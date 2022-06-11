@@ -1,0 +1,20 @@
+MATCH: $iopadmap$toggle.reset_TMR_2 ['/$auto$ff.cc:262:slice$2035_TMR_2/R[0]']---['/$auto$ff.cc:262:slice$2035/R[0]'] from $iopadmap$toggle.reset
+MATCH: $iopadmap$toggle.reset_TMR_1 ['/$auto$ff.cc:262:slice$2035_TMR_1/R[0]']---['/$auto$ff.cc:262:slice$2035/R[0]'] from $iopadmap$toggle.reset
+MATCH: $iopadmap$toggle.reset_TMR_0 ['/$auto$ff.cc:262:slice$2035_TMR_0/R[0]']---['/$auto$ff.cc:262:slice$2035/R[0]'] from $iopadmap$toggle.reset
+MATCH: $iopadmap$toggle.out_TMR_2 ['/out_TMR_2[0]']---['/out[0]'] from $iopadmap$toggle.out
+MATCH: $iopadmap$toggle.out_TMR_1 ['/out_TMR_1[0]']---['/out[0]'] from $iopadmap$toggle.out
+MATCH: $iopadmap$toggle.out_TMR_0 ['/out_TMR_0[0]']---['/out[0]'] from $iopadmap$toggle.out
+MATCH: $iopadmap$toggle.clk_TMR_2 ['/$auto$clkbufmap.cc:261:execute$2123_TMR_2/I[0]']---['/$auto$clkbufmap.cc:261:execute$2123/I[0]'] from $iopadmap$toggle.clk
+MATCH: $iopadmap$toggle.clk_TMR_1 ['/$auto$clkbufmap.cc:261:execute$2123_TMR_1/I[0]']---['/$auto$clkbufmap.cc:261:execute$2123/I[0]'] from $iopadmap$toggle.clk
+MATCH: $iopadmap$toggle.clk_TMR_0 ['/$auto$clkbufmap.cc:261:execute$2123_TMR_0/I[0]']---['/$auto$clkbufmap.cc:261:execute$2123/I[0]'] from $iopadmap$toggle.clk
+MATCH: $auto$ff.cc:262:slice$2035_TMR_2 ['/$abc$2116$auto$blifparse.cc:515:parse_blif$2117_TMR_2/I[0]', '/$iopadmap$toggle.out_TMR_2/I[0]']---['/$abc$2116$auto$blifparse.cc:515:parse_blif$2117/I[0]', '/$iopadmap$toggle.out/I[0]'] from $auto$ff.cc:262:slice$2035
+MATCH: $auto$ff.cc:262:slice$2035_TMR_1 ['/$abc$2116$auto$blifparse.cc:515:parse_blif$2117_TMR_1/I[0]', '/$iopadmap$toggle.out_TMR_1/I[0]']---['/$abc$2116$auto$blifparse.cc:515:parse_blif$2117/I[0]', '/$iopadmap$toggle.out/I[0]'] from $auto$ff.cc:262:slice$2035
+MATCH: $auto$ff.cc:262:slice$2035_TMR_0 ['/$abc$2116$auto$blifparse.cc:515:parse_blif$2117_TMR_0/I[0]', '/$iopadmap$toggle.out_TMR_0/I[0]']---['/$abc$2116$auto$blifparse.cc:515:parse_blif$2117/I[0]', '/$iopadmap$toggle.out/I[0]'] from $auto$ff.cc:262:slice$2035
+MATCH: $auto$clkbufmap.cc:261:execute$2123_TMR_2 ['/$auto$ff.cc:262:slice$2035_TMR_2/C[0]']---['/$auto$ff.cc:262:slice$2035/C[0]'] from $auto$clkbufmap.cc:261:execute$2123
+MATCH: $auto$clkbufmap.cc:261:execute$2123_TMR_1 ['/$auto$ff.cc:262:slice$2035_TMR_1/C[0]']---['/$auto$ff.cc:262:slice$2035/C[0]'] from $auto$clkbufmap.cc:261:execute$2123
+MATCH: $auto$clkbufmap.cc:261:execute$2123_TMR_0 ['/$auto$ff.cc:262:slice$2035_TMR_0/C[0]']---['/$auto$ff.cc:262:slice$2035/C[0]'] from $auto$clkbufmap.cc:261:execute$2123
+MATCH: $abc$2116$auto$blifparse.cc:515:parse_blif$2117_TMR_2 ['/$auto$ff.cc:262:slice$2035_TMR_2/D[0]']---['/$auto$ff.cc:262:slice$2035/D[0]'] from $abc$2116$auto$blifparse.cc:515:parse_blif$2117
+MATCH: $abc$2116$auto$blifparse.cc:515:parse_blif$2117_TMR_1 ['/$auto$ff.cc:262:slice$2035_TMR_1/D[0]']---['/$auto$ff.cc:262:slice$2035/D[0]'] from $abc$2116$auto$blifparse.cc:515:parse_blif$2117
+MATCH: $abc$2116$auto$blifparse.cc:515:parse_blif$2117_TMR_0 ['/$auto$ff.cc:262:slice$2035_TMR_0/D[0]']---['/$auto$ff.cc:262:slice$2035/D[0]'] from $abc$2116$auto$blifparse.cc:515:parse_blif$2117
+MATCH: $true ['/$auto$ff.cc:262:slice$2035_TMR_0/CE[0]', '/$auto$ff.cc:262:slice$2035_TMR_1/CE[0]', '/$auto$ff.cc:262:slice$2035_TMR_2/CE[0]']---['/$auto$ff.cc:262:slice$2035/CE[0]'] from $true
+MATCH: $false []---[] from $false

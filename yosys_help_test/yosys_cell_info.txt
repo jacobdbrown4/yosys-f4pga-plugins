@@ -1,0 +1,1961 @@
+$_DLATCHSR_PPP_
+	INPUTS:
+		D
+		R
+		S
+		E
+	OUTPUTS:
+		Q
+DONE
+$_DLATCHSR_PPN_
+	INPUTS:
+		D
+		R
+		S
+		E
+	OUTPUTS:
+		Q
+DONE
+$_DLATCHSR_PNP_
+	INPUTS:
+		D
+		R
+		S
+		E
+	OUTPUTS:
+		Q
+DONE
+$_DLATCHSR_PNN_
+	INPUTS:
+		D
+		R
+		S
+		E
+	OUTPUTS:
+		Q
+DONE
+$_DLATCHSR_NPP_
+	INPUTS:
+		D
+		R
+		S
+		E
+	OUTPUTS:
+		Q
+DONE
+$_DLATCHSR_NPN_
+	INPUTS:
+		D
+		R
+		S
+		E
+	OUTPUTS:
+		Q
+DONE
+$_DLATCHSR_NNP_
+	INPUTS:
+		D
+		R
+		S
+		E
+	OUTPUTS:
+		Q
+DONE
+$_DLATCHSR_NNN_
+	INPUTS:
+		D
+		R
+		S
+		E
+	OUTPUTS:
+		Q
+DONE
+$_DLATCH_PP1_
+	INPUTS:
+		D
+		R
+		E
+	OUTPUTS:
+		Q
+DONE
+$_DLATCH_PP0_
+	INPUTS:
+		D
+		R
+		E
+	OUTPUTS:
+		Q
+DONE
+$_DLATCH_PN1_
+	INPUTS:
+		D
+		R
+		E
+	OUTPUTS:
+		Q
+DONE
+$_DLATCH_PN0_
+	INPUTS:
+		D
+		R
+		E
+	OUTPUTS:
+		Q
+DONE
+$_DLATCH_NP1_
+	INPUTS:
+		D
+		R
+		E
+	OUTPUTS:
+		Q
+DONE
+$_DLATCH_NP0_
+	INPUTS:
+		D
+		R
+		E
+	OUTPUTS:
+		Q
+DONE
+$_DLATCH_NN1_
+	INPUTS:
+		D
+		R
+		E
+	OUTPUTS:
+		Q
+DONE
+$_DLATCH_NN0_
+	INPUTS:
+		D
+		R
+		E
+	OUTPUTS:
+		Q
+DONE
+$_DLATCH_P_
+	INPUTS:
+		D
+		E
+	OUTPUTS:
+		Q
+DONE
+$_DLATCH_N_
+	INPUTS:
+		D
+		E
+	OUTPUTS:
+		Q
+DONE
+$_SDFFCE_PP1P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFCE_PP1N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFCE_PP0P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFCE_PP0N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFCE_PN1P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFCE_PN1N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFCE_PN0P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFCE_PN0N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFCE_NP1P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFCE_NP1N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFCE_NP0P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFCE_NP0N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFCE_NN1P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFCE_NN1N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFCE_NN0P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFCE_NN0N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFE_PP1P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFE_PP1N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFE_PP0P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFE_PP0N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFE_PN1P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFE_PN1N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFE_PN0P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFE_PN0N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFE_NP1P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFE_NP1N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFE_NP0P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFE_NP0N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFE_NN1P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFE_NN1N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFE_NN0P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFFE_NN0N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFF_PP1_
+	INPUTS:
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFF_PP0_
+	INPUTS:
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFF_PN1_
+	INPUTS:
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFF_PN0_
+	INPUTS:
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFF_NP1_
+	INPUTS:
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFF_NP0_
+	INPUTS:
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFF_NN1_
+	INPUTS:
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_SDFF_NN0_
+	INPUTS:
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSRE_PPPP_
+	INPUTS:
+		E
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSRE_PPPN_
+	INPUTS:
+		E
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSRE_PPNP_
+	INPUTS:
+		E
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSRE_PPNN_
+	INPUTS:
+		E
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSRE_PNPP_
+	INPUTS:
+		E
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSRE_PNPN_
+	INPUTS:
+		E
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSRE_PNNP_
+	INPUTS:
+		E
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSRE_PNNN_
+	INPUTS:
+		E
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSRE_NPPP_
+	INPUTS:
+		E
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSRE_NPPN_
+	INPUTS:
+		E
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSRE_NPNP_
+	INPUTS:
+		E
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSRE_NPNN_
+	INPUTS:
+		E
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSRE_NNPP_
+	INPUTS:
+		E
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSRE_NNPN_
+	INPUTS:
+		E
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSRE_NNNP_
+	INPUTS:
+		E
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSRE_NNNN_
+	INPUTS:
+		E
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSR_PPP_
+	INPUTS:
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSR_PPN_
+	INPUTS:
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSR_PNP_
+	INPUTS:
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSR_PNN_
+	INPUTS:
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSR_NPP_
+	INPUTS:
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSR_NPN_
+	INPUTS:
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSR_NNP_
+	INPUTS:
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFSR_NNN_
+	INPUTS:
+		D
+		R
+		S
+		C
+	OUTPUTS:
+		Q
+DONE
+$_ALDFFE_PPP_
+	INPUTS:
+		E
+		D
+		AD
+		L
+		C
+	OUTPUTS:
+		Q
+DONE
+$_ALDFFE_PPN_
+	INPUTS:
+		E
+		D
+		AD
+		L
+		C
+	OUTPUTS:
+		Q
+DONE
+$_ALDFFE_PNP_
+	INPUTS:
+		E
+		D
+		AD
+		L
+		C
+	OUTPUTS:
+		Q
+DONE
+$_ALDFFE_PNN_
+	INPUTS:
+		E
+		D
+		AD
+		L
+		C
+	OUTPUTS:
+		Q
+DONE
+$_ALDFFE_NPP_
+	INPUTS:
+		E
+		D
+		AD
+		L
+		C
+	OUTPUTS:
+		Q
+DONE
+$_ALDFFE_NPN_
+	INPUTS:
+		E
+		D
+		AD
+		L
+		C
+	OUTPUTS:
+		Q
+DONE
+$_ALDFFE_NNP_
+	INPUTS:
+		E
+		D
+		AD
+		L
+		C
+	OUTPUTS:
+		Q
+DONE
+$_ALDFFE_NNN_
+	INPUTS:
+		E
+		D
+		AD
+		L
+		C
+	OUTPUTS:
+		Q
+DONE
+$_ALDFF_PP_
+	INPUTS:
+		D
+		AD
+		L
+		C
+	OUTPUTS:
+		Q
+DONE
+$_ALDFF_PN_
+	INPUTS:
+		D
+		AD
+		L
+		C
+	OUTPUTS:
+		Q
+DONE
+$_ALDFF_NP_
+	INPUTS:
+		D
+		AD
+		L
+		C
+	OUTPUTS:
+		Q
+DONE
+$_ALDFF_NN_
+	INPUTS:
+		D
+		AD
+		L
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFE_PP1P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFE_PP1N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFE_PP0P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFE_PP0N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFE_PN1P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFE_PN1N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFE_PN0P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFE_PN0N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFE_NP1P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFE_NP1N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFE_NP0P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFE_NP0N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFE_NN1P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFE_NN1N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFE_NN0P_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFE_NN0N_
+	INPUTS:
+		E
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFF_PP1_
+	INPUTS:
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFF_PP0_
+	INPUTS:
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFF_PN1_
+	INPUTS:
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFF_PN0_
+	INPUTS:
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFF_NP1_
+	INPUTS:
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFF_NP0_
+	INPUTS:
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFF_NN1_
+	INPUTS:
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFF_NN0_
+	INPUTS:
+		D
+		R
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFE_PP_
+	INPUTS:
+		E
+		D
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFE_PN_
+	INPUTS:
+		E
+		D
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFE_NP_
+	INPUTS:
+		E
+		D
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFFE_NN_
+	INPUTS:
+		E
+		D
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFF_P_
+	INPUTS:
+		D
+		C
+	OUTPUTS:
+		Q
+DONE
+$_DFF_N_
+	INPUTS:
+		D
+		C
+	OUTPUTS:
+		Q
+DONE
+$_FF_
+	INPUTS:
+		D
+	OUTPUTS:
+		Q
+DONE
+$_SR_PP_
+	INPUTS:
+		R
+		S
+	OUTPUTS:
+		Q
+DONE
+$_SR_PN_
+	INPUTS:
+		R
+		S
+	OUTPUTS:
+		Q
+DONE
+$_SR_NP_
+	INPUTS:
+		R
+		S
+	OUTPUTS:
+		Q
+DONE
+$_SR_NN_
+	INPUTS:
+		R
+		S
+	OUTPUTS:
+		Q
+DONE
+$_TBUF_
+	INPUTS:
+		E
+		A
+	OUTPUTS:
+		Y
+DONE
+$_OAI4_
+	INPUTS:
+		D
+		C
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$_AOI4_
+	INPUTS:
+		D
+		C
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$_OAI3_
+	INPUTS:
+		C
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$_AOI3_
+	INPUTS:
+		C
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$_MUX16_
+	INPUTS:
+		V
+		U
+		T
+		S
+		P
+		O
+		N
+		M
+		L
+		K
+		J
+		I
+		H
+		G
+		F
+		E
+		D
+		C
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$_MUX8_
+	INPUTS:
+		U
+		T
+		S
+		H
+		G
+		F
+		E
+		D
+		C
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$_MUX4_
+	INPUTS:
+		T
+		S
+		D
+		C
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$_NMUX_
+	INPUTS:
+		S
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$_MUX_
+	INPUTS:
+		S
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$_ORNOT_
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$_ANDNOT_
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$_XNOR_
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$_XOR_
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$_NOR_
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$_OR_
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$_NAND_
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$_AND_
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$_NOT_
+	INPUTS:
+		A
+	OUTPUTS:
+		Y
+DONE
+$_BUF_
+	INPUTS:
+		A
+	OUTPUTS:
+		Y
+DONE
+$fsm
+	INPUTS:
+		CTRL_IN
+		ARST
+		CLK
+	OUTPUTS:
+		CTRL_OUT
+DONE
+$mem_v2
+	INPUTS:
+		WR_DATA
+		WR_ADDR
+		WR_EN
+		WR_CLK
+		RD_ADDR
+		RD_SRST
+		RD_ARST
+		RD_EN
+		RD_CLK
+	OUTPUTS:
+		RD_DATA
+DONE
+$mem
+	INPUTS:
+		WR_DATA
+		WR_ADDR
+		WR_EN
+		WR_CLK
+		RD_ADDR
+		RD_EN
+		RD_CLK
+	OUTPUTS:
+		RD_DATA
+DONE
+$meminit_v2
+	INPUTS:
+		EN
+		DATA
+		ADDR
+	OUTPUTS:
+DONE
+$meminit
+	INPUTS:
+		DATA
+		ADDR
+	OUTPUTS:
+DONE
+$memwr_v2
+	INPUTS:
+		DATA
+		ADDR
+		EN
+		CLK
+	OUTPUTS:
+DONE
+$memwr
+	INPUTS:
+		DATA
+		ADDR
+		EN
+		CLK
+	OUTPUTS:
+DONE
+$memrd_v2
+	INPUTS:
+		ADDR
+		SRST
+		ARST
+		EN
+		CLK
+	OUTPUTS:
+		DATA
+DONE
+$memrd
+	INPUTS:
+		ADDR
+		EN
+		CLK
+	OUTPUTS:
+		DATA
+DONE
+$dlatchsr
+	INPUTS:
+		D
+		CLR
+		SET
+		EN
+	OUTPUTS:
+		Q
+DONE
+$adlatch
+	INPUTS:
+		ARST
+		D
+		EN
+	OUTPUTS:
+		Q
+DONE
+$dlatch
+	INPUTS:
+		D
+		EN
+	OUTPUTS:
+		Q
+DONE
+$sdffce
+	INPUTS:
+		EN
+		D
+		SRST
+		CLK
+	OUTPUTS:
+		Q
+DONE
+$sdffe
+	INPUTS:
+		EN
+		D
+		SRST
+		CLK
+	OUTPUTS:
+		Q
+DONE
+$sdff
+	INPUTS:
+		D
+		SRST
+		CLK
+	OUTPUTS:
+		Q
+DONE
+$aldffe
+	INPUTS:
+		EN
+		D
+		AD
+		ALOAD
+		CLK
+	OUTPUTS:
+		Q
+DONE
+$aldff
+	INPUTS:
+		D
+		AD
+		ALOAD
+		CLK
+	OUTPUTS:
+		Q
+DONE
+$adffe
+	INPUTS:
+		EN
+		D
+		ARST
+		CLK
+	OUTPUTS:
+		Q
+DONE
+$adff
+	INPUTS:
+		D
+		ARST
+		CLK
+	OUTPUTS:
+		Q
+DONE
+$dffsre
+	INPUTS:
+		EN
+		D
+		CLR
+		SET
+		CLK
+	OUTPUTS:
+		Q
+DONE
+$dffsr
+	INPUTS:
+		D
+		CLR
+		SET
+		CLK
+	OUTPUTS:
+		Q
+DONE
+$dffe
+	INPUTS:
+		D
+		EN
+		CLK
+	OUTPUTS:
+		Q
+DONE
+$dff
+	INPUTS:
+		D
+		CLK
+	OUTPUTS:
+		Q
+DONE
+$ff
+	INPUTS:
+		D
+	OUTPUTS:
+		Q
+DONE
+$sr
+	INPUTS:
+		CLR
+		SET
+	OUTPUTS:
+		Q
+DONE
+$specrule
+	INPUTS:
+		DST
+		SRC
+		EN_DST
+		EN_SRC
+	OUTPUTS:
+DONE
+$specify3
+	INPUTS:
+		DAT
+		DST
+		SRC
+		EN
+	OUTPUTS:
+DONE
+$specify2
+	INPUTS:
+		DST
+		SRC
+		EN
+	OUTPUTS:
+DONE
+$equiv
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$allseq
+	INPUTS:
+	OUTPUTS:
+		Y
+DONE
+$allconst
+	INPUTS:
+	OUTPUTS:
+		Y
+DONE
+$anyseq
+	INPUTS:
+	OUTPUTS:
+		Y
+DONE
+$anyconst
+	INPUTS:
+	OUTPUTS:
+		Y
+DONE
+$initstate
+	INPUTS:
+	OUTPUTS:
+		Y
+DONE
+$cover
+	INPUTS:
+		EN
+		A
+	OUTPUTS:
+DONE
+$fair
+	INPUTS:
+		EN
+		A
+	OUTPUTS:
+DONE
+$live
+	INPUTS:
+		EN
+		A
+	OUTPUTS:
+DONE
+$assume
+	INPUTS:
+		EN
+		A
+	OUTPUTS:
+DONE
+$assert
+	INPUTS:
+		EN
+		A
+	OUTPUTS:
+DONE
+$tribuf
+	INPUTS:
+		EN
+		A
+	OUTPUTS:
+		Y
+DONE
+$fa
+	INPUTS:
+		C
+		B
+		A
+	OUTPUTS:
+		Y
+		X
+DONE
+$alu
+	INPUTS:
+		BI
+		CI
+		B
+		A
+	OUTPUTS:
+		CO
+		Y
+		X
+DONE
+$lcu
+	INPUTS:
+		CI
+		G
+		P
+	OUTPUTS:
+		CO
+DONE
+$demux
+	INPUTS:
+		S
+		A
+	OUTPUTS:
+		Y
+DONE
+$bmux
+	INPUTS:
+		S
+		A
+	OUTPUTS:
+		Y
+DONE
+$pmux
+	INPUTS:
+		S
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$mux
+	INPUTS:
+		S
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$macc
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$concat
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$logic_or
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$logic_and
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$pow
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$modfloor
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$divfloor
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$mod
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$div
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$mul
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$sub
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$add
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$gt
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$ge
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$nex
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$eqx
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$ne
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$eq
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$le
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$lt
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$shiftx
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$shift
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$sshr
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$sshl
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$shr
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$shl
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$xnor
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$xor
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$or
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$and
+	INPUTS:
+		B
+		A
+	OUTPUTS:
+		Y
+DONE
+$sop
+	INPUTS:
+		A
+	OUTPUTS:
+		Y
+DONE
+$lut
+	INPUTS:
+		A
+	OUTPUTS:
+		Y
+DONE
+$slice
+	INPUTS:
+		A
+	OUTPUTS:
+		Y
+DONE
+$logic_not
+	INPUTS:
+		A
+	OUTPUTS:
+		Y
+DONE
+$reduce_bool
+	INPUTS:
+		A
+	OUTPUTS:
+		Y
+DONE
+$reduce_xnor
+	INPUTS:
+		A
+	OUTPUTS:
+		Y
+DONE
+$reduce_xor
+	INPUTS:
+		A
+	OUTPUTS:
+		Y
+DONE
+$reduce_or
+	INPUTS:
+		A
+	OUTPUTS:
+		Y
+DONE
+$reduce_and
+	INPUTS:
+		A
+	OUTPUTS:
+		Y
+DONE
+$neg
+	INPUTS:
+		A
+	OUTPUTS:
+		Y
+DONE
+$pos
+	INPUTS:
+		A
+	OUTPUTS:
+		Y
+DONE
+$not
+	INPUTS:
+		A
+	OUTPUTS:
+		Y
+DONE
