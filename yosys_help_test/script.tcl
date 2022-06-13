@@ -8,28 +8,44 @@ yosys -import
 # hierarchy -top top
 # yosys read_verilog ../yosys_help_test/verilog_files/counter.v
 # hierarchy -top top
-yosys read -sv counter/*
+# yosys read -sv counter/*
+yosys read -sv counter/debounce*
+yosys read -sv -lib counter/mod_counter.sv
 hierarchy -top debounce_top
 
 # yosys proc
-yosys synth_xilinx
+
+# yosys proc
+# yosys synth_xilinx
 # wreduce
 
 
-write_blif -cname -icells original.blif
+write_blif -cname -icells -blackbox original.blif
 # write_rtlil original.rtlil
+# write_verilog -blackboxes original.v
+
+# read_verilog -lib fault_tolerant/ft.v
+# techmap
+# techmap -map fault_tolerant/not_ft.v
+# yosys proc
+# synth_xilinx
+# write_verilog -blackboxes out.v
+
+# yosys read -sv counter/mod_counter.sv
+
+write_blif -cname -icells -blackbox after_change_map.blif
 
 plugin -i mine
 # yosys cell_primitive_info
 # ls
 # hierarchy -purge_lib
 # yosys collect_connections
-yosys apply_tmr -suffix TMR
+# yosys apply_tmr -suffix TMR
 # hierarchy -top debounce_top
-yosys insert_voters
+# yosys insert_voters
 # yosys view_info
 
-yosys write_blif -cname -icells after_tmr.blif
+# yosys write_blif -cname -icells after_tmr.blif
 
 # exec python3 ../yosys_help_test/checking.py
 # hierarchy -top debounce_top
