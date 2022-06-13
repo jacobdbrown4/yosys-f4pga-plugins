@@ -1,4 +1,4 @@
-file copy -force ~/yosys_plugins/yosys-f4pga-plugins/mine-plugin/mine.so ~/yosys/yosys/share/plugins/
+file copy -force ~/yosys_plugins/yosys-f4pga-plugins/mine-plugin/mine.so ~/yosys/share/plugins/
 
 
 yosys -import
@@ -8,19 +8,21 @@ yosys -import
 # hierarchy -top top
 # yosys read_verilog ../yosys_help_test/verilog_files/counter.v
 # hierarchy -top top
-# yosys read -sv counter/*
-yosys read -sv counter/debounce*
-yosys read -sv -lib counter/mod_counter.sv
+yosys read -sv counter/*
+# yosys read -sv counter/debounce*
+# yosys read -sv -lib counter/mod_counter.sv
 hierarchy -top debounce_top
 
 # yosys proc
+yosys synth_xilinx
+write_blif -cname -icells original.blif
+plugin -i mine
+yosys apply_tmr -suffix TMR
+yosys insert_voters
+check
 
-# yosys proc
-# yosys synth_xilinx
-# wreduce
+yosys write_blif -cname -icells after_tmr.blif
 
-
-write_blif -cname -icells -blackbox original.blif
 # write_rtlil original.rtlil
 # write_verilog -blackboxes original.v
 
@@ -33,9 +35,9 @@ write_blif -cname -icells -blackbox original.blif
 
 # yosys read -sv counter/mod_counter.sv
 
-write_blif -cname -icells -blackbox after_change_map.blif
+# write_blif -cname -icells -blackbox after_change_map.blif
 
-plugin -i mine
+# plugin -i mine
 # yosys cell_primitive_info
 # ls
 # hierarchy -purge_lib

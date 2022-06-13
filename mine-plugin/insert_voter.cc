@@ -225,6 +225,106 @@ struct InsertVoterWorker {
             // then connect the voter's output to the buffer
             receiving_cell.cell->setPort(receiving_cell.port_name, voter_output);
         }
+    }
+
+    typedef struct InsertionPoint {
+        // std::string wire_name;
+        // int offset;
+        std::vector<ConnectedCell> cells;  
+    } InsertionPoint;
+
+    std::vector<InsertionPoint> identify_points_after_ff(RTLIL::Module *module, std::string suffix, std::map<std::string, WireConnectionInfo> connection_map) {
+        std::vector<InsertionPoint> insertion_points;
+        std::map<std::string, std::vector<ConnectedCell>> plain_name_to_drivers;
+        for (auto entry: connection_map) {
+            if (entry.second.driver.cell != nullptr) {
+                RTLIL::Cell *driver_cell = entry.second.driver.cell;
+                std::string cell_type = RTLIL::unescape_id(driver_cell->type);
+                if (std::find(std::begin(ff_names), std::end(ff_names), cell_type) == std::end(ff_names)) {
+                    continue;
+                }
+                std::string wire_name = RTLIL::unescape_id(entry.second.wire->name);
+                std::string map_key = remove_suffix_from_name(wire_name, suffix) + "_" + std::to_string(entry.second.offset);
+                plain_name_to_drivers[map_key].push_back(entry.second.driver);
+                
+            }
+        }
+        for (auto entry: plain_name_to_drivers){
+            InsertionPoint point;
+            std::cout << entry.first << "\n";
+            for (auto cell: entry.second) {
+                point.cells.push_back(cell);
+                std::cout << "\t" << log_id(cell.cell) << "\n";
+            }
+            insertion_points.push_back(point);
+        }
+        return insertion_points;
+    }
+
+    void insert_voters(RTLIL::Module *module, std::vector<InsertionPoint> insertion_points) {
+        std::vector<RTLIL::Cell*> cells_set;
+        for (auto point: insertion_points) {
+
+            std::vector<RTLIL::SigBit> voter_outputs;
+            std::vector<RTLIL::SigBit> voter_inputs;
+            // std::vector<RTLIL::
+            for (auto driver: point.cells) {
+                RTLIL::Cell *driver_cell = driver.cell;
+                voter_outputs.push_back(driver.sigbit);
+                std::string new_wire_name = "\\" + RTLIL::unescape_id(driver.sigbit.wire->name) + "_VOTER_wire_" + std::to_string(driver.sigbit.offset);
+                RTLIL::Wire *new_wire = module->addWire(new_wire_name);
+                // new_wire->port_output = driver.sigbit.wire->port_output;
+                voter_inputs.push_back(SigBit(new_wire));
+            } 
+
+            int i = 0;
+            for (auto driver: point.cells) {
+                // disconnect the cell from original output and connect to new sigbit
+                RTLIL::Cell *driver_cell = driver.cell;
+                if (std::find(cells_set.begin(), cells_set.end(), driver_cell) == cells_set.end()) {
+                    RTLIL::SigSpec new_sigspec = SigSpec();
+                    std::cout << "trying to set port " << RTLIL::unescape_id(driver.port_name) << \
+                         " on cell " << RTLIL::unescape_id(driver_cell->name) << "\n";
+                    driver_cell->setPort(driver.port_name, new_sigspec);
+                    cells_set.push_back(driver_cell);
+                    std::cout << "done\n";
+                }
+
+                // driver.sigbit.wire->port_output = false;
+                // add the new sigbit to the driver_cell's output
+                RTLIL::SigSpec cell_output = driver_cell->getPort(driver.port_name);
+                cell_output.append(voter_inputs[i]);
+                driver_cell->setPort(driver.port_name, cell_output);
+
+                RTLIL::SigSpec voter_output = SigSpec(voter_outputs[i]);
+                RTLIL::SigSpec voter_input = SigSpec();
+                std::map<RTLIL::IdString, RTLIL::SigSpec> voter_input_map;
+                for (unsigned int i = 0; i < point.cells.size(); i++){
+                    voter_input_map[voterInfo.input_ports[i]] = SigSpec(voter_inputs[i]);
+                    // voter_input.append(bit_pack[i].sigbit);
+                }
+                std::string voter_name = "\\" + RTLIL::unescape_id(driver.sigbit.wire->name) + \
+                                            "_VOTER_" + std::to_string(driver.sigbit.offset);
+                // add the voter now
+                // // RTLIL::Cell *voter = module->addLut(voter_name, voter_input, voter_output, RTLIL::Const::from_string("8'11101000"));
+                RTLIL::Cell *voter = module->addCell(voter_name, "\\" + voterInfo.cell_type);
+                        // // voter_other->setPort("\\I", voter_input);
+                for (auto voter_input_entry: voter_input_map){
+                    voter->setPort(voter_input_entry.first, voter_input_entry.second);
+                }
+                voter->setPort(voterInfo.output_ports[0], voter_output);
+                voter_cnt++;
+                i++;
+                std::cout << "Added voter: " << voter_name << " (in module: " << RTLIL::unescape_id(module->name) << ")\n";
+                std::cout << "\tConnections:\n";
+                for (auto conn: voter->connections()) {
+                    log("\tPort: %s is connected to %s\n", log_id(conn.first), log_id(conn.second[0].wire));
+                }
+            }
+        }
+        module->fixup_ports();
+
+    }
     //     std::map<std::string, SigBitPack> new_sigbit_map = arrangePointPackBits(module, insertion_points);
     //     std::vector<RTLIL::Cell*> cells_set;
     //     for (auto map_entry: new_sigbit_map) {
@@ -271,19 +371,19 @@ struct InsertVoterWorker {
     //         else {
     //             for (auto bit: bit_pack) {
 
-    //                 // disconnect the cell from original output and connect to new sigbit
-    //                 if (std::find(cells_set.begin(), cells_set.end(), bit.cell) == cells_set.end()) {
-    //                     RTLIL::SigSpec new_sigspec = SigSpec();
-    //                     bit.cell->setPort(bit.port_name, new_sigspec);
-    //                     cells_set.push_back(bit.cell);
-    //                 }
+                    // // disconnect the cell from original output and connect to new sigbit
+                    // if (std::find(cells_set.begin(), cells_set.end(), bit.cell) == cells_set.end()) {
+                    //     RTLIL::SigSpec new_sigspec = SigSpec();
+                    //     bit.cell->setPort(bit.port_name, new_sigspec);
+                    //     cells_set.push_back(bit.cell);
+                    // }
 
-    //                 bit.sigbit.wire->port_output = false;
-    //                 RTLIL::SigSpec cell_output = bit.cell->getPort(bit.port_name);
-    //                 cell_output.append(bit.sigbit);
-    //                 bit.cell->setPort(bit.port_name, cell_output);
+                    // bit.sigbit.wire->port_output = false;
+                    // RTLIL::SigSpec cell_output = bit.cell->getPort(bit.port_name);
+                    // cell_output.append(bit.sigbit);
+                    // bit.cell->setPort(bit.port_name, cell_output);
 
-    //                 RTLIL::SigSpec voter_output = bit.original;
+                    // RTLIL::SigSpec voter_output = bit.original;
                     // std::map<RTLIL::IdString, RTLIL::SigSpec> voter_inputs;
                     // RTLIL::SigSpec voter_input = SigSpec();
                     // for (unsigned int i = 0; i < bit_pack.size(); i++){
@@ -304,7 +404,7 @@ struct InsertVoterWorker {
     //             }
     //         }
     //     }
-    }
+    // }
 
     // bool check_voter_insertion() {
     //     return false;
@@ -594,6 +694,8 @@ public:
             std::map<std::string, WireConnectionInfo> connection_map = collect_connections(module);
             std::vector<ReductionPoint> insertion_points = identify_reduction_points(module, suffix, connection_map);
             insert_reduction_voters(module, suffix, insertion_points, connection_map);
+            std::vector<InsertionPoint> insertion_points_2 = identify_points_after_ff(module, suffix, connection_map);
+            insert_voters(module, insertion_points_2);
             // std::map<std::string, InsertionPointPack>  insertion_points = find_points_after_ff(module, suffix);
             // std::map<std::string, InsertionPointPack>  reduction_insertion_points = find_reduction_points(module, suffix);
             // for (auto point: reduction_insertion_points) {
