@@ -243,7 +243,7 @@ private:
     void replicate_cells(RTLIL::Module *old_module, RTLIL::Module *new_module, std::string suffix, bool check_ports) {
         std::cout << "replicating cells in module"  << log_id(old_module) << "\n";
         for (auto cell: old_module->cells()) { // copy cells over
-            std::cout << "set to replicate cell " << log_id(cell) << " of type " << RTLIL::unescape_id(cell->type) << "\n";
+            // std::cout << "set to replicate cell " << log_id(cell) << " of type " << RTLIL::unescape_id(cell->type) << "\n";
             std::string cell_type = RTLIL::unescape_id(cell->type);
             std::string cell_name = RTLIL::unescape_id(cell->name);
             if (cell_type.substr(0,1) != "$" || cell_name.substr(0,1) != "$") {
@@ -267,7 +267,7 @@ private:
             bool replicate = false;
             bool buffer = false;
             if (check_ports){
-                std::cout << "checking cell " << log_id(cell) << " of type " << RTLIL::unescape_id(cell->type) << "\n";
+                // std::cout << "checking cell " << log_id(cell) << " of type " << RTLIL::unescape_id(cell->type) << "\n";
                 for (auto conn: cell->connections()) {
                     RTLIL::SigSpec sigspec = conn.second;
                     for (auto bit: sigspec.bits()) {
@@ -275,14 +275,14 @@ private:
                             continue;
                         }
                         RTLIL::Wire *wire = bit.wire;
-                        std::cout << log_id(wire) << " is a wire\n";
-                        std::cout << "Is it a port_input? " << std::to_string(wire->port_input) << "\n";
+                        // std::cout << log_id(wire) << " is a wire\n";
+                        // std::cout << "Is it a port_input? " << std::to_string(wire->port_input) << "\n";
                         if ((wire->port_input || wire->port_output)) {
-                            std::cout << log_id(wire) << " is connected to top level input/output\n";
+                            // std::cout << log_id(wire) << " is connected to top level input/output\n";
                             buffer = true;
                             std::string wire_name = RTLIL::unescape_id(wire->name);
                             if (std::find(std::begin(ports_to_replicate), std::end(ports_to_replicate), "\\" + wire_name) != std::end(ports_to_replicate)) {
-                                std::cout << "Cell " << log_id(cell) << " will be replicated\n";
+                                // std::cout << "Cell " << log_id(cell) << " will be replicated\n";
                                 replicate = true;
                                 break;
                             }
@@ -299,7 +299,9 @@ private:
             }
             
             if (!replicate && buffer) {
-                std::cout << "Will not replicate cell " << log_id(cell) << " of type " << log_id(cell->type) << " as it should not be replicated\n";
+                std::cout << "Will not replicate cell " << log_id(cell) << " of type " << log_id(cell->type) << " as it should not be replicated. It will simply be copied\n";
+                RTLIL::Cell* new_cell = new_module->addCell(cell->name, cell);
+                fix_cell_connections(new_module, new_cell, 0, suffix);  
                 continue;
             }
             for (int i = 0; i < copy_amount; i++) {
@@ -339,7 +341,7 @@ private:
                     continue;
                 }
                 std::string wire_chunk_name = RTLIL::unescape_id(chunk.wire->name);
-                std::cout << "trying to add wire named " << ("\\" + wire_chunk_name + "_" + suffix + "_" + std::to_string(i)) << "\n";
+                // std::cout << "trying to add wire named " << ("\\" + wire_chunk_name + "_" + suffix + "_" + std::to_string(i)) << "\n";
                 RTLIL::Wire *replicated_wire = new_module->wire("\\" + wire_chunk_name + "_" + suffix + "_" + std::to_string(i));
                 if (replicated_wire == nullptr) {
                     std::cout << "the wire was null. It was not replicated.\n";
@@ -348,7 +350,7 @@ private:
                     //     std::cout << "found the old regular one!\n";
                     // }
                 }
-                std::cout << "success\n";
+                // std::cout << "success\n";
 
                 RTLIL::Wire *old_wire = new_module->wire("\\" + wire_chunk_name);
 

@@ -1,4 +1,4 @@
-file copy -force ~/yosys_plugins/yosys-f4pga-plugins/mine-plugin/mine.so ~/yosys/share/plugins/
+file copy -force ~/yosys_plugins/yosys-f4pga-plugins/mine-plugin/mine.so ~/yosys/yosys/share/plugins/
 
 
 yosys -import
@@ -13,11 +13,11 @@ hierarchy -top debounce_top
 
 # yosys proc
 yosys synth_xilinx
-wreduce
+# wreduce
 
 
 write_blif -cname -icells original.blif
-write_rtlil original.rtlil
+# write_rtlil original.rtlil
 
 plugin -i mine
 # yosys cell_primitive_info
@@ -25,6 +25,7 @@ plugin -i mine
 # hierarchy -purge_lib
 # yosys collect_connections
 yosys apply_tmr -suffix TMR
+# hierarchy -top debounce_top
 yosys insert_voters
 # yosys view_info
 

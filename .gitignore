@@ -4,3 +4,6 @@
 *.swp
 *.log
 ql-qlf-plugin/pmgen/*
+*.vscode/*
+__pycache__/*
+*.pyc

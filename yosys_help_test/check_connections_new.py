@@ -97,6 +97,8 @@ class CheckConnections():
     def is_own_voter(self, instance, voter):
         instance_key = self.find_key(instance)
         voter_key = self.find_key(voter)
+        if (voter_key == -1):
+            return True
         return instance_key == voter_key
 
     def get_non_replicated_voter_driven_instances(self, voter, parent_name):
