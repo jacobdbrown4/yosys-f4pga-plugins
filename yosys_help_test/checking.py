@@ -1,6 +1,6 @@
 import spydrnet as sdn
 from cell_info_parser import read_cell_info
-from spydrnet.util.architecture import YOSYS_CELLS, XILINX_7SERIES
+from spydrnet.util.architecture import XILINX_7SERIES # ,YOSYS_CELLS
 from spydrnet.util.selection import Selection 
 
 
