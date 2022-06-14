@@ -791,10 +791,44 @@ struct InsertVoterWorker {
     //     return false;
     // }
 
-    std::vector<ReductionPoint> remove_redundant_reduction_voters(std::vector<ReductionPoint> reduction_points,  std::vector<InsertionPoint> insertion_points) {
-        std::vector<ReductionPoint> edited_reduction_points;
-        // if any reduction voters are 
-
+    std::vector<InsertionPoint> remove_redundant_reduction_voters(std::vector<InsertionPoint> insertion_points) {
+        std::cout << "removing redundant reduction voters\n";
+        std::vector<InsertionPoint> insertion_points_edited;
+        std::map<std::string, std::vector<InsertionPoint>> point_map; 
+        for (auto voter: insertion_points) {
+            if (voter.is_reduction) {
+                RTLIL::Wire *wire = voter.red_point.info.wire;
+                RTLIL::SigBit sigbit = voter.red_point.receiver.sigbit;
+                std::string map_key = unescape_id(sigbit.wire->name) + "_" + std::to_string(sigbit.offset);
+                point_map[map_key].push_back(voter);
+            }
+            if (voter.normal_point.cells.size() > 0) {
+                RTLIL::SigBit sigbit = voter.normal_point.cells[0].sigbit;
+                std::string map_key = unescape_id(sigbit.wire->name) + "_" + std::to_string(sigbit.offset);
+                point_map[map_key].push_back(voter);
+            }
+            // else if (voter.red_point.)
+        }
+        for (auto map_entry: point_map) {
+            std::cout << map_entry.first << "\n";
+            if (map_entry.second.size() == 1) {
+                insertion_points_edited.push_back(map_entry.second[0]);
+            }
+            else {
+                InsertionPoint non_reduction_point;
+                for (auto point: map_entry.second) {
+                    if (point.is_reduction) {
+                        std::cout << "\tReduction\n";
+                    }
+                    else{
+                        std::cout << "\tOther\n";
+                        non_reduction_point = point;
+                    }
+                }
+                insertion_points_edited.push_back(non_reduction_point);
+            }
+        }
+        return insertion_points_edited;
     }
 
     std::vector<InsertionPoint> combine_insertion_points(std::vector<InsertionPoint> first, std::vector<InsertionPoint> two) {
@@ -834,7 +868,8 @@ public:
             // insert_reduction_voters(module, suffix, insertion_points, connection_map);
             std::vector<InsertionPoint> insertion_points_2 = identify_points_after_ff(module, suffix, connection_map);
             std::vector<InsertionPoint> all_insertion_points = combine_insertion_points(insertion_points, insertion_points_2);
-            insert_voters(module, suffix, all_insertion_points, connection_map);
+            std::vector<InsertionPoint> final_insertion_points = remove_redundant_reduction_voters(all_insertion_points);
+            insert_voters(module, suffix, final_insertion_points, connection_map);
             // std::map<std::string, InsertionPointPack>  insertion_points = find_points_after_ff(module, suffix);
             // std::map<std::string, InsertionPointPack>  reduction_insertion_points = find_reduction_points(module, suffix);
             // for (auto point: reduction_insertion_points) {
