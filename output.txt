@@ -1,0 +1,6 @@
+make -C mine-plugin mine.so
+make[1]: Entering directory '/home/jacobdbrown4/yosys_plugins/yosys-f4pga-plugins/mine-plugin'
+g++ -Wall -Wextra -ggdb -I/usr/local/share/yosys/include -MD -MP -D_YOSYS_ -fPIC -I/usr/local/include -std=c++11 -Os -DYOSYS_ENABLE_READLINE -DYOSYS_ENABLE_PLUGINS -DYOSYS_ENABLE_GLOB -DYOSYS_ENABLE_ZLIB -I/usr/include/tcl8.6 -DYOSYS_ENABLE_TCL -DYOSYS_ENABLE_ABC -DYOSYS_ENABLE_COVER     -c -o apply_tmr.o apply_tmr.cc
+../Makefile_plugin.common:68: recipe for target 'apply_tmr.o' failed
+make[1]: Leaving directory '/home/jacobdbrown4/yosys_plugins/yosys-f4pga-plugins/mine-plugin'
+Makefile:46: recipe for target 'mine.so' failed

@@ -17,9 +17,12 @@ hierarchy -top debounce_top
 yosys synth_xilinx
 write_blif -cname -icells original.blif
 plugin -i mine
+# tee -q -o output.txt apply_tmr -suffix TMR
 yosys apply_tmr -suffix TMR
+check
 yosys insert_voters
 check
+clean
 
 yosys write_blif -cname -icells after_tmr.blif
 

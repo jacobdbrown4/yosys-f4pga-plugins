@@ -70,6 +70,21 @@ struct InsertVoterWorker {
         WireConnectionInfo info;
     } ReductionPoint;
 
+    typedef struct NormalPoint {
+        std::vector<ConnectedCell> cells;
+    } NormalPoint;
+
+    typedef struct InsertionPoint_ {
+        // std::vector<ConnectedCell> cells;
+        bool is_reduction;
+        NormalPoint normal_point;
+        ReductionPoint red_point;
+        // union point_u {
+        //     // NormalPoint normal_point;
+        //     ReductionPoint red_point;
+        // } point;
+    } InsertionPoint;
+
     std::map<std::string, WireConnectionInfo> collect_connections(RTLIL::Module *module) {
         std::map<std::string, WireConnectionInfo> connection_map;
         for (auto cell: module->cells()) {
@@ -100,11 +115,14 @@ struct InsertVoterWorker {
         return connection_map;
     }
 
-    std::vector<ReductionPoint> identify_reduction_points(RTLIL::Module *module, std::string suffix, std::map<std::string, WireConnectionInfo> connection_map) {
+    // std::vector<ReductionPoint> identify_reduction_points(RTLIL::Module *module, std::string suffix, std::map<std::string, WireConnectionInfo> connection_map) {
+    std::vector<InsertionPoint> identify_reduction_points(RTLIL::Module *module, std::string suffix, std::map<std::string, WireConnectionInfo> connection_map) {
         log("Identifying reduction points in module %s\n", log_id(module));    
         // map from a cell needing a replication voter before him to wire connection info.
-        std::map<ConnectedCell, WireConnectionInfo> insertion_points;
+        // std::map<ConnectedCell, WireConnectionInfo> insertion_points;
         std::vector<ReductionPoint> points;
+        std::map<std::string, std::vector<ConnectedCell>> plain_name_to_drivers;
+        std::vector<InsertionPoint> insertion_points;
         // iterate through cells in the module
         // if a cell does not have the suffix but his input wire does, he needs a reduction voter
         for (auto cell: module->cells()) {
@@ -139,10 +157,30 @@ struct InsertVoterWorker {
                     // insertion_points[c] = connection_map[map_key];
                     ReductionPoint new_point = {c, connection_map[map_key]};
                     points.push_back(new_point);
+
+                    // std::string wire_name = RTLIL::unescape_id(sigbit.wire->name);
+                    std::string new_map_key = remove_suffix_from_name(wire_name, suffix) + "_" + std::to_string(sigbit.offset);
+                    WireConnectionInfo info = connection_map[map_key];
+                    // plain_name_to_drivers[new_map_key].push_back(info.driver);
+                    InsertionPoint point;
+                    point.is_reduction = true;
+                    point.red_point = new_point;
+                    insertion_points.push_back(point);
                 }
             }
         }
-        return points;
+        // for (auto map_entry: plain_name_to_drivers) {
+        //     ReductionPoint point;
+        //     for (auto cell: map_entry.second) {
+        //         point.cells.push_back(cell);
+        //         // std::cout << "\t" << log_id(cell.cell) << "\n";
+        //     }
+        //     point.is_reduction = true;
+        //     insertion_points.push_back(point);
+        // }
+
+        // return points;
+        return insertion_points;
     }
 
     void insert_reduction_voters(RTLIL::Module *module, std::string suffix, std::vector<ReductionPoint> insertion_points,  \
@@ -227,12 +265,6 @@ struct InsertVoterWorker {
         }
     }
 
-    typedef struct InsertionPoint {
-        // std::string wire_name;
-        // int offset;
-        std::vector<ConnectedCell> cells;  
-    } InsertionPoint;
-
     std::vector<InsertionPoint> identify_points_after_ff(RTLIL::Module *module, std::string suffix, std::map<std::string, WireConnectionInfo> connection_map) {
         std::vector<InsertionPoint> insertion_points;
         std::map<std::string, std::vector<ConnectedCell>> plain_name_to_drivers;
@@ -250,20 +282,112 @@ struct InsertVoterWorker {
             }
         }
         for (auto entry: plain_name_to_drivers){
-            InsertionPoint point;
+            NormalPoint point;
             std::cout << entry.first << "\n";
             for (auto cell: entry.second) {
                 point.cells.push_back(cell);
                 std::cout << "\t" << log_id(cell.cell) << "\n";
             }
-            insertion_points.push_back(point);
+            InsertionPoint insertion_point;
+            insertion_point.is_reduction = false;
+            insertion_point.normal_point = point;
+            insertion_points.push_back(insertion_point);
         }
         return insertion_points;
     }
 
-    void insert_voters(RTLIL::Module *module, std::vector<InsertionPoint> insertion_points) {
+    void insert_reduction_voter(RTLIL::Module *module, std::string suffix, ReductionPoint point,  \
+                                            std::map<std::string, WireConnectionInfo> connection_map) {
+        log("Inserting Reduction Voter...\n");
+    //     for (auto point: insertion_points) {
+        ConnectedCell receiving_cell = point.receiver;
+        WireConnectionInfo info = point.info;
+        std::cout << log_id(receiving_cell.cell) << " needs a reduction voter \n";
+        // std::cout << "his number of wire connection infos is " << std::to_string(map_entry.second.size()) << "\n";
+        RTLIL::Cell* primary_driver = info.driver.cell;
+        std::vector<RTLIL::Cell*> driver_cells;
+        // driver_cells.push_back(primary_driver);
+        std::string plain_name = remove_suffix_from_name(RTLIL::unescape_id(primary_driver->name), suffix);
+        // std::cout << "driver name is: " << RTLIL::unescape_id(primary_driver->name) << " and plain name is " << plain_name << "\n";
+        for (int i = 0; i < 3; i++) {
+            std::string other_driver_name = plain_name + "_" + suffix + "_" + std::to_string(i);
+            RTLIL::Cell* other_driver = module->cell(other_driver_name);
+            if (other_driver != nullptr){
+                // std::cout << "\tfound other driver of name " << other_driver_name << "\n";
+                driver_cells.push_back(other_driver);
+            }
+            else{
+                // std::cout << "\t other driver of name " << other_driver_name << " was not found\n";
+            }
+        }
+
+        RTLIL::IdString port_name = info.driver.port_name;
+        std::string plain_wire_name = remove_suffix_from_name(RTLIL::unescape_id(info.wire->name), suffix);
+        int offset = info.offset;
+        std::vector<RTLIL::SigBit> voter_input;
+        for (int i = 0; i < driver_cells.size(); i++) {
+            RTLIL::Cell *current_cell = driver_cells[i];
+            RTLIL::SigSpec cell_output = current_cell->getPort(port_name);
+            for (auto sigbit: cell_output.bits()) {
+                if (sigbit.wire == NULL) {
+                    continue;
+                }
+                if (remove_suffix_from_name(RTLIL::unescape_id(sigbit.wire->name), suffix) != plain_wire_name) {
+                    continue;
+                }
+                if (sigbit.offset != offset) {
+                    continue;
+                }
+                // std::cout << "adding sigbit of name " << RTLIL::unescape_id(sigbit.wire->name) << " and offset " << std::to_string(sigbit.offset) << "\n";
+                voter_input.push_back(sigbit); 
+            }
+        }
+
+        std::string new_wire_name = RTLIL::unescape_id(receiving_cell.cell->name) + "_RED_VOTER_wire";
+        RTLIL::Wire *voter_output_wire = module->addWire(new_wire_name);
+        RTLIL::SigSpec voter_output = SigSpec(voter_output_wire);
+
+        std::map<RTLIL::IdString, RTLIL::SigSpec> voter_inputs;
+        // RTLIL::SigSpec voter_input = SigSpec();
+        for (unsigned int i = 0; i < voter_input.size(); i++){
+            voter_inputs[voterInfo.input_ports[i]] = voter_input[i];
+            // voter_input.append(bit_pack[i].sigbit);
+        }
+
+
+
+        std::string voter_name = "\\" + RTLIL::unescape_id(receiving_cell.cell->name) + \
+                                            "_RED_VOTER";
+        // add the voter now
+        RTLIL::Cell *voter = module->addCell(voter_name, "\\" + voterInfo.cell_type);
+        // voter_other->setPort("\\I", voter_input);
+        for (auto voter_input_entry: voter_inputs){
+            voter->setPort(voter_input_entry.first, voter_input_entry.second);
+        }
+        voter->setPort(voterInfo.output_ports[0], voter_output);
+        voter_cnt++;
+
+        std::cout << "Added reduction voter: " << voter_name << "\n";
+        std::cout << "\tConnections:\n";
+        for (auto conn: voter->connections()) {
+            log("\tPort: %s is connected to %s\n", log_id(conn.first), log_id(conn.second[0].wire));
+        }
+        
+        // then connect the voter's output to the buffer
+        receiving_cell.cell->setPort(receiving_cell.port_name, voter_output);
+        // }
+    }
+
+    void insert_voters(RTLIL::Module *module, std::string suffix, std::vector<InsertionPoint> insertion_points,
+                        std::map<std::string, WireConnectionInfo> connection_map) {
         std::vector<RTLIL::Cell*> cells_set;
-        for (auto point: insertion_points) {
+        for (auto insertion_point: insertion_points) {
+            if (insertion_point.is_reduction) {
+                std::cout << "we got a red voter here\n";
+                insert_reduction_voter(module, suffix, insertion_point.red_point, connection_map);
+                continue;
+            }
+            NormalPoint point = insertion_point.normal_point;
 
             std::vector<RTLIL::SigBit> voter_outputs;
             std::vector<RTLIL::SigBit> voter_inputs;
@@ -667,6 +791,19 @@ struct InsertVoterWorker {
     //     return false;
     // }
 
+    std::vector<ReductionPoint> remove_redundant_reduction_voters(std::vector<ReductionPoint> reduction_points,  std::vector<InsertionPoint> insertion_points) {
+        std::vector<ReductionPoint> edited_reduction_points;
+        // if any reduction voters are 
+
+    }
+
+    std::vector<InsertionPoint> combine_insertion_points(std::vector<InsertionPoint> first, std::vector<InsertionPoint> two) {
+        for (auto point: first){
+            two.push_back(point);
+        }
+        return two;
+    }
+
     std::string remove_suffix_from_name(std::string name, std::string suffix) {
         size_t position = name.find(suffix);
         if (position != std::string::npos) {
@@ -692,10 +829,12 @@ public:
                 continue;
             }
             std::map<std::string, WireConnectionInfo> connection_map = collect_connections(module);
-            std::vector<ReductionPoint> insertion_points = identify_reduction_points(module, suffix, connection_map);
-            insert_reduction_voters(module, suffix, insertion_points, connection_map);
+            // std::vector<ReductionPoint> insertion_points = identify_reduction_points(module, suffix, connection_map);
+            std::vector<InsertionPoint> insertion_points = identify_reduction_points(module, suffix, connection_map);
+            // insert_reduction_voters(module, suffix, insertion_points, connection_map);
             std::vector<InsertionPoint> insertion_points_2 = identify_points_after_ff(module, suffix, connection_map);
-            insert_voters(module, insertion_points_2);
+            std::vector<InsertionPoint> all_insertion_points = combine_insertion_points(insertion_points, insertion_points_2);
+            insert_voters(module, suffix, all_insertion_points, connection_map);
             // std::map<std::string, InsertionPointPack>  insertion_points = find_points_after_ff(module, suffix);
             // std::map<std::string, InsertionPointPack>  reduction_insertion_points = find_reduction_points(module, suffix);
             // for (auto point: reduction_insertion_points) {

@@ -1,0 +1,361 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.17+41 (git sha1 c525b5f91, clang 6.0.0-1ubuntu2 -fPIC -Os)
+
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing Verilog-2005 frontend: counter/debounce.sv
+Parsing SystemVerilog input from `counter/debounce.sv' to AST representation.
+Storing AST representation for module `$abstract\debounce'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: counter/debounce_top.sv
+Parsing SystemVerilog input from `counter/debounce_top.sv' to AST representation.
+Storing AST representation for module `$abstract\debounce_top'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: counter/mod_counter.sv
+Parsing SystemVerilog input from `counter/mod_counter.sv' to AST representation.
+Storing AST representation for module `$abstract\mod_counter'.
+Successfully finished Verilog frontend.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+5. Executing AST frontend in derive mode using pre-parsed AST for module `\debounce_top'.
+Generating RTLIL representation for module `\debounce_top'.
+
+5.1. Analyzing design hierarchy..
+Top module:  \debounce_top
+
+5.2. Executing AST frontend in derive mode using pre-parsed AST for module `\debounce'.
+Generating RTLIL representation for module `\debounce'.
+
+5.3. Analyzing design hierarchy..
+Top module:  \debounce_top
+Used module:     \debounce
+Parameter 1 (\MOD_VALUE) = 500001
+Parameter 2 (\COUNTER_WIDTH) = 19
+
+5.4. Executing AST frontend in derive mode using pre-parsed AST for module `\mod_counter'.
+Parameter 1 (\MOD_VALUE) = 500001
+Parameter 2 (\COUNTER_WIDTH) = 19
+Generating RTLIL representation for module `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+
+5.5. Analyzing design hierarchy..
+Top module:  \debounce_top
+Used module:     \debounce
+Used module:         $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+
+5.6. Analyzing design hierarchy..
+Top module:  \debounce_top
+Used module:     \debounce
+Used module:         $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+Removing unused module `$abstract\mod_counter'.
+Removing unused module `$abstract\debounce_top'.
+Removing unused module `$abstract\debounce'.
+Removed 3 unused modules.
+
+6. Executing PROC pass (convert processes to netlists).
+
+6.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+6.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$counter/mod_counter.sv:26$31 in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+Removed 1 dead cases from process $proc$counter/debounce.sv:0$21 in module debounce.
+Marked 10 switch rules as full_case in process $proc$counter/debounce.sv:0$21 in module debounce.
+Marked 1 switch rules as full_case in process $proc$counter/debounce_top.sv:62$16 in module debounce_top.
+Marked 1 switch rules as full_case in process $proc$counter/debounce_top.sv:44$9 in module debounce_top.
+Removed a total of 1 dead cases.
+
+6.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 10 assignments to connections.
+
+6.4. Executing PROC_INIT pass (extract init attributes).
+
+6.5. Executing PROC_ARST pass (detect async resets in processes).
+
+6.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~16 debug messages>
+
+6.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.$proc$counter/mod_counter.sv:26$31'.
+     1/1: $0\count[18:0]
+Creating decoders for process `\debounce.$proc$counter/debounce.sv:90$30'.
+Creating decoders for process `\debounce.$proc$counter/debounce.sv:0$21'.
+     1/14: $10\ns[1:0]
+     2/14: $9\ns[1:0]
+     3/14: $8\ns[1:0]
+     4/14: $7\ns[1:0]
+     5/14: $6\ns[1:0]
+     6/14: $5\ns[1:0]
+     7/14: $4\ns[1:0]
+     8/14: $3\ns[1:0]
+     9/14: $2\ns[1:0]
+    10/14: $2\debounced[0:0]
+    11/14: $2\clrTimer[0:0]
+    12/14: $1\ns[1:0]
+    13/14: $1\clrTimer[0:0]
+    14/14: $1\debounced[0:0]
+Creating decoders for process `\debounce_top.$proc$counter/debounce_top.sv:62$16'.
+     1/1: $0\noisyCount[6:0]
+Creating decoders for process `\debounce_top.$proc$counter/debounce_top.sv:57$13'.
+Creating decoders for process `\debounce_top.$proc$counter/debounce_top.sv:55$12'.
+Creating decoders for process `\debounce_top.$proc$counter/debounce_top.sv:44$9'.
+     1/1: $0\debouncedCount[6:0]
+Creating decoders for process `\debounce_top.$proc$counter/debounce_top.sv:39$6'.
+Creating decoders for process `\debounce_top.$proc$counter/debounce_top.sv:37$5'.
+Creating decoders for process `\debounce_top.$proc$counter/debounce_top.sv:31$3'.
+Creating decoders for process `\debounce_top.$proc$counter/debounce_top.sv:29$1'.
+
+6.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\debounce.\debounced' from process `\debounce.$proc$counter/debounce.sv:0$21'.
+No latch inferred for signal `\debounce.\clrTimer' from process `\debounce.$proc$counter/debounce.sv:0$21'.
+No latch inferred for signal `\debounce.\ns' from process `\debounce.$proc$counter/debounce.sv:0$21'.
+
+6.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.\count' using process `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.$proc$counter/mod_counter.sv:26$31'.
+  created $dff cell `$procdff$175' with positive edge clock.
+Creating register for signal `\debounce.\cs' using process `\debounce.$proc$counter/debounce.sv:90$30'.
+  created $dff cell `$procdff$176' with positive edge clock.
+Creating register for signal `\debounce_top.\noisyCount' using process `\debounce_top.$proc$counter/debounce_top.sv:62$16'.
+  created $dff cell `$procdff$177' with positive edge clock.
+Creating register for signal `\debounce_top.\F4' using process `\debounce_top.$proc$counter/debounce_top.sv:57$13'.
+  created $dff cell `$procdff$178' with positive edge clock.
+Creating register for signal `\debounce_top.\F3' using process `\debounce_top.$proc$counter/debounce_top.sv:55$12'.
+  created $dff cell `$procdff$179' with positive edge clock.
+Creating register for signal `\debounce_top.\debouncedCount' using process `\debounce_top.$proc$counter/debounce_top.sv:44$9'.
+  created $dff cell `$procdff$180' with positive edge clock.
+Creating register for signal `\debounce_top.\F2' using process `\debounce_top.$proc$counter/debounce_top.sv:39$6'.
+  created $dff cell `$procdff$181' with positive edge clock.
+Creating register for signal `\debounce_top.\F1' using process `\debounce_top.$proc$counter/debounce_top.sv:37$5'.
+  created $dff cell `$procdff$182' with positive edge clock.
+Creating register for signal `\debounce_top.\buttonPush [1]' using process `\debounce_top.$proc$counter/debounce_top.sv:31$3'.
+  created $dff cell `$procdff$183' with positive edge clock.
+Creating register for signal `\debounce_top.\buttonPush [0]' using process `\debounce_top.$proc$counter/debounce_top.sv:29$1'.
+  created $dff cell `$procdff$184' with positive edge clock.
+
+6.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+6.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 2 empty switches in `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.$proc$counter/mod_counter.sv:26$31'.
+Removing empty process `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.$proc$counter/mod_counter.sv:26$31'.
+Removing empty process `debounce.$proc$counter/debounce.sv:90$30'.
+Found and cleaned up 10 empty switches in `\debounce.$proc$counter/debounce.sv:0$21'.
+Removing empty process `debounce.$proc$counter/debounce.sv:0$21'.
+Found and cleaned up 2 empty switches in `\debounce_top.$proc$counter/debounce_top.sv:62$16'.
+Removing empty process `debounce_top.$proc$counter/debounce_top.sv:62$16'.
+Removing empty process `debounce_top.$proc$counter/debounce_top.sv:57$13'.
+Removing empty process `debounce_top.$proc$counter/debounce_top.sv:55$12'.
+Found and cleaned up 2 empty switches in `\debounce_top.$proc$counter/debounce_top.sv:44$9'.
+Removing empty process `debounce_top.$proc$counter/debounce_top.sv:44$9'.
+Removing empty process `debounce_top.$proc$counter/debounce_top.sv:39$6'.
+Removing empty process `debounce_top.$proc$counter/debounce_top.sv:37$5'.
+Removing empty process `debounce_top.$proc$counter/debounce_top.sv:31$3'.
+Removing empty process `debounce_top.$proc$counter/debounce_top.sv:29$1'.
+Cleaned up 16 empty switches.
+
+6.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+Optimizing module debounce.
+<suppressed ~8 debug messages>
+Optimizing module debounce_top.
+<suppressed ~2 debug messages>
+
+7. Executing BLIF backend.
+
+8. Executing FSM pass (extract and optimize FSM).
+
+8.1. Executing FSM_DETECT pass (finding FSMs in design).
+Found FSM state register debounce.cs.
+
+8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\cs' from module `\debounce'.
+  found $dff cell for state register: $procdff$176
+  root of input selection tree: $procmux$157_Y
+  found reset state: 2'00 (guessed from mux tree)
+  found ctrl input: \reset
+  found ctrl input: $procmux$133_CMP
+  found ctrl input: $procmux$134_CMP
+  found ctrl input: $procmux$135_CMP
+  found ctrl input: $procmux$136_CMP
+  found ctrl input: $procmux$57_CMP
+  found ctrl input: \noisy
+  found ctrl input: $procmux$49_CMP
+  found ctrl input: $logic_and$counter/debounce.sv:77$29_Y
+  found state code: 2'00
+  found state code: 2'11
+  found state code: 2'10
+  found ctrl input: $procmux$78_CMP
+  found ctrl input: $procmux$69_CMP
+  found ctrl input: $procmux$117_CMP
+  found ctrl input: $procmux$107_CMP
+  found ctrl input: $logic_and$counter/debounce.sv:59$24_Y
+  found ctrl input: $procmux$94_CMP
+  found ctrl input: $logic_and$counter/debounce.sv:61$25_Y
+  found state code: 2'01
+  found ctrl input: $procmux$128_CMP
+  found ctrl output: $procmux$49_CMP
+  found ctrl output: $procmux$57_CMP
+  found ctrl output: $procmux$69_CMP
+  found ctrl output: $procmux$78_CMP
+  found ctrl output: $procmux$94_CMP
+  found ctrl output: $procmux$107_CMP
+  found ctrl output: $procmux$117_CMP
+  found ctrl output: $procmux$128_CMP
+  found ctrl output: $procmux$133_CMP
+  found ctrl output: $procmux$134_CMP
+  found ctrl output: $procmux$135_CMP
+  found ctrl output: $procmux$136_CMP
+  found ctrl output: $procmux$141_CMP
+  found ctrl output: $procmux$142_CMP
+  found ctrl output: $procmux$143_CMP
+  found ctrl output: $procmux$144_CMP
+  found ctrl output: $procmux$149_CMP
+  found ctrl output: $procmux$150_CMP
+  found ctrl output: $procmux$151_CMP
+  found ctrl output: $procmux$152_CMP
+  ctrl inputs: { $logic_and$counter/debounce.sv:77$29_Y $logic_and$counter/debounce.sv:61$25_Y $logic_and$counter/debounce.sv:59$24_Y \noisy \reset }
+  ctrl outputs: { $procmux$157_Y $procmux$152_CMP $procmux$151_CMP $procmux$150_CMP $procmux$149_CMP $procmux$144_CMP $procmux$143_CMP $procmux$142_CMP $procmux$141_CMP $procmux$136_CMP $procmux$135_CMP $procmux$134_CMP $procmux$133_CMP $procmux$128_CMP $procmux$117_CMP $procmux$107_CMP $procmux$94_CMP $procmux$78_CMP $procmux$69_CMP $procmux$57_CMP $procmux$49_CMP }
+  transition:       2'00 5'---00 ->       2'00 22'0010001000100010000000
+  transition:       2'00 5'---10 ->       2'01 22'0110001000100010000000
+  transition:       2'00 5'----1 ->       2'00 22'0010001000100010000000
+  transition:       2'10 5'---00 ->       2'11 22'1100100010001000001100
+  transition:       2'10 5'---10 ->       2'10 22'1000100010001000001100
+  transition:       2'10 5'----1 ->       2'00 22'0000100010001000001100
+  transition:       2'01 5'---00 ->       2'00 22'0001000100010001110000
+  transition:       2'01 5'-0010 -> INVALID_STATE(2'0x) 22'0x01000100010001110000  <ignored invalid transition!>
+  transition:       2'01 5'-1010 ->       2'10 22'1001000100010001110000
+  transition:       2'01 5'--110 ->       2'01 22'0101000100010001110000
+  transition:       2'01 5'----1 ->       2'00 22'0001000100010001110000
+  transition:       2'11 5'0--00 ->       2'00 22'0000010001000100000011
+  transition:       2'11 5'1--00 ->       2'11 22'1100010001000100000011
+  transition:       2'11 5'---10 ->       2'10 22'1000010001000100000011
+  transition:       2'11 5'----1 ->       2'00 22'0000010001000100000011
+
+8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\cs$185' from module `\debounce'.
+
+8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+Finding unused cells or wires in module \debounce..
+Finding unused cells or wires in module \debounce_top..
+Removed 57 unused cells and 124 unused wires.
+<suppressed ~60 debug messages>
+
+8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\cs$185' from module `\debounce'.
+  Removing unused output signal $procmux$49_CMP.
+  Removing unused output signal $procmux$57_CMP.
+  Removing unused output signal $procmux$69_CMP.
+  Removing unused output signal $procmux$78_CMP.
+  Removing unused output signal $procmux$94_CMP.
+  Removing unused output signal $procmux$107_CMP.
+  Removing unused output signal $procmux$117_CMP.
+  Removing unused output signal $procmux$128_CMP.
+  Removing unused output signal $procmux$133_CMP.
+  Removing unused output signal $procmux$134_CMP.
+  Removing unused output signal $procmux$135_CMP.
+  Removing unused output signal $procmux$136_CMP.
+  Removing unused output signal \ns [0].
+  Removing unused output signal \ns [1].
+
+8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\cs$185' from module `\debounce' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  00 -> ---1
+  10 -> --1-
+  01 -> -1--
+  11 -> 1---
+
+8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\cs$185' from module `debounce':
+-------------------------------------
+
+  Information on FSM $fsm$\cs$185 (\cs):
+
+  Number of input signals:    5
+  Number of output signals:   8
+  Number of state bits:       4
+
+  Input signals:
+    0: \reset
+    1: \noisy
+    2: $logic_and$counter/debounce.sv:59$24_Y
+    3: $logic_and$counter/debounce.sv:61$25_Y
+    4: $logic_and$counter/debounce.sv:77$29_Y
+
+  Output signals:
+    0: $procmux$141_CMP
+    1: $procmux$142_CMP
+    2: $procmux$143_CMP
+    3: $procmux$144_CMP
+    4: $procmux$149_CMP
+    5: $procmux$150_CMP
+    6: $procmux$151_CMP
+    7: $procmux$152_CMP
+
+  State encoding:
+    0:     4'---1  <RESET STATE>
+    1:     4'--1-
+    2:     4'-1--
+    3:     4'1---
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 5'---00   ->     0 8'10001000
+      1:     0 5'----1   ->     0 8'10001000
+      2:     0 5'---10   ->     2 8'10001000
+      3:     1 5'----1   ->     0 8'00100010
+      4:     1 5'---10   ->     1 8'00100010
+      5:     1 5'---00   ->     3 8'00100010
+      6:     2 5'---00   ->     0 8'01000100
+      7:     2 5'----1   ->     0 8'01000100
+      8:     2 5'-1010   ->     1 8'01000100
+      9:     2 5'--110   ->     2 8'01000100
+     10:     3 5'0--00   ->     0 8'00010001
+     11:     3 5'----1   ->     0 8'00010001
+     12:     3 5'---10   ->     1 8'00010001
+     13:     3 5'1--00   ->     3 8'00010001
+
+-------------------------------------
+
+8.8. Executing FSM_EXPORT pass (exporting FSMs in KISS2 file format).
+
+Exporting FSM `$fsm$\cs$185' from module `\debounce' to file `debounce-$fsm$\cs$185.kiss2'.
+
+8.9. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\cs$185' from module `\debounce'.
+
+9. Executing BLIF backend.
+
+10. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+End of script. Logfile hash: d8a3acade3, CPU: user 0.06s system 0.01s, MEM: 14.75 MB peak
+Yosys 0.17+41 (git sha1 c525b5f91, clang 6.0.0-1ubuntu2 -fPIC -Os)
+Time spent: 17% 1x hierarchy (0 sec), 16% 4x write_blif (0 sec), ...

@@ -80,6 +80,19 @@ from check_connections_new import check_the_connections
 # check_connections(netlist_original, netlist_tmr, "TMR", ["VOTER"], True)
 check_the_connections(netlist_original, netlist_tmr,["VOTER"], "TMR", True)
 
+# instance = next(netlist_tmr.get_instances("$abc$2747$auto$blifparse.cc:515:parse_blif$2751_TMR_1"))
+# print(instance.name)
+# for pin in instance.get_pins(selection=Selection.OUTSIDE):
+#     print(pin.inner_pin.port.name + "[" + str(pin.inner_pin.port.pins.index(pin.inner_pin))+"]")
+#     if pin.wire:
+#         for wire_pin in pin.wire.pins:
+#             if wire_pin is not pin:
+#                 if wire_pin.__class__ is sdn.ir.OuterPin:
+#                     print("\t" + wire_pin.instance.name)
+#                 else:
+#                     print("\t" + wire_pin.port.name)
+
+
 
 # def get_original_name(current_instance,suffix="TMR"):
 #     '''
