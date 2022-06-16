@@ -9,7 +9,8 @@ SOURCES = hello.cc \
 		apply_tmr.cc \
 		cell_primitive_info.cc \
 		view_info.cc \
-		collect_connections.cc
+		collect_connections.cc \
+		replicate.cc
 		# tmr_and_check.cc
 
 include ../Makefile_plugin.common

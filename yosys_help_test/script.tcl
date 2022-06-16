@@ -2,29 +2,35 @@ file copy -force ~/yosys_plugins/yosys-f4pga-plugins/mine-plugin/mine.so ~/yosys
 
 
 yosys -import
-# yosys read -sv ../yosys_help_test/toggle.sv
-# hierarchy -top toggle
+yosys read -sv ../yosys_help_test/toggle.sv
+hierarchy -top toggle
 # yosys read_verilog ../yosys_help_test/verilog_files/pulse_led.v ../yosys_help_test/verilog_files/PWM.v
 # hierarchy -top top
 # yosys read_verilog ../yosys_help_test/verilog_files/counter.v
 # hierarchy -top top
-yosys read -sv counter/*
+# yosys read -sv counter/*
 # yosys read -sv counter/debounce*
 # yosys read -sv -lib counter/mod_counter.sv
-hierarchy -top debounce_top
+# hierarchy -top debounce_top
 
 # yosys proc
 yosys synth_xilinx
-write_blif -cname -icells original.blif
+write_blif -cname -icells -param original.blif
+write_rtlil original.rtlil
 plugin -i mine
 # tee -q -o output.txt apply_tmr -suffix TMR
-yosys apply_tmr -suffix TMR
+# yosys apply_tmr -suffix TMR
+yosys replicate -suffix TMR
+# write_blif -cname -param -icells after_rep.blif
 check
-yosys insert_voters
+yosys insert_voters -reduction -ff -voter_name VOTER
 check
 clean
 
-yosys write_blif -cname -icells after_tmr.blif
+yosys write_blif -cname -param -icells after_tmr.blif
+
+# yosys help replicate
+# yosys help insert_voters
 
 # write_rtlil original.rtlil
 # write_verilog -blackboxes original.v
