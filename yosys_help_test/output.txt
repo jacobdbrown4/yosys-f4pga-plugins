@@ -1484,28 +1484,808 @@ Found and reported 0 problems.
 6. Executing RTLIL backend.
 Output filename: original.rtlil
 
-7. Executing REPLICATE Pass
+7. Executing APPLY_TMR Pass
+Running replicate with args:  -suffix TMR_dude -amount 3 -verbose
+
+7.1. Executing REPLICATE Pass
+Old design stuff
+Cell: $specify$31
+Cell: $specify$32
+Cell: $specify$33
+Cell: $specify$34
+Cell: $specify$35
+Cell: $specify$36
+Cell: $specify$37
+Cell: $specify$38
+Cell: $specify$39
+Cell: $specify$40
+Cell: $specify$41
+Cell: $specify$42
+Cell: $specify$43
+Cell: $specify$44
+Cell: $specify$45
+Cell: $specify$8
+Cell: $logic_and$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:3513$1355
+Cell: $logic_and$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:3514$1356
+Cell: $logic_and$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:3515$1357
+Cell: $logic_and$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:3516$1358
+Cell: genblk1.$specify$461
+Cell: genblk1.$specify$462
+Cell: genblk2.$specify$465
+Cell: genblk2.$specify$466
+Cell: genblk3.$specify$469
+Cell: genblk3.$specify$470
+Cell: genblk4.$specify$473
+Cell: genblk4.$specify$474
+Cell: genblk5.$specify$477
+Cell: genblk5.$specify$478
+Cell: genblk6.$specify$479
+Cell: genblk6.$specify$480
+Cell: genblk6.$specify$481
+Cell: genblk6.$specify$482
+Cell: $specify$3
+Cell: $specify$9
+Cell: $specify$5
+Cell: $specify$6
+Cell: $specify$10
+Cell: $specify$11
+Cell: $specify$12
+Cell: $specify$13
+Cell: $specify$14
+Cell: $specify$15
+Cell: $specify$16
+Cell: $specify$17
+Cell: $specify$18
+Cell: $specify$19
+Cell: $specify$20
+Cell: $specify$21
+Cell: $specify$22
+Cell: $specify$23
+Cell: $specify$24
+Cell: $specify$25
+Cell: $specify$26
+Cell: $specify$27
+Cell: $specify$28
+Cell: $specify$29
+Cell: $specify$30
+Cell: $specify$4
+Cell: $specify$7
+Cell: $specify$241
+Cell: $specify$242
+Cell: $specify$243
+Cell: $specify$244
+Cell: $specify$245
+Cell: $specify$246
+Cell: $specify$247
+Cell: $specify$248
+Cell: $specify$249
+Cell: $specify$250
+Cell: $specify$251
+Cell: $specify$252
+Cell: $specify$253
+Cell: $specify$254
+Cell: $specify$255
+Cell: $specify$256
+Cell: $specify$257
+Cell: $specify$258
+Cell: $specify$259
+Cell: $specify$260
+Cell: $specify$261
+Cell: $specify$262
+Cell: $specify$483
+Cell: $specify$484
+Cell: $specify$485
+Cell: $specify$486
+Cell: $specify$487
+Cell: $specify$488
+Cell: $specify$489
+Cell: $specify$490
+Cell: $specify$491
+Cell: $specify$492
+Cell: $specify$493
+Cell: $specify$494
+Cell: $specify$495
+Cell: $specify$496
+Cell: $specify$497
+Cell: $specify$498
+Cell: $specify$499
+Cell: $specify$500
+Cell: $specify$501
+Cell: $specify$502
+Cell: $specify$503
+Cell: $specify$504
+Cell: $specify$505
+Cell: $specify$506
+Cell: $specify$507
+Cell: $specify$508
+Cell: $specify$509
+Cell: $specify$510
+Cell: $specify$511
+Cell: $specify$512
+Cell: $specify$513
+Cell: $specify$514
+Cell: $specify$515
+Cell: $specify$516
+Cell: $specify$517
+Cell: $specify$518
+Cell: $specify$519
+Cell: $specify$520
+Cell: $specify$521
+Cell: $specify$522
+Cell: $abc$2116$auto$blifparse.cc:515:parse_blif$2117
+Cell: $auto$clkbufmap.cc:261:execute$2123
+Cell: $auto$ff.cc:262:slice$2035
+Cell: $iopadmap$toggle.clk
+Cell: $iopadmap$toggle.out
+Cell: $iopadmap$toggle.reset
+Will not replicate inside blackbox module \$__ABC9_LUT7
+Will not replicate inside blackbox module \$__ABC9_LUT8
+Will not replicate inside blackbox module AND2B1L
+Will not replicate inside blackbox module BITSLICE_CONTROL
+Will not replicate inside blackbox module BSCANE2
+Will not replicate inside blackbox module BSCAN_SPARTAN3
+Will not replicate inside blackbox module BSCAN_SPARTAN3A
+Will not replicate inside blackbox module BSCAN_SPARTAN6
+Will not replicate inside blackbox module BSCAN_VIRTEX4
+Will not replicate inside blackbox module BSCAN_VIRTEX5
+Will not replicate inside blackbox module BSCAN_VIRTEX6
+Will not replicate inside blackbox module BUFG
+Will not replicate inside blackbox module BUFGCE
+Will not replicate inside blackbox module BUFGCE_1
+Will not replicate inside blackbox module BUFGCE_DIV
+Will not replicate inside blackbox module BUFGCTRL
+Will not replicate inside blackbox module BUFGMUX
+Will not replicate inside blackbox module BUFGMUX_1
+Will not replicate inside blackbox module BUFGMUX_CTRL
+Will not replicate inside blackbox module BUFGMUX_VIRTEX4
+Will not replicate inside blackbox module BUFG_GT
+Will not replicate inside blackbox module BUFG_GT_SYNC
+Will not replicate inside blackbox module BUFG_PS
+Will not replicate inside blackbox module BUFH
+Will not replicate inside blackbox module BUFHCE
+Will not replicate inside blackbox module BUFIO
+Will not replicate inside blackbox module BUFIO2
+Will not replicate inside blackbox module BUFIO2FB
+Will not replicate inside blackbox module BUFIO2_2CLK
+Will not replicate inside blackbox module BUFIODQS
+Will not replicate inside blackbox module BUFMR
+Will not replicate inside blackbox module BUFMRCE
+Will not replicate inside blackbox module BUFPLL
+Will not replicate inside blackbox module BUFPLL_MCB
+Will not replicate inside blackbox module BUFR
+Will not replicate inside blackbox module BUFT
+Will not replicate inside blackbox module CAPTUREE2
+Will not replicate inside blackbox module CAPTURE_SPARTAN3
+Will not replicate inside blackbox module CAPTURE_SPARTAN3A
+Will not replicate inside blackbox module CAPTURE_VIRTEX4
+Will not replicate inside blackbox module CAPTURE_VIRTEX5
+Will not replicate inside blackbox module CAPTURE_VIRTEX6
+Will not replicate inside blackbox module CARRY4
+Will not replicate inside blackbox module CARRY8
+Will not replicate inside blackbox module CFGLUT5
+Will not replicate inside blackbox module CMAC
+Will not replicate inside blackbox module CMACE4
+Will not replicate inside blackbox module CRC32
+Will not replicate inside blackbox module CRC64
+Will not replicate inside blackbox module DCIRESET
+Will not replicate inside blackbox module DCM
+Will not replicate inside blackbox module DCM_ADV
+Will not replicate inside blackbox module DCM_BASE
+Will not replicate inside blackbox module DCM_CLKGEN
+Will not replicate inside blackbox module DCM_PS
+Will not replicate inside blackbox module DCM_SP
+Will not replicate inside blackbox module DNA_PORT
+Will not replicate inside blackbox module DNA_PORTE2
+Will not replicate inside blackbox module DSP48
+Will not replicate inside blackbox module DSP48A
+Will not replicate inside blackbox module DSP48A1
+Will not replicate inside blackbox module DSP48E
+Will not replicate inside blackbox module DSP48E1
+Will not replicate inside blackbox module DSP48E2
+Will not replicate inside blackbox module EFUSE_USR
+Will not replicate inside blackbox module EMAC
+Will not replicate inside blackbox module FDCE
+Will not replicate inside blackbox module FDCE_1
+Will not replicate inside blackbox module FDCPE
+Will not replicate inside blackbox module FDCPE_1
+Will not replicate inside blackbox module FDDRCPE
+Will not replicate inside blackbox module FDDRRSE
+Will not replicate inside blackbox module FDPE
+Will not replicate inside blackbox module FDPE_1
+Will not replicate inside blackbox module FDRE
+Will not replicate inside blackbox module FDRE_1
+Will not replicate inside blackbox module FDRSE
+Will not replicate inside blackbox module FDRSE_1
+Will not replicate inside blackbox module FDSE
+Will not replicate inside blackbox module FDSE_1
+Will not replicate inside blackbox module FE
+Will not replicate inside blackbox module FIFO16
+Will not replicate inside blackbox module FIFO18
+Will not replicate inside blackbox module FIFO18E1
+Will not replicate inside blackbox module FIFO18E2
+Will not replicate inside blackbox module FIFO18_36
+Will not replicate inside blackbox module FIFO36
+Will not replicate inside blackbox module FIFO36E1
+Will not replicate inside blackbox module FIFO36E2
+Will not replicate inside blackbox module FIFO36_72
+Will not replicate inside blackbox module FRAME_ECCE2
+Will not replicate inside blackbox module FRAME_ECCE3
+Will not replicate inside blackbox module FRAME_ECCE4
+Will not replicate inside blackbox module FRAME_ECC_VIRTEX4
+Will not replicate inside blackbox module FRAME_ECC_VIRTEX5
+Will not replicate inside blackbox module FRAME_ECC_VIRTEX6
+Will not replicate inside blackbox module GND
+Will not replicate inside blackbox module GT11CLK
+Will not replicate inside blackbox module GT11CLK_MGT
+Will not replicate inside blackbox module GT11_CUSTOM
+Will not replicate inside blackbox module GT11_DUAL
+Will not replicate inside blackbox module GTHE1_QUAD
+Will not replicate inside blackbox module GTHE2_CHANNEL
+Will not replicate inside blackbox module GTHE2_COMMON
+Will not replicate inside blackbox module GTHE3_CHANNEL
+Will not replicate inside blackbox module GTHE3_COMMON
+Will not replicate inside blackbox module GTHE4_CHANNEL
+Will not replicate inside blackbox module GTHE4_COMMON
+Will not replicate inside blackbox module GTM_DUAL
+Will not replicate inside blackbox module GTPA1_DUAL
+Will not replicate inside blackbox module GTPE2_CHANNEL
+Will not replicate inside blackbox module GTPE2_COMMON
+Will not replicate inside blackbox module GTP_DUAL
+Will not replicate inside blackbox module GTXE1
+Will not replicate inside blackbox module GTXE2_CHANNEL
+Will not replicate inside blackbox module GTXE2_COMMON
+Will not replicate inside blackbox module GTX_DUAL
+Will not replicate inside blackbox module GTYE3_CHANNEL
+Will not replicate inside blackbox module GTYE3_COMMON
+Will not replicate inside blackbox module GTYE4_CHANNEL
+Will not replicate inside blackbox module GTYE4_COMMON
+Will not replicate inside blackbox module HARD_SYNC
+Will not replicate inside blackbox module HBM_ONE_STACK_INTF
+Will not replicate inside blackbox module HBM_REF_CLK
+Will not replicate inside blackbox module HBM_SNGLBLI_INTF_APB
+Will not replicate inside blackbox module HBM_SNGLBLI_INTF_AXI
+Will not replicate inside blackbox module HBM_TWO_STACK_INTF
+Will not replicate inside blackbox module HPIO_VREF
+Will not replicate inside blackbox module HSADC
+Will not replicate inside blackbox module HSDAC
+Will not replicate inside blackbox module IBUF
+Will not replicate inside blackbox module IBUFDS
+Will not replicate inside blackbox module IBUFDSE3
+Will not replicate inside blackbox module IBUFDS_DIFF_OUT
+Will not replicate inside blackbox module IBUFDS_DIFF_OUT_IBUFDISABLE
+Will not replicate inside blackbox module IBUFDS_DIFF_OUT_INTERMDISABLE
+Will not replicate inside blackbox module IBUFDS_DLY_ADJ
+Will not replicate inside blackbox module IBUFDS_DPHY
+Will not replicate inside blackbox module IBUFDS_GTE2
+Will not replicate inside blackbox module IBUFDS_GTE3
+Will not replicate inside blackbox module IBUFDS_GTE4
+Will not replicate inside blackbox module IBUFDS_GTHE1
+Will not replicate inside blackbox module IBUFDS_GTM
+Will not replicate inside blackbox module IBUFDS_GTXE1
+Will not replicate inside blackbox module IBUFDS_IBUFDISABLE
+Will not replicate inside blackbox module IBUFDS_INTERMDISABLE
+Will not replicate inside blackbox module IBUFE3
+Will not replicate inside blackbox module IBUFG
+Will not replicate inside blackbox module IBUFGDS
+Will not replicate inside blackbox module IBUFGDS_DIFF_OUT
+Will not replicate inside blackbox module IBUF_ANALOG
+Will not replicate inside blackbox module IBUF_DLY_ADJ
+Will not replicate inside blackbox module IBUF_IBUFDISABLE
+Will not replicate inside blackbox module IBUF_INTERMDISABLE
+Will not replicate inside blackbox module ICAPE2
+Will not replicate inside blackbox module ICAPE3
+Will not replicate inside blackbox module ICAP_SPARTAN3A
+Will not replicate inside blackbox module ICAP_SPARTAN6
+Will not replicate inside blackbox module ICAP_VIRTEX4
+Will not replicate inside blackbox module ICAP_VIRTEX5
+Will not replicate inside blackbox module ICAP_VIRTEX6
+Will not replicate inside blackbox module IDDR
+Will not replicate inside blackbox module IDDR2
+Will not replicate inside blackbox module IDDRE1
+Will not replicate inside blackbox module IDDR_2CLK
+Will not replicate inside blackbox module IDELAY
+Will not replicate inside blackbox module IDELAYCTRL
+Will not replicate inside blackbox module IDELAYE2
+Will not replicate inside blackbox module IDELAYE3
+Will not replicate inside blackbox module IFDDRCPE
+Will not replicate inside blackbox module IFDDRRSE
+Will not replicate inside blackbox module ILKN
+Will not replicate inside blackbox module ILKNE4
+Will not replicate inside blackbox module INV
+Will not replicate inside blackbox module IN_FIFO
+Will not replicate inside blackbox module IOBUF
+Will not replicate inside blackbox module IOBUFDS
+Will not replicate inside blackbox module IOBUFDSE3
+Will not replicate inside blackbox module IOBUFDS_DCIEN
+Will not replicate inside blackbox module IOBUFDS_DIFF_OUT
+Will not replicate inside blackbox module IOBUFDS_DIFF_OUT_DCIEN
+Will not replicate inside blackbox module IOBUFDS_DIFF_OUT_INTERMDISABLE
+Will not replicate inside blackbox module IOBUFDS_INTERMDISABLE
+Will not replicate inside blackbox module IOBUFE3
+Will not replicate inside blackbox module IOBUF_DCIEN
+Will not replicate inside blackbox module IOBUF_INTERMDISABLE
+Will not replicate inside blackbox module IODELAY
+Will not replicate inside blackbox module IODELAY2
+Will not replicate inside blackbox module IODELAYE1
+Will not replicate inside blackbox module IODRP2
+Will not replicate inside blackbox module IODRP2_MCB
+Will not replicate inside blackbox module ISERDES
+Will not replicate inside blackbox module ISERDES2
+Will not replicate inside blackbox module ISERDESE1
+Will not replicate inside blackbox module ISERDESE2
+Will not replicate inside blackbox module ISERDESE3
+Will not replicate inside blackbox module ISERDES_NODELAY
+Will not replicate inside blackbox module KEEPER
+Will not replicate inside blackbox module KEY_CLEAR
+Will not replicate inside blackbox module LDCE
+Will not replicate inside blackbox module LDCPE
+Will not replicate inside blackbox module LDPE
+Will not replicate inside blackbox module LUT1
+Will not replicate inside blackbox module LUT2
+Will not replicate inside blackbox module LUT3
+Will not replicate inside blackbox module LUT4
+Will not replicate inside blackbox module LUT5
+Will not replicate inside blackbox module LUT6
+Will not replicate inside blackbox module LUT6_2
+Will not replicate inside blackbox module MASTER_JTAG
+Will not replicate inside blackbox module MCB
+Will not replicate inside blackbox module MMCME2_ADV
+Will not replicate inside blackbox module MMCME2_BASE
+Will not replicate inside blackbox module MMCME3_ADV
+Will not replicate inside blackbox module MMCME3_BASE
+Will not replicate inside blackbox module MMCME4_ADV
+Will not replicate inside blackbox module MMCME4_BASE
+Will not replicate inside blackbox module MMCM_ADV
+Will not replicate inside blackbox module MMCM_BASE
+Will not replicate inside blackbox module MULT18X18
+Will not replicate inside blackbox module MULT18X18S
+Will not replicate inside blackbox module MULT18X18SIO
+Will not replicate inside blackbox module MULT_AND
+Will not replicate inside blackbox module MUXCY
+Will not replicate inside blackbox module MUXF5
+Will not replicate inside blackbox module MUXF6
+Will not replicate inside blackbox module MUXF7
+Will not replicate inside blackbox module MUXF8
+Will not replicate inside blackbox module MUXF9
+Will not replicate inside blackbox module OBUF
+Will not replicate inside blackbox module OBUFDS
+Will not replicate inside blackbox module OBUFDS_DPHY
+Will not replicate inside blackbox module OBUFDS_GTE3
+Will not replicate inside blackbox module OBUFDS_GTE3_ADV
+Will not replicate inside blackbox module OBUFDS_GTE4
+Will not replicate inside blackbox module OBUFDS_GTE4_ADV
+Will not replicate inside blackbox module OBUFDS_GTM
+Will not replicate inside blackbox module OBUFDS_GTM_ADV
+Will not replicate inside blackbox module OBUFT
+Will not replicate inside blackbox module OBUFTDS
+Will not replicate inside blackbox module ODDR
+Will not replicate inside blackbox module ODDR2
+Will not replicate inside blackbox module ODDRE1
+Will not replicate inside blackbox module ODELAYE2
+Will not replicate inside blackbox module ODELAYE3
+Will not replicate inside blackbox module OFDDRCPE
+Will not replicate inside blackbox module OFDDRRSE
+Will not replicate inside blackbox module OFDDRTCPE
+Will not replicate inside blackbox module OFDDRTRSE
+Will not replicate inside blackbox module OR2L
+Will not replicate inside blackbox module ORCY
+Will not replicate inside blackbox module OSERDES
+Will not replicate inside blackbox module OSERDES2
+Will not replicate inside blackbox module OSERDESE1
+Will not replicate inside blackbox module OSERDESE2
+Will not replicate inside blackbox module OSERDESE3
+Will not replicate inside blackbox module OUT_FIFO
+Will not replicate inside blackbox module PCIE40E4
+Will not replicate inside blackbox module PCIE4CE4
+Will not replicate inside blackbox module PCIE_2_0
+Will not replicate inside blackbox module PCIE_2_1
+Will not replicate inside blackbox module PCIE_3_0
+Will not replicate inside blackbox module PCIE_3_1
+Will not replicate inside blackbox module PCIE_A1
+Will not replicate inside blackbox module PCIE_EP
+Will not replicate inside blackbox module PHASER_IN
+Will not replicate inside blackbox module PHASER_IN_PHY
+Will not replicate inside blackbox module PHASER_OUT
+Will not replicate inside blackbox module PHASER_OUT_PHY
+Will not replicate inside blackbox module PHASER_REF
+Will not replicate inside blackbox module PHY_CONTROL
+Will not replicate inside blackbox module PLLE2_ADV
+Will not replicate inside blackbox module PLLE2_BASE
+Will not replicate inside blackbox module PLLE3_ADV
+Will not replicate inside blackbox module PLLE3_BASE
+Will not replicate inside blackbox module PLLE4_ADV
+Will not replicate inside blackbox module PLLE4_BASE
+Will not replicate inside blackbox module PLL_ADV
+Will not replicate inside blackbox module PLL_BASE
+Will not replicate inside blackbox module PMCD
+Will not replicate inside blackbox module POST_CRC_INTERNAL
+Will not replicate inside blackbox module PPC405_ADV
+Will not replicate inside blackbox module PPC440
+Will not replicate inside blackbox module PS7
+Will not replicate inside blackbox module PS8
+Will not replicate inside blackbox module PULLDOWN
+Will not replicate inside blackbox module PULLUP
+Will not replicate inside blackbox module RAM128X1D
+Will not replicate inside blackbox module RAM128X1S
+Will not replicate inside blackbox module RAM128X1S_1
+Will not replicate inside blackbox module RAM16X1D
+Will not replicate inside blackbox module RAM16X1D_1
+Will not replicate inside blackbox module RAM16X1S
+Will not replicate inside blackbox module RAM16X1S_1
+Will not replicate inside blackbox module RAM16X2S
+Will not replicate inside blackbox module RAM16X4S
+Will not replicate inside blackbox module RAM16X8S
+Will not replicate inside blackbox module RAM256X1D
+Will not replicate inside blackbox module RAM256X1S
+Will not replicate inside blackbox module RAM32M
+Will not replicate inside blackbox module RAM32M16
+Will not replicate inside blackbox module RAM32X16DR8
+Will not replicate inside blackbox module RAM32X1D
+Will not replicate inside blackbox module RAM32X1D_1
+Will not replicate inside blackbox module RAM32X1S
+Will not replicate inside blackbox module RAM32X1S_1
+Will not replicate inside blackbox module RAM32X2S
+Will not replicate inside blackbox module RAM32X4S
+Will not replicate inside blackbox module RAM32X8S
+Will not replicate inside blackbox module RAM512X1S
+Will not replicate inside blackbox module RAM64M
+Will not replicate inside blackbox module RAM64M8
+Will not replicate inside blackbox module RAM64X1D
+Will not replicate inside blackbox module RAM64X1D_1
+Will not replicate inside blackbox module RAM64X1S
+Will not replicate inside blackbox module RAM64X1S_1
+Will not replicate inside blackbox module RAM64X2S
+Will not replicate inside blackbox module RAM64X8SW
+Will not replicate inside blackbox module RAMB16
+Will not replicate inside blackbox module RAMB16BWER
+Will not replicate inside blackbox module RAMB16BWE_S18
+Will not replicate inside blackbox module RAMB16BWE_S18_S18
+Will not replicate inside blackbox module RAMB16BWE_S18_S9
+Will not replicate inside blackbox module RAMB16BWE_S36
+Will not replicate inside blackbox module RAMB16BWE_S36_S18
+Will not replicate inside blackbox module RAMB16BWE_S36_S36
+Will not replicate inside blackbox module RAMB16BWE_S36_S9
+Will not replicate inside blackbox module RAMB16_S1
+Will not replicate inside blackbox module RAMB16_S18
+Will not replicate inside blackbox module RAMB16_S18_S18
+Will not replicate inside blackbox module RAMB16_S18_S36
+Will not replicate inside blackbox module RAMB16_S1_S1
+Will not replicate inside blackbox module RAMB16_S1_S18
+Will not replicate inside blackbox module RAMB16_S1_S2
+Will not replicate inside blackbox module RAMB16_S1_S36
+Will not replicate inside blackbox module RAMB16_S1_S4
+Will not replicate inside blackbox module RAMB16_S1_S9
+Will not replicate inside blackbox module RAMB16_S2
+Will not replicate inside blackbox module RAMB16_S2_S18
+Will not replicate inside blackbox module RAMB16_S2_S2
+Will not replicate inside blackbox module RAMB16_S2_S36
+Will not replicate inside blackbox module RAMB16_S2_S4
+Will not replicate inside blackbox module RAMB16_S2_S9
+Will not replicate inside blackbox module RAMB16_S36
+Will not replicate inside blackbox module RAMB16_S36_S36
+Will not replicate inside blackbox module RAMB16_S4
+Will not replicate inside blackbox module RAMB16_S4_S18
+Will not replicate inside blackbox module RAMB16_S4_S36
+Will not replicate inside blackbox module RAMB16_S4_S4
+Will not replicate inside blackbox module RAMB16_S4_S9
+Will not replicate inside blackbox module RAMB16_S9
+Will not replicate inside blackbox module RAMB16_S9_S18
+Will not replicate inside blackbox module RAMB16_S9_S36
+Will not replicate inside blackbox module RAMB16_S9_S9
+Will not replicate inside blackbox module RAMB18
+Will not replicate inside blackbox module RAMB18E1
+Will not replicate inside blackbox module RAMB18E2
+Will not replicate inside blackbox module RAMB18SDP
+Will not replicate inside blackbox module RAMB32_S64_ECC
+Will not replicate inside blackbox module RAMB36
+Will not replicate inside blackbox module RAMB36E1
+Will not replicate inside blackbox module RAMB36E2
+Will not replicate inside blackbox module RAMB36SDP
+Will not replicate inside blackbox module RAMB4_S1
+Will not replicate inside blackbox module RAMB4_S16
+Will not replicate inside blackbox module RAMB4_S16_S16
+Will not replicate inside blackbox module RAMB4_S1_S1
+Will not replicate inside blackbox module RAMB4_S1_S16
+Will not replicate inside blackbox module RAMB4_S1_S2
+Will not replicate inside blackbox module RAMB4_S1_S4
+Will not replicate inside blackbox module RAMB4_S1_S8
+Will not replicate inside blackbox module RAMB4_S2
+Will not replicate inside blackbox module RAMB4_S2_S16
+Will not replicate inside blackbox module RAMB4_S2_S2
+Will not replicate inside blackbox module RAMB4_S2_S4
+Will not replicate inside blackbox module RAMB4_S2_S8
+Will not replicate inside blackbox module RAMB4_S4
+Will not replicate inside blackbox module RAMB4_S4_S16
+Will not replicate inside blackbox module RAMB4_S4_S4
+Will not replicate inside blackbox module RAMB4_S4_S8
+Will not replicate inside blackbox module RAMB4_S8
+Will not replicate inside blackbox module RAMB4_S8_S16
+Will not replicate inside blackbox module RAMB4_S8_S8
+Will not replicate inside blackbox module RAMB8BWER
+Will not replicate inside blackbox module RFADC
+Will not replicate inside blackbox module RFDAC
+Will not replicate inside blackbox module RIU_OR
+Will not replicate inside blackbox module ROM128X1
+Will not replicate inside blackbox module ROM16X1
+Will not replicate inside blackbox module ROM256X1
+Will not replicate inside blackbox module ROM32X1
+Will not replicate inside blackbox module ROM64X1
+Will not replicate inside blackbox module RXTX_BITSLICE
+Will not replicate inside blackbox module RX_BITSLICE
+Will not replicate inside blackbox module SPI_ACCESS
+Will not replicate inside blackbox module SRL16
+Will not replicate inside blackbox module SRL16E
+Will not replicate inside blackbox module SRLC16
+Will not replicate inside blackbox module SRLC16E
+Will not replicate inside blackbox module SRLC32E
+Will not replicate inside blackbox module STARTUPE2
+Will not replicate inside blackbox module STARTUPE3
+Will not replicate inside blackbox module STARTUP_SPARTAN3
+Will not replicate inside blackbox module STARTUP_SPARTAN3A
+Will not replicate inside blackbox module STARTUP_SPARTAN3E
+Will not replicate inside blackbox module STARTUP_SPARTAN6
+Will not replicate inside blackbox module STARTUP_VIRTEX4
+Will not replicate inside blackbox module STARTUP_VIRTEX5
+Will not replicate inside blackbox module STARTUP_VIRTEX6
+Will not replicate inside blackbox module SUSPEND_SYNC
+Will not replicate inside blackbox module SYSMON
+Will not replicate inside blackbox module SYSMONE1
+Will not replicate inside blackbox module SYSMONE4
+Will not replicate inside blackbox module TEMAC
+Will not replicate inside blackbox module TEMAC_SINGLE
+Will not replicate inside blackbox module TX_BITSLICE
+Will not replicate inside blackbox module TX_BITSLICE_TRI
+Will not replicate inside blackbox module URAM288
+Will not replicate inside blackbox module URAM288_BASE
+Will not replicate inside blackbox module USR_ACCESSE2
+Will not replicate inside blackbox module USR_ACCESS_VIRTEX4
+Will not replicate inside blackbox module USR_ACCESS_VIRTEX5
+Will not replicate inside blackbox module USR_ACCESS_VIRTEX6
+Will not replicate inside blackbox module VCC
+Will not replicate inside blackbox module VCU
+Will not replicate inside blackbox module XADC
+Will not replicate inside blackbox module XORCY
 Replicating module: toggle
+Connection Map for Module: toggle
+Key: $abc$2116$not$../yosys_help_test/toggle.sv:26$2_Y_0
+	Driver: $abc$2116$auto$blifparse.cc:515:parse_blif$2117
+	Driven Cells: 
+		$auto$ff.cc:262:slice$2035
+Key: $auto$clkbufmap.cc:262:execute$2124_0
+	Driver: $iopadmap$toggle.clk
+	Driven Cells: 
+		$auto$clkbufmap.cc:261:execute$2123
+Key: $iopadmap$clk_0
+	Driver: $auto$clkbufmap.cc:261:execute$2123
+	Driven Cells: 
+		$auto$ff.cc:262:slice$2035
+Key: $iopadmap$reset_0
+	Driver: $iopadmap$toggle.reset
+	Driven Cells: 
+		$auto$ff.cc:262:slice$2035
+Key: $techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_0
+	Driver: $auto$ff.cc:262:slice$2035
+	Driven Cells: 
+		$abc$2116$auto$blifparse.cc:515:parse_blif$2117
+		$iopadmap$toggle.out
+Key: clk_0
+	Driver: NULL
+	Driven Cells: 
+		$iopadmap$toggle.clk
+Key: out_0
+	Driver: $iopadmap$toggle.out
+	Driven Cells: 
+Key: reset_0
+	Driver: NULL
+	Driven Cells: 
+		$iopadmap$toggle.reset
+Identifying cells to not replicate in module toggle
+Cell $iopadmap$toggle.clk of type IBUF will not be replicated
+Cell $iopadmap$toggle.out of type OBUF will not be replicated
+Cell $iopadmap$toggle.reset of type IBUF will not be replicated
+Identifying wires to not replicate in module toggle
+Wire clk going into cell $iopadmap$toggle.clk will not be replicated
+Wire $auto$clkbufmap.cc:262:execute$2124 leaving cell $iopadmap$toggle.clk will not be replicated
+Wire out leaving cell $iopadmap$toggle.out will not be replicated
+Wire reset going into cell $iopadmap$toggle.reset will not be replicated
+Wire $iopadmap$reset leaving cell $iopadmap$toggle.reset will not be replicated
+Replicating wires...
+Replicated wire $iopadmap$clk into wire \$iopadmap$clk_TMR_dude_0
+Replicated wire $iopadmap$clk into wire \$iopadmap$clk_TMR_dude_1
+Replicated wire $iopadmap$clk into wire \$iopadmap$clk_TMR_dude_2
+Replicated wire $techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A into wire \$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_0
+Replicated wire $techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A into wire \$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_1
+Replicated wire $techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A into wire \$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_2
+Replicated wire $abc$2116$not$../yosys_help_test/toggle.sv:26$2_Y into wire \$abc$2116$not$../yosys_help_test/toggle.sv:26$2_Y_TMR_dude_0
+Replicated wire $abc$2116$not$../yosys_help_test/toggle.sv:26$2_Y into wire \$abc$2116$not$../yosys_help_test/toggle.sv:26$2_Y_TMR_dude_1
+Replicated wire $abc$2116$not$../yosys_help_test/toggle.sv:26$2_Y into wire \$abc$2116$not$../yosys_help_test/toggle.sv:26$2_Y_TMR_dude_2
+Replicating cells in module toggle
+Replicated cell$abc$2116$auto$blifparse.cc:515:parse_blif$2117 into cell $abc$2116$auto$blifparse.cc:515:parse_blif$2117_TMR_dude_0
+Replicated cell$abc$2116$auto$blifparse.cc:515:parse_blif$2117 into cell $abc$2116$auto$blifparse.cc:515:parse_blif$2117_TMR_dude_1
+Replicated cell$abc$2116$auto$blifparse.cc:515:parse_blif$2117 into cell $abc$2116$auto$blifparse.cc:515:parse_blif$2117_TMR_dude_2
+Replicated cell$auto$clkbufmap.cc:261:execute$2123 into cell $auto$clkbufmap.cc:261:execute$2123_TMR_dude_0
+Replicated cell$auto$clkbufmap.cc:261:execute$2123 into cell $auto$clkbufmap.cc:261:execute$2123_TMR_dude_1
+Replicated cell$auto$clkbufmap.cc:261:execute$2123 into cell $auto$clkbufmap.cc:261:execute$2123_TMR_dude_2
+Replicated cell$auto$ff.cc:262:slice$2035 into cell $auto$ff.cc:262:slice$2035_TMR_dude_0
+Replicated cell$auto$ff.cc:262:slice$2035 into cell $auto$ff.cc:262:slice$2035_TMR_dude_1
+Replicated cell$auto$ff.cc:262:slice$2035 into cell $auto$ff.cc:262:slice$2035_TMR_dude_2
+Connecting wire to wire connections...
 
 Checking replication of toggle module
 Replication of module toggle passed check
+
+New design stuff
+Cell: $iopadmap$toggle.reset
+Cell: $iopadmap$toggle.out
+Cell: $iopadmap$toggle.clk
+Cell: $auto$ff.cc:262:slice$2035_TMR_dude_2
+Cell: $auto$ff.cc:262:slice$2035_TMR_dude_1
+Cell: $auto$ff.cc:262:slice$2035_TMR_dude_0
+Cell: $auto$clkbufmap.cc:261:execute$2123_TMR_dude_2
+Cell: $auto$clkbufmap.cc:261:execute$2123_TMR_dude_1
+Cell: $auto$clkbufmap.cc:261:execute$2123_TMR_dude_0
+Cell: $abc$2116$auto$blifparse.cc:515:parse_blif$2117_TMR_dude_2
+Cell: $abc$2116$auto$blifparse.cc:515:parse_blif$2117_TMR_dude_1
+Cell: $abc$2116$auto$blifparse.cc:515:parse_blif$2117_TMR_dude_0
+Cell: $specify$522
+Cell: $specify$521
+Cell: $specify$520
+Cell: $specify$519
+Cell: $specify$518
+Cell: $specify$517
+Cell: $specify$516
+Cell: $specify$515
+Cell: $specify$514
+Cell: $specify$513
+Cell: $specify$512
+Cell: $specify$511
+Cell: $specify$510
+Cell: $specify$509
+Cell: $specify$508
+Cell: $specify$507
+Cell: $specify$506
+Cell: $specify$505
+Cell: $specify$504
+Cell: $specify$503
+Cell: $specify$502
+Cell: $specify$501
+Cell: $specify$500
+Cell: $specify$499
+Cell: $specify$498
+Cell: $specify$497
+Cell: $specify$496
+Cell: $specify$495
+Cell: $specify$494
+Cell: $specify$493
+Cell: $specify$492
+Cell: $specify$491
+Cell: $specify$490
+Cell: $specify$489
+Cell: $specify$488
+Cell: $specify$487
+Cell: $specify$486
+Cell: $specify$485
+Cell: $specify$484
+Cell: $specify$483
+Cell: $specify$262
+Cell: $specify$261
+Cell: $specify$260
+Cell: $specify$259
+Cell: $specify$258
+Cell: $specify$257
+Cell: $specify$256
+Cell: $specify$255
+Cell: $specify$254
+Cell: $specify$253
+Cell: $specify$252
+Cell: $specify$251
+Cell: $specify$250
+Cell: $specify$249
+Cell: $specify$248
+Cell: $specify$247
+Cell: $specify$246
+Cell: $specify$245
+Cell: $specify$244
+Cell: $specify$243
+Cell: $specify$242
+Cell: $specify$241
+Cell: $specify$7
+Cell: $specify$4
+Cell: $specify$30
+Cell: $specify$29
+Cell: $specify$28
+Cell: $specify$27
+Cell: $specify$26
+Cell: $specify$25
+Cell: $specify$24
+Cell: $specify$23
+Cell: $specify$22
+Cell: $specify$21
+Cell: $specify$20
+Cell: $specify$19
+Cell: $specify$18
+Cell: $specify$17
+Cell: $specify$16
+Cell: $specify$15
+Cell: $specify$14
+Cell: $specify$13
+Cell: $specify$12
+Cell: $specify$11
+Cell: $specify$10
+Cell: $specify$6
+Cell: $specify$5
+Cell: $specify$9
+Cell: $specify$3
+Cell: genblk6.$specify$482
+Cell: genblk6.$specify$481
+Cell: genblk6.$specify$480
+Cell: genblk6.$specify$479
+Cell: genblk5.$specify$478
+Cell: genblk5.$specify$477
+Cell: genblk4.$specify$474
+Cell: genblk4.$specify$473
+Cell: genblk3.$specify$470
+Cell: genblk3.$specify$469
+Cell: genblk2.$specify$466
+Cell: genblk2.$specify$465
+Cell: genblk1.$specify$462
+Cell: genblk1.$specify$461
+Cell: $logic_and$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:3516$1358
+Cell: $logic_and$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:3515$1357
+Cell: $logic_and$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:3514$1356
+Cell: $logic_and$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:3513$1355
+Cell: $specify$8
+Cell: $specify$45
+Cell: $specify$44
+Cell: $specify$43
+Cell: $specify$42
+Cell: $specify$41
+Cell: $specify$40
+Cell: $specify$39
+Cell: $specify$38
+Cell: $specify$37
+Cell: $specify$36
+Cell: $specify$35
+Cell: $specify$34
+Cell: $specify$33
+Cell: $specify$32
+Cell: $specify$31
+Running insert_voters with args:  -suffix TMR_dude -amount 3 -verbose -voter_type LUT3 -voter_name VOTER -reduction -ff
+
+7.2. Executing INSERT_VOTERS Pass
+Initializing Voter Information
+Voter type is LUT3
+Creating map of cell connections in module: toggle
+Identifying reduction points in module toggle
+Identifying points after ff in module toggle
+Removing redundant reduction voters...
+Inserting voters in module toggle
+Added voter: \\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_0_VOTER_0
+	Connections:
+	Port: O is connected to \$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_0
+	Port: I2 is connected to \\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_0_VOTER_wire_0
+	Port: I1 is connected to \\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_1_VOTER_wire_0
+	Port: I0 is connected to \\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_2_VOTER_wire_0
+Added voter: \\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_1_VOTER_0
+	Connections:
+	Port: O is connected to \$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_1
+	Port: I2 is connected to \\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_0_VOTER_wire_0
+	Port: I1 is connected to \\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_1_VOTER_wire_0
+	Port: I0 is connected to \\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_2_VOTER_wire_0
+Added voter: \\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_2_VOTER_0
+	Connections:
+	Port: O is connected to \$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_2
+	Port: I2 is connected to \\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_0_VOTER_wire_0
+	Port: I1 is connected to \\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_1_VOTER_wire_0
+	Port: I0 is connected to \\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_2_VOTER_wire_0
+Inserted 3 Voters
 
 8. Executing CHECK pass (checking for obvious problems).
 Checking module toggle...
 Found and reported 0 problems.
 
-9. Executing INSERT_VOTERS Pass
-Identifying reduction points in module toggle
-Identifying points after ff in module toggle
-Inserting voters in module toggle
-Inserted 3 Voters
+9. Executing BLIF backend.
 
-10. Executing CHECK pass (checking for obvious problems).
-Checking module toggle...
-Found and reported 0 problems.
-
-11. Executing BLIF backend.
-
-End of script. Logfile hash: 33288d2d49, CPU: user 15.49s system 0.57s, MEM: 140.85 MB peak
+End of script. Logfile hash: 6009f9ab2e, CPU: user 4.27s system 0.11s, MEM: 140.75 MB peak
 Yosys 0.17+41 (git sha1 c525b5f91, clang 6.0.0-1ubuntu2 -fPIC -Os)
-Time spent: 63% 19x read_verilog (10 sec), 7% 2x write_rtlil (1 sec), ...
+Time spent: 62% 19x read_verilog (2 sec), 7% 13x opt_clean (0 sec), ...

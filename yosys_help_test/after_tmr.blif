@@ -7,40 +7,40 @@
 .names $true
 1
 .names $undef
-.subckt INV I=\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_0 O=\$abc$2116$not$../yosys_help_test/toggle.sv:26$2_Y_TMR_0
-.cname $abc$2116$auto$blifparse.cc:515:parse_blif$2117_TMR_0
-.subckt INV I=\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_1 O=\$abc$2116$not$../yosys_help_test/toggle.sv:26$2_Y_TMR_1
-.cname $abc$2116$auto$blifparse.cc:515:parse_blif$2117_TMR_1
-.subckt INV I=\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_2 O=\$abc$2116$not$../yosys_help_test/toggle.sv:26$2_Y_TMR_2
-.cname $abc$2116$auto$blifparse.cc:515:parse_blif$2117_TMR_2
-.subckt BUFG I=$auto$clkbufmap.cc:262:execute$2124 O=\$iopadmap$clk_TMR_0
-.cname $auto$clkbufmap.cc:261:execute$2123_TMR_0
-.subckt BUFG I=$auto$clkbufmap.cc:262:execute$2124 O=\$iopadmap$clk_TMR_1
-.cname $auto$clkbufmap.cc:261:execute$2123_TMR_1
-.subckt BUFG I=$auto$clkbufmap.cc:262:execute$2124 O=\$iopadmap$clk_TMR_2
-.cname $auto$clkbufmap.cc:261:execute$2123_TMR_2
-.subckt FDRE C=\$iopadmap$clk_TMR_0 CE=$true D=\$abc$2116$not$../yosys_help_test/toggle.sv:26$2_Y_TMR_0 Q=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_0_VOTER_wire_0 R=$iopadmap$reset
-.cname $auto$ff.cc:262:slice$2035_TMR_0
+.subckt INV I=\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_0 O=\$abc$2116$not$../yosys_help_test/toggle.sv:26$2_Y_TMR_dude_0
+.cname $abc$2116$auto$blifparse.cc:515:parse_blif$2117_TMR_dude_0
+.subckt INV I=\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_1 O=\$abc$2116$not$../yosys_help_test/toggle.sv:26$2_Y_TMR_dude_1
+.cname $abc$2116$auto$blifparse.cc:515:parse_blif$2117_TMR_dude_1
+.subckt INV I=\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_2 O=\$abc$2116$not$../yosys_help_test/toggle.sv:26$2_Y_TMR_dude_2
+.cname $abc$2116$auto$blifparse.cc:515:parse_blif$2117_TMR_dude_2
+.subckt BUFG I=$auto$clkbufmap.cc:262:execute$2124 O=\$iopadmap$clk_TMR_dude_0
+.cname $auto$clkbufmap.cc:261:execute$2123_TMR_dude_0
+.subckt BUFG I=$auto$clkbufmap.cc:262:execute$2124 O=\$iopadmap$clk_TMR_dude_1
+.cname $auto$clkbufmap.cc:261:execute$2123_TMR_dude_1
+.subckt BUFG I=$auto$clkbufmap.cc:262:execute$2124 O=\$iopadmap$clk_TMR_dude_2
+.cname $auto$clkbufmap.cc:261:execute$2123_TMR_dude_2
+.subckt FDRE C=\$iopadmap$clk_TMR_dude_0 CE=$true D=\$abc$2116$not$../yosys_help_test/toggle.sv:26$2_Y_TMR_dude_0 Q=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_0_VOTER_wire_0 R=$iopadmap$reset
+.cname $auto$ff.cc:262:slice$2035_TMR_dude_0
 .param INIT x
-.subckt FDRE C=\$iopadmap$clk_TMR_1 CE=$true D=\$abc$2116$not$../yosys_help_test/toggle.sv:26$2_Y_TMR_1 Q=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_1_VOTER_wire_0 R=$iopadmap$reset
-.cname $auto$ff.cc:262:slice$2035_TMR_1
+.subckt FDRE C=\$iopadmap$clk_TMR_dude_1 CE=$true D=\$abc$2116$not$../yosys_help_test/toggle.sv:26$2_Y_TMR_dude_1 Q=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_1_VOTER_wire_0 R=$iopadmap$reset
+.cname $auto$ff.cc:262:slice$2035_TMR_dude_1
 .param INIT x
-.subckt FDRE C=\$iopadmap$clk_TMR_2 CE=$true D=\$abc$2116$not$../yosys_help_test/toggle.sv:26$2_Y_TMR_2 Q=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_2_VOTER_wire_0 R=$iopadmap$reset
-.cname $auto$ff.cc:262:slice$2035_TMR_2
+.subckt FDRE C=\$iopadmap$clk_TMR_dude_2 CE=$true D=\$abc$2116$not$../yosys_help_test/toggle.sv:26$2_Y_TMR_dude_2 Q=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_2_VOTER_wire_0 R=$iopadmap$reset
+.cname $auto$ff.cc:262:slice$2035_TMR_dude_2
 .param INIT x
 .subckt IBUF I=clk O=$auto$clkbufmap.cc:262:execute$2124
 .cname $iopadmap$toggle.clk
-.subckt OBUF I=\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_0 O=out
+.subckt OBUF I=\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_0 O=out
 .cname $iopadmap$toggle.out
 .subckt IBUF I=reset O=$iopadmap$reset
 .cname $iopadmap$toggle.reset
-.subckt LUT3 I0=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_2_VOTER_wire_0 I1=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_1_VOTER_wire_0 I2=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_0_VOTER_wire_0 O=\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_0
-.cname \\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_0_VOTER_0
+.subckt LUT3 I0=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_2_VOTER_wire_0 I1=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_1_VOTER_wire_0 I2=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_0_VOTER_wire_0 O=\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_0
+.cname \\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_0_VOTER_0
 .param INIT 11101000
-.subckt LUT3 I0=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_2_VOTER_wire_0 I1=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_1_VOTER_wire_0 I2=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_0_VOTER_wire_0 O=\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_1
-.cname \\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_1_VOTER_0
+.subckt LUT3 I0=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_2_VOTER_wire_0 I1=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_1_VOTER_wire_0 I2=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_0_VOTER_wire_0 O=\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_1
+.cname \\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_1_VOTER_0
 .param INIT 11101000
-.subckt LUT3 I0=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_2_VOTER_wire_0 I1=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_1_VOTER_wire_0 I2=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_0_VOTER_wire_0 O=\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_2
-.cname \\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_2_VOTER_0
+.subckt LUT3 I0=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_2_VOTER_wire_0 I1=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_1_VOTER_wire_0 I2=\\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_0_VOTER_wire_0 O=\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_2
+.cname \\$techmap2122$abc$2116$auto$blifparse.cc:515:parse_blif$2117.A_TMR_dude_2_VOTER_0
 .param INIT 11101000
 .end

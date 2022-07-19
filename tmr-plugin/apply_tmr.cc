@@ -73,10 +73,10 @@ struct ApplyTMRPass : public ScriptPass {
         std::string run_from, run_to;
 
         log_push();
-        run_script(design, run_from, run_to);
-        log_pop();
-
-        
+        // run_script(design, run_from, run_to);
+        run_script(yosys_design, run_from, "insert_voters");
+        run_script(yosys_design, "insert_voters", run_to);
+        log_pop();        
     }
 
     void script() override {
@@ -87,8 +87,8 @@ struct ApplyTMRPass : public ScriptPass {
         replicate_args+=" -suffix " + suffix;
         insert_voters_args+=" -suffix " + suffix;
 
-        replicate_args+=" -amount " + amount;
-        insert_voters_args+=" -amount " + amount;
+        replicate_args+=" -amount " + std::to_string(amount);
+        insert_voters_args+=" -amount " + std::to_string(amount);
 
         if (ports) {
             replicate_args+=" -ports";
@@ -108,10 +108,15 @@ struct ApplyTMRPass : public ScriptPass {
             insert_voters_args+=" -ff";
         }
 
-        log("Running replicate with args: %s\n", replicate_args.c_str());
-        run("replicate " + replicate_args);
-        log("Running insert_voters with args: %s\n", insert_voters_args.c_str());
-        run("insert_voters " + insert_voters_args);
+        if (check_label("replicate")) {
+            log("Running replicate with args: %s\n", replicate_args.c_str());
+            run("replicate " + replicate_args);
+            // run("write_blif -cname between.blif");
+        }
+        if (check_label("insert_voters")) {
+            log("Running insert_voters with args: %s\n", insert_voters_args.c_str());
+            run("insert_voters " + insert_voters_args);
+        }
 
     }
 } ApplyTMRPass;

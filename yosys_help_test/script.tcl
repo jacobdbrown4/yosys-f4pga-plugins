@@ -1,4 +1,5 @@
 file copy -force ~/yosys_plugins/yosys-f4pga-plugins/mine-plugin/mine.so ~/yosys/share/plugins/
+file copy -force ~/yosys_plugins/yosys-f4pga-plugins/tmr-plugin/tmr.so ~/yosys/share/plugins/
 
 
 yosys -import
@@ -17,14 +18,14 @@ hierarchy -top toggle
 yosys synth_xilinx
 write_blif -cname -icells -param original.blif
 write_rtlil original.rtlil
-plugin -i mine
+plugin -i tmr
 # tee -q -o output.txt apply_tmr -suffix TMR
-# yosys apply_tmr -suffix TMR
-yosys replicate -suffix TMR
+yosys apply_tmr -suffix TMR_dude -ff -reduction -voter_name VOTER -voter_type LUT3 -verbose
+# yosys replicate -suffix TMR -ports
 # write_blif -cname -param -icells after_rep.blif
 check
-yosys insert_voters -reduction -ff -voter_name VOTER
-check
+# yosys insert_voters -reduction -ff -voter_name VOTER
+# check
 clean
 
 yosys write_blif -cname -param -icells after_tmr.blif
