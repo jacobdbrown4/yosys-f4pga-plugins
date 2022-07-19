@@ -28,7 +28,7 @@ class CheckConnections():
             self.original_dict[instance.name] = self.get_driven_instances(instance)
         for instance in self.netlist_modified.get_hinstances(recursive=True, filter=lambda x: self.filter_instances(x.item) is True):
             self.modified_dict[instance.name] = self.get_driven_instances(instance)
-        self.compare_connections()
+        self.compare_connections(self.suffix)
 
     def filter_instances(self, instance):
         if self.is_organ(instance):
@@ -106,15 +106,15 @@ class CheckConnections():
         non_replicated_driven = list(x for x in driven_instances if self.suffix not in x)
         return non_replicated_driven
 
-    def compare_connections(self):
+    def compare_connections(self, suffix):
         f = None
         if self.write_enable:
             f = open('drc_connection_results_'+self.netlist_original.name+'.txt','w')
         for key in self.modified_dict.keys():
-            plain_key = self.get_original_name(key)
+            plain_key = self.get_original_name(key, suffix)
             modified_driven_instances_modified_names = self.modified_dict[key]
             modified_driven_instances_modified_names.sort()
-            modified_driven_instances_plain_names = list(self.get_original_name(name) for name in modified_driven_instances_modified_names)
+            modified_driven_instances_plain_names = list(self.get_original_name(name, suffix) for name in modified_driven_instances_modified_names)
             if plain_key == key: #this instance was not replicated
                 no_duplicate_list = list()
                 [no_duplicate_list.append(x) for x in modified_driven_instances_plain_names if x not in no_duplicate_list]
@@ -142,7 +142,7 @@ class CheckConnections():
             f.close()
 
     
-    def get_original_name(self, current_instance,suffix="TMR"):
+    def get_original_name(self, current_instance, suffix="TMR"):
         '''
         returns the instance's name without the replica suffix appended to it
         '''

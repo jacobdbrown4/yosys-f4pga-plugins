@@ -78,7 +78,7 @@ for instance in netlist_tmr.get_instances():
 # from spydrnet_tmr.utils.design_rule_check import check_connections
 from check_connections_new import check_the_connections
 # check_connections(netlist_original, netlist_tmr, "TMR", ["VOTER"], True)
-check_the_connections(netlist_original, netlist_tmr,["VOTER"], "TMR", True)
+check_the_connections(netlist_original, netlist_tmr,["VOTER"], "TMR_dude", True)
 
 # instance = next(netlist_tmr.get_instances("$abc$2747$auto$blifparse.cc:515:parse_blif$2751_TMR_1"))
 # print(instance.name)

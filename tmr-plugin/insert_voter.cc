@@ -454,7 +454,7 @@ struct VoterInsertionPass : public Pass {
 		log("It operates on all modules in the design except for blackboxes.\n");
 		log("\n");
         log("    -suffix <string>\n");
-        log("        Specify the suffix used during replication\n");
+        log("        Specify the suffix to be appended to each inserted voter.\n");
         log("        The default suffix is \"TMR\"\n");
 		log("\n");
         log("    -amount <int>\n");

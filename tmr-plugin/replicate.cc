@@ -602,27 +602,10 @@ struct ApplyTMRPass : public Pass {
             }
         }
 
-        log("Old design stuff\n");
-        for (auto module: yosys_design->modules()) {
-            for (auto cell: module->cells()) {
-                log("Cell: %s\n", log_id(cell));
-            }
-        }
-
         ReplicationWorker worker = ReplicationWorker(copy_amount, suffix, replicate_ports);
         worker.setVerbose(verbose);
         RTLIL::Design *new_design = worker.run(design);
         yosys_design = new_design; // set the new design as THE design.
-        log("New design stuff\n");
-        for (auto module: yosys_design->modules()) {
-            for (auto cell: module->cells()) {
-                log("Cell: %s\n", log_id(cell));
-            }
-        }
-
-        // for (auto module:)
-        // *design = *new_design;
-        // new_design->cloneInto(design);
         
     }
 } ApplyTMRPass;

@@ -12,7 +12,38 @@ struct ApplyTMRPass : public ScriptPass {
     void help() override {
 
         log("\n");
-        log("TODO put information about command and arguments here\n");
+		log("\n");
+		log("    apply_tmr [options]\n");
+		log("\n");
+        log("Convenience command to run both replicate and insert_voters");
+		log("\n");
+        log("    -suffix <string>\n");
+        log("        Specify the suffix to be appended to each replicated cell and wire name.\n");
+        log("        The default suffix is \"TMR\"\n");
+		log("\n");
+        log("    -amount <int>\n");
+        log("        Total number of copies. The default is 3\n");
+        log("\n");
+        log("    -ports\n");
+        log("        When this option is passed, all top level ports will be replicated.\n");
+        log("\n");
+        log("    -voter_type <string>\n");
+        log("        Specify the name of the primitive in the design to be used as a voter\n");
+        log("        The default is Xilinx's LUT3\n");
+        log("\n");
+        log("    -voter_name <string>\n");
+        log("        Specify the name to be appended to each voter\n");
+        log("        The default is \"VOTER\"\n");
+        log("\n");
+        log("    -reduction\n");
+        log("        Insert reduction voters\n");
+        log("\n");
+        log("    -ff\n");
+        log("        Insert voters after every flip flop\n");
+        log("\n");
+        log("    -verbose\n");
+        log("        Print all log messages during voter insertion\n");
+        log("\n");
     }
 
     std::string suffix, voter_type, voter_name;
