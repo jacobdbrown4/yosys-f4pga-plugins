@@ -143,7 +143,9 @@ struct InsertVoterWorker {
                     if (cell->output(conn.first)) {
                         continue;
                     }
-                    // std::cout << cell_name << " of type " << RTLIL::unescape_id(cell->type) << " needs a reduction voter before his port " << RTLIL::unescape_id(conn.first) << "\n";
+                    std::string to_write = cell_name + " of type " + RTLIL::unescape_id(cell->type) +" needs a reduction voter before his port " + 
+                                            RTLIL::unescape_id(conn.first) + "\n";
+                    printMessage(to_write, false);
                     std::string map_key = unescape_id(sigbit.wire->name) + "_" + std::to_string(sigbit.offset);
                     ConnectedCell c = {cell, conn.first, sigbit};
                     ReductionPoint new_point = {c, connection_map[map_key]};
@@ -192,39 +194,78 @@ struct InsertVoterWorker {
 
     void insert_reduction_voter(RTLIL::Module *module, std::string suffix, ReductionPoint point,  \
                                             std::map<std::string, WireConnectionInfo> connection_map) {
+        std::cout << "inserting a red voter\n";
         ConnectedCell receiving_cell = point.receiver;
         WireConnectionInfo info = point.info;
         RTLIL::Cell* primary_driver = info.driver.cell;
         std::vector<RTLIL::Cell*> driver_cells;
-        std::string plain_name = remove_suffix_from_name(RTLIL::unescape_id(primary_driver->name), suffix);
-        for (int i = 0; i < 3; i++) {
-            std::string other_driver_name = plain_name + "_" + suffix + "_" + std::to_string(i);
-            RTLIL::Cell* other_driver = module->cell(other_driver_name);
-            if (other_driver != nullptr){
-                driver_cells.push_back(other_driver);
-            }
-            else{
-            }
-        }
-
-        RTLIL::IdString port_name = info.driver.port_name;
-        std::string plain_wire_name = remove_suffix_from_name(RTLIL::unescape_id(info.wire->name), suffix);
         int offset = info.offset;
         std::vector<RTLIL::SigBit> voter_input;
-        for (int i = 0; i < driver_cells.size(); i++) {
-            RTLIL::Cell *current_cell = driver_cells[i];
-            RTLIL::SigSpec cell_output = current_cell->getPort(port_name);
-            for (auto sigbit: cell_output.bits()) {
-                if (sigbit.wire == NULL) {
-                    continue;
+
+        std::string plain_name = remove_suffix_from_name(RTLIL::unescape_id(primary_driver->name), suffix);
+        if (plain_name.at(0) != '\\' || plain_name.at(0) != '$') {
+            // std::cout << "red voter will be driven by non leaf instance. DO SOMETHING DIFFERENT\n";
+            // std::cout << "the driver port name is " << RTLIL::unescape_id(info.driver.port_name) << "\n";
+            RTLIL::Cell* non_leaf_cell = primary_driver;
+            std::string plain_port_name = remove_suffix_from_name(RTLIL::unescape_id(info.driver.port_name), suffix);
+            std::string plain_wire_name = remove_suffix_from_name(RTLIL::unescape_id(info.wire->name), suffix);
+
+            std::vector<RTLIL::SigBit> port_outputs;
+            // std::vector<RTLIL::SigBit> voter_input;
+            for (int i = 0; i < 3; i++) {
+                std::string other_port_name = "\\" + plain_port_name + "_" + suffix + "_" + std::to_string(i);
+                // std::cout << "other_port_name is " << other_port_name << "\n";
+                RTLIL::SigSpec port_output = non_leaf_cell->getPort(other_port_name);
+                int offset = info.offset;
+                for (auto sigbit: port_output.bits()) {
+                    if (sigbit.wire == NULL) {
+                        continue;
+                    }
+                    if (remove_suffix_from_name(RTLIL::unescape_id(sigbit.wire->name), suffix) != plain_wire_name) {
+                        continue;
+                    }
+                    if (sigbit.offset != offset) {
+                        continue;
+                    }
+                    voter_input.push_back(sigbit);
+                    // std::cout << "got it\n";
                 }
-                if (remove_suffix_from_name(RTLIL::unescape_id(sigbit.wire->name), suffix) != plain_wire_name) {
-                    continue;
+            }
+            
+            // return;
+        }
+        else {
+            for (int i = 0; i < 3; i++) {
+                std::string other_driver_name = plain_name + "_" + suffix + "_" + std::to_string(i);
+                // std::cout << "other driver name is " << other_driver_name << "\n";
+                RTLIL::Cell* other_driver = module->cell(other_driver_name);
+                if (other_driver != nullptr){
+                    driver_cells.push_back(other_driver);
                 }
-                if (sigbit.offset != offset) {
-                    continue;
+                else{
+                    // std::cout << "other driver is null.\n";
                 }
-                voter_input.push_back(sigbit); 
+            }
+
+            RTLIL::IdString port_name = info.driver.port_name;
+            std::string plain_wire_name = remove_suffix_from_name(RTLIL::unescape_id(info.wire->name), suffix);
+            // int offset = info.offset;
+            // std::vector<RTLIL::SigBit> voter_input;
+            for (int i = 0; i < driver_cells.size(); i++) {
+                RTLIL::Cell *current_cell = driver_cells[i];
+                RTLIL::SigSpec cell_output = current_cell->getPort(port_name);
+                for (auto sigbit: cell_output.bits()) {
+                    if (sigbit.wire == NULL) {
+                        continue;
+                    }
+                    if (remove_suffix_from_name(RTLIL::unescape_id(sigbit.wire->name), suffix) != plain_wire_name) {
+                        continue;
+                    }
+                    if (sigbit.offset != offset) {
+                        continue;
+                    }
+                    voter_input.push_back(sigbit); 
+                }
             }
         }
 
@@ -291,6 +332,7 @@ struct InsertVoterWorker {
                 RTLIL::Cell *driver_cell = driver.cell;
                 if (std::find(cells_set.begin(), cells_set.end(), driver_cell) == cells_set.end()) {
                     RTLIL::SigSpec new_sigspec = SigSpec();
+                    std::cout << "here for port name " << RTLIL::unescape_id(driver.port_name) << "\n";
                     driver_cell->setPort(driver.port_name, new_sigspec);
                     cells_set.push_back(driver_cell);
                 }
@@ -341,34 +383,62 @@ struct InsertVoterWorker {
         std::vector<InsertionPoint> insertion_points_edited;
         std::map<std::string, std::vector<InsertionPoint>> point_map; 
         for (auto voter: insertion_points) {
+            if (!voter.is_reduction) {
+                RTLIL::SigBit sigbit = voter.normal_point.cells[0].sigbit;
+                std::string map_key = unescape_id(sigbit.wire->name) + "_" + std::to_string(sigbit.offset);
+                point_map[map_key].push_back(voter);
+                insertion_points_edited.push_back(voter);
+                std::cout << "map_key for ff voter was " << map_key << "\n";
+            }
+        }
+        for (auto voter: insertion_points) {
             if (voter.is_reduction) {
                 RTLIL::Wire *wire = voter.red_point.info.wire;
                 RTLIL::SigBit sigbit = voter.red_point.receiver.sigbit;
                 std::string map_key = unescape_id(sigbit.wire->name) + "_" + std::to_string(sigbit.offset);
-                point_map[map_key].push_back(voter);
-            }
-            if (voter.normal_point.cells.size() > 0) {
-                RTLIL::SigBit sigbit = voter.normal_point.cells[0].sigbit;
-                std::string map_key = unescape_id(sigbit.wire->name) + "_" + std::to_string(sigbit.offset);
-                point_map[map_key].push_back(voter);
-            }
-        }
-        for (auto map_entry: point_map) {
-            if (map_entry.second.size() == 1) {
-                insertion_points_edited.push_back(map_entry.second[0]);
-            }
-            else {
-                InsertionPoint non_reduction_point;
-                for (auto point: map_entry.second) {
-                    if (point.is_reduction) {
-                    }
-                    else{
-                        non_reduction_point = point;
-                    }
+                // point_map[map_key].push_back(voter);
+                std::cout << "map_key for red voter was " << map_key << "\n";
+                if (point_map.find(map_key) != point_map.end()) {
+                    std::cout << "ff voter is already taking care of this\n";
                 }
-                insertion_points_edited.push_back(non_reduction_point);
+                else {
+                    // point_map[map_key].push_back(voter);
+                    insertion_points_edited.push_back(voter);
+                }
             }
         }
+        // for (auto voter: insertion_points) {
+        //     if (voter.is_reduction) {
+        //         RTLIL::Wire *wire = voter.red_point.info.wire;
+        //         RTLIL::SigBit sigbit = voter.red_point.receiver.sigbit;
+        //         std::string map_key = unescape_id(sigbit.wire->name) + "_" + std::to_string(sigbit.offset);
+        //         point_map[map_key].push_back(voter);
+        //         std::cout << "map_key for red voter was " << map_key << "\n";
+        //     }
+        //     if (voter.normal_point.cells.size() > 0) {
+        //         RTLIL::SigBit sigbit = voter.normal_point.cells[0].sigbit;
+        //         std::string map_key = unescape_id(sigbit.wire->name) + "_" + std::to_string(sigbit.offset);
+        //         point_map[map_key].push_back(voter);
+        //         std::cout << "map_key for ff voter was " << map_key << "\n";
+        //     }
+        // }
+        // for (auto map_entry: point_map) {
+        //     if (map_entry.second.size() == 1) {
+        //         insertion_points_edited.push_back(map_entry.second[0]);
+        //     }
+        //     else {
+        //         std::cout << "Map_entry key " << map_entry.first << " is size " << std::to_string(map_entry.second.size()) << "\n";
+        //         InsertionPoint non_reduction_point;
+        //         for (auto point: map_entry.second) {
+        //             if (point.is_reduction) {
+        //             }
+        //             else{
+        //                 non_reduction_point = point;
+        //             }
+        //         }
+        //         insertion_points_edited.push_back(non_reduction_point);
+        //     }
+        // }
         return insertion_points_edited;
     }
 
@@ -426,13 +496,23 @@ public:
 
             if (reduction_voters) {
                 insertion_points_1 = identify_reduction_points(module, suffix, connection_map);
+                // for (auto point : insertion_points_1) {
+                //     ReductionPoint red_point = point.red_point;
+                //     ConnectedCell receiver = red_point.receiver;
+                //     std::cout << "Receiver cell name is " << RTLIL::unescape_id(receiver.cell->name) << " at port " << RTLIL::unescape_id(receiver.port_name) << "\n";
+                // }
             }
             if (ff_voters) {
                 insertion_points_2 = identify_points_after_ff(module, suffix, connection_map);
             }
 
+            // std::cout << "reduction Points: " << std::to_string(insertion_points_1.size()) << "\n";
+            // std::cout << "FF Points: " << std::to_string(insertion_points_2.size()) << "\n";
+
             std::vector<InsertionPoint> all_insertion_points = combine_insertion_points(insertion_points_1, insertion_points_2);
+            // std::cout << "Combined Points: " << std::to_string(all_insertion_points.size()) << "\n";
             std::vector<InsertionPoint> final_insertion_points = remove_redundant_reduction_voters(all_insertion_points);
+            // std::cout << "Final Points: " << std::to_string(final_insertion_points.size()) << "\n";
             insert_voters(module, suffix, final_insertion_points, connection_map);
 
             module->fixup_ports();

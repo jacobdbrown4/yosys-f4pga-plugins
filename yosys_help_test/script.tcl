@@ -12,10 +12,15 @@ yosys -import
 # hierarchy -top top
 # yosys read_verilog ../yosys_help_test/verilog_files/counter.v
 # hierarchy -top top
-yosys read -sv counter/*
+# yosys read -sv counter/*
 # yosys read -sv counter/debounce*
 # yosys read -sv -lib counter/mod_counter.sv
-hierarchy -top debounce_top
+# hierarchy -top debounce_top
+# yosys read -vlog2k SID.v
+# write_rtlil out.rtlil
+
+yosys read -sv uart/*
+hierarchy -top tx_top
 
 # yosys proc
 yosys synth_xilinx
@@ -27,11 +32,11 @@ help apply_tmr
 help replicate
 help insert_voters
 # help synth_xilinx
-yosys apply_tmr -suffix TMR_dude -ff -reduction -voter_name VOTER -voter_type LUT4 -verbose
-# yosys replicate -suffix TMR -ports
-# write_blif -cname -param -icells after_rep.blif
+# yosys apply_tmr -suffix TMR_dude -ff -reduction -voter_name VOTER -voter_type LUT4 -verbose
+yosys replicate -suffix TMR
+write_blif -cname -param -icells after_rep.blif
 check
-# yosys insert_voters -reduction -ff -voter_name VOTER
+yosys insert_voters -reduction -voter_name VOTER
 # check
 clean
 
