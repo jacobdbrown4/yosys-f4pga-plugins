@@ -7,6 +7,7 @@ file copy -force ~/yosys_plugins/yosys-f4pga-plugins/tmr-plugin/tmr.so ~/yosys/y
 yosys -import
 # yosys read -sv ../yosys_help_test/toggle.sv
 # yosys read -sv ~/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/toggle.sv
+# yosys read_verilog ~/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/toggle.v
 # hierarchy -top toggle
 # yosys read_verilog ../yosys_help_test/verilog_files/pulse_led.v ../yosys_help_test/verilog_files/PWM.v
 # hierarchy -top top
@@ -18,29 +19,38 @@ yosys -import
 # hierarchy -top debounce_top
 # yosys read -vlog2k SID.v
 # write_rtlil out.rtlil
+# hierarchy -top debounce_top
 
-yosys read -sv uart/*
-hierarchy -top tx_top
+# yosys read -sv uart/*
+# hierarchy -top tx_top
 
 # yosys proc
-yosys synth_xilinx
+yosys synth_xilinx -dff
+zinit
+yosys dffinit -ff FDRE Q INIT
 write_blif -cname -icells -param original.blif
+write_verilog -nohex original.v
 # write_rtlil original.rtlil
+write_edif original.edif
 plugin -i tmr
 # tee -q -o output.txt apply_tmr -suffix TMR
-help apply_tmr
-help replicate
-help insert_voters
+# help apply_tmr
+# help replicate
+# help insert_voters
 # help synth_xilinx
 # yosys apply_tmr -suffix TMR_dude -ff -reduction -voter_name VOTER -voter_type LUT4 -verbose
-yosys replicate -suffix TMR
+ls
+yosys replicate -suffix TMR -ports
+
 write_blif -cname -param -icells after_rep.blif
 check
-yosys insert_voters -reduction -voter_name VOTER
+yosys insert_voters -ff -reduction -voter_name VOTER -verbose
 # check
 clean
 
 yosys write_blif -cname -param -icells after_tmr.blif
+
+# yosys write_verilog toggle_tmr.v
 
 # yosys help replicate
 # yosys help insert_voters

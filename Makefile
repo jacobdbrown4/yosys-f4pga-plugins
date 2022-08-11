@@ -15,7 +15,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # PLUGIN_LIST := fasm xdc params sdc ql-iob design_introspection integrateinv ql-qlf systemverilog uhdm dsp-ff
-PLUGIN_LIST := tmr mine
+PLUGIN_LIST := tmr
 PLUGINS := $(foreach plugin,$(PLUGIN_LIST),$(plugin).so)
 PLUGINS_INSTALL := $(foreach plugin,$(PLUGIN_LIST),install_$(plugin))
 PLUGINS_CLEAN := $(foreach plugin,$(PLUGIN_LIST),clean_$(plugin))
@@ -40,6 +40,7 @@ clean_$(1):
 	$$(MAKE) -C $(1)-plugin clean
 
 test_$(1):
+	$(info plugin test)
 	@$$(MAKE) --no-print-directory -C $(1)-plugin test
 endef
 

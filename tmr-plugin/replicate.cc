@@ -74,6 +74,49 @@ struct ReplicationChecker {
         return connections;
     }
 
+    // std::map<std::string, WireConnectionInfo> collect_connections(RTLIL::Module *module) {
+    //     std::map<std::string, WireConnectionInfo> connection_map;
+    //     for (auto cell: module->cells()) {
+    //         for (auto conn: cell->connections()) {
+    //             RTLIL::SigSpec sigspec = conn.second;
+    //             for (auto sigbit: sigspec.bits()) {
+    //                 if (sigbit.wire == NULL) {
+    //                     continue;
+    //                 }
+    //                 ConnectedCell c = {cell, conn.first, sigbit};
+    //                 std::string map_key = unescape_id(sigbit.wire->name) + "_" + std::to_string(sigbit.offset);
+    //                 if (cell->output(conn.first)) {
+    //                     connection_map[map_key].driver = c;
+    //                 }
+    //                 else {
+    //                     connection_map[map_key].driven_cells.push_back(c);
+    //                 }
+
+    //                 connection_map[map_key].wire = sigbit.wire;
+    //                 connection_map[map_key].offset = sigbit.offset;
+    //             }
+    //         }
+    //     }
+    //     printMessage("Connection Map for Module: " + RTLIL::unescape_id(module->name) + "\n", false);
+    //     for (auto map_entry: connection_map) {
+    //         std::string to_write;
+    //         to_write = "Key: " + map_entry.first + "\n";
+    //         to_write+= "\tDriver: ";
+    //         if (map_entry.second.driver.cell == nullptr) {
+    //             to_write+= "NULL\n";
+    //         }
+    //         else {
+    //             to_write+= RTLIL::unescape_id(map_entry.second.driver.cell->name) + "\n";
+    //         }
+    //         to_write+= "\tDriven Cells: \n";
+    //         for(auto cell: map_entry.second.driven_cells) {
+    //             to_write+= "\t\t" + RTLIL::unescape_id(cell.cell->name) + "\n";
+    //         }
+    //         printMessage(to_write, false);
+    //     }
+    //     return connection_map;
+    // }
+
     std::string remove_suffix_from_name(std::string name, std::string suffix) {
         size_t position = name.find(suffix);
         if (position != std::string::npos) {
@@ -85,6 +128,7 @@ struct ReplicationChecker {
 
 struct ReplicationWorker {
 private:
+    std::set<std::string> modules_to_replicate;
     int copy_amount;
     std::string suffix;
     std::vector<RTLIL::Cell*> non_leaf_cells;
@@ -124,6 +168,12 @@ private:
                 module->cloneInto(new_module);
                 continue;
             }
+            if (modules_to_replicate.size() > 0 && modules_to_replicate.find(RTLIL::unescape_id(module->name)) == modules_to_replicate.end()) {
+                printMessage("Will not replicate module "+ RTLIL::unescape_id(module->name) +  " because it is not specified \n", false);
+                RTLIL::Module *new_module = new_design->addModule("\\" + RTLIL::unescape_id(module->name));
+                module->cloneInto(new_module);
+                continue;
+            }
 
             bool check_ports = false;
             if (original_design->top_module() == module) {
@@ -134,6 +184,12 @@ private:
             log("\n");
         }
         for (auto cell: non_leaf_cells) {
+            if (modules_to_replicate.size() > 0 && modules_to_replicate.find(RTLIL::unescape_id(cell->name)) == modules_to_replicate.end()) {
+                // printMessage("Will not replicate module "+ RTLIL::unescape_id(module->name) +  " because it is not specified \n", false);
+                // RTLIL::Module *new_module = new_design->addModule("\\" + RTLIL::unescape_id(module->name));
+                // module->cloneInto(new_module);
+                continue;
+            }
             fix_non_leaf_cell_connections(cell->module, cell, suffix);
         }
         return new_design;
@@ -142,7 +198,7 @@ private:
     std::map<std::string, bool> get_blackbox_modules(RTLIL::Design *design) {
         std::map<std::string, bool> blackbox_map;
         for (auto module: design->modules()) {
-            if (module->get_bool_attribute("\\blackbox")) {
+            if (module->get_bool_attribute("\\blackbox") || module->get_blackbox_attribute()) {
                 blackbox_map[RTLIL::unescape_id(module->name)] = true;
             }
             else {
@@ -155,6 +211,9 @@ private:
     void replicate_module(RTLIL::Design *new_design, RTLIL::Module *module, std::string suffix, bool check_ports) {
 
         RTLIL::Module *new_module = new_design->addModule("\\" + RTLIL::unescape_id(module->name));
+        if (module->get_bool_attribute(ID::top)) {
+            new_module->set_bool_attribute(ID::top);
+        }
         std::map<std::string, WireConnectionInfo> connection_map = collect_connections(module);
 
         std::vector<Cell*> cells_to_not_replicate = identify_cells_to_not_replicate(module, connection_map, check_ports);
@@ -165,7 +224,7 @@ private:
         connect_wire_connections(module, new_module, suffix);
 
         ReplicationChecker checker = ReplicationChecker();
-        checker.run(module, new_module, suffix);
+        // checker.run(module, new_module, suffix);
     }
 
     std::vector<Cell*> identify_cells_to_not_replicate (RTLIL::Module *module, std::map<std::string, WireConnectionInfo> connection_map, \
@@ -307,6 +366,9 @@ private:
                         std::string first_wire_name = RTLIL::unescape_id(sigspec_one[i].wire->name);
                         RTLIL::Wire *replicated_wire_one = new_module->wire("\\" + first_wire_name + "_" + suffix + "_" + std::to_string(j));
                         new_sigspec_one = RTLIL::SigSpec(replicated_wire_one, sigspec_one[i].offset, 1);
+                        if (replicated_wire_one == nullptr) {
+                            std::cout << "hes null\n";
+                        }
                     }
                     else {
                         new_sigspec_one = RTLIL::SigSpec(sigspec_one[i], 1); // create a sigbit with a null wire.
@@ -322,6 +384,7 @@ private:
 
                     RTLIL::SigSig new_sigsig = std::pair<RTLIL::SigSpec, RTLIL::SigSpec>(new_sigspec_one, new_sigspec_two);
                     new_module->connect(new_sigsig);
+                    std::cout << "did one\n";
                 }
             }
         }
@@ -365,6 +428,7 @@ private:
         for (auto cell: old_module->cells()) { // copy cells over
             // std::cout << "set to replicate cell " << log_id(cell) << " of type " << RTLIL::unescape_id(cell->type) << "\n";
             if (std::find(std::begin(cells_to_not_replicate), std::end(cells_to_not_replicate), cell) != std::end(cells_to_not_replicate)) {
+                // std::cout << "but he was found in cells_to_not_replicate\n";
 
                 RTLIL::Cell *new_cell = new_module->addCell(cell->name, cell);
                 fix_cell_connections(new_module, new_cell, 0, suffix); 
@@ -373,6 +437,7 @@ private:
             std::string cell_type = RTLIL::unescape_id(cell->type);
             std::string cell_name = RTLIL::unescape_id(cell->name);
             if (cell_type.substr(0,1) != "$" || cell_name.substr(0,1) != "$") {
+                // std::cout << log_id(cell) << " of cell_type " << cell_type << " made it here\n";
                 if (!cell->known()) {
                     log("Unrecognized yosys cell type: %s. Will not replicate.\n", cell_type.c_str());
                     continue;
@@ -446,6 +511,8 @@ private:
     }
 
     void fix_non_leaf_cell_connections(RTLIL::Module *new_module, RTLIL::Cell *new_cell, std::string suffix) {
+        // std::cout << "fixing connections for non leaf cell named " << RTLIL::unescape_id(new_cell->name) << " of type " << \
+                    RTLIL::unescape_id(new_cell->type) << "\n";
         for (auto &connection: new_cell->connections()) {
             bool unset_already = false;
             std::string id_string = RTLIL::unescape_id(connection.first);
@@ -514,7 +581,8 @@ private:
     }
 
 public:
-    ReplicationWorker(int amount_of_copies, std::string suffix, bool replicate_ports) {
+    ReplicationWorker(std::set<std::string> modules_to_replicate, int amount_of_copies, std::string suffix, bool replicate_ports) {
+        this->modules_to_replicate = modules_to_replicate;
         copy_amount = amount_of_copies;
         this->suffix = suffix;
         this->replicate_ports = replicate_ports;
@@ -564,6 +632,7 @@ struct ApplyTMRPass : public Pass {
         bool verbose = false;
         // std::vector<std::string> port_to_replicate;
         bool replicate_ports = false;
+        std::set<std::string> modules_to_replicate;
 
         log_header(design, "Executing REPLICATE Pass\n");
 
@@ -597,12 +666,16 @@ struct ApplyTMRPass : public Pass {
             else if (args[argidx] == "-verbose") {
                 verbose = true;
             }
+            else if (args[argidx] == "-module") {
+                const char *str = (args[++argidx]).c_str();
+                modules_to_replicate.insert(str);
+            }
             else {
                 log("Unknown argument '%s'. It will be ignored.\n", args[argidx].c_str());
             }
         }
 
-        ReplicationWorker worker = ReplicationWorker(copy_amount, suffix, replicate_ports);
+        ReplicationWorker worker = ReplicationWorker(modules_to_replicate, copy_amount, suffix, replicate_ports);
         worker.setVerbose(verbose);
         RTLIL::Design *new_design = worker.run(design);
         yosys_design = new_design; // set the new design as THE design.

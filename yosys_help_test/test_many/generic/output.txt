@@ -1,0 +1,2534 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.17+41 (git sha1 c525b5f91, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing Verilog-2005 frontend: /home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv
+Parsing SystemVerilog input from `/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv' to AST representation.
+Storing AST representation for module `$abstract\debounce'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: /home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv
+Parsing SystemVerilog input from `/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv' to AST representation.
+Storing AST representation for module `$abstract\debounce_top'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/mod_counter.sv
+Parsing SystemVerilog input from `/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/mod_counter.sv' to AST representation.
+Storing AST representation for module `$abstract\mod_counter'.
+Successfully finished Verilog frontend.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+5. Executing AST frontend in derive mode using pre-parsed AST for module `\debounce_top'.
+Generating RTLIL representation for module `\debounce_top'.
+
+5.1. Analyzing design hierarchy..
+Top module:  \debounce_top
+
+5.2. Executing AST frontend in derive mode using pre-parsed AST for module `\debounce'.
+Generating RTLIL representation for module `\debounce'.
+
+5.3. Analyzing design hierarchy..
+Top module:  \debounce_top
+Used module:     \debounce
+Parameter 1 (\MOD_VALUE) = 500001
+Parameter 2 (\COUNTER_WIDTH) = 19
+
+5.4. Executing AST frontend in derive mode using pre-parsed AST for module `\mod_counter'.
+Parameter 1 (\MOD_VALUE) = 500001
+Parameter 2 (\COUNTER_WIDTH) = 19
+Generating RTLIL representation for module `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+
+5.5. Analyzing design hierarchy..
+Top module:  \debounce_top
+Used module:     \debounce
+Used module:         $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+
+5.6. Analyzing design hierarchy..
+Top module:  \debounce_top
+Used module:     \debounce
+Used module:         $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+Removing unused module `$abstract\mod_counter'.
+Removing unused module `$abstract\debounce_top'.
+Removing unused module `$abstract\debounce'.
+Removed 3 unused modules.
+
+6. Executing SYNTH_XILINX pass.
+
+6.1. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v
+Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\VCC'.
+Generating RTLIL representation for module `\GND'.
+Generating RTLIL representation for module `\IBUF'.
+Generating RTLIL representation for module `\IBUFG'.
+Generating RTLIL representation for module `\OBUF'.
+Generating RTLIL representation for module `\IOBUF'.
+Generating RTLIL representation for module `\OBUFT'.
+Generating RTLIL representation for module `\BUFG'.
+Generating RTLIL representation for module `\BUFGCTRL'.
+Generating RTLIL representation for module `\BUFHCE'.
+Generating RTLIL representation for module `\INV'.
+Generating RTLIL representation for module `\LUT1'.
+Generating RTLIL representation for module `\LUT2'.
+Generating RTLIL representation for module `\LUT3'.
+Generating RTLIL representation for module `\LUT4'.
+Generating RTLIL representation for module `\LUT5'.
+Generating RTLIL representation for module `\LUT6'.
+Generating RTLIL representation for module `\LUT6_2'.
+Generating RTLIL representation for module `\$__ABC9_LUT7'.
+Generating RTLIL representation for module `\$__ABC9_LUT8'.
+Generating RTLIL representation for module `\MUXCY'.
+Generating RTLIL representation for module `\MUXF5'.
+Generating RTLIL representation for module `\MUXF6'.
+Generating RTLIL representation for module `\MUXF7'.
+Generating RTLIL representation for module `\MUXF8'.
+Generating RTLIL representation for module `\MUXF9'.
+Generating RTLIL representation for module `\XORCY'.
+Generating RTLIL representation for module `\CARRY4'.
+Generating RTLIL representation for module `\CARRY8'.
+Generating RTLIL representation for module `\ORCY'.
+Generating RTLIL representation for module `\MULT_AND'.
+Generating RTLIL representation for module `\FDRE'.
+Generating RTLIL representation for module `\FDRE_1'.
+Generating RTLIL representation for module `\FDSE'.
+Generating RTLIL representation for module `\FDSE_1'.
+Generating RTLIL representation for module `\FDRSE'.
+Generating RTLIL representation for module `\FDRSE_1'.
+Generating RTLIL representation for module `\FDCE'.
+Generating RTLIL representation for module `\FDCE_1'.
+Generating RTLIL representation for module `\FDPE'.
+Generating RTLIL representation for module `\FDPE_1'.
+Generating RTLIL representation for module `\FDCPE'.
+Generating RTLIL representation for module `\FDCPE_1'.
+Generating RTLIL representation for module `\LDCE'.
+Generating RTLIL representation for module `\LDPE'.
+Generating RTLIL representation for module `\LDCPE'.
+Generating RTLIL representation for module `\AND2B1L'.
+Generating RTLIL representation for module `\OR2L'.
+Generating RTLIL representation for module `\RAM16X1S'.
+Generating RTLIL representation for module `\RAM16X1S_1'.
+Generating RTLIL representation for module `\RAM32X1S'.
+Generating RTLIL representation for module `\RAM32X1S_1'.
+Generating RTLIL representation for module `\RAM64X1S'.
+Generating RTLIL representation for module `\RAM64X1S_1'.
+Generating RTLIL representation for module `\RAM128X1S'.
+Generating RTLIL representation for module `\RAM128X1S_1'.
+Generating RTLIL representation for module `\RAM256X1S'.
+Generating RTLIL representation for module `\RAM512X1S'.
+Generating RTLIL representation for module `\RAM16X2S'.
+Generating RTLIL representation for module `\RAM32X2S'.
+Generating RTLIL representation for module `\RAM64X2S'.
+Generating RTLIL representation for module `\RAM16X4S'.
+Generating RTLIL representation for module `\RAM32X4S'.
+Generating RTLIL representation for module `\RAM16X8S'.
+Generating RTLIL representation for module `\RAM32X8S'.
+Generating RTLIL representation for module `\RAM16X1D'.
+Generating RTLIL representation for module `\RAM16X1D_1'.
+Generating RTLIL representation for module `\RAM32X1D'.
+Generating RTLIL representation for module `\RAM32X1D_1'.
+Generating RTLIL representation for module `\RAM64X1D'.
+Generating RTLIL representation for module `\RAM64X1D_1'.
+Generating RTLIL representation for module `\RAM128X1D'.
+Generating RTLIL representation for module `\RAM256X1D'.
+Generating RTLIL representation for module `\RAM32M'.
+Generating RTLIL representation for module `\RAM32M16'.
+Generating RTLIL representation for module `\RAM64M'.
+Generating RTLIL representation for module `\RAM64M8'.
+Generating RTLIL representation for module `\RAM32X16DR8'.
+Generating RTLIL representation for module `\RAM64X8SW'.
+Generating RTLIL representation for module `\ROM16X1'.
+Generating RTLIL representation for module `\ROM32X1'.
+Generating RTLIL representation for module `\ROM64X1'.
+Generating RTLIL representation for module `\ROM128X1'.
+Generating RTLIL representation for module `\ROM256X1'.
+Generating RTLIL representation for module `\SRL16'.
+Generating RTLIL representation for module `\SRL16E'.
+Generating RTLIL representation for module `\SRLC16'.
+Generating RTLIL representation for module `\SRLC16E'.
+Generating RTLIL representation for module `\SRLC32E'.
+Generating RTLIL representation for module `\CFGLUT5'.
+Generating RTLIL representation for module `\MULT18X18'.
+Generating RTLIL representation for module `\MULT18X18S'.
+Generating RTLIL representation for module `\MULT18X18SIO'.
+Generating RTLIL representation for module `\DSP48A'.
+Generating RTLIL representation for module `\DSP48A1'.
+Generating RTLIL representation for module `\DSP48'.
+Generating RTLIL representation for module `\DSP48E1'.
+Generating RTLIL representation for module `\RAMB18E1'.
+Generating RTLIL representation for module `\RAMB36E1'.
+Successfully finished Verilog frontend.
+
+6.2. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/xilinx/cells_xtra.v
+Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/xilinx/cells_xtra.v' to AST representation.
+Generating RTLIL representation for module `\RAMB4_S1'.
+Generating RTLIL representation for module `\RAMB4_S2'.
+Generating RTLIL representation for module `\RAMB4_S4'.
+Generating RTLIL representation for module `\RAMB4_S8'.
+Generating RTLIL representation for module `\RAMB4_S16'.
+Generating RTLIL representation for module `\RAMB4_S1_S1'.
+Generating RTLIL representation for module `\RAMB4_S1_S2'.
+Generating RTLIL representation for module `\RAMB4_S1_S4'.
+Generating RTLIL representation for module `\RAMB4_S1_S8'.
+Generating RTLIL representation for module `\RAMB4_S1_S16'.
+Generating RTLIL representation for module `\RAMB4_S2_S2'.
+Generating RTLIL representation for module `\RAMB4_S2_S4'.
+Generating RTLIL representation for module `\RAMB4_S2_S8'.
+Generating RTLIL representation for module `\RAMB4_S2_S16'.
+Generating RTLIL representation for module `\RAMB4_S4_S4'.
+Generating RTLIL representation for module `\RAMB4_S4_S8'.
+Generating RTLIL representation for module `\RAMB4_S4_S16'.
+Generating RTLIL representation for module `\RAMB4_S8_S8'.
+Generating RTLIL representation for module `\RAMB4_S8_S16'.
+Generating RTLIL representation for module `\RAMB4_S16_S16'.
+Generating RTLIL representation for module `\RAMB16_S1'.
+Generating RTLIL representation for module `\RAMB16_S2'.
+Generating RTLIL representation for module `\RAMB16_S4'.
+Generating RTLIL representation for module `\RAMB16_S9'.
+Generating RTLIL representation for module `\RAMB16_S18'.
+Generating RTLIL representation for module `\RAMB16_S36'.
+Generating RTLIL representation for module `\RAMB16_S1_S1'.
+Generating RTLIL representation for module `\RAMB16_S1_S2'.
+Generating RTLIL representation for module `\RAMB16_S1_S4'.
+Generating RTLIL representation for module `\RAMB16_S1_S9'.
+Generating RTLIL representation for module `\RAMB16_S1_S18'.
+Generating RTLIL representation for module `\RAMB16_S1_S36'.
+Generating RTLIL representation for module `\RAMB16_S2_S2'.
+Generating RTLIL representation for module `\RAMB16_S2_S4'.
+Generating RTLIL representation for module `\RAMB16_S2_S9'.
+Generating RTLIL representation for module `\RAMB16_S2_S18'.
+Generating RTLIL representation for module `\RAMB16_S2_S36'.
+Generating RTLIL representation for module `\RAMB16_S4_S4'.
+Generating RTLIL representation for module `\RAMB16_S4_S9'.
+Generating RTLIL representation for module `\RAMB16_S4_S18'.
+Generating RTLIL representation for module `\RAMB16_S4_S36'.
+Generating RTLIL representation for module `\RAMB16_S9_S9'.
+Generating RTLIL representation for module `\RAMB16_S9_S18'.
+Generating RTLIL representation for module `\RAMB16_S9_S36'.
+Generating RTLIL representation for module `\RAMB16_S18_S18'.
+Generating RTLIL representation for module `\RAMB16_S18_S36'.
+Generating RTLIL representation for module `\RAMB16_S36_S36'.
+Generating RTLIL representation for module `\RAMB16BWE_S18'.
+Generating RTLIL representation for module `\RAMB16BWE_S36'.
+Generating RTLIL representation for module `\RAMB16BWE_S18_S9'.
+Generating RTLIL representation for module `\RAMB16BWE_S18_S18'.
+Generating RTLIL representation for module `\RAMB16BWE_S36_S9'.
+Generating RTLIL representation for module `\RAMB16BWE_S36_S18'.
+Generating RTLIL representation for module `\RAMB16BWE_S36_S36'.
+Generating RTLIL representation for module `\RAMB16BWER'.
+Generating RTLIL representation for module `\RAMB8BWER'.
+Generating RTLIL representation for module `\FIFO16'.
+Generating RTLIL representation for module `\RAMB16'.
+Generating RTLIL representation for module `\RAMB32_S64_ECC'.
+Generating RTLIL representation for module `\FIFO18'.
+Generating RTLIL representation for module `\FIFO18_36'.
+Generating RTLIL representation for module `\FIFO36'.
+Generating RTLIL representation for module `\FIFO36_72'.
+Generating RTLIL representation for module `\RAMB18'.
+Generating RTLIL representation for module `\RAMB36'.
+Generating RTLIL representation for module `\RAMB18SDP'.
+Generating RTLIL representation for module `\RAMB36SDP'.
+Generating RTLIL representation for module `\FIFO18E1'.
+Generating RTLIL representation for module `\FIFO36E1'.
+Generating RTLIL representation for module `\FIFO18E2'.
+Generating RTLIL representation for module `\FIFO36E2'.
+Generating RTLIL representation for module `\RAMB18E2'.
+Generating RTLIL representation for module `\RAMB36E2'.
+Generating RTLIL representation for module `\URAM288'.
+Generating RTLIL representation for module `\URAM288_BASE'.
+Generating RTLIL representation for module `\DSP48E'.
+Generating RTLIL representation for module `\DSP48E2'.
+Generating RTLIL representation for module `\FDDRCPE'.
+Generating RTLIL representation for module `\FDDRRSE'.
+Generating RTLIL representation for module `\IFDDRCPE'.
+Generating RTLIL representation for module `\IFDDRRSE'.
+Generating RTLIL representation for module `\OFDDRCPE'.
+Generating RTLIL representation for module `\OFDDRRSE'.
+Generating RTLIL representation for module `\OFDDRTCPE'.
+Generating RTLIL representation for module `\OFDDRTRSE'.
+Generating RTLIL representation for module `\IDDR2'.
+Generating RTLIL representation for module `\ODDR2'.
+Generating RTLIL representation for module `\IDDR'.
+Generating RTLIL representation for module `\IDDR_2CLK'.
+Generating RTLIL representation for module `\ODDR'.
+Generating RTLIL representation for module `\IDELAYCTRL'.
+Generating RTLIL representation for module `\IDELAY'.
+Generating RTLIL representation for module `\ISERDES'.
+Generating RTLIL representation for module `\OSERDES'.
+Generating RTLIL representation for module `\IODELAY'.
+Generating RTLIL representation for module `\ISERDES_NODELAY'.
+Generating RTLIL representation for module `\IODELAYE1'.
+Generating RTLIL representation for module `\ISERDESE1'.
+Generating RTLIL representation for module `\OSERDESE1'.
+Generating RTLIL representation for module `\IDELAYE2'.
+Generating RTLIL representation for module `\ODELAYE2'.
+Generating RTLIL representation for module `\ISERDESE2'.
+Generating RTLIL representation for module `\OSERDESE2'.
+Generating RTLIL representation for module `\PHASER_IN'.
+Generating RTLIL representation for module `\PHASER_IN_PHY'.
+Generating RTLIL representation for module `\PHASER_OUT'.
+Generating RTLIL representation for module `\PHASER_OUT_PHY'.
+Generating RTLIL representation for module `\PHASER_REF'.
+Generating RTLIL representation for module `\PHY_CONTROL'.
+Generating RTLIL representation for module `\IDDRE1'.
+Generating RTLIL representation for module `\ODDRE1'.
+Generating RTLIL representation for module `\IDELAYE3'.
+Generating RTLIL representation for module `\ODELAYE3'.
+Generating RTLIL representation for module `\ISERDESE3'.
+Generating RTLIL representation for module `\OSERDESE3'.
+Generating RTLIL representation for module `\BITSLICE_CONTROL'.
+Generating RTLIL representation for module `\RIU_OR'.
+Generating RTLIL representation for module `\RX_BITSLICE'.
+Generating RTLIL representation for module `\RXTX_BITSLICE'.
+Generating RTLIL representation for module `\TX_BITSLICE'.
+Generating RTLIL representation for module `\TX_BITSLICE_TRI'.
+Generating RTLIL representation for module `\IODELAY2'.
+Generating RTLIL representation for module `\IODRP2'.
+Generating RTLIL representation for module `\IODRP2_MCB'.
+Generating RTLIL representation for module `\ISERDES2'.
+Generating RTLIL representation for module `\OSERDES2'.
+Generating RTLIL representation for module `\IBUF_DLY_ADJ'.
+Generating RTLIL representation for module `\IBUF_IBUFDISABLE'.
+Generating RTLIL representation for module `\IBUF_INTERMDISABLE'.
+Generating RTLIL representation for module `\IBUF_ANALOG'.
+Generating RTLIL representation for module `\IBUFE3'.
+Generating RTLIL representation for module `\IBUFDS'.
+Generating RTLIL representation for module `\IBUFDS_DLY_ADJ'.
+Generating RTLIL representation for module `\IBUFDS_IBUFDISABLE'.
+Generating RTLIL representation for module `\IBUFDS_INTERMDISABLE'.
+Generating RTLIL representation for module `\IBUFDS_DIFF_OUT'.
+Generating RTLIL representation for module `\IBUFDS_DIFF_OUT_IBUFDISABLE'.
+Generating RTLIL representation for module `\IBUFDS_DIFF_OUT_INTERMDISABLE'.
+Generating RTLIL representation for module `\IBUFDSE3'.
+Generating RTLIL representation for module `\IBUFDS_DPHY'.
+Generating RTLIL representation for module `\IBUFGDS'.
+Generating RTLIL representation for module `\IBUFGDS_DIFF_OUT'.
+Generating RTLIL representation for module `\IOBUF_DCIEN'.
+Generating RTLIL representation for module `\IOBUF_INTERMDISABLE'.
+Generating RTLIL representation for module `\IOBUFE3'.
+Generating RTLIL representation for module `\IOBUFDS'.
+Generating RTLIL representation for module `\IOBUFDS_DCIEN'.
+Generating RTLIL representation for module `\IOBUFDS_INTERMDISABLE'.
+Generating RTLIL representation for module `\IOBUFDS_DIFF_OUT'.
+Generating RTLIL representation for module `\IOBUFDS_DIFF_OUT_DCIEN'.
+Generating RTLIL representation for module `\IOBUFDS_DIFF_OUT_INTERMDISABLE'.
+Generating RTLIL representation for module `\IOBUFDSE3'.
+Generating RTLIL representation for module `\OBUFDS'.
+Generating RTLIL representation for module `\OBUFDS_DPHY'.
+Generating RTLIL representation for module `\OBUFTDS'.
+Generating RTLIL representation for module `\KEEPER'.
+Generating RTLIL representation for module `\PULLDOWN'.
+Generating RTLIL representation for module `\PULLUP'.
+Generating RTLIL representation for module `\DCIRESET'.
+Generating RTLIL representation for module `\HPIO_VREF'.
+Generating RTLIL representation for module `\BUFGCE'.
+Generating RTLIL representation for module `\BUFGCE_1'.
+Generating RTLIL representation for module `\BUFGMUX'.
+Generating RTLIL representation for module `\BUFGMUX_1'.
+Generating RTLIL representation for module `\BUFGMUX_CTRL'.
+Generating RTLIL representation for module `\BUFGMUX_VIRTEX4'.
+Generating RTLIL representation for module `\BUFG_GT'.
+Generating RTLIL representation for module `\BUFG_GT_SYNC'.
+Generating RTLIL representation for module `\BUFG_PS'.
+Generating RTLIL representation for module `\BUFGCE_DIV'.
+Generating RTLIL representation for module `\BUFH'.
+Generating RTLIL representation for module `\BUFIO2'.
+Generating RTLIL representation for module `\BUFIO2_2CLK'.
+Generating RTLIL representation for module `\BUFIO2FB'.
+Generating RTLIL representation for module `\BUFPLL'.
+Generating RTLIL representation for module `\BUFPLL_MCB'.
+Generating RTLIL representation for module `\BUFIO'.
+Generating RTLIL representation for module `\BUFIODQS'.
+Generating RTLIL representation for module `\BUFR'.
+Generating RTLIL representation for module `\BUFMR'.
+Generating RTLIL representation for module `\BUFMRCE'.
+Generating RTLIL representation for module `\DCM'.
+Generating RTLIL representation for module `\DCM_SP'.
+Generating RTLIL representation for module `\DCM_CLKGEN'.
+Generating RTLIL representation for module `\DCM_ADV'.
+Generating RTLIL representation for module `\DCM_BASE'.
+Generating RTLIL representation for module `\DCM_PS'.
+Generating RTLIL representation for module `\PMCD'.
+Generating RTLIL representation for module `\PLL_ADV'.
+Generating RTLIL representation for module `\PLL_BASE'.
+Generating RTLIL representation for module `\MMCM_ADV'.
+Generating RTLIL representation for module `\MMCM_BASE'.
+Generating RTLIL representation for module `\MMCME2_ADV'.
+Generating RTLIL representation for module `\MMCME2_BASE'.
+Generating RTLIL representation for module `\PLLE2_ADV'.
+Generating RTLIL representation for module `\PLLE2_BASE'.
+Generating RTLIL representation for module `\MMCME3_ADV'.
+Generating RTLIL representation for module `\MMCME3_BASE'.
+Generating RTLIL representation for module `\PLLE3_ADV'.
+Generating RTLIL representation for module `\PLLE3_BASE'.
+Generating RTLIL representation for module `\MMCME4_ADV'.
+Generating RTLIL representation for module `\MMCME4_BASE'.
+Generating RTLIL representation for module `\PLLE4_ADV'.
+Generating RTLIL representation for module `\PLLE4_BASE'.
+Generating RTLIL representation for module `\BUFT'.
+Generating RTLIL representation for module `\IN_FIFO'.
+Generating RTLIL representation for module `\OUT_FIFO'.
+Generating RTLIL representation for module `\HARD_SYNC'.
+Generating RTLIL representation for module `\STARTUP_SPARTAN3'.
+Generating RTLIL representation for module `\STARTUP_SPARTAN3E'.
+Generating RTLIL representation for module `\STARTUP_SPARTAN3A'.
+Generating RTLIL representation for module `\STARTUP_SPARTAN6'.
+Generating RTLIL representation for module `\STARTUP_VIRTEX4'.
+Generating RTLIL representation for module `\STARTUP_VIRTEX5'.
+Generating RTLIL representation for module `\STARTUP_VIRTEX6'.
+Generating RTLIL representation for module `\STARTUPE2'.
+Generating RTLIL representation for module `\STARTUPE3'.
+Generating RTLIL representation for module `\CAPTURE_SPARTAN3'.
+Generating RTLIL representation for module `\CAPTURE_SPARTAN3A'.
+Generating RTLIL representation for module `\CAPTURE_VIRTEX4'.
+Generating RTLIL representation for module `\CAPTURE_VIRTEX5'.
+Generating RTLIL representation for module `\CAPTURE_VIRTEX6'.
+Generating RTLIL representation for module `\CAPTUREE2'.
+Generating RTLIL representation for module `\ICAP_SPARTAN3A'.
+Generating RTLIL representation for module `\ICAP_SPARTAN6'.
+Generating RTLIL representation for module `\ICAP_VIRTEX4'.
+Generating RTLIL representation for module `\ICAP_VIRTEX5'.
+Generating RTLIL representation for module `\ICAP_VIRTEX6'.
+Generating RTLIL representation for module `\ICAPE2'.
+Generating RTLIL representation for module `\ICAPE3'.
+Generating RTLIL representation for module `\BSCAN_SPARTAN3'.
+Generating RTLIL representation for module `\BSCAN_SPARTAN3A'.
+Generating RTLIL representation for module `\BSCAN_SPARTAN6'.
+Generating RTLIL representation for module `\BSCAN_VIRTEX4'.
+Generating RTLIL representation for module `\BSCAN_VIRTEX5'.
+Generating RTLIL representation for module `\BSCAN_VIRTEX6'.
+Generating RTLIL representation for module `\BSCANE2'.
+Generating RTLIL representation for module `\DNA_PORT'.
+Generating RTLIL representation for module `\DNA_PORTE2'.
+Generating RTLIL representation for module `\FRAME_ECC_VIRTEX4'.
+Generating RTLIL representation for module `\FRAME_ECC_VIRTEX5'.
+Generating RTLIL representation for module `\FRAME_ECC_VIRTEX6'.
+Generating RTLIL representation for module `\FRAME_ECCE2'.
+Generating RTLIL representation for module `\FRAME_ECCE3'.
+Generating RTLIL representation for module `\FRAME_ECCE4'.
+Generating RTLIL representation for module `\USR_ACCESS_VIRTEX4'.
+Generating RTLIL representation for module `\USR_ACCESS_VIRTEX5'.
+Generating RTLIL representation for module `\USR_ACCESS_VIRTEX6'.
+Generating RTLIL representation for module `\USR_ACCESSE2'.
+Generating RTLIL representation for module `\POST_CRC_INTERNAL'.
+Generating RTLIL representation for module `\SUSPEND_SYNC'.
+Generating RTLIL representation for module `\KEY_CLEAR'.
+Generating RTLIL representation for module `\MASTER_JTAG'.
+Generating RTLIL representation for module `\SPI_ACCESS'.
+Generating RTLIL representation for module `\EFUSE_USR'.
+Generating RTLIL representation for module `\SYSMON'.
+Generating RTLIL representation for module `\XADC'.
+Generating RTLIL representation for module `\SYSMONE1'.
+Generating RTLIL representation for module `\SYSMONE4'.
+Generating RTLIL representation for module `\GTPA1_DUAL'.
+Generating RTLIL representation for module `\GT11_CUSTOM'.
+Generating RTLIL representation for module `\GT11_DUAL'.
+Generating RTLIL representation for module `\GT11CLK'.
+Generating RTLIL representation for module `\GT11CLK_MGT'.
+Generating RTLIL representation for module `\GTP_DUAL'.
+Generating RTLIL representation for module `\GTX_DUAL'.
+Generating RTLIL representation for module `\CRC32'.
+Generating RTLIL representation for module `\CRC64'.
+Generating RTLIL representation for module `\GTHE1_QUAD'.
+Generating RTLIL representation for module `\GTXE1'.
+Generating RTLIL representation for module `\IBUFDS_GTXE1'.
+Generating RTLIL representation for module `\IBUFDS_GTHE1'.
+Generating RTLIL representation for module `\GTHE2_CHANNEL'.
+Generating RTLIL representation for module `\GTHE2_COMMON'.
+Generating RTLIL representation for module `\GTPE2_CHANNEL'.
+Generating RTLIL representation for module `\GTPE2_COMMON'.
+Generating RTLIL representation for module `\GTXE2_CHANNEL'.
+Generating RTLIL representation for module `\GTXE2_COMMON'.
+Generating RTLIL representation for module `\IBUFDS_GTE2'.
+Generating RTLIL representation for module `\GTHE3_CHANNEL'.
+Generating RTLIL representation for module `\GTHE3_COMMON'.
+Generating RTLIL representation for module `\GTYE3_CHANNEL'.
+Generating RTLIL representation for module `\GTYE3_COMMON'.
+Generating RTLIL representation for module `\IBUFDS_GTE3'.
+Generating RTLIL representation for module `\OBUFDS_GTE3'.
+Generating RTLIL representation for module `\OBUFDS_GTE3_ADV'.
+Generating RTLIL representation for module `\GTHE4_CHANNEL'.
+Generating RTLIL representation for module `\GTHE4_COMMON'.
+Generating RTLIL representation for module `\GTYE4_CHANNEL'.
+Generating RTLIL representation for module `\GTYE4_COMMON'.
+Generating RTLIL representation for module `\IBUFDS_GTE4'.
+Generating RTLIL representation for module `\OBUFDS_GTE4'.
+Generating RTLIL representation for module `\OBUFDS_GTE4_ADV'.
+Generating RTLIL representation for module `\GTM_DUAL'.
+Generating RTLIL representation for module `\IBUFDS_GTM'.
+Generating RTLIL representation for module `\OBUFDS_GTM'.
+Generating RTLIL representation for module `\OBUFDS_GTM_ADV'.
+Generating RTLIL representation for module `\HSDAC'.
+Generating RTLIL representation for module `\HSADC'.
+Generating RTLIL representation for module `\RFDAC'.
+Generating RTLIL representation for module `\RFADC'.
+Generating RTLIL representation for module `\PCIE_A1'.
+Generating RTLIL representation for module `\PCIE_EP'.
+Generating RTLIL representation for module `\PCIE_2_0'.
+Generating RTLIL representation for module `\PCIE_2_1'.
+Generating RTLIL representation for module `\PCIE_3_0'.
+Generating RTLIL representation for module `\PCIE_3_1'.
+Generating RTLIL representation for module `\PCIE40E4'.
+Generating RTLIL representation for module `\PCIE4CE4'.
+Generating RTLIL representation for module `\EMAC'.
+Generating RTLIL representation for module `\TEMAC'.
+Generating RTLIL representation for module `\TEMAC_SINGLE'.
+Generating RTLIL representation for module `\CMAC'.
+Generating RTLIL representation for module `\CMACE4'.
+Generating RTLIL representation for module `\MCB'.
+Generating RTLIL representation for module `\HBM_REF_CLK'.
+Generating RTLIL representation for module `\HBM_SNGLBLI_INTF_APB'.
+Generating RTLIL representation for module `\HBM_SNGLBLI_INTF_AXI'.
+Generating RTLIL representation for module `\HBM_ONE_STACK_INTF'.
+Generating RTLIL representation for module `\HBM_TWO_STACK_INTF'.
+Generating RTLIL representation for module `\PPC405_ADV'.
+Generating RTLIL representation for module `\PPC440'.
+Generating RTLIL representation for module `\PS7'.
+Generating RTLIL representation for module `\PS8'.
+Generating RTLIL representation for module `\ILKN'.
+Generating RTLIL representation for module `\ILKNE4'.
+Generating RTLIL representation for module `\VCU'.
+Generating RTLIL representation for module `\FE'.
+Successfully finished Verilog frontend.
+
+6.3. Executing HIERARCHY pass (managing design hierarchy).
+
+6.3.1. Analyzing design hierarchy..
+Top module:  \debounce_top
+Used module:     \debounce
+Used module:         $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+
+6.3.2. Analyzing design hierarchy..
+Top module:  \debounce_top
+Used module:     \debounce
+Used module:         $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+Removed 0 unused modules.
+
+6.4. Executing PROC pass (convert processes to netlists).
+
+6.4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+6.4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135 in module RAM64M.
+Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963 in module RAM32M.
+Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$893 in module RAM128X1D.
+Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$845 in module RAM64X1D.
+Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$818 in module RAM32X1D_1.
+Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$779 in module RAM32X1D.
+Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:810$642 in module FDPE_1.
+Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:769$639 in module FDPE.
+Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:731$624 in module FDCE_1.
+Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:690$621 in module FDCE.
+Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:587$606 in module FDSE_1.
+Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:554$602 in module FDSE.
+Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:522$584 in module FDRE_1.
+Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:489$580 in module FDRE.
+Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/mod_counter.sv:26$31 in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+Removed 1 dead cases from process $proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv:0$21 in module debounce.
+Marked 10 switch rules as full_case in process $proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv:0$21 in module debounce.
+Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:62$16 in module debounce_top.
+Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:44$9 in module debounce_top.
+Removed a total of 1 dead cases.
+
+6.4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 97 assignments to connections.
+
+6.4.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\SRLC32E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2400$1340'.
+  Set init value: \r = 0
+Found init rule in `\SRLC16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2356$1333'.
+  Set init value: \r = 16'0000000000000000
+Found init rule in `\SRLC16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2324$1326'.
+  Set init value: \r = 16'0000000000000000
+Found init rule in `\SRL16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2287$1323'.
+  Set init value: \r = 16'0000000000000000
+Found init rule in `\SRL16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2259$1316'.
+  Set init value: \r = 16'0000000000000000
+Found init rule in `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1975$1241'.
+  Set init value: \mem_d = 64'0000000000000000000000000000000000000000000000000000000000000000
+Found init rule in `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1974$1240'.
+  Set init value: \mem_c = 64'0000000000000000000000000000000000000000000000000000000000000000
+Found init rule in `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1973$1239'.
+  Set init value: \mem_b = 64'0000000000000000000000000000000000000000000000000000000000000000
+Found init rule in `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1972$1238'.
+  Set init value: \mem_a = 64'0000000000000000000000000000000000000000000000000000000000000000
+Found init rule in `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1801$1089'.
+  Set init value: \mem_d = 64'0000000000000000000000000000000000000000000000000000000000000000
+Found init rule in `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1800$1088'.
+  Set init value: \mem_c = 64'0000000000000000000000000000000000000000000000000000000000000000
+Found init rule in `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1799$1087'.
+  Set init value: \mem_b = 64'0000000000000000000000000000000000000000000000000000000000000000
+Found init rule in `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1798$1086'.
+  Set init value: \mem_a = 64'0000000000000000000000000000000000000000000000000000000000000000
+Found init rule in `\RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1707$930'.
+  Set init value: \mem = 128'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Found init rule in `\RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1602$882'.
+  Set init value: \mem = 64'0000000000000000000000000000000000000000000000000000000000000000
+Found init rule in `\RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1556$837'.
+  Set init value: \mem = 0
+Found init rule in `\RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1497$810'.
+  Set init value: \mem = 0
+Found init rule in `\FDPE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$645'.
+  Set init value: \Q = 1'1
+Found init rule in `\FDPE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$641'.
+  Set init value: \Q = 1'1
+Found init rule in `\FDCE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$627'.
+  Set init value: \Q = 1'0
+Found init rule in `\FDCE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$623'.
+  Set init value: \Q = 1'0
+Found init rule in `\FDSE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$609'.
+  Set init value: \Q = 1'1
+Found init rule in `\FDSE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$605'.
+  Set init value: \Q = 1'1
+Found init rule in `\FDRE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$587'.
+  Set init value: \Q = 1'0
+Found init rule in `\FDRE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$583'.
+  Set init value: \Q = 1'0
+
+6.4.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \PRE in `\FDPE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:810$642'.
+Found async reset \PRE in `\FDPE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:769$639'.
+Found async reset \CLR in `\FDCE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:731$624'.
+Found async reset \CLR in `\FDCE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:690$621'.
+
+6.4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~37 debug messages>
+
+6.4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\SRLC32E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2400$1340'.
+Creating decoders for process `\SRLC32E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2408$1339'.
+     1/1: $0\r[31:0]
+Creating decoders for process `\SRLC16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2356$1333'.
+Creating decoders for process `\SRLC16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2364$1332'.
+     1/1: $0\r[15:0]
+Creating decoders for process `\SRLC16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2324$1326'.
+Creating decoders for process `\SRLC16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2327$1325'.
+Creating decoders for process `\SRL16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2287$1323'.
+Creating decoders for process `\SRL16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2294$1322'.
+     1/1: $0\r[15:0]
+Creating decoders for process `\SRL16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2259$1316'.
+Creating decoders for process `\SRL16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2261$1315'.
+Creating decoders for process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1975$1241'.
+Creating decoders for process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1974$1240'.
+Creating decoders for process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1973$1239'.
+Creating decoders for process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1972$1238'.
+Creating decoders for process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+     1/16: $1$lookahead\mem_d$1134[63:0]$1167
+     2/16: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1986$1124[63:0]$1162
+     3/16: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1986$1123[63:0]$1161
+     4/16: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1986$1125[5:0]$1163
+     5/16: $1$lookahead\mem_c$1133[63:0]$1166
+     6/16: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1985$1121[63:0]$1159
+     7/16: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1985$1120[63:0]$1158
+     8/16: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1985$1122[5:0]$1160
+     9/16: $1$lookahead\mem_b$1132[63:0]$1165
+    10/16: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1984$1118[63:0]$1156
+    11/16: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1984$1117[63:0]$1155
+    12/16: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1984$1119[5:0]$1157
+    13/16: $1$lookahead\mem_a$1131[63:0]$1164
+    14/16: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1983$1115[63:0]$1153
+    15/16: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1983$1114[63:0]$1152
+    16/16: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1983$1116[5:0]$1154
+Creating decoders for process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1801$1089'.
+Creating decoders for process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1800$1088'.
+Creating decoders for process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1799$1087'.
+Creating decoders for process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1798$1086'.
+Creating decoders for process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+     1/16: $1$lookahead\mem_d$962[63:0]$995
+     2/16: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1812$944[63:0]$990
+     3/16: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1812$943[63:0]$989
+     4/16: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1812$945[31:0]$991
+     5/16: $1$lookahead\mem_c$961[63:0]$994
+     6/16: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1811$941[63:0]$987
+     7/16: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1811$940[63:0]$986
+     8/16: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1811$942[31:0]$988
+     9/16: $1$lookahead\mem_b$960[63:0]$993
+    10/16: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1810$938[63:0]$984
+    11/16: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1810$937[63:0]$983
+    12/16: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1810$939[31:0]$985
+    13/16: $1$lookahead\mem_a$959[63:0]$992
+    14/16: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1809$935[63:0]$981
+    15/16: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1809$934[63:0]$980
+    16/16: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1809$936[31:0]$982
+Creating decoders for process `\RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1707$930'.
+Creating decoders for process `\RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$893'.
+     1/4: $1$lookahead\mem$892[127:0]$901
+     2/4: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$887[127:0]$899
+     3/4: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$886[127:0]$898
+     4/4: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$888[6:0]$900
+Creating decoders for process `\RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1602$882'.
+Creating decoders for process `\RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$845'.
+     1/4: $1$lookahead\mem$844[63:0]$853
+     2/4: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$839[63:0]$851
+     3/4: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$838[63:0]$850
+     4/4: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$840[5:0]$852
+Creating decoders for process `\RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1556$837'.
+Creating decoders for process `\RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$818'.
+     1/4: $1$lookahead\mem$817[31:0]$826
+     2/4: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$812[31:0]$824
+     3/4: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$811[31:0]$823
+     4/4: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$813[4:0]$825
+Creating decoders for process `\RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1497$810'.
+Creating decoders for process `\RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$779'.
+     1/4: $1$lookahead\mem$778[31:0]$787
+     2/4: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$773[31:0]$785
+     3/4: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$772[31:0]$784
+     4/4: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$774[4:0]$786
+Creating decoders for process `\FDPE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$645'.
+Creating decoders for process `\FDPE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:810$642'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\FDPE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$641'.
+Creating decoders for process `\FDPE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:769$639'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\FDCE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$627'.
+Creating decoders for process `\FDCE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:731$624'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\FDCE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$623'.
+Creating decoders for process `\FDCE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:690$621'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\FDSE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$609'.
+Creating decoders for process `\FDSE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:587$606'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\FDSE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$605'.
+Creating decoders for process `\FDSE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:554$602'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\FDRE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$587'.
+Creating decoders for process `\FDRE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:522$584'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\FDRE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$583'.
+Creating decoders for process `\FDRE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:489$580'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/mod_counter.sv:26$31'.
+     1/1: $0\count[18:0]
+Creating decoders for process `\debounce.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv:90$30'.
+Creating decoders for process `\debounce.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv:0$21'.
+     1/14: $10\ns[1:0]
+     2/14: $9\ns[1:0]
+     3/14: $8\ns[1:0]
+     4/14: $7\ns[1:0]
+     5/14: $6\ns[1:0]
+     6/14: $5\ns[1:0]
+     7/14: $4\ns[1:0]
+     8/14: $3\ns[1:0]
+     9/14: $2\ns[1:0]
+    10/14: $2\debounced[0:0]
+    11/14: $2\clrTimer[0:0]
+    12/14: $1\ns[1:0]
+    13/14: $1\clrTimer[0:0]
+    14/14: $1\debounced[0:0]
+Creating decoders for process `\debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:62$16'.
+     1/1: $0\noisyCount[6:0]
+Creating decoders for process `\debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:57$13'.
+Creating decoders for process `\debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:55$12'.
+Creating decoders for process `\debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:44$9'.
+     1/1: $0\debouncedCount[6:0]
+Creating decoders for process `\debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:39$6'.
+Creating decoders for process `\debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:37$5'.
+Creating decoders for process `\debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:31$3'.
+Creating decoders for process `\debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:29$1'.
+
+6.4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\debounce.\debounced' from process `\debounce.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv:0$21'.
+No latch inferred for signal `\debounce.\clrTimer' from process `\debounce.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv:0$21'.
+No latch inferred for signal `\debounce.\ns' from process `\debounce.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv:0$21'.
+
+6.4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\SRLC32E.\r' using process `\SRLC32E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2408$1339'.
+  created $dff cell `$procdff$1709' with positive edge clock.
+Creating register for signal `\SRLC16E.\r' using process `\SRLC16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2364$1332'.
+  created $dff cell `$procdff$1710' with positive edge clock.
+Creating register for signal `\SRLC16.\r' using process `\SRLC16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2327$1325'.
+  created $dff cell `$procdff$1711' with positive edge clock.
+Creating register for signal `\SRL16E.\r' using process `\SRL16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2294$1322'.
+  created $dff cell `$procdff$1712' with positive edge clock.
+Creating register for signal `\SRL16.\r' using process `\SRL16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2261$1315'.
+  created $dff cell `$procdff$1713' with positive edge clock.
+Creating register for signal `\RAM64M.\mem_a' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+  created $dff cell `$procdff$1714' with positive edge clock.
+Creating register for signal `\RAM64M.\mem_b' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+  created $dff cell `$procdff$1715' with positive edge clock.
+Creating register for signal `\RAM64M.\mem_c' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+  created $dff cell `$procdff$1716' with positive edge clock.
+Creating register for signal `\RAM64M.\mem_d' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+  created $dff cell `$procdff$1717' with positive edge clock.
+Creating register for signal `\RAM64M.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1983$1114' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+  created $dff cell `$procdff$1718' with positive edge clock.
+Creating register for signal `\RAM64M.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1983$1115' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+  created $dff cell `$procdff$1719' with positive edge clock.
+Creating register for signal `\RAM64M.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1983$1116' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+  created $dff cell `$procdff$1720' with positive edge clock.
+Creating register for signal `\RAM64M.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1984$1117' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+  created $dff cell `$procdff$1721' with positive edge clock.
+Creating register for signal `\RAM64M.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1984$1118' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+  created $dff cell `$procdff$1722' with positive edge clock.
+Creating register for signal `\RAM64M.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1984$1119' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+  created $dff cell `$procdff$1723' with positive edge clock.
+Creating register for signal `\RAM64M.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1985$1120' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+  created $dff cell `$procdff$1724' with positive edge clock.
+Creating register for signal `\RAM64M.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1985$1121' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+  created $dff cell `$procdff$1725' with positive edge clock.
+Creating register for signal `\RAM64M.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1985$1122' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+  created $dff cell `$procdff$1726' with positive edge clock.
+Creating register for signal `\RAM64M.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1986$1123' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+  created $dff cell `$procdff$1727' with positive edge clock.
+Creating register for signal `\RAM64M.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1986$1124' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+  created $dff cell `$procdff$1728' with positive edge clock.
+Creating register for signal `\RAM64M.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1986$1125' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+  created $dff cell `$procdff$1729' with positive edge clock.
+Creating register for signal `\RAM64M.$lookahead\mem_a$1131' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+  created $dff cell `$procdff$1730' with positive edge clock.
+Creating register for signal `\RAM64M.$lookahead\mem_b$1132' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+  created $dff cell `$procdff$1731' with positive edge clock.
+Creating register for signal `\RAM64M.$lookahead\mem_c$1133' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+  created $dff cell `$procdff$1732' with positive edge clock.
+Creating register for signal `\RAM64M.$lookahead\mem_d$1134' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+  created $dff cell `$procdff$1733' with positive edge clock.
+Creating register for signal `\RAM32M.\mem_a' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+  created $dff cell `$procdff$1734' with positive edge clock.
+Creating register for signal `\RAM32M.\mem_b' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+  created $dff cell `$procdff$1735' with positive edge clock.
+Creating register for signal `\RAM32M.\mem_c' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+  created $dff cell `$procdff$1736' with positive edge clock.
+Creating register for signal `\RAM32M.\mem_d' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+  created $dff cell `$procdff$1737' with positive edge clock.
+Creating register for signal `\RAM32M.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1809$934' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+  created $dff cell `$procdff$1738' with positive edge clock.
+Creating register for signal `\RAM32M.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1809$935' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+  created $dff cell `$procdff$1739' with positive edge clock.
+Creating register for signal `\RAM32M.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1809$936' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+  created $dff cell `$procdff$1740' with positive edge clock.
+Creating register for signal `\RAM32M.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1810$937' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+  created $dff cell `$procdff$1741' with positive edge clock.
+Creating register for signal `\RAM32M.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1810$938' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+  created $dff cell `$procdff$1742' with positive edge clock.
+Creating register for signal `\RAM32M.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1810$939' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+  created $dff cell `$procdff$1743' with positive edge clock.
+Creating register for signal `\RAM32M.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1811$940' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+  created $dff cell `$procdff$1744' with positive edge clock.
+Creating register for signal `\RAM32M.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1811$941' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+  created $dff cell `$procdff$1745' with positive edge clock.
+Creating register for signal `\RAM32M.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1811$942' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+  created $dff cell `$procdff$1746' with positive edge clock.
+Creating register for signal `\RAM32M.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1812$943' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+  created $dff cell `$procdff$1747' with positive edge clock.
+Creating register for signal `\RAM32M.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1812$944' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+  created $dff cell `$procdff$1748' with positive edge clock.
+Creating register for signal `\RAM32M.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1812$945' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+  created $dff cell `$procdff$1749' with positive edge clock.
+Creating register for signal `\RAM32M.$lookahead\mem_a$959' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+  created $dff cell `$procdff$1750' with positive edge clock.
+Creating register for signal `\RAM32M.$lookahead\mem_b$960' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+  created $dff cell `$procdff$1751' with positive edge clock.
+Creating register for signal `\RAM32M.$lookahead\mem_c$961' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+  created $dff cell `$procdff$1752' with positive edge clock.
+Creating register for signal `\RAM32M.$lookahead\mem_d$962' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+  created $dff cell `$procdff$1753' with positive edge clock.
+Creating register for signal `\RAM128X1D.\mem' using process `\RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$893'.
+  created $dff cell `$procdff$1754' with positive edge clock.
+Creating register for signal `\RAM128X1D.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$886' using process `\RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$893'.
+  created $dff cell `$procdff$1755' with positive edge clock.
+Creating register for signal `\RAM128X1D.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$887' using process `\RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$893'.
+  created $dff cell `$procdff$1756' with positive edge clock.
+Creating register for signal `\RAM128X1D.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$888' using process `\RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$893'.
+  created $dff cell `$procdff$1757' with positive edge clock.
+Creating register for signal `\RAM128X1D.$lookahead\mem$892' using process `\RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$893'.
+  created $dff cell `$procdff$1758' with positive edge clock.
+Creating register for signal `\RAM64X1D.\mem' using process `\RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$845'.
+  created $dff cell `$procdff$1759' with positive edge clock.
+Creating register for signal `\RAM64X1D.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$838' using process `\RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$845'.
+  created $dff cell `$procdff$1760' with positive edge clock.
+Creating register for signal `\RAM64X1D.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$839' using process `\RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$845'.
+  created $dff cell `$procdff$1761' with positive edge clock.
+Creating register for signal `\RAM64X1D.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$840' using process `\RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$845'.
+  created $dff cell `$procdff$1762' with positive edge clock.
+Creating register for signal `\RAM64X1D.$lookahead\mem$844' using process `\RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$845'.
+  created $dff cell `$procdff$1763' with positive edge clock.
+Creating register for signal `\RAM32X1D_1.\mem' using process `\RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$818'.
+  created $dff cell `$procdff$1764' with negative edge clock.
+Creating register for signal `\RAM32X1D_1.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$811' using process `\RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$818'.
+  created $dff cell `$procdff$1765' with negative edge clock.
+Creating register for signal `\RAM32X1D_1.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$812' using process `\RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$818'.
+  created $dff cell `$procdff$1766' with negative edge clock.
+Creating register for signal `\RAM32X1D_1.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$813' using process `\RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$818'.
+  created $dff cell `$procdff$1767' with negative edge clock.
+Creating register for signal `\RAM32X1D_1.$lookahead\mem$817' using process `\RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$818'.
+  created $dff cell `$procdff$1768' with negative edge clock.
+Creating register for signal `\RAM32X1D.\mem' using process `\RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$779'.
+  created $dff cell `$procdff$1769' with positive edge clock.
+Creating register for signal `\RAM32X1D.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$772' using process `\RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$779'.
+  created $dff cell `$procdff$1770' with positive edge clock.
+Creating register for signal `\RAM32X1D.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$773' using process `\RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$779'.
+  created $dff cell `$procdff$1771' with positive edge clock.
+Creating register for signal `\RAM32X1D.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$774' using process `\RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$779'.
+  created $dff cell `$procdff$1772' with positive edge clock.
+Creating register for signal `\RAM32X1D.$lookahead\mem$778' using process `\RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$779'.
+  created $dff cell `$procdff$1773' with positive edge clock.
+Creating register for signal `\FDPE_1.\Q' using process `\FDPE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:810$642'.
+  created $adff cell `$procdff$1774' with negative edge clock and positive level reset.
+Creating register for signal `\FDPE.\Q' using process `\FDPE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:769$639'.
+  created $adff cell `$procdff$1775' with positive edge clock and positive level reset.
+Creating register for signal `\FDCE_1.\Q' using process `\FDCE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:731$624'.
+  created $adff cell `$procdff$1776' with negative edge clock and positive level reset.
+Creating register for signal `\FDCE.\Q' using process `\FDCE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:690$621'.
+  created $adff cell `$procdff$1777' with positive edge clock and positive level reset.
+Creating register for signal `\FDSE_1.\Q' using process `\FDSE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:587$606'.
+  created $dff cell `$procdff$1778' with negative edge clock.
+Creating register for signal `\FDSE.\Q' using process `\FDSE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:554$602'.
+  created $dff cell `$procdff$1779' with positive edge clock.
+Creating register for signal `\FDRE_1.\Q' using process `\FDRE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:522$584'.
+  created $dff cell `$procdff$1780' with negative edge clock.
+Creating register for signal `\FDRE.\Q' using process `\FDRE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:489$580'.
+  created $dff cell `$procdff$1781' with positive edge clock.
+Creating register for signal `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.\count' using process `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/mod_counter.sv:26$31'.
+  created $dff cell `$procdff$1782' with positive edge clock.
+Creating register for signal `\debounce.\cs' using process `\debounce.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv:90$30'.
+  created $dff cell `$procdff$1783' with positive edge clock.
+Creating register for signal `\debounce_top.\noisyCount' using process `\debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:62$16'.
+  created $dff cell `$procdff$1784' with positive edge clock.
+Creating register for signal `\debounce_top.\F4' using process `\debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:57$13'.
+  created $dff cell `$procdff$1785' with positive edge clock.
+Creating register for signal `\debounce_top.\F3' using process `\debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:55$12'.
+  created $dff cell `$procdff$1786' with positive edge clock.
+Creating register for signal `\debounce_top.\debouncedCount' using process `\debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:44$9'.
+  created $dff cell `$procdff$1787' with positive edge clock.
+Creating register for signal `\debounce_top.\F2' using process `\debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:39$6'.
+  created $dff cell `$procdff$1788' with positive edge clock.
+Creating register for signal `\debounce_top.\F1' using process `\debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:37$5'.
+  created $dff cell `$procdff$1789' with positive edge clock.
+Creating register for signal `\debounce_top.\buttonPush [1]' using process `\debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:31$3'.
+  created $dff cell `$procdff$1790' with positive edge clock.
+Creating register for signal `\debounce_top.\buttonPush [0]' using process `\debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:29$1'.
+  created $dff cell `$procdff$1791' with positive edge clock.
+
+6.4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+6.4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `SRLC32E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2400$1340'.
+Found and cleaned up 1 empty switch in `\SRLC32E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2408$1339'.
+Removing empty process `SRLC32E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2408$1339'.
+Removing empty process `SRLC16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2356$1333'.
+Found and cleaned up 1 empty switch in `\SRLC16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2364$1332'.
+Removing empty process `SRLC16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2364$1332'.
+Removing empty process `SRLC16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2324$1326'.
+Removing empty process `SRLC16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2327$1325'.
+Removing empty process `SRL16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2287$1323'.
+Found and cleaned up 1 empty switch in `\SRL16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2294$1322'.
+Removing empty process `SRL16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2294$1322'.
+Removing empty process `SRL16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2259$1316'.
+Removing empty process `SRL16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2261$1315'.
+Removing empty process `RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1975$1241'.
+Removing empty process `RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1974$1240'.
+Removing empty process `RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1973$1239'.
+Removing empty process `RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1972$1238'.
+Found and cleaned up 1 empty switch in `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+Removing empty process `RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1135'.
+Removing empty process `RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1801$1089'.
+Removing empty process `RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1800$1088'.
+Removing empty process `RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1799$1087'.
+Removing empty process `RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1798$1086'.
+Found and cleaned up 1 empty switch in `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+Removing empty process `RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$963'.
+Removing empty process `RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1707$930'.
+Found and cleaned up 1 empty switch in `\RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$893'.
+Removing empty process `RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$893'.
+Removing empty process `RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1602$882'.
+Found and cleaned up 1 empty switch in `\RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$845'.
+Removing empty process `RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$845'.
+Removing empty process `RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1556$837'.
+Found and cleaned up 1 empty switch in `\RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$818'.
+Removing empty process `RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$818'.
+Removing empty process `RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1497$810'.
+Found and cleaned up 1 empty switch in `\RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$779'.
+Removing empty process `RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$779'.
+Removing empty process `FDPE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$645'.
+Found and cleaned up 1 empty switch in `\FDPE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:810$642'.
+Removing empty process `FDPE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:810$642'.
+Removing empty process `FDPE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$641'.
+Found and cleaned up 1 empty switch in `\FDPE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:769$639'.
+Removing empty process `FDPE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:769$639'.
+Removing empty process `FDCE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$627'.
+Found and cleaned up 1 empty switch in `\FDCE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:731$624'.
+Removing empty process `FDCE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:731$624'.
+Removing empty process `FDCE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$623'.
+Found and cleaned up 1 empty switch in `\FDCE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:690$621'.
+Removing empty process `FDCE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:690$621'.
+Removing empty process `FDSE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$609'.
+Found and cleaned up 2 empty switches in `\FDSE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:587$606'.
+Removing empty process `FDSE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:587$606'.
+Removing empty process `FDSE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$605'.
+Found and cleaned up 2 empty switches in `\FDSE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:554$602'.
+Removing empty process `FDSE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:554$602'.
+Removing empty process `FDRE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$587'.
+Found and cleaned up 2 empty switches in `\FDRE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:522$584'.
+Removing empty process `FDRE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:522$584'.
+Removing empty process `FDRE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$583'.
+Found and cleaned up 2 empty switches in `\FDRE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:489$580'.
+Removing empty process `FDRE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:489$580'.
+Found and cleaned up 2 empty switches in `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/mod_counter.sv:26$31'.
+Removing empty process `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/mod_counter.sv:26$31'.
+Removing empty process `debounce.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv:90$30'.
+Found and cleaned up 10 empty switches in `\debounce.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv:0$21'.
+Removing empty process `debounce.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv:0$21'.
+Found and cleaned up 2 empty switches in `\debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:62$16'.
+Removing empty process `debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:62$16'.
+Removing empty process `debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:57$13'.
+Removing empty process `debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:55$12'.
+Found and cleaned up 2 empty switches in `\debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:44$9'.
+Removing empty process `debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:44$9'.
+Removing empty process `debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:39$6'.
+Removing empty process `debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:37$5'.
+Removing empty process `debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:31$3'.
+Removing empty process `debounce_top.$proc$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:29$1'.
+Cleaned up 37 empty switches.
+
+6.4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+Optimizing module debounce.
+<suppressed ~8 debug messages>
+Optimizing module debounce_top.
+<suppressed ~2 debug messages>
+
+6.5. Executing TRIBUF pass.
+
+6.6. Executing DEMINOUT pass (demote inout ports to input or output).
+
+6.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+Optimizing module debounce.
+Optimizing module debounce_top.
+
+6.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+Finding unused cells or wires in module \debounce..
+Finding unused cells or wires in module \debounce_top..
+Removed 4 unused cells and 71 unused wires.
+<suppressed ~7 debug messages>
+
+6.9. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter...
+Checking module debounce...
+Checking module debounce_top...
+Found and reported 0 problems.
+
+6.10. Executing OPT pass (performing simple optimizations).
+
+6.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+Optimizing module debounce.
+Optimizing module debounce_top.
+
+6.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+Finding identical cells in module `\debounce'.
+<suppressed ~51 debug messages>
+Finding identical cells in module `\debounce_top'.
+Removed a total of 17 cells.
+
+6.10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \debounce..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$1600.
+    dead port 2/2 on $mux $procmux$1602.
+    dead port 1/2 on $mux $procmux$1605.
+    dead port 2/2 on $mux $procmux$1611.
+    dead port 1/2 on $mux $procmux$1614.
+    dead port 1/2 on $mux $procmux$1622.
+    dead port 2/2 on $mux $procmux$1625.
+    dead port 2/2 on $mux $procmux$1627.
+    dead port 1/2 on $mux $procmux$1630.
+    dead port 2/2 on $mux $procmux$1638.
+    dead port 2/2 on $mux $procmux$1640.
+    dead port 1/2 on $mux $procmux$1643.
+    dead port 2/2 on $mux $procmux$1650.
+    dead port 1/2 on $mux $procmux$1653.
+    dead port 2/2 on $mux $procmux$1661.
+    dead port 1/2 on $mux $procmux$1664.
+    dead port 1/2 on $mux $procmux$1580.
+    dead port 1/2 on $mux $procmux$1672.
+    dead port 2/2 on $mux $procmux$1582.
+    dead port 1/2 on $mux $procmux$1585.
+    dead port 1/2 on $mux $procmux$1680.
+    dead port 2/2 on $mux $procmux$1590.
+    dead port 1/2 on $mux $procmux$1593.
+    dead port 1/2 on $mux $procmux$1597.
+    dead port 1/2 on $mux $procmux$1688.
+Running muxtree optimizer on module \debounce_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 25 multiplexer ports.
+<suppressed ~7 debug messages>
+
+6.10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+  Optimizing cells in module \debounce.
+    New ctrl vector for $pmux cell $procmux$1674: { $auto$opt_reduce.cc:134:opt_pmux$1795 $auto$opt_reduce.cc:134:opt_pmux$1793 }
+    New ctrl vector for $pmux cell $procmux$1682: { $auto$opt_reduce.cc:134:opt_pmux$1799 $auto$opt_reduce.cc:134:opt_pmux$1797 }
+  Optimizing cells in module \debounce.
+  Optimizing cells in module \debounce_top.
+Performed a total of 2 changes.
+
+6.10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+Finding identical cells in module `\debounce'.
+Finding identical cells in module `\debounce_top'.
+Removed a total of 0 cells.
+
+6.10.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+Finding unused cells or wires in module \debounce..
+Finding unused cells or wires in module \debounce_top..
+Removed 0 unused cells and 42 unused wires.
+<suppressed ~1 debug messages>
+
+6.10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+Optimizing module debounce.
+Optimizing module debounce_top.
+
+6.10.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.10.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \debounce..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \debounce_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~7 debug messages>
+
+6.10.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+  Optimizing cells in module \debounce.
+  Optimizing cells in module \debounce_top.
+Performed a total of 0 changes.
+
+6.10.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+Finding identical cells in module `\debounce'.
+Finding identical cells in module `\debounce_top'.
+Removed a total of 0 cells.
+
+6.10.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.10.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+Finding unused cells or wires in module \debounce..
+Finding unused cells or wires in module \debounce_top..
+
+6.10.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+Optimizing module debounce.
+Optimizing module debounce_top.
+
+6.10.16. Finished OPT passes. (There is nothing left to do.)
+
+6.11. Executing FSM pass (extract and optimize FSM).
+
+6.11.1. Executing FSM_DETECT pass (finding FSMs in design).
+Found FSM state register debounce.cs.
+
+6.11.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\cs' from module `\debounce'.
+  found $dff cell for state register: $procdff$1783
+  root of input selection tree: \ns
+  found reset state: 2'00 (guessed from mux tree)
+  found ctrl input: \reset
+  found ctrl input: $procmux$1583_CMP
+  found ctrl input: $procmux$1603_CMP
+  found ctrl input: $procmux$1628_CMP
+  found ctrl input: $procmux$1662_CMP
+  found ctrl input: \noisy
+  found ctrl input: $logic_and$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv:77$29_Y
+  found state code: 2'00
+  found state code: 2'11
+  found state code: 2'10
+  found ctrl input: $logic_and$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv:59$24_Y
+  found ctrl input: $logic_and$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv:61$25_Y
+  found state code: 2'01
+  found ctrl output: $procmux$1583_CMP
+  found ctrl output: $procmux$1603_CMP
+  found ctrl output: $procmux$1628_CMP
+  found ctrl output: $procmux$1662_CMP
+  ctrl inputs: { $logic_and$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv:77$29_Y $logic_and$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv:61$25_Y $logic_and$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv:59$24_Y \noisy \reset }
+  ctrl outputs: { $procmux$1662_CMP $procmux$1628_CMP $procmux$1603_CMP $procmux$1583_CMP \ns }
+  transition:       2'00 5'---00 ->       2'00 6'100000
+  transition:       2'00 5'---10 ->       2'01 6'100001
+  transition:       2'00 5'----1 ->       2'00 6'100000
+  transition:       2'10 5'---00 ->       2'11 6'001011
+  transition:       2'10 5'---10 ->       2'10 6'001010
+  transition:       2'10 5'----1 ->       2'00 6'001000
+  transition:       2'01 5'---00 ->       2'00 6'010000
+  transition:       2'01 5'-0010 -> INVALID_STATE(2'0x) 6'01000x  <ignored invalid transition!>
+  transition:       2'01 5'-1010 ->       2'10 6'010010
+  transition:       2'01 5'--110 ->       2'01 6'010001
+  transition:       2'01 5'----1 ->       2'00 6'010000
+  transition:       2'11 5'0--00 ->       2'00 6'000100
+  transition:       2'11 5'1--00 ->       2'11 6'000111
+  transition:       2'11 5'---10 ->       2'10 6'000110
+  transition:       2'11 5'----1 ->       2'00 6'000100
+
+6.11.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\cs$1800' from module `\debounce'.
+
+6.11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+Finding unused cells or wires in module \debounce..
+Finding unused cells or wires in module \debounce_top..
+Removed 14 unused cells and 14 unused wires.
+<suppressed ~15 debug messages>
+
+6.11.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\cs$1800' from module `\debounce'.
+  Removing unused output signal \ns [0].
+  Removing unused output signal \ns [1].
+
+6.11.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\cs$1800' from module `\debounce' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  00 -> ---1
+  10 -> --1-
+  01 -> -1--
+  11 -> 1---
+
+6.11.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\cs$1800' from module `debounce':
+-------------------------------------
+
+  Information on FSM $fsm$\cs$1800 (\cs):
+
+  Number of input signals:    5
+  Number of output signals:   4
+  Number of state bits:       4
+
+  Input signals:
+    0: \reset
+    1: \noisy
+    2: $logic_and$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv:59$24_Y
+    3: $logic_and$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv:61$25_Y
+    4: $logic_and$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce.sv:77$29_Y
+
+  Output signals:
+    0: $procmux$1583_CMP
+    1: $procmux$1603_CMP
+    2: $procmux$1628_CMP
+    3: $procmux$1662_CMP
+
+  State encoding:
+    0:     4'---1  <RESET STATE>
+    1:     4'--1-
+    2:     4'-1--
+    3:     4'1---
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 5'---00   ->     0 4'1000
+      1:     0 5'----1   ->     0 4'1000
+      2:     0 5'---10   ->     2 4'1000
+      3:     1 5'----1   ->     0 4'0010
+      4:     1 5'---10   ->     1 4'0010
+      5:     1 5'---00   ->     3 4'0010
+      6:     2 5'---00   ->     0 4'0100
+      7:     2 5'----1   ->     0 4'0100
+      8:     2 5'-1010   ->     1 4'0100
+      9:     2 5'--110   ->     2 4'0100
+     10:     3 5'0--00   ->     0 4'0001
+     11:     3 5'----1   ->     0 4'0001
+     12:     3 5'---10   ->     1 4'0001
+     13:     3 5'1--00   ->     3 4'0001
+
+-------------------------------------
+
+6.11.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\cs$1800' from module `\debounce'.
+
+6.12. Executing OPT pass (performing simple optimizations).
+
+6.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+Optimizing module debounce.
+<suppressed ~4 debug messages>
+Optimizing module debounce_top.
+
+6.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+Finding identical cells in module `\debounce'.
+<suppressed ~12 debug messages>
+Finding identical cells in module `\debounce_top'.
+Removed a total of 4 cells.
+
+6.12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \debounce..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \debounce_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+6.12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+  Optimizing cells in module \debounce.
+  Optimizing cells in module \debounce_top.
+Performed a total of 0 changes.
+
+6.12.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+Finding identical cells in module `\debounce'.
+Finding identical cells in module `\debounce_top'.
+Removed a total of 0 cells.
+
+6.12.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$1782 ($dff) from module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter (D = $procmux$1571_Y, Q = \count, rval = 19'0000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$1852 ($sdff) from module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter (D = $add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/mod_counter.sv:30$33_Y [18:0], Q = \count).
+Adding SRST signal on $procdff$1787 ($dff) from module debounce_top (D = $procmux$1704_Y, Q = \debouncedCount, rval = 7'0000000).
+Adding EN signal on $auto$ff.cc:262:slice$1854 ($sdff) from module debounce_top (D = $add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:50$11_Y [6:0], Q = \debouncedCount).
+Adding SRST signal on $procdff$1784 ($dff) from module debounce_top (D = $procmux$1699_Y, Q = \noisyCount, rval = 7'0000000).
+Adding EN signal on $auto$ff.cc:262:slice$1856 ($sdff) from module debounce_top (D = $add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:68$18_Y [6:0], Q = \noisyCount).
+
+6.12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+Finding unused cells or wires in module \debounce..
+Finding unused cells or wires in module \debounce_top..
+Removed 6 unused cells and 18 unused wires.
+<suppressed ~10 debug messages>
+
+6.12.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+Optimizing module debounce.
+Optimizing module debounce_top.
+
+6.12.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.12.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \debounce..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \debounce_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~3 debug messages>
+
+6.12.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+  Optimizing cells in module \debounce.
+  Optimizing cells in module \debounce_top.
+Performed a total of 0 changes.
+
+6.12.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+Finding identical cells in module `\debounce'.
+Finding identical cells in module `\debounce_top'.
+Removed a total of 0 cells.
+
+6.12.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.12.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+Finding unused cells or wires in module \debounce..
+Finding unused cells or wires in module \debounce_top..
+
+6.12.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+Optimizing module debounce.
+Optimizing module debounce_top.
+
+6.12.16. Finished OPT passes. (There is nothing left to do.)
+
+6.13. Executing WREDUCE pass (reducing word size of cells).
+Removed top 31 bits (of 32) from port B of cell $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.$add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/mod_counter.sv:30$33 ($add).
+Removed top 13 bits (of 32) from port Y of cell $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.$add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/mod_counter.sv:30$33 ($add).
+Removed top 31 bits (of 32) from mux cell $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.$ternary$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/mod_counter.sv:33$36 ($mux).
+Removed top 13 bits (of 32) from wire $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.$add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/mod_counter.sv:30$33_Y.
+Removed top 31 bits (of 32) from port B of cell debounce_top.$add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:50$11 ($add).
+Removed top 25 bits (of 32) from port Y of cell debounce_top.$add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:50$11 ($add).
+Removed top 31 bits (of 32) from port B of cell debounce_top.$add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:68$18 ($add).
+Removed top 25 bits (of 32) from port Y of cell debounce_top.$add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:68$18 ($add).
+Removed top 25 bits (of 32) from wire debounce_top.$add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:50$11_Y.
+Removed top 25 bits (of 32) from wire debounce_top.$add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:68$18_Y.
+
+6.14. Executing PEEPOPT pass (run peephole optimizers).
+
+6.15. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+Finding unused cells or wires in module \debounce..
+Finding unused cells or wires in module \debounce_top..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~2 debug messages>
+
+6.16. Executing PMUX2SHIFTX pass.
+
+6.17. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+6.18. Executing TECHMAP pass (map to technology primitives).
+
+6.18.1. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/mul2dsp.v
+Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/mul2dsp.v' to AST representation.
+Generating RTLIL representation for module `\_80_mul'.
+Generating RTLIL representation for module `\_90_soft_mul'.
+Successfully finished Verilog frontend.
+
+6.18.2. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/xilinx/xc7_dsp_map.v
+Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/xilinx/xc7_dsp_map.v' to AST representation.
+Generating RTLIL representation for module `\$__MUL25X18'.
+Successfully finished Verilog frontend.
+
+6.18.3. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~5 debug messages>
+
+6.19. Executing OPT_EXPR pass (perform const folding).
+
+6.20. Executing WREDUCE pass (reducing word size of cells).
+
+6.21. Executing XILINX_DSP pass (pack resources into DSPs).
+
+6.22. Executing TECHMAP pass (map to technology primitives).
+
+6.22.1. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/cmp2lut.v
+Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+6.22.2. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/cmp2lcu.v
+Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/cmp2lcu.v' to AST representation.
+Generating RTLIL representation for module `\_80_lcu_cmp_'.
+Generating RTLIL representation for module `\$__CMP2LCU'.
+Successfully finished Verilog frontend.
+
+6.22.3. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~7 debug messages>
+
+6.23. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter:
+  creating $macc model for $add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/mod_counter.sv:30$33 ($add).
+  creating $alu model for $macc $add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/mod_counter.sv:30$33.
+  creating $alu cell for $add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/mod_counter.sv:30$33: $auto$alumacc.cc:485:replace_alu$1863
+  created 1 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module debounce:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module debounce_top:
+  creating $macc model for $add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:50$11 ($add).
+  creating $macc model for $add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:68$18 ($add).
+  creating $alu model for $macc $add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:68$18.
+  creating $alu model for $macc $add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:50$11.
+  creating $alu cell for $add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:50$11: $auto$alumacc.cc:485:replace_alu$1866
+  creating $alu cell for $add$/home/jacobb00/yosys_plugins/yosys-f4pga-plugins/yosys_help_test/counter/debounce_top.sv:68$18: $auto$alumacc.cc:485:replace_alu$1869
+  created 2 $alu and 0 $macc cells.
+
+6.24. Executing SHARE pass (SAT-based resource sharing).
+
+6.25. Executing OPT pass (performing simple optimizations).
+
+6.25.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+Optimizing module debounce.
+Optimizing module debounce_top.
+
+6.25.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+Finding identical cells in module `\debounce'.
+Finding identical cells in module `\debounce_top'.
+Removed a total of 0 cells.
+
+6.25.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \debounce..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \debounce_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~3 debug messages>
+
+6.25.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+  Optimizing cells in module \debounce.
+  Optimizing cells in module \debounce_top.
+Performed a total of 0 changes.
+
+6.25.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+Finding identical cells in module `\debounce'.
+Finding identical cells in module `\debounce_top'.
+Removed a total of 0 cells.
+
+6.25.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.25.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+Finding unused cells or wires in module \debounce..
+Finding unused cells or wires in module \debounce_top..
+
+6.25.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+Optimizing module debounce.
+Optimizing module debounce_top.
+
+6.25.9. Finished OPT passes. (There is nothing left to do.)
+
+6.26. Executing MEMORY pass.
+
+6.26.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+6.26.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+6.26.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+6.26.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+6.26.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+6.26.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+Finding unused cells or wires in module \debounce..
+Finding unused cells or wires in module \debounce_top..
+
+6.26.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+6.26.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+6.26.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+Finding unused cells or wires in module \debounce..
+Finding unused cells or wires in module \debounce_top..
+
+6.26.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+6.27. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+Finding unused cells or wires in module \debounce..
+Finding unused cells or wires in module \debounce_top..
+
+6.28. Executing MEMORY_LIBMAP pass (mapping memories to cells).
+
+6.29. Executing TECHMAP pass (map to technology primitives).
+
+6.29.1. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/xilinx/lutrams_xc5v_map.v
+Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/xilinx/lutrams_xc5v_map.v' to AST representation.
+Generating RTLIL representation for module `\$__XILINX_LUTRAM_SP_'.
+Generating RTLIL representation for module `\$__XILINX_LUTRAM_DP_'.
+Generating RTLIL representation for module `\$__XILINX_LUTRAM_QP_'.
+Generating RTLIL representation for module `\$__XILINX_LUTRAM_OP_'.
+Generating RTLIL representation for module `\$__XILINX_LUTRAM_SDP_'.
+Generating RTLIL representation for module `\$__XILINX_LUTRAM_64X8SW_'.
+Generating RTLIL representation for module `\$__XILINX_LUTRAM_32X16DR8_'.
+Successfully finished Verilog frontend.
+
+6.29.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~9 debug messages>
+
+6.30. Executing TECHMAP pass (map to technology primitives).
+
+6.30.1. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/xilinx/brams_xc6v_map.v
+Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/xilinx/brams_xc6v_map.v' to AST representation.
+Generating RTLIL representation for module `\$__XILINX_BLOCKRAM_TDP_'.
+Generating RTLIL representation for module `\$__XILINX_BLOCKRAM_SDP_'.
+Successfully finished Verilog frontend.
+
+6.30.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+6.31. Executing OPT pass (performing simple optimizations).
+
+6.31.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+<suppressed ~1 debug messages>
+Optimizing module debounce.
+<suppressed ~3 debug messages>
+Optimizing module debounce_top.
+
+6.31.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+Finding identical cells in module `\debounce'.
+Finding identical cells in module `\debounce_top'.
+Removed a total of 0 cells.
+
+6.31.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.31.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+Finding unused cells or wires in module \debounce..
+Finding unused cells or wires in module \debounce_top..
+Removed 1 unused cells and 3 unused wires.
+<suppressed ~3 debug messages>
+
+6.31.5. Finished fast OPT passes.
+
+6.32. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+6.33. Executing OPT pass (performing simple optimizations).
+
+6.33.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+Optimizing module debounce.
+Optimizing module debounce_top.
+
+6.33.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+Finding identical cells in module `\debounce'.
+Finding identical cells in module `\debounce_top'.
+Removed a total of 0 cells.
+
+6.33.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \debounce..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \debounce_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+6.33.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+  Optimizing cells in module \debounce.
+  Optimizing cells in module \debounce_top.
+Performed a total of 0 changes.
+
+6.33.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+Finding identical cells in module `\debounce'.
+Finding identical cells in module `\debounce_top'.
+Removed a total of 0 cells.
+
+6.33.6. Executing OPT_SHARE pass.
+
+6.33.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.33.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+Finding unused cells or wires in module \debounce..
+Finding unused cells or wires in module \debounce_top..
+
+6.33.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+Optimizing module debounce.
+Optimizing module debounce_top.
+
+6.33.10. Finished OPT passes. (There is nothing left to do.)
+
+6.34. Executing XILINX_SRL pass (Xilinx shift register extraction).
+
+6.35. Executing TECHMAP pass (map to technology primitives).
+
+6.35.1. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/techmap.v
+Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+6.35.2. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/xilinx/arith_map.v
+Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/xilinx/arith_map.v' to AST representation.
+Generating RTLIL representation for module `\_80_xilinx_lcu'.
+Generating RTLIL representation for module `\_80_xilinx_alu'.
+Successfully finished Verilog frontend.
+
+6.35.3. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $logic_and.
+Using template $paramod$2763a5a9ec1e8423a0c42a10276e1bb59c96a13e\_80_xilinx_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $sdffe.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $logic_or.
+Using template $paramod$85c3b546236e013020cf2106abd98e7ebbbaf3c6\_80_xilinx_alu for cells of type $alu.
+No more expansions possible.
+<suppressed ~185 debug messages>
+
+6.36. Executing OPT pass (performing simple optimizations).
+
+6.36.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+<suppressed ~57 debug messages>
+Optimizing module debounce.
+<suppressed ~12 debug messages>
+Optimizing module debounce_top.
+<suppressed ~28 debug messages>
+
+6.36.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+<suppressed ~24 debug messages>
+Finding identical cells in module `\debounce'.
+<suppressed ~21 debug messages>
+Finding identical cells in module `\debounce_top'.
+<suppressed ~48 debug messages>
+Removed a total of 31 cells.
+
+6.36.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.36.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter..
+Finding unused cells or wires in module \debounce..
+Finding unused cells or wires in module \debounce_top..
+Removed 11 unused cells and 79 unused wires.
+<suppressed ~14 debug messages>
+
+6.36.5. Finished fast OPT passes.
+
+6.37. Executing IOPADMAP pass (mapping inputs/outputs to IO-PAD cells).
+Mapping port debounce_top.clk using IBUF.
+Mapping port debounce_top.debouncedOutput using OBUF.
+Mapping port debounce_top.increment using IBUF.
+Mapping port debounce_top.noisyOutput using OBUF.
+Mapping port debounce_top.reset using IBUF.
+
+6.38. Executing TECHMAP pass (map to technology primitives).
+
+6.38.1. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/techmap.v
+Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+6.38.2. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/xilinx/cells_map.v
+Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/xilinx/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\$__SHREG_'.
+Generating RTLIL representation for module `\$__XILINX_SHREG_'.
+Generating RTLIL representation for module `\$__XILINX_MUXF78'.
+Successfully finished Verilog frontend.
+
+6.38.3. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~74 debug messages>
+
+6.39. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+
+6.40. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+Optimizing module debounce.
+Optimizing module debounce_top.
+
+6.41. Executing ABC pass (technology mapping using ABC).
+
+6.41.1. Extracting gate netlist of module `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter' to `<abc-temp-dir>/input.blif'..
+Extracted 29 gates and 50 wires to a netlist network with 21 inputs and 3 outputs.
+
+6.41.1.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lut <abc-temp-dir>/lutdefs.txt 
+ABC: + strash 
+ABC: + ifraig 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + dch -f 
+ABC: + if 
+ABC: + mfs2 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+6.41.1.2. Re-integrating ABC results.
+ABC RESULTS:              $lut cells:        8
+ABC RESULTS:        internal signals:       26
+ABC RESULTS:           input signals:       21
+ABC RESULTS:          output signals:        3
+Removing temp directory.
+
+6.41.2. Extracting gate netlist of module `\debounce' to `<abc-temp-dir>/input.blif'..
+Extracted 40 gates and 48 wires to a netlist network with 7 inputs and 6 outputs.
+
+6.41.2.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lut <abc-temp-dir>/lutdefs.txt 
+ABC: + strash 
+ABC: + ifraig 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + dch -f 
+ABC: + if 
+ABC: + mfs2 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+6.41.2.2. Re-integrating ABC results.
+ABC RESULTS:              $lut cells:        6
+ABC RESULTS:        internal signals:       35
+ABC RESULTS:           input signals:        7
+ABC RESULTS:          output signals:        6
+Removing temp directory.
+
+6.41.3. Extracting gate netlist of module `\debounce_top' to `<abc-temp-dir>/input.blif'..
+Extracted 34 gates and 54 wires to a netlist network with 20 inputs and 32 outputs.
+
+6.41.3.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lut <abc-temp-dir>/lutdefs.txt 
+ABC: + strash 
+ABC: + ifraig 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + dch -f 
+ABC: + if 
+ABC: + mfs2 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+6.41.3.2. Re-integrating ABC results.
+ABC RESULTS:              $lut cells:       32
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       20
+ABC RESULTS:          output signals:       32
+Removing temp directory.
+Removed 0 unused cells and 123 unused wires.
+
+6.42. Executing TECHMAP pass (map to technology primitives).
+
+6.42.1. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/xilinx/ff_map.v
+Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/xilinx/ff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFFE_NP0P_'.
+Generating RTLIL representation for module `\$_DFFE_PP0P_'.
+Generating RTLIL representation for module `\$_DFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFFE_PP1P_'.
+Generating RTLIL representation for module `\$_DFFSRE_NPPP_'.
+Generating RTLIL representation for module `\$_DFFSRE_PPPP_'.
+Generating RTLIL representation for module `\$_SDFFE_NP0P_'.
+Generating RTLIL representation for module `\$_SDFFE_PP0P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP1P_'.
+Generating RTLIL representation for module `\$_SDFFE_PP1P_'.
+Generating RTLIL representation for module `\$_DLATCH_NP0_'.
+Generating RTLIL representation for module `\$_DLATCH_PP0_'.
+Generating RTLIL representation for module `\$_DLATCH_NP1_'.
+Generating RTLIL representation for module `\$_DLATCH_PP1_'.
+Generating RTLIL representation for module `\$_DLATCH_NPP_'.
+Generating RTLIL representation for module `\$_DLATCH_PPP_'.
+Successfully finished Verilog frontend.
+
+6.42.2. Continuing TECHMAP pass.
+Using template $paramod\$_SDFFE_PP0P_\_TECHMAP_WIREINIT_Q_=1'x for cells of type $_SDFFE_PP0P_.
+No more expansions possible.
+<suppressed ~72 debug messages>
+
+6.43. Executing XILINX_SRL pass (Xilinx shift register extraction).
+
+6.44. Executing TECHMAP pass (map to technology primitives).
+
+6.44.1. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/xilinx/lut_map.v
+Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/xilinx/lut_map.v' to AST representation.
+Generating RTLIL representation for module `\$lut'.
+Successfully finished Verilog frontend.
+
+6.44.2. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/xilinx/cells_map.v
+Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/xilinx/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\$__SHREG_'.
+Generating RTLIL representation for module `\$__XILINX_SHREG_'.
+Generating RTLIL representation for module `\$__XILINX_MUXF78'.
+Successfully finished Verilog frontend.
+
+6.44.3. Continuing TECHMAP pass.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
+Using template $paramod$23716aa09ed3bf61ffdd7599ca5941804cdab3ca\$lut for cells of type $lut.
+Using template $paramod$2b50782fe8e2b235b61b0fb58b3875dc470739c9\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00000001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00001110 for cells of type $lut.
+Using template $paramod$38d2a2bcc73d2ea72c2568e0da203c4189032c5f\$lut for cells of type $lut.
+Using template $paramod$107906fddf7d89ab854e4846eb6fd13bd75a6fed\$lut for cells of type $lut.
+Using template $paramod$571404c0889eaf57f492cb5e37f8acb5df5852f9\$lut for cells of type $lut.
+Using template $paramod$658b9ed803f0d3d335616d3858b53e0a2522f1e8\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0001 for cells of type $lut.
+Using template $paramod$7562591c3bc7c6604ad78ee509201bbf2678b52a\$lut for cells of type $lut.
+Using template $paramod$01cbc9f2eb2cc4241ded6de72b111cacf10027fe\$lut for cells of type $lut.
+Using template $paramod$251994398653c4cf8de320f1e306e535d5d2d624\$lut for cells of type $lut.
+Using template $paramod$a2b4ddfa3906001b2ef9f2414d79c3048f2a3a6e\$lut for cells of type $lut.
+Using template $paramod$a52099cef019bbe114de53cfbdef9b6de0e07cac\$lut for cells of type $lut.
+Using template $paramod$692927e279b3d5c42ee4aacb287247c0b34943ed\$lut for cells of type $lut.
+Using template $paramod$e961da90a771f5989ad3eb701bff5437ac65eaae\$lut for cells of type $lut.
+No more expansions possible.
+<suppressed ~292 debug messages>
+
+6.45. Executing XILINX_DFFOPT pass (optimize FF control signal usage).
+Optimizing FFs in $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+Optimizing FFs in debounce.
+Optimizing FFs in debounce_top.
+
+6.46. Executing OPT_LUT_INS pass (discard unused LUT inputs).
+Optimizing LUTs in $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
+  Optimizing lut $abc$2738$auto$blifparse.cc:515:parse_blif$2740.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (6 -> 0)
+  Optimizing lut $abc$2738$auto$blifparse.cc:515:parse_blif$2740.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (6 -> 0)
+  Optimizing lut $abc$2738$auto$blifparse.cc:515:parse_blif$2740.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (6 -> 0)
+Optimizing LUTs in debounce.
+Optimizing LUTs in debounce_top.
+
+6.47. Executing CLKBUFMAP pass (inserting clock buffers).
+Inserting BUFG on debounce_top.$iopadmap$clk[0].
+Removed 0 unused cells and 369 unused wires.
+
+6.48. Executing HIERARCHY pass (managing design hierarchy).
+
+6.48.1. Analyzing design hierarchy..
+Top module:  \debounce_top
+Used module:     \debounce
+Used module:         $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+
+6.48.2. Analyzing design hierarchy..
+Top module:  \debounce_top
+Used module:     \debounce
+Used module:         $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+Removed 0 unused modules.
+
+6.49. Printing statistics.
+
+=== $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter ===
+
+   Number of wires:                 15
+   Number of wire bits:            130
+   Number of public wires:           5
+   Number of public wire bits:      23
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 35
+     CARRY4                          5
+     FDRE                           19
+     INV                             1
+     LUT2                            2
+     LUT4                            2
+     LUT5                            1
+     LUT6                            2
+     MUXF7                           2
+     MUXF8                           1
+
+   Estimated number of LCs:          5
+
+=== debounce ===
+
+   Number of wires:                 12
+   Number of wire bits:             33
+   Number of public wires:           8
+   Number of public wire bits:      29
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 11
+     $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter      1
+     FDRE                            4
+     LUT3                            2
+     LUT5                            2
+     LUT6                            2
+
+   Estimated number of LCs:          6
+
+=== debounce_top ===
+
+   Number of wires:                 57
+   Number of wire bits:            134
+   Number of public wires:          15
+   Number of public wire bits:      40
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 75
+     BUFG                            1
+     CARRY4                          4
+     FDRE                           20
+     IBUF                            3
+     INV                            30
+     LUT2                            2
+     OBUF                           14
+     debounce                        1
+
+   Estimated number of LCs:          1
+
+=== design hierarchy ===
+
+   debounce_top                      1
+     debounce                        1
+       $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter      1
+
+   Number of wires:                 84
+   Number of wire bits:            297
+   Number of public wires:          28
+   Number of public wire bits:      92
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                119
+     BUFG                            1
+     CARRY4                          9
+     FDRE                           43
+     IBUF                            3
+     INV                            31
+     LUT2                            4
+     LUT3                            2
+     LUT4                            2
+     LUT5                            3
+     LUT6                            4
+     MUXF7                           2
+     MUXF8                           1
+     OBUF                           14
+
+   Estimated number of LCs:         11
+
+6.50. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter...
+Checking module debounce...
+Checking module debounce_top...
+Found and reported 0 problems.
+
+7. Executing BLIF backend.
+
+8. Executing Verilog backend.
+
+8.1. Executing BMUXMAP pass.
+
+8.2. Executing DEMUXMAP pass.
+Dumping module `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+Dumping module `\debounce'.
+Dumping module `\debounce_top'.
+
+9. Executing EDIF backend.
+[TCL: yosys -import] Command name collision: found pre-existing command `abc' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `abc9' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `abc9_exe' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `abc9_ops' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `add' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `aigmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `alumacc' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `anlogic_eqn' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `anlogic_fixcarry' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `assertpmux' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `async2sync' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `attrmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `attrmvcp' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `autoname' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `blackbox' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `bmuxmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `bugpoint' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `check' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `chformal' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `chparam' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `chtype' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `clean' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `clean_zerowidth' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `clk2fflogic' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `clkbufmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `connect' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `connect_rpc' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `connwrappers' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `coolrunner2_fixup' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `coolrunner2_sop' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `copy' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `cover' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `cutpoint' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `debug' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `delete' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `deminout' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `demuxmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `design' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `dffinit' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `dfflegalize' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `dfflibmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `dffunmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `dump' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `echo' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `ecp5_gsr' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `edgetypes' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `efinix_fixcarry' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_add' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_induct' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_make' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_mark' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_miter' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_opt' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_purge' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_remove' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_simple' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_status' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `equiv_struct' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `expose' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `extract' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `extract_counter' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `extract_fa' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `extract_reduce' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `extractinv' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `flatten' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `flowmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fmcombine' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fminit' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `freduce' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fsm' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fsm_detect' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fsm_expand' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fsm_export' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fsm_extract' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fsm_info' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fsm_map' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fsm_opt' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fsm_recode' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `fst2tb' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `glift' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `greenpak4_dffinv' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `help' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `hierarchy' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `hilomap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `history' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `ice40_braminit' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `ice40_dsp' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `ice40_opt' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `ice40_wrapcarry' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `insbuf' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `iopadmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `jny' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `json' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `log' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `logger' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `ls' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `ltp' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `lut2mux' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `maccmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_bmux2rom' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_bram' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_collect' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_dff' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_libmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_map' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_memx' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_narrow' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_nordff' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_share' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `memory_unpack' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `miter' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `mutate' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `muxcover' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `muxpack' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `nlutmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `onehot' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_clean' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_demorgan' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_dff' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_expr' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_ffinv' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_lut' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_lut_ins' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_mem' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_mem_feedback' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_mem_priority' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_mem_widen' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_merge' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_muxtree' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_reduce' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `opt_share' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `paramap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `peepopt' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `plugin' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `pmux2shiftx' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `pmuxtree' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `portlist' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `prep' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `printattrs' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc_arst' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc_clean' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc_dff' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc_dlatch' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc_init' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc_memwr' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc_mux' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc_prune' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc_rmdead' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `proc_rom' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `qbfsat' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `qwp' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read_aiger' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read_blif' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read_ilang' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read_json' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read_liberty' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read_rtlil' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read_verilog' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `rename' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `rmports' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `sat' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `scatter' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `scc' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `scratchpad' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `script' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `select' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `setattr' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `setparam' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `setundef' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `share' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `shell' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `show' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `shregmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `sim' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `simplemap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `splice' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `splitnets' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `sta' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `stat' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `submod' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `supercover' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_achronix' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_anlogic' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_coolrunner2' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_easic' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_ecp5' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_efinix' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_gatemate' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_gowin' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_greenpak4' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_ice40' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_intel' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_intel_alm' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_machxo2' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_nexus' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_quicklogic' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_sf2' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `synth_xilinx' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `tcl' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `techmap' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `tee' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `test_abcloop' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `test_autotb' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `test_cell' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `test_pmgen' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `torder' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `tribuf' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `uniquify' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `verific' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `verilog_defaults' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `verilog_defines' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `wbflip' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `wreduce' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_aiger' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_blif' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_btor' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_cxxrtl' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_edif' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_file' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_firrtl' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_ilang' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_intersynth' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_jny' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_json' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_rtlil' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_simplec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_smt2' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_smv' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_spice' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_table' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_verilog' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `write_xaiger' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `xilinx_dffopt' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `xilinx_dsp' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `xilinx_srl' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `zinit' -> skip.
+
+10. Executing REPLICATE Pass
+Replicating module: $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+
+Replicating module: debounce
+
+Replicating module: debounce_top
+
+11. Executing INSERT_VOTERS Pass
+Identifying reduction points in module debounce_top
+Identifying points after ff in module debounce_top
+Inserting voters in module debounce_top
+Identifying reduction points in module debounce
+Identifying points after ff in module debounce
+Inserting voters in module debounce
+Identifying reduction points in module \$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+Identifying points after ff in module \$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+Inserting voters in module \$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+Inserted 0 Voters
+
+12. Executing BLIF backend.
+
+13. Executing Verilog backend.
+
+13.1. Executing BMUXMAP pass.
+
+13.2. Executing DEMUXMAP pass.
+Dumping module `\$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+Dumping module `\debounce'.
+Dumping module `\debounce_top'.
+
+14. Executing EDIF backend.
+
+15. Executing REPLICATE Pass
+Replicating module: $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+
+Replicating module: debounce
+
+Replicating module: debounce_top
+
+16. Executing INSERT_VOTERS Pass
+Identifying points after ff in module debounce_top
+Inserting voters in module debounce_top
+Identifying points after ff in module debounce
+Inserting voters in module debounce
+Identifying points after ff in module \$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+Inserting voters in module \$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+Inserted 0 Voters
+
+17. Executing BLIF backend.
+
+18. Executing Verilog backend.
+
+18.1. Executing BMUXMAP pass.
+
+18.2. Executing DEMUXMAP pass.
+Dumping module `\$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+Dumping module `\debounce'.
+Dumping module `\debounce_top'.
+
+19. Executing EDIF backend.
+
+20. Executing REPLICATE Pass
+Replicating module: $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+
+Replicating module: debounce
+
+Replicating module: debounce_top
+
+21. Executing INSERT_VOTERS Pass
+Identifying reduction points in module debounce_top
+Inserting voters in module debounce_top
+Identifying reduction points in module debounce
+Inserting voters in module debounce
+Identifying reduction points in module \$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+Inserting voters in module \$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+Inserted 0 Voters
+
+22. Executing BLIF backend.
+
+23. Executing Verilog backend.
+
+23.1. Executing BMUXMAP pass.
+
+23.2. Executing DEMUXMAP pass.
+Dumping module `\$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+Dumping module `\debounce'.
+Dumping module `\debounce_top'.
+
+24. Executing EDIF backend.
+
+25. Executing REPLICATE Pass
+Replicating module: $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+
+Replicating module: debounce
+
+Replicating module: debounce_top
+
+26. Executing INSERT_VOTERS Pass
+Identifying reduction points in module debounce_top
+Identifying points after ff in module debounce_top
+Inserting voters in module debounce_top
+Identifying reduction points in module debounce
+Identifying points after ff in module debounce
+Inserting voters in module debounce
+Identifying reduction points in module \$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+Identifying points after ff in module \$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+Inserting voters in module \$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+Inserted 14 Voters
+
+27. Executing BLIF backend.
+
+28. Executing Verilog backend.
+
+28.1. Executing BMUXMAP pass.
+
+28.2. Executing DEMUXMAP pass.
+Dumping module `\$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+Dumping module `\debounce'.
+Dumping module `\debounce_top'.
+
+29. Executing EDIF backend.
+
+30. Executing REPLICATE Pass
+Replicating module: $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+
+Replicating module: debounce
+
+Replicating module: debounce_top
+
+31. Executing INSERT_VOTERS Pass
+Identifying reduction points in module debounce_top
+Inserting voters in module debounce_top
+Identifying reduction points in module debounce
+Inserting voters in module debounce
+Identifying reduction points in module \$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+Inserting voters in module \$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+Inserted 14 Voters
+
+32. Executing BLIF backend.
+
+33. Executing Verilog backend.
+
+33.1. Executing BMUXMAP pass.
+
+33.2. Executing DEMUXMAP pass.
+Dumping module `\$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+Dumping module `\debounce'.
+Dumping module `\debounce_top'.
+
+34. Executing EDIF backend.
+
+35. Executing REPLICATE Pass
+Replicating module: $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+
+Replicating module: debounce
+
+Replicating module: debounce_top
+
+36. Executing BLIF backend.
+
+37. Executing Verilog backend.
+
+37.1. Executing BMUXMAP pass.
+
+37.2. Executing DEMUXMAP pass.
+Dumping module `\$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter'.
+Dumping module `\debounce'.
+Dumping module `\debounce_top'.
+
+38. Executing EDIF backend.
+
+End of script. Logfile hash: 7d4582d376, CPU: user 1.83s system 0.10s, MEM: 607.55 MB peak
+Yosys 0.17+41 (git sha1 c525b5f91, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 45% 21x read_verilog (0 sec), 11% 14x write_verilog (0 sec), ...

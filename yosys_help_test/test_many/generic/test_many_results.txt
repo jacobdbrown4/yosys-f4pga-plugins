@@ -1,0 +1,42 @@
+Check for testing_stuff/p_ff_r.blif
+Parsing original
+Found information for 5 definitions
+Parsing TMR
+Found information for 6 definitions
+PASSED
+
+Check for testing_stuff/p_ff.blif
+Parsing original
+Found information for 5 definitions
+Parsing TMR
+Found information for 6 definitions
+PASSED
+
+Check for testing_stuff/p_r.blif
+Parsing original
+Found information for 5 definitions
+Parsing TMR
+Found information for 6 definitions
+PASSED
+
+Check for testing_stuff/ff_r.blif
+Parsing original
+Found information for 5 definitions
+Parsing TMR
+Found information for 6 definitions
+PASSED
+
+Check for testing_stuff/r.blif
+Parsing original
+Found information for 5 definitions
+Parsing TMR
+Found information for 6 definitions
+PASSED
+
+Check for testing_stuff/p.blif
+Parsing original
+Found information for 5 definitions
+Parsing TMR
+Found information for 6 definitions
+PASSED
+

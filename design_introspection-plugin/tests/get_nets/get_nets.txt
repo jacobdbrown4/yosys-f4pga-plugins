@@ -1,0 +1,10 @@
+*inter* nets quiet
+bottom_intermediate_inst.I bottom_intermediate_inst.O bottom_intermediate_inst.bottom_intermediate_wire inter_wire inter_wire_2
+*inter* nets
+bottom_intermediate_inst.I bottom_intermediate_inst.O bottom_intermediate_inst.bottom_intermediate_wire inter_wire inter_wire_2
+*inter* nets with invalid filter expression
+bottom_intermediate_inst.I bottom_intermediate_inst.O bottom_intermediate_inst.bottom_intermediate_wire inter_wire inter_wire_2
+Filtered nets
+clk
+All nets
+{$abc$2568$aiger2567$38} {$abc$2568$aiger2567$42} {$abc$2568$aiger2567$43} {$abc$2568$aiger2567$44} {$abc$2568$aiger2567$45} {$abc$2568$aiger2567$50} {$abc$2568$aiger2567$51} {$abc$2568$aiger2567$52} {$abc$2568$aiger2567$53} {$abc$2568$aiger2567$58} {$abc$2568$aiger2567$59} {$abc$2568$aiger2567$60} {$abc$2568$aiger2567$61} {$abc$2568$aiger2567$66} {$abc$2568$aiger2567$67} {$abc$2568$aiger2567$68} {$abc$2568$aiger2567$69} {$abc$2568$aiger2567$74} {$abc$2568$aiger2567$75} {$abc$2568$aiger2567$76} {$abc$2568$aiger2567$77} {$abc$2568$aiger2567$82} {$abc$2568$aiger2567$83} {$abc$2568$aiger2567$84} {$abc$2568$aiger2567$85} {$abc$2568$aiger2567$88} {$abc$2568$aiger2567$89} {$abc$2568$aiger2567$90} {$abc$2568$aiger2567$91} {$abc$2568$aiger2567$92} {$abc$2568$aiger2567$93} {$abc$2568$iopadmap$clk} {$auto$alumacc.cc:485:replace_alu$1615.Y} LD6 LD7 LD8 LD9 bottom_inst.I bottom_inst.O bottom_inst.OB bottom_intermediate_inst.I bottom_intermediate_inst.O bottom_intermediate_inst.bottom_intermediate_wire clk counter inter_wire inter_wire_2 led out_a out_b signal_n signal_p

@@ -34,7 +34,7 @@ module tx(
             count <= count+1;
     // 9600 baud is count == 1250
 	// 115200 baud is count == 104.1667
-    assign timerDone = (count == 104)?1:0;
+    assign timerDone = (count == 5208)?1:0;
     
     //bit counter
     always_ff @(posedge clk)

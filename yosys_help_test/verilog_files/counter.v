@@ -1,5 +1,5 @@
 module top (
-    input clk,
+    input clk, reset,
     output [3:0] led
 );
 
@@ -15,7 +15,10 @@ module top (
   reg [BITS+LOG2DELAY-1:0] counter = 0;
 
   always @(posedge bufg) begin
-    counter <= counter + 1;
+    if (reset)
+      counter <= 1'b0;
+    else
+      counter <= counter + 1;
   end
 
   assign led[3:0] = counter >> LOG2DELAY;

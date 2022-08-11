@@ -19,10 +19,10 @@ netlist_original = sdn.parse("original.blif", architecture=XILINX_7SERIES)
 #     print(child)
 # file = "yosys_cell_info.txt"
 # read_cell_info(netlist_original, file)
-for definition in netlist_original.get_definitions():
-    for port in definition.get_ports():
-        if port.direction is sdn.UNDEFINED:
-            print("UHOH")
+# for definition in netlist_original.get_definitions():
+#     for port in definition.get_ports():
+#         if port.direction is sdn.UNDEFINED:
+#             print("UHOH")
 for instance in netlist_original.get_instances():
     name = instance.name
     # print(name)
@@ -33,12 +33,20 @@ for instance in netlist_original.get_instances():
 
 print("Parsing TMR")
 netlist_tmr = sdn.parse("after_tmr.blif", architecture=XILINX_7SERIES)
+for instance in netlist_tmr.get_instances():
+    name = instance.name
+    # print(name)
+    # print(name[0] + " and " + name[1])
+    if (name[0] == "\\" and name[1] == "$"):
+        # print("Old name is " +instance.name)
+        instance.name = name[1:]
+        # print("New name is " + instance.name)
 # read_cell_info(netlist_tmr, file)
 # hierarchy(netlist_tmr.top_instance)
-for definition in netlist_tmr.get_definitions():
-    for port in definition.get_ports():
-        if port.direction is sdn.UNDEFINED:
-            print("UHOH " + port.name + " is undefined direction")
+# for definition in netlist_tmr.get_definitions():
+#     for port in definition.get_ports():
+#         if port.direction is sdn.UNDEFINED:
+#             print("UHOH " + port.name + " is undefined direction")
         # print(port.direction)
 # for instance in netlist_tmr.get_instances():
 #     if "EBLIF.type" in instance.data:
@@ -61,14 +69,14 @@ for definition in netlist_tmr.get_definitions():
 # parser.netlist = netlist_tmr
 # parser.set_subcircuit_names_by_convention()
 
-for instance in netlist_tmr.get_instances():
-    name = instance.name
-    # print(name)
-    # print(name[0] + " and " + name[1])
-    if (name[0] == "\\" and name[1] == "$"):
-        # print("Old name is " +instance.name)
-        instance.name = name[1:]
-        # print("New name is " + instance.name)
+# for instance in netlist_tmr.get_instances():
+#     name = instance.name
+#     # print(name)
+#     # print(name[0] + " and " + name[1])
+#     if (name[0] == "\\" and name[1] == "$"):
+#         # print("Old name is " +instance.name)
+#         instance.name = name[1:]
+#         # print("New name is " + instance.name)
 
 # mux_instance_9 = next(netlist_tmr.get_instances("*mux_instance_9*"))
 # print(mux_instance_9.data)

@@ -1,0 +1,15 @@
+
+*inter* cells quiet
+bottom_intermediate_inst.OBUF_8
+
+*inter* cells
+bottom_intermediate_inst.OBUF_8
+
+*inter* cells with invalid filter expression
+bottom_intermediate_inst.OBUF_8
+
+Filtered cells
+OBUFTDS_2
+
+All cells
+{$abc$2568$lut$not$aiger2567$1} {$auto$alumacc.cc:485:replace_alu$1615.genblk1.slice[0].genblk1.carry4} {$auto$alumacc.cc:485:replace_alu$1615.genblk1.slice[1].genblk1.carry4} {$auto$alumacc.cc:485:replace_alu$1615.genblk1.slice[2].genblk1.carry4} {$auto$alumacc.cc:485:replace_alu$1615.genblk1.slice[3].genblk1.carry4} {$auto$alumacc.cc:485:replace_alu$1615.genblk1.slice[4].genblk1.carry4} {$auto$alumacc.cc:485:replace_alu$1615.genblk1.slice[5].genblk1.carry4} {$auto$alumacc.cc:485:replace_alu$1615.genblk1.slice[6].genblk1.carry4} {$auto$ff.cc:262:slice$2038} {$auto$ff.cc:262:slice$2039} {$auto$ff.cc:262:slice$2040} {$auto$ff.cc:262:slice$2041} {$auto$ff.cc:262:slice$2042} {$auto$ff.cc:262:slice$2043} {$auto$ff.cc:262:slice$2044} {$auto$ff.cc:262:slice$2045} {$auto$ff.cc:262:slice$2046} {$auto$ff.cc:262:slice$2047} {$auto$ff.cc:262:slice$2048} {$auto$ff.cc:262:slice$2049} {$auto$ff.cc:262:slice$2050} {$auto$ff.cc:262:slice$2051} {$auto$ff.cc:262:slice$2052} {$auto$ff.cc:262:slice$2053} {$auto$ff.cc:262:slice$2054} {$auto$ff.cc:262:slice$2055} {$auto$ff.cc:262:slice$2056} {$auto$ff.cc:262:slice$2057} {$auto$ff.cc:262:slice$2058} {$auto$ff.cc:262:slice$2059} {$auto$ff.cc:262:slice$2060} {$auto$ff.cc:262:slice$2061} {$auto$ff.cc:262:slice$2062} {$auto$ff.cc:262:slice$2063} {$iopadmap$top.clk} OBUFTDS_2 OBUF_6 OBUF_7 OBUF_OUT bottom_inst.OBUF_10 bottom_inst.OBUF_11 bottom_inst.OBUF_9 bottom_intermediate_inst.OBUF_8
