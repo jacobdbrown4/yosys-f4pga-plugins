@@ -1,6 +1,7 @@
 # file copy -force ~/yosys_plugins/yosys-f4pga-plugins/mine-plugin/mine.so ~/yosys/share/plugins/
 # file copy -force ~/yosys_plugins/yosys-f4pga-plugins/tmr-plugin/tmr.so ~/yosys/share/plugins/
-file copy -force ~/yosys_plugins/yosys-f4pga-plugins/tmr-plugin/tmr.so ~/yosys/yosys/share/plugins/
+# file copy -force ~/yosys_plugins/yosys-f4pga-plugins/tmr-plugin/tmr.so ~/yosys/yosys/share/plugins/
+file copy -force ~/yosys_plugins/yosys-f4pga-plugins/tmr-plugin/tmr.so ~/yosys/share/plugins/
 
 
 
@@ -36,12 +37,12 @@ write_blif -cname -attr -param -conn original.blif
 plugin -i tmr
 
 # dump */t:INV %n
-yosys replicate_partial -suffix TMR -ports -verbose */t:FDRE %n
+yosys replicate_partial -suffix TMR -ports -verbose */t:IBUF */t:OBUF %% %n
 check
 
 write_blif -cname -param -attr -conn after_rep.blif
 # check
-yosys insert_voters_new -reduction -voter_name VOTER -verbose -suffix TMR */t:FDRE %n
+yosys insert_voters_new -reduction -voter_name VOTER -verbose -suffix TMR */t:IBUF */t:OBUF %% %n
 check
 # clean
 

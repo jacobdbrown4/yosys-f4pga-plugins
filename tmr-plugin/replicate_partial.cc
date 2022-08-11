@@ -184,15 +184,15 @@ private:
             replicate_module(new_design, module, suffix, check_ports);
             log("\n");
         }
-        for (auto cell: non_leaf_cells) {
-            // if (modules_to_replicate.size() > 0 && modules_to_replicate.find(RTLIL::unescape_id(cell->name)) == modules_to_replicate.end()) {
-            //     // printMessage("Will not replicate module "+ RTLIL::unescape_id(module->name) +  " because it is not specified \n", false);
-            //     // RTLIL::Module *new_module = new_design->addModule("\\" + RTLIL::unescape_id(module->name));
-            //     // module->cloneInto(new_module);
-            //     continue;
-            // }
-            fix_non_leaf_cell_connections(cell->module, cell, suffix);
-        }
+        // for (auto cell: non_leaf_cells) {
+        //     // if (modules_to_replicate.size() > 0 && modules_to_replicate.find(RTLIL::unescape_id(cell->name)) == modules_to_replicate.end()) {
+        //     //     // printMessage("Will not replicate module "+ RTLIL::unescape_id(module->name) +  " because it is not specified \n", false);
+        //     //     // RTLIL::Module *new_module = new_design->addModule("\\" + RTLIL::unescape_id(module->name));
+        //     //     // module->cloneInto(new_module);
+        //     //     continue;
+        //     // }
+        //     fix_non_leaf_cell_connections(cell->module, cell, suffix);
+        // }
         return new_design;
     }
 
@@ -257,6 +257,16 @@ private:
                 }
             }
         }
+        // for each non leaf cell, for each of his wires, if they output from the non leaf cell and are set to be replicated, replicate the other side of that port.
+        // for (auto cell: module->cells()) {
+        //     RTLIL::Module *cell_module = module->design->module(cell->type);
+        //     if (cell_module->get_blackbox_attribute()) {
+        //         continue;
+        //     }
+        //     for 
+        // }
+
+
         // for (auto sigsig: module->connections()) {
         //     RTLIL::SigSpec sigspec_one = sigsig.first;
         //     RTLIL::SigSpec sigspec_two = sigsig.second;
@@ -329,6 +339,10 @@ private:
         printMessage("Identifying cells to replicate\n", false);
         std::vector<Cell*> cells_to_replicate;
         for (auto cell: module->selected_cells()) {
+            RTLIL::Module* cell_module = module->design->module(cell->type);
+            if (!cell_module->get_blackbox_attribute()) { // a non leaf cell
+                continue;
+            }
             cells_to_replicate.push_back(cell);
             printMessage("Cell " + RTLIL::unescape_id(cell->name) + " of type " + RTLIL::unescape_id(cell->type) + " will be replicated\n", false);
         }
@@ -341,6 +355,7 @@ private:
         std::map<RTLIL::Wire*,std::vector<RTLIL::Wire*>> wire_map;
         for (auto wire: old_module->wires()) {
             if (std::find(std::begin(wires_to_replicate), std::end(wires_to_replicate), wire) == std::end(wires_to_replicate)) {
+                std::cout << "Wire " << log_id(wire) << " is only copied over\n";
                 RTLIL::Wire *new_wire = new_module->addWire(wire->name, wire);
                 wire_map[wire].push_back(new_wire);
                 global_wire_map[wire].push_back(new_wire);
@@ -369,10 +384,19 @@ private:
             std::cout << "set to replicate cell " << log_id(cell) << " of type " << RTLIL::unescape_id(cell->type) << "\n";
             if (std::find(std::begin(cells_to_replicate), std::end(cells_to_replicate), cell) == std::end(cells_to_replicate)) {
                 std::cout << "\tbut he was not specified to be replicated\n";
-
-                RTLIL::Cell *new_cell = new_module->addCell(cell->name, cell);
-                fix_cell_connections_new(new_module, new_cell, cell, 0, suffix, wire_map);    
+                RTLIL::Module* cell_module = old_module->design->module(cell->type);
+                if (cell_module->get_blackbox_attribute()) { 
+                    RTLIL::Cell *new_cell = new_module->addCell(cell->name, cell);
+                    fix_cell_connections_new(new_module, new_cell, cell, 0, suffix, wire_map);    
+                    continue;
+                }
+                RTLIL::Cell *new_cell = new_module->addCell("\\" + RTLIL::unescape_id(cell->name), cell);
+                new_cell->type = cell->type;
+                non_leaf_cells.push_back(new_cell);
+                // fix_cell_connections_new(new_module, new_cell, cell, 0, suffix, wire_map);
+                fix_non_leaf_cell_connections_new(new_module, new_cell, cell, suffix, wire_map);
                 continue;
+
             }
             std::string cell_type = RTLIL::unescape_id(cell->type);
             std::string cell_name = RTLIL::unescape_id(cell->name);
@@ -838,11 +862,13 @@ private:
                     RTLIL::unescape_id(new_cell->type) << "\n";
         // do stuff here
         // if it's not a blackbox, do what we were saying before. Otherwise (if it's a blackbox), hook it up to the one (TMR_0)
-        if (blackbox_map[RTLIL::unescape_id(new_module->name)]) {
+        RTLIL::Module *cell_module = new_module->design->module(new_cell->type);
+        if (blackbox_map[RTLIL::unescape_id(cell_module->name)]) {
+            std::cout << "TODO..." << log_id(new_module) << " is a blackbox and needs his connections fixed differently.\n";
             return; // TODO do something here
         }
         // see what ports are replicated
-        RTLIL::Module *cell_module = new_module->design->module(new_cell->type);
+        // RTLIL::Module *cell_module = new_module->design->module(new_cell->type);
         std::map<RTLIL::IdString, RTLIL::Wire*> inner_port_map;
         for (auto wire: cell_module->wires()) {
             if (wire->port_input || wire->port_output) {

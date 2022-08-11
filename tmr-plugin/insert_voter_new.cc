@@ -172,15 +172,21 @@ struct InsertVoterWorker {
         // iterate through cells in the module
         // if a cell was not selected during replication, his inputs must be reduced
         for (auto cell: module->cells()) {
-            if (module->selected(cell)) {
+            RTLIL::Module *cell_module = module->design->module(cell->type);
+            if (module->selected(cell) && cell_module->get_blackbox_attribute()) {
                 continue;
             }
+            if (!cell_module->get_blackbox_attribute()){
+                // TODO handle these non leaf cell reduction points
+                continue;
+            }
+            std::cout << "checking cell " << RTLIL::unescape_id(cell->name) << " of type " << RTLIL::unescape_id(cell->type) << " for needed reduction points\n";
             for (auto conn: cell->connections()) {
                 if (!cell->input(conn.first)){
                     continue;
                 }
                 RTLIL::SigSpec sigspec = conn.second;
-                // std::cout << "The sigspec on port " << RTLIL::unescape_id(conn.first) << " is size " << std::to_string(GetSize(sigspec)) << "\n";
+                std::cout << "The sigspec on port " << RTLIL::unescape_id(conn.first) << " is size " << std::to_string(GetSize(sigspec)) << "\n";
                 for (auto sigbit: sigspec.bits()) {
                     if (sigbit.wire == nullptr) {
                         continue;
@@ -198,6 +204,9 @@ struct InsertVoterWorker {
                         pin.sigbit = sigbit;
                         std::string map_key = RTLIL::unescape_id(sigbit.wire->name) + "_" + std::to_string(sigbit.offset);
                         reduction_map[map_key].push_back(pin);
+                    }
+                    else {
+                        // it wasn't replicated, but it may still output from a non leaf with replicated ports.
                     }
                 }
             }
