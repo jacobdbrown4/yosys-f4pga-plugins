@@ -139,6 +139,7 @@ private:
     std::map<RTLIL::Wire*,std::vector<RTLIL::Wire*>> global_wire_map;
     std::vector<Cell*> cells_to_replicate;
     std::vector<Wire*> wires_to_replicate;
+    std::vector<std::pair<RTLIL::Cell*, RTLIL::Cell*>> non_leaf_cells_to_fix;
     // std::vector<Wire*> wires_driving_inputs_non_leafs_to_replicate; //outside
     // std::vector<Wire*> wires_driving_outputs_non_leafs_to_replicate; //inside
 
@@ -191,6 +192,9 @@ private:
                 wires_to_replicate.push_back(wire);
             }
         }
+        for (auto wire: wires_to_replicate) {
+            std::cout << "Wire: " << log_id(wire) << " of module " << log_id(wire->module) << " will be replicated\n";
+        }
         
         for (auto module: original_design->modules()) {
             if (blackbox_map[RTLIL::unescape_id(module->name)]){
@@ -206,6 +210,9 @@ private:
             log("Replicating module: %s\n", log_id(module));
             replicate_module(new_design, module, suffix, check_ports);
             log("\n");
+        }
+        for (auto pair: non_leaf_cells_to_fix) {
+            fix_non_leaf_cell_connections_new(pair.first->module, pair.first, pair.second, suffix, global_wire_map);
         }
         // for (auto cell: non_leaf_cells) {
         //     // if (modules_to_replicate.size() > 0 && modules_to_replicate.find(RTLIL::unescape_id(cell->name)) == modules_to_replicate.end()) {
@@ -375,23 +382,32 @@ private:
             if (cell_module->get_blackbox_attribute()){
                 continue;
             }
+            std::cout << "\tchecking cell of type " << log_id(cell->type) << "\n";
             for (auto conn: cell->connections()) {
                 for (auto bit: conn.second.bits()) {
                     if (bit.wire == nullptr) {
                         continue;
                     }
-                    // std::cout << log_id(conn.first) << " is connected to wire named " << log_id(bit.wire) << "\n";
+                    std::cout << log_id(conn.first) << " is connected to wire named " << log_id(bit.wire) << "\n";
+                    // std::cout << "\tThat wire has port_id " << std::to_string(bit.wire->port_id) << "\n";
                     outside_port_connections[conn.first].insert(bit.wire);
                 }
             }
             for (auto wire: cell_module->wires()) {
-                if (outside_port_connections.find(wire->name) == outside_port_connections.end()) {
+                if (outside_port_connections.find(wire->name) == outside_port_connections.end()) { // wire name is not a port name
+                    // if (wire->port_input || wire->port_output) {
+                    //     std::cout << "for some reason he's a port input/output but his name is not a port name\n";
+                    // }
                     continue;
                 }
-                // std::cout << "Wire named " << log_id(wire) << " drives a non leaf port\n";
+                std::cout << "Wire named " << log_id(wire) << " drives a non leaf port\n";
+                std::cout << "\tThat wire has port_id " << std::to_string(wire->port_id) << "\n";
                 bool inside_wire_to_be_replicated = std::find(wires_to_replicate.begin(), wires_to_replicate.end(), wire) != wires_to_replicate.end();
                 bool outside_wire_to_be_replicated = false;
                 RTLIL:Wire* outer_wire;
+                if (outside_port_connections[wire->name].size() > 1) {
+                    std::cout << "we've got a big one at size " << std::to_string(outside_port_connections[wire->name].size()) << "\n";
+                }
                 for (auto outside_wire: outside_port_connections[wire->name]) {
                     if (std::find(wires_to_replicate.begin(), wires_to_replicate.end(), outside_wire) != wires_to_replicate.end()) {
                         outside_wire_to_be_replicated = true;
@@ -403,7 +419,45 @@ private:
 
                 if (inside_wire_to_be_replicated || outside_wire_to_be_replicated) {
                     // std::cout << "one of them will be replicated\n";
-                    if (cell->input(wire->name)) {
+                    if (cell->input(wire->name) && cell->output(wire->name)) {
+                        std::cout << "found an inout port\n";
+                        if (!inside_wire_to_be_replicated) {
+                            std::cout << "Now inside wire " << log_id(wire) << " will also be replicated\n";
+                            additional_wires.push_back(wire);
+                        }
+                        else {
+                            // std::cout << "Well inside wire " << log_id(wire) << " was already going to be replicated\n";
+                            for (auto outer_wire: outside_port_connections[wire->name]) {
+                                if (std::find(wires_to_replicate.begin(), wires_to_replicate.end(), outer_wire) == wires_to_replicate.end()) {
+                                    std::cout << "Now inside wire " << log_id(outer_wire) << " will also be replicated\n";
+                                    additional_wires.push_back(outer_wire);
+                                }
+                                else {
+                                    std::cout << "Well inside wire " << log_id(outer_wire) << " was already going to be replicated\n";
+                                }
+                            }
+                        }
+                        if (!outside_wire_to_be_replicated) {
+                            for (auto outer_wire: outside_port_connections[wire->name]) {
+                                std::cout << "Now outside wire " << log_id(outer_wire) << " will also be replicated\n";
+                                additional_wires.push_back(outer_wire);
+                            }
+                        }
+                        else {
+                            // std::cout << "Well outside wire " << log_id(outer_wire) << " was already going to be replicated\n";
+                            for (auto outer_wire: outside_port_connections[wire->name]) {
+                                if (std::find(wires_to_replicate.begin(), wires_to_replicate.end(), outer_wire) == wires_to_replicate.end()) {
+                                    std::cout << "Now outside wire " << log_id(outer_wire) << " will also be replicated\n";
+                                    additional_wires.push_back(outer_wire);
+                                }
+                                else {
+                                    std::cout << "Well outside wire " << log_id(outer_wire) << " was already going to be replicated\n";
+                                }
+                            }
+                        }
+                    // }
+                    }
+                    else if (cell->input(wire->name)) {
                     // std::cout << "but he's an input so we'll handle him later\n";
                     // continue;
                         if (!inside_wire_to_be_replicated) {
@@ -411,21 +465,42 @@ private:
                             additional_wires.push_back(wire);
                         }
                         else {
-                            std::cout << "Well inside wire " << log_id(wire) << " was already going to be replicated\n";
+                            // std::cout << "Well inside wire " << log_id(wire) << " was already going to be replicated\n";
+                            for (auto outer_wire: outside_port_connections[wire->name]) {
+                                if (std::find(wires_to_replicate.begin(), wires_to_replicate.end(), outer_wire) == wires_to_replicate.end()) {
+                                    std::cout << "Now inside wire " << log_id(outer_wire) << " will also be replicated\n";
+                                    additional_wires.push_back(outer_wire);
+                                }
+                                else {
+                                    std::cout << "Well inside wire " << log_id(outer_wire) << " was already going to be replicated\n";
+                                }
+                            }
+                            
                         }
                     }
                     else if (cell->output(wire->name)) {
-                            if (!outside_wire_to_be_replicated) {
-                            std::cout << "Now outside wire " << log_id(outer_wire) << " will also be replicated\n";
-                            additional_wires.push_back(outer_wire);
+                        if (!outside_wire_to_be_replicated) {
+                            for (auto outer_wire: outside_port_connections[wire->name]) {
+                                std::cout << "Now outside wire " << log_id(outer_wire) << " will also be replicated\n";
+                                additional_wires.push_back(outer_wire);
+                            }
                         }
                         else {
-                            std::cout << "Well outside wire " << log_id(outer_wire) << " was already going to be replicated\n";
+                            // std::cout << "Well outside wire " << log_id(outer_wire) << " was already going to be replicated\n";
+                            for (auto outer_wire: outside_port_connections[wire->name]) {
+                                if (std::find(wires_to_replicate.begin(), wires_to_replicate.end(), outer_wire) == wires_to_replicate.end()) {
+                                    std::cout << "Now outside wire " << log_id(outer_wire) << " will also be replicated\n";
+                                    additional_wires.push_back(outer_wire);
+                                }
+                                else {
+                                    std::cout << "Well outside wire " << log_id(outer_wire) << " was already going to be replicated\n";
+                                }
+                            }
                         }
                     }
                 }
                 else {
-                    std::cout << "neither will be replicated\n";
+                    std::cout << "neither " << log_id(wire) << " nor " << log_id(outer_wire) << " will be replicated\n";
                 }
             }
         }
@@ -453,7 +528,7 @@ private:
         std::map<RTLIL::Wire*,std::vector<RTLIL::Wire*>> wire_map;
         for (auto wire: old_module->wires()) {
             if (std::find(std::begin(wires_to_replicate), std::end(wires_to_replicate), wire) == std::end(wires_to_replicate)) {
-                std::cout << "Wire " << log_id(wire) << " is only copied over\n";
+                std::cout << "Wire " << log_id(wire) << " from module " << log_id(wire->module) << " is only copied over\n";
                 RTLIL::Wire *new_wire = new_module->addWire(wire->name, wire);
                 wire_map[wire].push_back(new_wire);
                 global_wire_map[wire].push_back(new_wire);
@@ -488,11 +563,17 @@ private:
                     fix_cell_connections_new(new_module, new_cell, cell, 0, suffix, wire_map);    
                     continue;
                 }
-                RTLIL::Cell *new_cell = new_module->addCell("\\" + RTLIL::unescape_id(cell->name), cell);
+                RTLIL::Cell *new_cell = new_module->addCell(cell->name, cell);
+                // new_cell->type = cell->type;
+                // RTLIL::Module* new_cell_module = new_module->design->module(cell->type);
+                // if (new_cell_module == nullptr) {
+                //     std::cout << "he's null here too\n";
+                // }
                 new_cell->type = cell->type;
                 non_leaf_cells.push_back(new_cell);
                 // fix_cell_connections_new(new_module, new_cell, cell, 0, suffix, wire_map);
-                fix_non_leaf_cell_connections_new(new_module, new_cell, cell, suffix, wire_map);
+                // fix_non_leaf_cell_connections_new(new_module, new_cell, cell, suffix, wire_map);
+                non_leaf_cells_to_fix.push_back(std::pair<RTLIL::Cell*, RTLIL::Cell*>(new_cell, cell));
                 continue;
 
             }
@@ -509,11 +590,12 @@ private:
                 }
                 else {
                     // if it's a non_leaf_cell or blackbox, we still need to add it to the new module
-                    RTLIL::Cell *new_cell = new_module->addCell("\\" + RTLIL::unescape_id(cell->name), cell);
+                    RTLIL::Cell *new_cell = new_module->addCell(cell->name, cell);
                     new_cell->type = cell->type;
                     non_leaf_cells.push_back(new_cell);
                     // fix_cell_connections_new(new_module, new_cell, cell, 0, suffix, wire_map);
-                    fix_non_leaf_cell_connections_new(new_module, new_cell, cell, suffix, wire_map);
+                    // fix_non_leaf_cell_connections_new(new_module, new_cell, cell, suffix, wire_map);
+                    non_leaf_cells_to_fix.push_back(std::pair<RTLIL::Cell*, RTLIL::Cell*>(new_cell, cell));
                     continue;
                 }
             }
@@ -550,6 +632,9 @@ private:
                 }
                 else {
                     wire = wire_map[bit.wire][i];
+                }
+                if (wire_map[bit.wire].size() > 3) {
+                    std::cout << "GREATER THAN THREE " << log_id(bit.wire) << " has size " << std::to_string(wire_map[bit.wire].size()) << "\n";
                 }
                 if (!port_set_already) {
                     RTLIL::SigSpec signal = RTLIL::SigSpec(wire, bit.offset, 1);
@@ -675,7 +760,7 @@ private:
                 }
             }
         }
-        printMessage("Connection Map for Module: " + RTLIL::unescape_id(module->name) + "\n", false);
+        // printMessage("Connection Map for Module: " + RTLIL::unescape_id(module->name) + "\n", false);
         for (auto map_entry: connection_map) {
             std::string to_write;
             to_write = "Key: " + map_entry.first + "\n";
@@ -690,9 +775,9 @@ private:
             for(auto cell: map_entry.second.driven_cells) {
                 to_write+= "\t\t" + RTLIL::unescape_id(cell.cell->name) + "\n";
             }
-            printMessage(to_write, false);
+            // printMessage(to_write, false);
         }
-        printMessage("Finished printing connection map\n", false);
+        // printMessage("Finished printing connection map\n", false);
         return connection_map;
     }
 
@@ -960,14 +1045,17 @@ private:
                     RTLIL::unescape_id(new_cell->type) << "\n";
         // do stuff here
         // if it's not a blackbox, do what we were saying before. Otherwise (if it's a blackbox), hook it up to the one (TMR_0)
+        // for (auto module: new_module->design->modules()) {
+        //     std::cout << "known module: " << log_id(module) << "\n";
+        // }
         RTLIL::Module *cell_module = new_module->design->module(new_cell->type);
         // std::cout << "hereyo\n";
-        if (cell_module == nullptr) {
-            std::cout << "the cell module is nullptr\n";
-        }
-        if (!new_cell->known()) {
-            std::cout << "the new cell is not known\n";
-        }
+        // if (cell_module == nullptr) {
+        //     std::cout << "the cell module is nullptr\n";
+        // }
+        // if (!new_cell->known()) {
+        //     std::cout << "the new cell is not known\n";
+        // }
         if (blackbox_map[RTLIL::unescape_id(cell_module->name)]) {
             std::cout << "TODO..." << log_id(new_module) << " is a blackbox and needs his connections fixed differently.\n";
             return; // TODO do something here
@@ -981,6 +1069,9 @@ private:
                 inner_port_map.insert(std::pair<RTLIL::IdString, RTLIL::Wire*>(wire->name, wire));
             }
         }
+        for (auto entry: inner_port_map) {
+            std::cout << log_id(entry.first) << " is driven by " << log_id(entry.second) << "\n";
+        }
         // std::cout << "inner port map completed\n";
         // make a map of which ports were replicated
         std::map<std::string, int> replicated_ports_map;
@@ -993,9 +1084,9 @@ private:
                 replicated_ports_map[plain_port_name]++;
             }
         }
-        // for (auto entry: replicated_ports_map) {
-        //     std::cout << "Entry: " << entry.first << " has " << std::to_string(entry.second) << "\n";
-        // }
+        for (auto entry: replicated_ports_map) {
+            std::cout << "Entry: " << entry.first << " has " << std::to_string(entry.second) << "\n";
+        }
         // std::cout << "going into connections\n";
         for (auto &connection: old_cell->connections()) {
             bool unset_already = false;
@@ -1015,17 +1106,20 @@ private:
                         }
 
                         if (global_wire_map[sigbit.wire].size() > 1) {
-                            // std::cout << "wire was replicated\n";
+                            std::cout << "wire " << log_id(sigbit.wire) << " was replicated\n";
                             RTLIL::SigBit new_sigbit = RTLIL::SigBit(global_wire_map[sigbit.wire][i], sigbit.offset);
                             new_sigspec.append(new_sigbit);
                         }
                         else {
                             // std::cout << "wire was NOT replicated\n";
-                            // std::cout << "Global wire map size or that wire is " << std::to_string(global_wire_map[sigbit.wire].size()) << "\n";
+                            // std::cout << "Global wire map size for that wire is " << std::to_string(global_wire_map[sigbit.wire].size()) << "\n";
                             RTLIL::SigBit new_sigbit = RTLIL::SigBit(global_wire_map[sigbit.wire][0], sigbit.offset);
                             // std::cout << "here\n";
                             new_sigspec.append(new_sigbit);
                             // std::cout << "done\n";
+                        }
+                        if (global_wire_map[sigbit.wire].size() > 3) {
+                            std::cout << "GREATER THAN THREE " << log_id(sigbit.wire) << " has size " << std::to_string(global_wire_map[sigbit.wire].size()) << "\n";
                         }
                     }
                     std::string suffix_key = "_" + suffix + "_" + std::to_string(i);
