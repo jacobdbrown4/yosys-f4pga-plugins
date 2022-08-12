@@ -1669,6 +1669,151 @@ Found and reported 0 problems.
 6. Executing BLIF backend.
 
 7. Executing REPLICATE PARTIAL Pass
+Identifying cells to replicate
+Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398 of type LUT4 will be replicated
+Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 of type LUT6 will be replicated
+Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 of type LUT6 will be replicated
+Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 of type LUT6 will be replicated
+Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 of type LUT6 will be replicated
+Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403 of type LUT4 will be replicated
+Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 of type LUT6 will be replicated
+Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 of type LUT6 will be replicated
+Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 of type LUT6 will be replicated
+Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 of type LUT6 will be replicated
+Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2408 of type INV will be replicated
+Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 of type CARRY4 will be replicated
+Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 of type CARRY4 will be replicated
+Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 of type CARRY4 will be replicated
+Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 of type CARRY4 will be replicated
+Cell $auto$ff.cc:262:slice$2149 of type FDRE will be replicated
+Cell $auto$ff.cc:262:slice$2150 of type FDRE will be replicated
+Cell $auto$ff.cc:262:slice$2151 of type FDRE will be replicated
+Cell $auto$ff.cc:262:slice$2152 of type FDRE will be replicated
+Cell $auto$ff.cc:262:slice$2153 of type FDRE will be replicated
+Cell $auto$ff.cc:262:slice$2154 of type FDRE will be replicated
+Cell $auto$ff.cc:262:slice$2155 of type FDRE will be replicated
+Cell $auto$ff.cc:262:slice$2156 of type FDRE will be replicated
+Cell $auto$ff.cc:262:slice$2157 of type FDRE will be replicated
+Cell $auto$ff.cc:262:slice$2158 of type FDRE will be replicated
+Cell $auto$ff.cc:262:slice$2159 of type FDRE will be replicated
+Cell $auto$ff.cc:262:slice$2160 of type FDRE will be replicated
+Cell $auto$ff.cc:262:slice$2161 of type FDRE will be replicated
+Cell $auto$ff.cc:262:slice$2162 of type FDRE will be replicated
+Cell $auto$ff.cc:262:slice$2163 of type FDRE will be replicated
+Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 of type CARRY4 will be replicated
+Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 of type CARRY4 will be replicated
+Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398
+	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.G[0] will be replicated
+Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399
+	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.G[1] will be replicated
+Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400
+	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.G[2] will be replicated
+Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401
+	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.G[3] will be replicated
+Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402
+	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.G[4] will be replicated
+Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403
+	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S[0] will be replicated
+Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404
+	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S[1] will be replicated
+Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405
+	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S[2] will be replicated
+Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406
+	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S[3] will be replicated
+Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407
+	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S[4] will be replicated
+Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2408
+	Wire $auto$alumacc.cc:485:replace_alu$1726.X[0] will be replicated
+Checking wires for cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4
+	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[0] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[1] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[2] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[3] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[0] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[1] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[2] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[3] will be replicated
+Checking wires for cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4
+	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[4] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[5] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[6] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[7] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[4] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[5] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[6] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[7] will be replicated
+Checking wires for cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4
+	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[8] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[9] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[10] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[11] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[8] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[9] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[10] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[11] will be replicated
+Checking wires for cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4
+	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[12] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[13] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.genblk1.C[14] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.genblk1.C[15] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[12] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[13] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.genblk1.O[14] will be replicated
+	Wire $auto$alumacc.cc:485:replace_alu$1726.genblk1.O[15] will be replicated
+Checking wires for cell $auto$ff.cc:262:slice$2149
+	Wire pulse[0] will be replicated
+Checking wires for cell $auto$ff.cc:262:slice$2150
+	Wire counter[0] will be replicated
+Checking wires for cell $auto$ff.cc:262:slice$2151
+	Wire counter[1] will be replicated
+Checking wires for cell $auto$ff.cc:262:slice$2152
+	Wire counter[2] will be replicated
+Checking wires for cell $auto$ff.cc:262:slice$2153
+	Wire counter[3] will be replicated
+Checking wires for cell $auto$ff.cc:262:slice$2154
+	Wire counter[4] will be replicated
+Checking wires for cell $auto$ff.cc:262:slice$2155
+	Wire counter[5] will be replicated
+Checking wires for cell $auto$ff.cc:262:slice$2156
+	Wire counter[6] will be replicated
+Checking wires for cell $auto$ff.cc:262:slice$2157
+	Wire counter[7] will be replicated
+Checking wires for cell $auto$ff.cc:262:slice$2158
+	Wire counter[8] will be replicated
+Checking wires for cell $auto$ff.cc:262:slice$2159
+	Wire counter[9] will be replicated
+Checking wires for cell $auto$ff.cc:262:slice$2160
+	Wire counter[10] will be replicated
+Checking wires for cell $auto$ff.cc:262:slice$2161
+	Wire counter[11] will be replicated
+Checking wires for cell $auto$ff.cc:262:slice$2162
+	Wire counter[12] will be replicated
+Checking wires for cell $auto$ff.cc:262:slice$2163
+	Wire counter[13] will be replicated
+Checking wires for cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4
+	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO[0] will be replicated
+	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO[1] will be replicated
+	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO[2] will be replicated
+	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO[3] will be replicated
+Checking wires for cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4
+	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO[4] will be replicated
+	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C[5] will be replicated
+	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C[6] will be replicated
+	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C[7] will be replicated
+
+Identifying cells to replicate
+
+identifying additional wires to replicate in module PWM
+identifying additional wires to replicate in module top
+neither will be replicated
+Now outside wire $iopadmap$pulse_green will also be replicated
+neither will be replicated
+neither will be replicated
+Now outside wire $iopadmap$pulse_blue will also be replicated
+neither will be replicated
+neither will be replicated
+Now outside wire $iopadmap$pulse_red will also be replicated
+neither will be replicated
 Will not replicate inside blackbox module \$__ABC9_LUT7
 Will not replicate inside blackbox module \$__ABC9_LUT8
 Will not replicate inside blackbox module AND2B1L
@@ -2317,180 +2462,6 @@ Key: width_9
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2401
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2406
 Finished printing connection map
-Identifying cells to replicate
-Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398 of type LUT4 will be replicated
-Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 of type LUT6 will be replicated
-Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 of type LUT6 will be replicated
-Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 of type LUT6 will be replicated
-Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 of type LUT6 will be replicated
-Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403 of type LUT4 will be replicated
-Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 of type LUT6 will be replicated
-Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 of type LUT6 will be replicated
-Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 of type LUT6 will be replicated
-Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 of type LUT6 will be replicated
-Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2408 of type INV will be replicated
-Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 of type CARRY4 will be replicated
-Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 of type CARRY4 will be replicated
-Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 of type CARRY4 will be replicated
-Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 of type CARRY4 will be replicated
-Cell $auto$ff.cc:262:slice$2149 of type FDRE will be replicated
-Cell $auto$ff.cc:262:slice$2150 of type FDRE will be replicated
-Cell $auto$ff.cc:262:slice$2151 of type FDRE will be replicated
-Cell $auto$ff.cc:262:slice$2152 of type FDRE will be replicated
-Cell $auto$ff.cc:262:slice$2153 of type FDRE will be replicated
-Cell $auto$ff.cc:262:slice$2154 of type FDRE will be replicated
-Cell $auto$ff.cc:262:slice$2155 of type FDRE will be replicated
-Cell $auto$ff.cc:262:slice$2156 of type FDRE will be replicated
-Cell $auto$ff.cc:262:slice$2157 of type FDRE will be replicated
-Cell $auto$ff.cc:262:slice$2158 of type FDRE will be replicated
-Cell $auto$ff.cc:262:slice$2159 of type FDRE will be replicated
-Cell $auto$ff.cc:262:slice$2160 of type FDRE will be replicated
-Cell $auto$ff.cc:262:slice$2161 of type FDRE will be replicated
-Cell $auto$ff.cc:262:slice$2162 of type FDRE will be replicated
-Cell $auto$ff.cc:262:slice$2163 of type FDRE will be replicated
-Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 of type CARRY4 will be replicated
-Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 of type CARRY4 will be replicated
-Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398
-	Wire width[1] will be replicated
-	Wire width[0] will be replicated
-	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.G[0] will be replicated
-Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399
-	Wire width[4] will be replicated
-	Wire width[3] will be replicated
-	Wire width[2] will be replicated
-	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.G[1] will be replicated
-Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400
-	Wire width[7] will be replicated
-	Wire width[6] will be replicated
-	Wire width[5] will be replicated
-	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.G[2] will be replicated
-Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401
-	Wire width[10] will be replicated
-	Wire width[9] will be replicated
-	Wire width[8] will be replicated
-	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.G[3] will be replicated
-Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402
-	Wire width[13] will be replicated
-	Wire width[12] will be replicated
-	Wire width[11] will be replicated
-	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.G[4] will be replicated
-Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403
-	Wire width[0] will be replicated
-	Wire width[1] will be replicated
-	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S[0] will be replicated
-Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404
-	Wire width[2] will be replicated
-	Wire width[3] will be replicated
-	Wire width[4] will be replicated
-	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S[1] will be replicated
-Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405
-	Wire width[5] will be replicated
-	Wire width[6] will be replicated
-	Wire width[7] will be replicated
-	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S[2] will be replicated
-Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406
-	Wire width[8] will be replicated
-	Wire width[9] will be replicated
-	Wire width[10] will be replicated
-	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S[3] will be replicated
-Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407
-	Wire width[11] will be replicated
-	Wire width[12] will be replicated
-	Wire width[13] will be replicated
-	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S[4] will be replicated
-Checking wires for cell $abc$2397$auto$blifparse.cc:515:parse_blif$2408
-	Wire $auto$alumacc.cc:485:replace_alu$1726.X[0] will be replicated
-Checking wires for cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4
-	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[0] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[1] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[2] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[3] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[0] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[1] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[2] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[3] will be replicated
-Checking wires for cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4
-	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[4] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[5] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[6] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[7] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[4] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[5] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[6] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[7] will be replicated
-Checking wires for cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4
-	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[8] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[9] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[10] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[11] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[8] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[9] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[10] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[11] will be replicated
-Checking wires for cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4
-	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[12] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.CO[13] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.genblk1.C[14] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.genblk1.C[15] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[12] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.Y[13] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.genblk1.O[14] will be replicated
-	Wire $auto$alumacc.cc:485:replace_alu$1726.genblk1.O[15] will be replicated
-Checking wires for cell $auto$ff.cc:262:slice$2149
-	Wire clk[0] will be replicated
-	Wire pulse[0] will be replicated
-Checking wires for cell $auto$ff.cc:262:slice$2150
-	Wire clk[0] will be replicated
-	Wire counter[0] will be replicated
-Checking wires for cell $auto$ff.cc:262:slice$2151
-	Wire clk[0] will be replicated
-	Wire counter[1] will be replicated
-Checking wires for cell $auto$ff.cc:262:slice$2152
-	Wire clk[0] will be replicated
-	Wire counter[2] will be replicated
-Checking wires for cell $auto$ff.cc:262:slice$2153
-	Wire clk[0] will be replicated
-	Wire counter[3] will be replicated
-Checking wires for cell $auto$ff.cc:262:slice$2154
-	Wire clk[0] will be replicated
-	Wire counter[4] will be replicated
-Checking wires for cell $auto$ff.cc:262:slice$2155
-	Wire clk[0] will be replicated
-	Wire counter[5] will be replicated
-Checking wires for cell $auto$ff.cc:262:slice$2156
-	Wire clk[0] will be replicated
-	Wire counter[6] will be replicated
-Checking wires for cell $auto$ff.cc:262:slice$2157
-	Wire clk[0] will be replicated
-	Wire counter[7] will be replicated
-Checking wires for cell $auto$ff.cc:262:slice$2158
-	Wire clk[0] will be replicated
-	Wire counter[8] will be replicated
-Checking wires for cell $auto$ff.cc:262:slice$2159
-	Wire clk[0] will be replicated
-	Wire counter[9] will be replicated
-Checking wires for cell $auto$ff.cc:262:slice$2160
-	Wire clk[0] will be replicated
-	Wire counter[10] will be replicated
-Checking wires for cell $auto$ff.cc:262:slice$2161
-	Wire clk[0] will be replicated
-	Wire counter[11] will be replicated
-Checking wires for cell $auto$ff.cc:262:slice$2162
-	Wire clk[0] will be replicated
-	Wire counter[12] will be replicated
-Checking wires for cell $auto$ff.cc:262:slice$2163
-	Wire clk[0] will be replicated
-	Wire counter[13] will be replicated
-Checking wires for cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4
-	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO[0] will be replicated
-	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO[1] will be replicated
-	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO[2] will be replicated
-	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO[3] will be replicated
-Checking wires for cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4
-	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO[4] will be replicated
-	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C[5] will be replicated
-	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C[6] will be replicated
-	Wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C[7] will be replicated
 Replicating wires...
 Replicated wire $auto$alumacc.cc:485:replace_alu$1726.CO into wire \$auto$alumacc.cc:485:replace_alu$1726.CO_TMR_0
 Replicated wire $auto$alumacc.cc:485:replace_alu$1726.CO into wire \$auto$alumacc.cc:485:replace_alu$1726.CO_TMR_1
@@ -2519,2289 +2490,144 @@ Replicated wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C into w
 Replicated wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S into wire \$lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S_TMR_0
 Replicated wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S into wire \$lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S_TMR_1
 Replicated wire $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S into wire \$lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S_TMR_2
-Replicated wire clk into wire clk_TMR_0
-Replicated wire clk into wire clk_TMR_1
-Replicated wire clk into wire clk_TMR_2
+Wire clk is only copied over
 Replicated wire counter into wire counter_TMR_0
 Replicated wire counter into wire counter_TMR_1
 Replicated wire counter into wire counter_TMR_2
 Replicated wire pulse into wire pulse_TMR_0
 Replicated wire pulse into wire pulse_TMR_1
 Replicated wire pulse into wire pulse_TMR_2
-Replicated wire width into wire width_TMR_0
-Replicated wire width into wire width_TMR_1
-Replicated wire width into wire width_TMR_2
+Wire width is only copied over
 Replicating cells in module PWM
 set to replicate cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398 of type LUT4
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2398 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398_TMR_0
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2398 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398_TMR_1
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2398 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398_TMR_2
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2398 connections for port O is size 1
-The wiremap size for that wire key is 3
 set to replicate cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 of type LUT6
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2399 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399_TMR_0
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2399 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399_TMR_1
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2399 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399_TMR_2
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2399 connections for port O is size 1
-The wiremap size for that wire key is 3
 set to replicate cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 of type LUT6
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2400 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400_TMR_0
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2400 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400_TMR_1
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2400 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400_TMR_2
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2400 connections for port O is size 1
-The wiremap size for that wire key is 3
 set to replicate cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 of type LUT6
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2401 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401_TMR_0
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2401 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401_TMR_1
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2401 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401_TMR_2
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2401 connections for port O is size 1
-The wiremap size for that wire key is 3
 set to replicate cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 of type LUT6
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2402 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402_TMR_0
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2402 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402_TMR_1
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2402 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402_TMR_2
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2402 connections for port O is size 1
-The wiremap size for that wire key is 3
 set to replicate cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403 of type LUT4
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2403 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403_TMR_0
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2403 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403_TMR_1
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2403 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403_TMR_2
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2403 connections for port O is size 1
-The wiremap size for that wire key is 3
 set to replicate cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 of type LUT6
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2404 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404_TMR_0
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2404 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404_TMR_1
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2404 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404_TMR_2
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2404 connections for port O is size 1
-The wiremap size for that wire key is 3
 set to replicate cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 of type LUT6
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2405 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405_TMR_0
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2405 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405_TMR_1
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2405 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405_TMR_2
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2405 connections for port O is size 1
-The wiremap size for that wire key is 3
 set to replicate cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 of type LUT6
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2406 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406_TMR_0
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2406 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406_TMR_1
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2406 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406_TMR_2
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2406 connections for port O is size 1
-The wiremap size for that wire key is 3
 set to replicate cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 of type LUT6
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2407 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407_TMR_0
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2407 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407_TMR_1
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2407 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407_TMR_2
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port I0 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port I1 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port I2 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port I3 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port I4 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port I5 is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2407 connections for port O is size 1
-The wiremap size for that wire key is 3
 set to replicate cell $abc$2397$auto$blifparse.cc:515:parse_blif$2408 of type INV
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2408 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2408_TMR_0
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2408 connections for port I is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2408 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2408 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2408_TMR_1
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2408 connections for port I is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2408 connections for port O is size 1
-The wiremap size for that wire key is 3
 Replicated cell$abc$2397$auto$blifparse.cc:515:parse_blif$2408 into cell $abc$2397$auto$blifparse.cc:515:parse_blif$2408_TMR_2
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2408 connections for port I is size 1
-The wiremap size for that wire key is 3
-Old Cell $abc$2397$auto$blifparse.cc:515:parse_blif$2408 connections for port O is size 1
-The wiremap size for that wire key is 3
 set to replicate cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 of type CARRY4
 Replicated cell$auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 into cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4_TMR_0
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 connections for port CI is size 1
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 connections for port CO is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 connections for port CYINIT is size 1
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 connections for port DI is size 4
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 connections for port O is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 connections for port S is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
 Replicated cell$auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 into cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4_TMR_1
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 connections for port CI is size 1
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 connections for port CO is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 connections for port CYINIT is size 1
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 connections for port DI is size 4
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 connections for port O is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 connections for port S is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
 Replicated cell$auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 into cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4_TMR_2
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 connections for port CI is size 1
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 connections for port CO is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 connections for port CYINIT is size 1
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 connections for port DI is size 4
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 connections for port O is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[0].genblk1.carry4 connections for port S is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
 set to replicate cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 of type CARRY4
 Replicated cell$auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 into cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4_TMR_0
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 connections for port CI is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 connections for port CO is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 connections for port CYINIT is size 1
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 connections for port DI is size 4
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 connections for port O is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 connections for port S is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
 Replicated cell$auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 into cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4_TMR_1
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 connections for port CI is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 connections for port CO is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 connections for port CYINIT is size 1
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 connections for port DI is size 4
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 connections for port O is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 connections for port S is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
 Replicated cell$auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 into cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4_TMR_2
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 connections for port CI is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 connections for port CO is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 connections for port CYINIT is size 1
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 connections for port DI is size 4
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 connections for port O is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[1].genblk1.carry4 connections for port S is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
 set to replicate cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 of type CARRY4
 Replicated cell$auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 into cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4_TMR_0
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 connections for port CI is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 connections for port CO is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 connections for port CYINIT is size 1
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 connections for port DI is size 4
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 connections for port O is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 connections for port S is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
 Replicated cell$auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 into cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4_TMR_1
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 connections for port CI is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 connections for port CO is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 connections for port CYINIT is size 1
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 connections for port DI is size 4
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 connections for port O is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 connections for port S is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
 Replicated cell$auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 into cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4_TMR_2
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 connections for port CI is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 connections for port CO is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 connections for port CYINIT is size 1
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 connections for port DI is size 4
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 connections for port O is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[2].genblk1.carry4 connections for port S is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
 set to replicate cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 of type CARRY4
 Replicated cell$auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 into cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4_TMR_0
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 connections for port CI is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 connections for port CO is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 connections for port CYINIT is size 1
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 connections for port DI is size 4
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 connections for port O is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 connections for port S is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
 Replicated cell$auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 into cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4_TMR_1
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 connections for port CI is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 connections for port CO is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 connections for port CYINIT is size 1
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 connections for port DI is size 4
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 connections for port O is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 connections for port S is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
 Replicated cell$auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 into cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4_TMR_2
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 connections for port CI is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 connections for port CO is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 connections for port CYINIT is size 1
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 connections for port DI is size 4
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 connections for port O is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $auto$alumacc.cc:485:replace_alu$1726.genblk1.slice[3].genblk1.carry4 connections for port S is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
 set to replicate cell $auto$ff.cc:262:slice$2149 of type FDRE
 Replicated cell$auto$ff.cc:262:slice$2149 into cell $auto$ff.cc:262:slice$2149_TMR_0
-Old Cell $auto$ff.cc:262:slice$2149 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2149 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2149 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2149 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2149 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2149 into cell $auto$ff.cc:262:slice$2149_TMR_1
-Old Cell $auto$ff.cc:262:slice$2149 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2149 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2149 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2149 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2149 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2149 into cell $auto$ff.cc:262:slice$2149_TMR_2
-Old Cell $auto$ff.cc:262:slice$2149 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2149 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2149 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2149 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2149 connections for port R is size 1
 set to replicate cell $auto$ff.cc:262:slice$2150 of type FDRE
 Replicated cell$auto$ff.cc:262:slice$2150 into cell $auto$ff.cc:262:slice$2150_TMR_0
-Old Cell $auto$ff.cc:262:slice$2150 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2150 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2150 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2150 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2150 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2150 into cell $auto$ff.cc:262:slice$2150_TMR_1
-Old Cell $auto$ff.cc:262:slice$2150 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2150 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2150 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2150 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2150 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2150 into cell $auto$ff.cc:262:slice$2150_TMR_2
-Old Cell $auto$ff.cc:262:slice$2150 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2150 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2150 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2150 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2150 connections for port R is size 1
 set to replicate cell $auto$ff.cc:262:slice$2151 of type FDRE
 Replicated cell$auto$ff.cc:262:slice$2151 into cell $auto$ff.cc:262:slice$2151_TMR_0
-Old Cell $auto$ff.cc:262:slice$2151 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2151 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2151 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2151 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2151 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2151 into cell $auto$ff.cc:262:slice$2151_TMR_1
-Old Cell $auto$ff.cc:262:slice$2151 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2151 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2151 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2151 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2151 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2151 into cell $auto$ff.cc:262:slice$2151_TMR_2
-Old Cell $auto$ff.cc:262:slice$2151 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2151 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2151 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2151 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2151 connections for port R is size 1
 set to replicate cell $auto$ff.cc:262:slice$2152 of type FDRE
 Replicated cell$auto$ff.cc:262:slice$2152 into cell $auto$ff.cc:262:slice$2152_TMR_0
-Old Cell $auto$ff.cc:262:slice$2152 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2152 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2152 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2152 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2152 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2152 into cell $auto$ff.cc:262:slice$2152_TMR_1
-Old Cell $auto$ff.cc:262:slice$2152 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2152 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2152 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2152 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2152 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2152 into cell $auto$ff.cc:262:slice$2152_TMR_2
-Old Cell $auto$ff.cc:262:slice$2152 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2152 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2152 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2152 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2152 connections for port R is size 1
 set to replicate cell $auto$ff.cc:262:slice$2153 of type FDRE
 Replicated cell$auto$ff.cc:262:slice$2153 into cell $auto$ff.cc:262:slice$2153_TMR_0
-Old Cell $auto$ff.cc:262:slice$2153 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2153 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2153 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2153 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2153 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2153 into cell $auto$ff.cc:262:slice$2153_TMR_1
-Old Cell $auto$ff.cc:262:slice$2153 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2153 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2153 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2153 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2153 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2153 into cell $auto$ff.cc:262:slice$2153_TMR_2
-Old Cell $auto$ff.cc:262:slice$2153 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2153 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2153 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2153 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2153 connections for port R is size 1
 set to replicate cell $auto$ff.cc:262:slice$2154 of type FDRE
 Replicated cell$auto$ff.cc:262:slice$2154 into cell $auto$ff.cc:262:slice$2154_TMR_0
-Old Cell $auto$ff.cc:262:slice$2154 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2154 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2154 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2154 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2154 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2154 into cell $auto$ff.cc:262:slice$2154_TMR_1
-Old Cell $auto$ff.cc:262:slice$2154 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2154 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2154 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2154 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2154 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2154 into cell $auto$ff.cc:262:slice$2154_TMR_2
-Old Cell $auto$ff.cc:262:slice$2154 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2154 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2154 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2154 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2154 connections for port R is size 1
 set to replicate cell $auto$ff.cc:262:slice$2155 of type FDRE
 Replicated cell$auto$ff.cc:262:slice$2155 into cell $auto$ff.cc:262:slice$2155_TMR_0
-Old Cell $auto$ff.cc:262:slice$2155 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2155 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2155 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2155 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2155 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2155 into cell $auto$ff.cc:262:slice$2155_TMR_1
-Old Cell $auto$ff.cc:262:slice$2155 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2155 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2155 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2155 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2155 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2155 into cell $auto$ff.cc:262:slice$2155_TMR_2
-Old Cell $auto$ff.cc:262:slice$2155 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2155 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2155 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2155 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2155 connections for port R is size 1
 set to replicate cell $auto$ff.cc:262:slice$2156 of type FDRE
 Replicated cell$auto$ff.cc:262:slice$2156 into cell $auto$ff.cc:262:slice$2156_TMR_0
-Old Cell $auto$ff.cc:262:slice$2156 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2156 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2156 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2156 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2156 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2156 into cell $auto$ff.cc:262:slice$2156_TMR_1
-Old Cell $auto$ff.cc:262:slice$2156 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2156 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2156 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2156 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2156 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2156 into cell $auto$ff.cc:262:slice$2156_TMR_2
-Old Cell $auto$ff.cc:262:slice$2156 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2156 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2156 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2156 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2156 connections for port R is size 1
 set to replicate cell $auto$ff.cc:262:slice$2157 of type FDRE
 Replicated cell$auto$ff.cc:262:slice$2157 into cell $auto$ff.cc:262:slice$2157_TMR_0
-Old Cell $auto$ff.cc:262:slice$2157 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2157 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2157 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2157 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2157 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2157 into cell $auto$ff.cc:262:slice$2157_TMR_1
-Old Cell $auto$ff.cc:262:slice$2157 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2157 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2157 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2157 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2157 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2157 into cell $auto$ff.cc:262:slice$2157_TMR_2
-Old Cell $auto$ff.cc:262:slice$2157 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2157 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2157 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2157 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2157 connections for port R is size 1
 set to replicate cell $auto$ff.cc:262:slice$2158 of type FDRE
 Replicated cell$auto$ff.cc:262:slice$2158 into cell $auto$ff.cc:262:slice$2158_TMR_0
-Old Cell $auto$ff.cc:262:slice$2158 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2158 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2158 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2158 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2158 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2158 into cell $auto$ff.cc:262:slice$2158_TMR_1
-Old Cell $auto$ff.cc:262:slice$2158 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2158 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2158 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2158 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2158 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2158 into cell $auto$ff.cc:262:slice$2158_TMR_2
-Old Cell $auto$ff.cc:262:slice$2158 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2158 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2158 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2158 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2158 connections for port R is size 1
 set to replicate cell $auto$ff.cc:262:slice$2159 of type FDRE
 Replicated cell$auto$ff.cc:262:slice$2159 into cell $auto$ff.cc:262:slice$2159_TMR_0
-Old Cell $auto$ff.cc:262:slice$2159 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2159 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2159 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2159 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2159 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2159 into cell $auto$ff.cc:262:slice$2159_TMR_1
-Old Cell $auto$ff.cc:262:slice$2159 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2159 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2159 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2159 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2159 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2159 into cell $auto$ff.cc:262:slice$2159_TMR_2
-Old Cell $auto$ff.cc:262:slice$2159 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2159 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2159 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2159 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2159 connections for port R is size 1
 set to replicate cell $auto$ff.cc:262:slice$2160 of type FDRE
 Replicated cell$auto$ff.cc:262:slice$2160 into cell $auto$ff.cc:262:slice$2160_TMR_0
-Old Cell $auto$ff.cc:262:slice$2160 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2160 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2160 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2160 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2160 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2160 into cell $auto$ff.cc:262:slice$2160_TMR_1
-Old Cell $auto$ff.cc:262:slice$2160 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2160 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2160 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2160 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2160 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2160 into cell $auto$ff.cc:262:slice$2160_TMR_2
-Old Cell $auto$ff.cc:262:slice$2160 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2160 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2160 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2160 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2160 connections for port R is size 1
 set to replicate cell $auto$ff.cc:262:slice$2161 of type FDRE
 Replicated cell$auto$ff.cc:262:slice$2161 into cell $auto$ff.cc:262:slice$2161_TMR_0
-Old Cell $auto$ff.cc:262:slice$2161 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2161 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2161 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2161 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2161 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2161 into cell $auto$ff.cc:262:slice$2161_TMR_1
-Old Cell $auto$ff.cc:262:slice$2161 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2161 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2161 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2161 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2161 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2161 into cell $auto$ff.cc:262:slice$2161_TMR_2
-Old Cell $auto$ff.cc:262:slice$2161 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2161 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2161 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2161 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2161 connections for port R is size 1
 set to replicate cell $auto$ff.cc:262:slice$2162 of type FDRE
 Replicated cell$auto$ff.cc:262:slice$2162 into cell $auto$ff.cc:262:slice$2162_TMR_0
-Old Cell $auto$ff.cc:262:slice$2162 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2162 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2162 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2162 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2162 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2162 into cell $auto$ff.cc:262:slice$2162_TMR_1
-Old Cell $auto$ff.cc:262:slice$2162 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2162 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2162 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2162 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2162 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2162 into cell $auto$ff.cc:262:slice$2162_TMR_2
-Old Cell $auto$ff.cc:262:slice$2162 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2162 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2162 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2162 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2162 connections for port R is size 1
 set to replicate cell $auto$ff.cc:262:slice$2163 of type FDRE
 Replicated cell$auto$ff.cc:262:slice$2163 into cell $auto$ff.cc:262:slice$2163_TMR_0
-Old Cell $auto$ff.cc:262:slice$2163 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2163 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2163 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2163 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2163 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2163 into cell $auto$ff.cc:262:slice$2163_TMR_1
-Old Cell $auto$ff.cc:262:slice$2163 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2163 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2163 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2163 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2163 connections for port R is size 1
 Replicated cell$auto$ff.cc:262:slice$2163 into cell $auto$ff.cc:262:slice$2163_TMR_2
-Old Cell $auto$ff.cc:262:slice$2163 connections for port C is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2163 connections for port CE is size 1
-Old Cell $auto$ff.cc:262:slice$2163 connections for port D is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2163 connections for port Q is size 1
-The wiremap size for that wire key is 3
-Old Cell $auto$ff.cc:262:slice$2163 connections for port R is size 1
 set to replicate cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 of type CARRY4
 Replicated cell$lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 into cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4_TMR_0
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 connections for port CI is size 1
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 connections for port CO is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 connections for port CYINIT is size 1
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 connections for port DI is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 connections for port S is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
 Replicated cell$lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 into cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4_TMR_1
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 connections for port CI is size 1
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 connections for port CO is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 connections for port CYINIT is size 1
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 connections for port DI is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 connections for port S is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
 Replicated cell$lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 into cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4_TMR_2
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 connections for port CI is size 1
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 connections for port CO is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 connections for port CYINIT is size 1
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 connections for port DI is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[0].genblk1.carry4 connections for port S is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
 set to replicate cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 of type CARRY4
 Replicated cell$lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 into cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4_TMR_0
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 connections for port CI is size 1
-The wiremap size for that wire key is 3
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 connections for port CO is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 connections for port CYINIT is size 1
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 connections for port DI is size 4
-The wiremap size for that wire key is 3
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 connections for port S is size 4
-The wiremap size for that wire key is 3
 Replicated cell$lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 into cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4_TMR_1
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 connections for port CI is size 1
-The wiremap size for that wire key is 3
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 connections for port CO is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 connections for port CYINIT is size 1
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 connections for port DI is size 4
-The wiremap size for that wire key is 3
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 connections for port S is size 4
-The wiremap size for that wire key is 3
 Replicated cell$lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 into cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4_TMR_2
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 connections for port CI is size 1
-The wiremap size for that wire key is 3
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 connections for port CO is size 4
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-The wiremap size for that wire key is 3
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 connections for port CYINIT is size 1
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 connections for port DI is size 4
-The wiremap size for that wire key is 3
-Old Cell $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4 connections for port S is size 4
-The wiremap size for that wire key is 3
 Connecting wire to wire connections...
-another connection to do
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.X
-one is replicated
-second_wire_name is counter
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another connection to do
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.CO
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another connection to do
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-first_wire_name is $auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-one is replicated
-second_wire_name is $auto$alumacc.cc:485:replace_alu$1726.Y
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another connection to do
-another
-begin
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C
-one is replicated
-second_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C
-one is replicated
-second_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C
-one is replicated
-second_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C
-one is replicated
-second_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C
-one is replicated
-second_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C
-one is replicated
-second_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C
-one is replicated
-second_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C
-one is replicated
-second_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C
-one is replicated
-second_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C
-one is replicated
-second_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C
-one is replicated
-second_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C
-one is replicated
-second_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C
-one is replicated
-second_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C
-one is replicated
-second_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO
-two is replicated
-connecting now
-connected
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C
-one is replicated
-second_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO
-two is replicated
-connecting now
-connected
-Done here
-head back to top
-another connection to do
-another
-begin
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S
-one is replicated
-two is a null wireconnecting now
-connected
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S
-one is replicated
-two is a null wireconnecting now
-connected
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S
-one is replicated
-two is a null wireconnecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S
-one is replicated
-two is a null wireconnecting now
-connected
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S
-one is replicated
-two is a null wireconnecting now
-connected
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S
-one is replicated
-two is a null wireconnecting now
-connected
-Done here
-head back to top
-another
-begin
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S
-one is replicated
-two is a null wireconnecting now
-connected
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S
-one is replicated
-two is a null wireconnecting now
-connected
-first_wire_name is $lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S
-one is replicated
-two is a null wireconnecting now
-connected
-Done here
-head back to top
-all done with wire2wire connections
-finished with this module
 
 Will not replicate inside blackbox module RAM128X1D
 Will not replicate inside blackbox module RAM128X1S
@@ -5045,18 +2871,18 @@ Key: sw_3
 	Driven Cells: 
 		$iopadmap$top.sw_3
 Finished printing connection map
-Identifying cells to replicate
-Cell $auto$clkbufmap.cc:261:execute$2439 of type BUFG will be replicated
-Checking wires for cell $auto$clkbufmap.cc:261:execute$2439
-	Wire $iopadmap$clk[0] will be replicated
 Replicating wires...
 Wire $auto$clkbufmap.cc:262:execute$2440 is only copied over
-Replicated wire $iopadmap$clk into wire \$iopadmap$clk_TMR_0
-Replicated wire $iopadmap$clk into wire \$iopadmap$clk_TMR_1
-Replicated wire $iopadmap$clk into wire \$iopadmap$clk_TMR_2
-Wire $iopadmap$pulse_blue is only copied over
-Wire $iopadmap$pulse_green is only copied over
-Wire $iopadmap$pulse_red is only copied over
+Wire $iopadmap$clk is only copied over
+Replicated wire $iopadmap$pulse_blue into wire \$iopadmap$pulse_blue_TMR_0
+Replicated wire $iopadmap$pulse_blue into wire \$iopadmap$pulse_blue_TMR_1
+Replicated wire $iopadmap$pulse_blue into wire \$iopadmap$pulse_blue_TMR_2
+Replicated wire $iopadmap$pulse_green into wire \$iopadmap$pulse_green_TMR_0
+Replicated wire $iopadmap$pulse_green into wire \$iopadmap$pulse_green_TMR_1
+Replicated wire $iopadmap$pulse_green into wire \$iopadmap$pulse_green_TMR_2
+Replicated wire $iopadmap$pulse_red into wire \$iopadmap$pulse_red_TMR_0
+Replicated wire $iopadmap$pulse_red into wire \$iopadmap$pulse_red_TMR_1
+Replicated wire $iopadmap$pulse_red into wire \$iopadmap$pulse_red_TMR_2
 Wire btn is only copied over
 Wire clk is only copied over
 Wire pulse_blue is only copied over
@@ -5068,258 +2894,49 @@ Wire pulse_wideR is only copied over
 Wire sw is only copied over
 Replicating cells in module top
 set to replicate cell $auto$clkbufmap.cc:261:execute$2439 of type BUFG
-Replicated cell$auto$clkbufmap.cc:261:execute$2439 into cell $auto$clkbufmap.cc:261:execute$2439_TMR_0
-Old Cell $auto$clkbufmap.cc:261:execute$2439 connections for port I is size 1
-The wiremap size for that wire key is 1
-Old Cell $auto$clkbufmap.cc:261:execute$2439 connections for port O is size 1
-The wiremap size for that wire key is 3
-Replicated cell$auto$clkbufmap.cc:261:execute$2439 into cell $auto$clkbufmap.cc:261:execute$2439_TMR_1
-Old Cell $auto$clkbufmap.cc:261:execute$2439 connections for port I is size 1
-The wiremap size for that wire key is 1
-Old Cell $auto$clkbufmap.cc:261:execute$2439 connections for port O is size 1
-The wiremap size for that wire key is 3
-Replicated cell$auto$clkbufmap.cc:261:execute$2439 into cell $auto$clkbufmap.cc:261:execute$2439_TMR_2
-Old Cell $auto$clkbufmap.cc:261:execute$2439 connections for port I is size 1
-The wiremap size for that wire key is 1
-Old Cell $auto$clkbufmap.cc:261:execute$2439 connections for port O is size 1
-The wiremap size for that wire key is 3
+	but he was not specified to be replicated
 set to replicate cell $iopadmap$top.btn of type IBUF
 	but he was not specified to be replicated
-Old Cell $iopadmap$top.btn connections for port I is size 1
-The wiremap size for that wire key is 1
-Old Cell $iopadmap$top.btn connections for port O is size 1
-The wiremap size for that wire key is 1
 set to replicate cell $iopadmap$top.btn_1 of type IBUF
 	but he was not specified to be replicated
-Old Cell $iopadmap$top.btn_1 connections for port I is size 1
-The wiremap size for that wire key is 1
-Old Cell $iopadmap$top.btn_1 connections for port O is size 1
-The wiremap size for that wire key is 1
 set to replicate cell $iopadmap$top.btn_2 of type IBUF
 	but he was not specified to be replicated
-Old Cell $iopadmap$top.btn_2 connections for port I is size 1
-The wiremap size for that wire key is 1
-Old Cell $iopadmap$top.btn_2 connections for port O is size 1
-The wiremap size for that wire key is 1
 set to replicate cell $iopadmap$top.btn_3 of type IBUF
 	but he was not specified to be replicated
-Old Cell $iopadmap$top.btn_3 connections for port I is size 1
-The wiremap size for that wire key is 1
-Old Cell $iopadmap$top.btn_3 connections for port O is size 1
-The wiremap size for that wire key is 1
 set to replicate cell $iopadmap$top.clk of type IBUF
 	but he was not specified to be replicated
-Old Cell $iopadmap$top.clk connections for port I is size 1
-The wiremap size for that wire key is 1
-Old Cell $iopadmap$top.clk connections for port O is size 1
-The wiremap size for that wire key is 1
 set to replicate cell $iopadmap$top.pulse_blue of type OBUF
 	but he was not specified to be replicated
-Old Cell $iopadmap$top.pulse_blue connections for port I is size 1
-The wiremap size for that wire key is 1
-Old Cell $iopadmap$top.pulse_blue connections for port O is size 1
-The wiremap size for that wire key is 1
 set to replicate cell $iopadmap$top.pulse_green of type OBUF
 	but he was not specified to be replicated
-Old Cell $iopadmap$top.pulse_green connections for port I is size 1
-The wiremap size for that wire key is 1
-Old Cell $iopadmap$top.pulse_green connections for port O is size 1
-The wiremap size for that wire key is 1
 set to replicate cell $iopadmap$top.pulse_red of type OBUF
 	but he was not specified to be replicated
-Old Cell $iopadmap$top.pulse_red connections for port I is size 1
-The wiremap size for that wire key is 1
-Old Cell $iopadmap$top.pulse_red connections for port O is size 1
-The wiremap size for that wire key is 1
 set to replicate cell $iopadmap$top.sw of type IBUF
 	but he was not specified to be replicated
-Old Cell $iopadmap$top.sw connections for port I is size 1
-The wiremap size for that wire key is 1
-Old Cell $iopadmap$top.sw connections for port O is size 1
-The wiremap size for that wire key is 1
 set to replicate cell $iopadmap$top.sw_1 of type IBUF
 	but he was not specified to be replicated
-Old Cell $iopadmap$top.sw_1 connections for port I is size 1
-The wiremap size for that wire key is 1
-Old Cell $iopadmap$top.sw_1 connections for port O is size 1
-The wiremap size for that wire key is 1
 set to replicate cell $iopadmap$top.sw_2 of type IBUF
 	but he was not specified to be replicated
-Old Cell $iopadmap$top.sw_2 connections for port I is size 1
-The wiremap size for that wire key is 1
-Old Cell $iopadmap$top.sw_2 connections for port O is size 1
-The wiremap size for that wire key is 1
 set to replicate cell $iopadmap$top.sw_3 of type IBUF
 	but he was not specified to be replicated
-Old Cell $iopadmap$top.sw_3 connections for port I is size 1
-The wiremap size for that wire key is 1
-Old Cell $iopadmap$top.sw_3 connections for port O is size 1
-The wiremap size for that wire key is 1
 set to replicate cell B0 of type PWM
 	but he was not specified to be replicated
 fixing connections NEW for non leaf cell named B0 of type PWM
-Entry: clk has 3
-Entry: pulse has 3
-Entry: width has 3
+hereyo
 set to replicate cell G0 of type PWM
 	but he was not specified to be replicated
 fixing connections NEW for non leaf cell named G0 of type PWM
-Entry: clk has 3
-Entry: pulse has 3
-Entry: width has 3
+hereyo
 set to replicate cell R0 of type PWM
 	but he was not specified to be replicated
 fixing connections NEW for non leaf cell named R0 of type PWM
-Entry: clk has 3
-Entry: pulse has 3
-Entry: width has 3
+hereyo
 Connecting wire to wire connections...
-another connection to do
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another connection to do
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another connection to do
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-another
-begin
-connecting two non replicated wires
-head back to top
-all done with wire2wire connections
-finished with this module
 
 8. Executing CHECK pass (checking for obvious problems).
 Checking module top...
-Warning: multiple conflicting drivers for top.$iopadmap$pulse_green:
-    port pulse_TMR_1[0] of cell B0 (PWM)
-    port pulse_TMR_0[0] of cell B0 (PWM)
-    port pulse_TMR_2[0] of cell B0 (PWM)
-Warning: multiple conflicting drivers for top.$iopadmap$pulse_blue:
-    port pulse_TMR_1[0] of cell G0 (PWM)
-    port pulse_TMR_0[0] of cell G0 (PWM)
-    port pulse_TMR_2[0] of cell G0 (PWM)
-Warning: multiple conflicting drivers for top.$iopadmap$pulse_red:
-    port pulse_TMR_1[0] of cell R0 (PWM)
-    port pulse_TMR_0[0] of cell R0 (PWM)
-    port pulse_TMR_2[0] of cell R0 (PWM)
 Checking module PWM...
-Found and reported 3 problems.
+Found and reported 0 problems.
 
 9. Executing BLIF backend.
 
@@ -5877,59 +3494,53 @@ Key: \$lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S_TMR_2_4
 	Driver: $abc$2397$auto$blifparse.cc:515:parse_blif$2407_TMR_2
 	Driven Cells: 
 		$lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.slice[1].genblk1.carry4_TMR_2
-Key: clk_TMR_0_0
+Key: clk_0
 	Driver: NULL
 	Driven Cells: 
 		$auto$ff.cc:262:slice$2149_TMR_0
-		$auto$ff.cc:262:slice$2150_TMR_0
-		$auto$ff.cc:262:slice$2151_TMR_0
-		$auto$ff.cc:262:slice$2152_TMR_0
-		$auto$ff.cc:262:slice$2153_TMR_0
-		$auto$ff.cc:262:slice$2154_TMR_0
-		$auto$ff.cc:262:slice$2155_TMR_0
-		$auto$ff.cc:262:slice$2156_TMR_0
-		$auto$ff.cc:262:slice$2157_TMR_0
-		$auto$ff.cc:262:slice$2158_TMR_0
-		$auto$ff.cc:262:slice$2159_TMR_0
-		$auto$ff.cc:262:slice$2160_TMR_0
-		$auto$ff.cc:262:slice$2161_TMR_0
-		$auto$ff.cc:262:slice$2162_TMR_0
-		$auto$ff.cc:262:slice$2163_TMR_0
-Key: clk_TMR_1_0
-	Driver: NULL
-	Driven Cells: 
 		$auto$ff.cc:262:slice$2149_TMR_1
-		$auto$ff.cc:262:slice$2150_TMR_1
-		$auto$ff.cc:262:slice$2151_TMR_1
-		$auto$ff.cc:262:slice$2152_TMR_1
-		$auto$ff.cc:262:slice$2153_TMR_1
-		$auto$ff.cc:262:slice$2154_TMR_1
-		$auto$ff.cc:262:slice$2155_TMR_1
-		$auto$ff.cc:262:slice$2156_TMR_1
-		$auto$ff.cc:262:slice$2157_TMR_1
-		$auto$ff.cc:262:slice$2158_TMR_1
-		$auto$ff.cc:262:slice$2159_TMR_1
-		$auto$ff.cc:262:slice$2160_TMR_1
-		$auto$ff.cc:262:slice$2161_TMR_1
-		$auto$ff.cc:262:slice$2162_TMR_1
-		$auto$ff.cc:262:slice$2163_TMR_1
-Key: clk_TMR_2_0
-	Driver: NULL
-	Driven Cells: 
 		$auto$ff.cc:262:slice$2149_TMR_2
+		$auto$ff.cc:262:slice$2150_TMR_0
+		$auto$ff.cc:262:slice$2150_TMR_1
 		$auto$ff.cc:262:slice$2150_TMR_2
+		$auto$ff.cc:262:slice$2151_TMR_0
+		$auto$ff.cc:262:slice$2151_TMR_1
 		$auto$ff.cc:262:slice$2151_TMR_2
+		$auto$ff.cc:262:slice$2152_TMR_0
+		$auto$ff.cc:262:slice$2152_TMR_1
 		$auto$ff.cc:262:slice$2152_TMR_2
+		$auto$ff.cc:262:slice$2153_TMR_0
+		$auto$ff.cc:262:slice$2153_TMR_1
 		$auto$ff.cc:262:slice$2153_TMR_2
+		$auto$ff.cc:262:slice$2154_TMR_0
+		$auto$ff.cc:262:slice$2154_TMR_1
 		$auto$ff.cc:262:slice$2154_TMR_2
+		$auto$ff.cc:262:slice$2155_TMR_0
+		$auto$ff.cc:262:slice$2155_TMR_1
 		$auto$ff.cc:262:slice$2155_TMR_2
+		$auto$ff.cc:262:slice$2156_TMR_0
+		$auto$ff.cc:262:slice$2156_TMR_1
 		$auto$ff.cc:262:slice$2156_TMR_2
+		$auto$ff.cc:262:slice$2157_TMR_0
+		$auto$ff.cc:262:slice$2157_TMR_1
 		$auto$ff.cc:262:slice$2157_TMR_2
+		$auto$ff.cc:262:slice$2158_TMR_0
+		$auto$ff.cc:262:slice$2158_TMR_1
 		$auto$ff.cc:262:slice$2158_TMR_2
+		$auto$ff.cc:262:slice$2159_TMR_0
+		$auto$ff.cc:262:slice$2159_TMR_1
 		$auto$ff.cc:262:slice$2159_TMR_2
+		$auto$ff.cc:262:slice$2160_TMR_0
+		$auto$ff.cc:262:slice$2160_TMR_1
 		$auto$ff.cc:262:slice$2160_TMR_2
+		$auto$ff.cc:262:slice$2161_TMR_0
+		$auto$ff.cc:262:slice$2161_TMR_1
 		$auto$ff.cc:262:slice$2161_TMR_2
+		$auto$ff.cc:262:slice$2162_TMR_0
+		$auto$ff.cc:262:slice$2162_TMR_1
 		$auto$ff.cc:262:slice$2162_TMR_2
+		$auto$ff.cc:262:slice$2163_TMR_0
+		$auto$ff.cc:262:slice$2163_TMR_1
 		$auto$ff.cc:262:slice$2163_TMR_2
 Key: counter_TMR_0_0
 	Driver: $auto$ff.cc:262:slice$2150_TMR_0
@@ -6192,269 +3803,133 @@ Key: pulse_TMR_1_0
 Key: pulse_TMR_2_0
 	Driver: $auto$ff.cc:262:slice$2149_TMR_2
 	Driven Cells: 
-Key: width_TMR_0_0
+Key: width_0
 	Driver: NULL
 	Driven Cells: 
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2398_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2398_TMR_1
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2398_TMR_2
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2403_TMR_0
-Key: width_TMR_0_1
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2403_TMR_1
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2403_TMR_2
+Key: width_1
 	Driver: NULL
 	Driven Cells: 
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2398_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2398_TMR_1
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2398_TMR_2
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2403_TMR_0
-Key: width_TMR_0_10
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2401_TMR_0
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2406_TMR_0
-Key: width_TMR_0_11
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2402_TMR_0
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2407_TMR_0
-Key: width_TMR_0_12
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2402_TMR_0
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2407_TMR_0
-Key: width_TMR_0_13
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2402_TMR_0
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2407_TMR_0
-Key: width_TMR_0_2
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2399_TMR_0
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2404_TMR_0
-Key: width_TMR_0_3
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2399_TMR_0
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2404_TMR_0
-Key: width_TMR_0_4
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2399_TMR_0
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2404_TMR_0
-Key: width_TMR_0_5
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2400_TMR_0
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2405_TMR_0
-Key: width_TMR_0_6
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2400_TMR_0
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2405_TMR_0
-Key: width_TMR_0_7
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2400_TMR_0
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2405_TMR_0
-Key: width_TMR_0_8
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2401_TMR_0
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2406_TMR_0
-Key: width_TMR_0_9
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2401_TMR_0
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2406_TMR_0
-Key: width_TMR_1_0
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2398_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2403_TMR_1
-Key: width_TMR_1_1
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2398_TMR_1
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2403_TMR_1
-Key: width_TMR_1_10
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2401_TMR_1
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2406_TMR_1
-Key: width_TMR_1_11
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2402_TMR_1
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2407_TMR_1
-Key: width_TMR_1_12
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2402_TMR_1
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2407_TMR_1
-Key: width_TMR_1_13
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2402_TMR_1
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2407_TMR_1
-Key: width_TMR_1_2
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2399_TMR_1
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2404_TMR_1
-Key: width_TMR_1_3
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2399_TMR_1
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2404_TMR_1
-Key: width_TMR_1_4
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2399_TMR_1
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2404_TMR_1
-Key: width_TMR_1_5
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2400_TMR_1
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2405_TMR_1
-Key: width_TMR_1_6
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2400_TMR_1
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2405_TMR_1
-Key: width_TMR_1_7
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2400_TMR_1
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2405_TMR_1
-Key: width_TMR_1_8
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2401_TMR_1
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2406_TMR_1
-Key: width_TMR_1_9
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2401_TMR_1
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2406_TMR_1
-Key: width_TMR_2_0
-	Driver: NULL
-	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2398_TMR_2
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2403_TMR_2
-Key: width_TMR_2_1
+Key: width_10
 	Driver: NULL
 	Driven Cells: 
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2398_TMR_2
-		$abc$2397$auto$blifparse.cc:515:parse_blif$2403_TMR_2
-Key: width_TMR_2_10
-	Driver: NULL
-	Driven Cells: 
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2401_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2401_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2401_TMR_2
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2406_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2406_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2406_TMR_2
-Key: width_TMR_2_11
+Key: width_11
 	Driver: NULL
 	Driven Cells: 
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2402_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2402_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2402_TMR_2
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2407_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2407_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2407_TMR_2
-Key: width_TMR_2_12
+Key: width_12
 	Driver: NULL
 	Driven Cells: 
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2402_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2402_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2402_TMR_2
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2407_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2407_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2407_TMR_2
-Key: width_TMR_2_13
+Key: width_13
 	Driver: NULL
 	Driven Cells: 
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2402_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2402_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2402_TMR_2
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2407_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2407_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2407_TMR_2
-Key: width_TMR_2_2
+Key: width_2
 	Driver: NULL
 	Driven Cells: 
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2399_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2399_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2399_TMR_2
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2404_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2404_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2404_TMR_2
-Key: width_TMR_2_3
+Key: width_3
 	Driver: NULL
 	Driven Cells: 
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2399_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2399_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2399_TMR_2
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2404_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2404_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2404_TMR_2
-Key: width_TMR_2_4
+Key: width_4
 	Driver: NULL
 	Driven Cells: 
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2399_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2399_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2399_TMR_2
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2404_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2404_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2404_TMR_2
-Key: width_TMR_2_5
+Key: width_5
 	Driver: NULL
 	Driven Cells: 
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2400_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2400_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2400_TMR_2
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2405_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2405_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2405_TMR_2
-Key: width_TMR_2_6
+Key: width_6
 	Driver: NULL
 	Driven Cells: 
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2400_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2400_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2400_TMR_2
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2405_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2405_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2405_TMR_2
-Key: width_TMR_2_7
+Key: width_7
 	Driver: NULL
 	Driven Cells: 
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2400_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2400_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2400_TMR_2
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2405_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2405_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2405_TMR_2
-Key: width_TMR_2_8
+Key: width_8
 	Driver: NULL
 	Driven Cells: 
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2401_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2401_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2401_TMR_2
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2406_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2406_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2406_TMR_2
-Key: width_TMR_2_9
+Key: width_9
 	Driver: NULL
 	Driven Cells: 
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2401_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2401_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2401_TMR_2
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2406_TMR_0
+		$abc$2397$auto$blifparse.cc:515:parse_blif$2406_TMR_1
 		$abc$2397$auto$blifparse.cc:515:parse_blif$2406_TMR_2
 creating wire map for modulePWM
-plain wire name is \$auto$alumacc.cc:485:replace_alu$1726.CO
-plain wire name is \$auto$alumacc.cc:485:replace_alu$1726.CO
-plain wire name is \$auto$alumacc.cc:485:replace_alu$1726.CO
-plain wire name is \$auto$alumacc.cc:485:replace_alu$1726.X
-plain wire name is \$auto$alumacc.cc:485:replace_alu$1726.X
-plain wire name is \$auto$alumacc.cc:485:replace_alu$1726.X
-plain wire name is \$auto$alumacc.cc:485:replace_alu$1726.Y
-plain wire name is \$auto$alumacc.cc:485:replace_alu$1726.Y
-plain wire name is \$auto$alumacc.cc:485:replace_alu$1726.Y
-plain wire name is \$auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-plain wire name is \$auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-plain wire name is \$auto$alumacc.cc:485:replace_alu$1726.genblk1.C
-plain wire name is \$auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-plain wire name is \$auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-plain wire name is \$auto$alumacc.cc:485:replace_alu$1726.genblk1.O
-plain wire name is \$lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO
-plain wire name is \$lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO
-plain wire name is \$lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO
-plain wire name is \$lt$../yosys_help_test/verilog_files/PWM.v:11$3.G
-plain wire name is \$lt$../yosys_help_test/verilog_files/PWM.v:11$3.G
-plain wire name is \$lt$../yosys_help_test/verilog_files/PWM.v:11$3.G
-plain wire name is \$lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C
-plain wire name is \$lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C
-plain wire name is \$lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C
-plain wire name is \$lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S
-plain wire name is \$lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S
-plain wire name is \$lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S
-plain wire name is clk
-plain wire name is clk
-plain wire name is clk
-plain wire name is counter
-plain wire name is counter
-plain wire name is counter
-plain wire name is pulse
-plain wire name is pulse
-plain wire name is pulse
-plain wire name is width
-plain wire name is width
-plain wire name is width
-Entry: \$auto$alumacc.cc:485:replace_alu$1726.CO is size 3
-Entry: \$auto$alumacc.cc:485:replace_alu$1726.X is size 3
-Entry: \$auto$alumacc.cc:485:replace_alu$1726.Y is size 3
-Entry: \$auto$alumacc.cc:485:replace_alu$1726.genblk1.C is size 3
-Entry: \$auto$alumacc.cc:485:replace_alu$1726.genblk1.O is size 3
-Entry: \$lt$../yosys_help_test/verilog_files/PWM.v:11$3.CO is size 3
-Entry: \$lt$../yosys_help_test/verilog_files/PWM.v:11$3.G is size 3
-Entry: \$lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.C is size 3
-Entry: \$lt$../yosys_help_test/verilog_files/PWM.v:11$3.genblk1.S is size 3
-Entry: clk is size 3
-Entry: counter is size 3
-Entry: pulse is size 3
-Entry: width is size 3
 Identifying reduction points in module PWM
 inserting reduction voters
 Creating map of cell connections in module: top
@@ -6462,39 +3937,43 @@ Connection Map for Module: top
 Key: $auto$clkbufmap.cc:262:execute$2440_0
 	Driver: $iopadmap$top.clk
 	Driven Cells: 
-		$auto$clkbufmap.cc:261:execute$2439_TMR_0
-		$auto$clkbufmap.cc:261:execute$2439_TMR_1
-		$auto$clkbufmap.cc:261:execute$2439_TMR_2
-Key: $iopadmap$pulse_blue_0
+		$auto$clkbufmap.cc:261:execute$2439
+Key: $iopadmap$clk_0
+	Driver: $auto$clkbufmap.cc:261:execute$2439
+	Driven Cells: 
+		B0
+		G0
+		R0
+Key: \$iopadmap$pulse_blue_TMR_0_0
 	Driver: G0
 	Driven Cells: 
 		$iopadmap$top.pulse_blue
-Key: $iopadmap$pulse_green_0
+Key: \$iopadmap$pulse_blue_TMR_1_0
+	Driver: G0
+	Driven Cells: 
+Key: \$iopadmap$pulse_blue_TMR_2_0
+	Driver: G0
+	Driven Cells: 
+Key: \$iopadmap$pulse_green_TMR_0_0
 	Driver: B0
 	Driven Cells: 
 		$iopadmap$top.pulse_green
-Key: $iopadmap$pulse_red_0
+Key: \$iopadmap$pulse_green_TMR_1_0
+	Driver: B0
+	Driven Cells: 
+Key: \$iopadmap$pulse_green_TMR_2_0
+	Driver: B0
+	Driven Cells: 
+Key: \$iopadmap$pulse_red_TMR_0_0
 	Driver: R0
 	Driven Cells: 
 		$iopadmap$top.pulse_red
-Key: \$iopadmap$clk_TMR_0_0
-	Driver: $auto$clkbufmap.cc:261:execute$2439_TMR_0
+Key: \$iopadmap$pulse_red_TMR_1_0
+	Driver: R0
 	Driven Cells: 
-		B0
-		G0
-		R0
-Key: \$iopadmap$clk_TMR_1_0
-	Driver: $auto$clkbufmap.cc:261:execute$2439_TMR_1
+Key: \$iopadmap$pulse_red_TMR_2_0
+	Driver: R0
 	Driven Cells: 
-		B0
-		G0
-		R0
-Key: \$iopadmap$clk_TMR_2_0
-	Driver: $auto$clkbufmap.cc:261:execute$2439_TMR_2
-	Driven Cells: 
-		B0
-		G0
-		R0
 Key: btn_0
 	Driver: NULL
 	Driven Cells: 
@@ -6528,49 +4007,33 @@ Key: pulse_wideB_11
 	Driver: $iopadmap$top.btn
 	Driven Cells: 
 		B0
-		B0
-		B0
 Key: pulse_wideB_12
 	Driver: $iopadmap$top.btn_1
 	Driven Cells: 
-		B0
-		B0
 		B0
 Key: pulse_wideG_10
 	Driver: $iopadmap$top.btn_2
 	Driven Cells: 
 		G0
-		G0
-		G0
 Key: pulse_wideG_11
 	Driver: $iopadmap$top.btn_3
 	Driven Cells: 
-		G0
-		G0
 		G0
 Key: pulse_wideG_12
 	Driver: $iopadmap$top.sw
 	Driven Cells: 
 		G0
-		G0
-		G0
 Key: pulse_wideR_10
 	Driver: $iopadmap$top.sw_1
 	Driven Cells: 
-		R0
-		R0
 		R0
 Key: pulse_wideR_11
 	Driver: $iopadmap$top.sw_2
 	Driven Cells: 
 		R0
-		R0
-		R0
 Key: pulse_wideR_12
 	Driver: $iopadmap$top.sw_3
 	Driven Cells: 
-		R0
-		R0
 		R0
 Key: sw_0
 	Driver: NULL
@@ -6589,84 +4052,34 @@ Key: sw_3
 	Driven Cells: 
 		$iopadmap$top.sw_3
 creating wire map for moduletop
-plain wire name is $auto$clkbufmap.cc:262:execute$2440
-plain wire name is $iopadmap$pulse_blue
-plain wire name is $iopadmap$pulse_green
-plain wire name is $iopadmap$pulse_red
-plain wire name is \$iopadmap$clk
-plain wire name is \$iopadmap$clk
-plain wire name is \$iopadmap$clk
-plain wire name is btn
-plain wire name is clk
-plain wire name is pulse_blue
-plain wire name is pulse_green
-plain wire name is pulse_red
-plain wire name is pulse_wideB
-plain wire name is pulse_wideG
-plain wire name is pulse_wideR
-plain wire name is sw
-Entry: $auto$clkbufmap.cc:262:execute$2440 is size 1
-Entry: $iopadmap$pulse_blue is size 1
-Entry: $iopadmap$pulse_green is size 1
-Entry: $iopadmap$pulse_red is size 1
-Entry: \$iopadmap$clk is size 3
-Entry: btn is size 1
-Entry: clk is size 1
-Entry: pulse_blue is size 1
-Entry: pulse_green is size 1
-Entry: pulse_red is size 1
-Entry: pulse_wideB is size 1
-Entry: pulse_wideG is size 1
-Entry: pulse_wideR is size 1
-Entry: sw is size 1
 Identifying reduction points in module top
-checking cell $iopadmap$top.btn of type IBUF for needed reduction points
-The sigspec on port I is size 1
-checking cell $iopadmap$top.btn_1 of type IBUF for needed reduction points
-The sigspec on port I is size 1
-checking cell $iopadmap$top.btn_2 of type IBUF for needed reduction points
-The sigspec on port I is size 1
-checking cell $iopadmap$top.btn_3 of type IBUF for needed reduction points
-The sigspec on port I is size 1
-checking cell $iopadmap$top.clk of type IBUF for needed reduction points
-The sigspec on port I is size 1
-checking cell $iopadmap$top.pulse_blue of type OBUF for needed reduction points
-The sigspec on port I is size 1
-checking cell $iopadmap$top.pulse_green of type OBUF for needed reduction points
-The sigspec on port I is size 1
-checking cell $iopadmap$top.pulse_red of type OBUF for needed reduction points
-The sigspec on port I is size 1
-checking cell $iopadmap$top.sw of type IBUF for needed reduction points
-The sigspec on port I is size 1
-checking cell $iopadmap$top.sw_1 of type IBUF for needed reduction points
-The sigspec on port I is size 1
-checking cell $iopadmap$top.sw_2 of type IBUF for needed reduction points
-The sigspec on port I is size 1
-checking cell $iopadmap$top.sw_3 of type IBUF for needed reduction points
-The sigspec on port I is size 1
+$iopadmap$top.pulse_blue of type OBUF needs a reduction voter before his port I
+$iopadmap$top.pulse_green of type OBUF needs a reduction voter before his port I
+$iopadmap$top.pulse_red of type OBUF needs a reduction voter before his port I
 inserting reduction voters
-Inserted 0 Voters
+Added reduction voter: \\$iopadmap$pulse_blue_0_RED_VOTER
+	Connections:
+	Port: O is connected to \\$iopadmap$pulse_blue_0_RED_VOTER_wire
+	Port: I2 is connected to \$iopadmap$pulse_blue_TMR_2
+	Port: I1 is connected to \$iopadmap$pulse_blue_TMR_1
+	Port: I0 is connected to \$iopadmap$pulse_blue_TMR_0
+Added reduction voter: \\$iopadmap$pulse_green_0_RED_VOTER
+	Connections:
+	Port: O is connected to \\$iopadmap$pulse_green_0_RED_VOTER_wire
+	Port: I2 is connected to \$iopadmap$pulse_green_TMR_2
+	Port: I1 is connected to \$iopadmap$pulse_green_TMR_1
+	Port: I0 is connected to \$iopadmap$pulse_green_TMR_0
+Added reduction voter: \\$iopadmap$pulse_red_0_RED_VOTER
+	Connections:
+	Port: O is connected to \\$iopadmap$pulse_red_0_RED_VOTER_wire
+	Port: I2 is connected to \$iopadmap$pulse_red_TMR_2
+	Port: I1 is connected to \$iopadmap$pulse_red_TMR_1
+	Port: I0 is connected to \$iopadmap$pulse_red_TMR_0
+Inserted 3 Voters
 
 11. Executing CHECK pass (checking for obvious problems).
 Checking module PWM...
 Checking module top...
-Warning: multiple conflicting drivers for top.$iopadmap$pulse_red:
-    port pulse_TMR_0[0] of cell R0 (PWM)
-    port pulse_TMR_1[0] of cell R0 (PWM)
-    port pulse_TMR_2[0] of cell R0 (PWM)
-Warning: multiple conflicting drivers for top.$iopadmap$pulse_blue:
-    port pulse_TMR_0[0] of cell G0 (PWM)
-    port pulse_TMR_1[0] of cell G0 (PWM)
-    port pulse_TMR_2[0] of cell G0 (PWM)
-Warning: multiple conflicting drivers for top.$iopadmap$pulse_green:
-    port pulse_TMR_0[0] of cell B0 (PWM)
-    port pulse_TMR_1[0] of cell B0 (PWM)
-    port pulse_TMR_2[0] of cell B0 (PWM)
-Found and reported 3 problems.
+Found and reported 0 problems.
 
 12. Executing BLIF backend.
-
-Warnings: 6 unique messages, 6 total
-End of script. Logfile hash: c2dedb718c, CPU: user 9.71s system 0.26s, MEM: 140.72 MB peak
-Yosys 0.17+41 (git sha1 c525b5f91, clang 6.0.0-1ubuntu2 -fPIC -Os)
-Time spent: 62% 20x read_verilog (6 sec), 7% 13x opt_clean (0 sec), ...
