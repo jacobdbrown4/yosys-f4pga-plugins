@@ -75,8 +75,8 @@ struct InsertVoterWorker {
     }
 
     RTLIL::Cell* addVoter(RTLIL::Module *module, std::string voter_id) {
-        RTLIL::Cell* voter = module->addCell(voter_id, "\\" + voterInfo.cell_type);
-        RTLIL::Const val = RTLIL::Const(232, 8); // "voter init value of 8'hE8
+        RTLIL::Cell* voter = module->addCell(voter_id, RTLIL::escape_id(voterInfo.cell_type));
+        RTLIL::Const val = RTLIL::Const(232, 8); // voter init value of 8'hE8
         voter->setParam("\\INIT", val);
         return voter;
     }
@@ -158,7 +158,7 @@ struct InsertVoterWorker {
             for(auto cell: map_entry.second.driven_cells) {
                 to_write+= "\t\t" + RTLIL::unescape_id(cell.cell->name) + "\n";
             }
-            printMessage(to_write, false);
+            // printMessage(to_write, false);
         }
         return connection_map;
     }
@@ -172,9 +172,15 @@ struct InsertVoterWorker {
         // iterate through cells in the module
         // if a cell was not selected during replication, his inputs must be reduced
         for (auto cell: module->cells()) {
-            if (module->selected(cell)) {
+            RTLIL::Module *cell_module = module->design->module(cell->type);
+            if (module->selected(cell) && cell_module->get_blackbox_attribute()) {
                 continue;
             }
+            if (!cell_module->get_blackbox_attribute()){
+                // TODO handle these non leaf cell reduction points
+                continue;
+            }
+            // std::cout << "checking cell " << RTLIL::unescape_id(cell->name) << " of type " << RTLIL::unescape_id(cell->type) << " for needed reduction points\n";
             for (auto conn: cell->connections()) {
                 if (!cell->input(conn.first)){
                     continue;
@@ -198,6 +204,9 @@ struct InsertVoterWorker {
                         pin.sigbit = sigbit;
                         std::string map_key = RTLIL::unescape_id(sigbit.wire->name) + "_" + std::to_string(sigbit.offset);
                         reduction_map[map_key].push_back(pin);
+                    }
+                    else {
+                        // it wasn't replicated, but it may still output from a non leaf with replicated ports.
                     }
                 }
             }
@@ -285,7 +294,7 @@ struct InsertVoterWorker {
                                         std::map<std::string, std::vector<RTLIL::Wire*>> wire_map) {
         printMessage("inserting reduction voters\n", false);
         for (auto entry: reduction_map) {
-            std::cout << "next\n";
+            // std::cout << "next\n";
             RTLIL::Wire* wire = entry.second[0].sigbit.wire; // grab the wire from one of the pins
             int offset = entry.second[0].sigbit.offset;
             std::string plain_wire_name = remove_suffix_from_name(RTLIL::unescape_id(wire->name), suffix);
@@ -297,10 +306,10 @@ struct InsertVoterWorker {
             //     //     std::cout << "oh no it's null for name " << RTLIL::unescape_id(other_wire_name) <<"\n";
             //     // }
             // }
+            // std::cout << "here\n";
             std::string new_wire_name = "\\" + plain_wire_name + "_" + std::to_string(entry.second[0].sigbit.offset) + \
                                         "_RED_" + voterInfo.name + "_wire";
             RTLIL::Wire* voter_output_wire = module->addWire(new_wire_name, 1);
-            
             // prepare voter connections
             std::vector<RTLIL::SigSpec> voter_inputs;
             std::cout << "plain_wire_name is " << plain_wire_name << "\n";
@@ -309,12 +318,17 @@ struct InsertVoterWorker {
                 RTLIL::SigSpec sigspec = RTLIL::SigSpec(sigbit);
                 voter_inputs.push_back(sigspec);
             }
-            std::cout << "here\n";
+            // std::cout << "here\n";
             std::cout << "Voter inputs vector size is " << std::to_string(voter_inputs.size()) << "\n";
             std::map<RTLIL::IdString, RTLIL::SigSpec> voter_input_map;
             for (unsigned int i = 0; i < voterInfo.input_ports.size(); i++){
                 std::cout << std::to_string(i) << "\n";
-                voter_input_map[voterInfo.input_ports[i]] = SigSpec(voter_inputs[i]);
+                if (i < copy_amount) {
+                    voter_input_map[voterInfo.input_ports[i]] = SigSpec(voter_inputs[i]);
+                }
+                else {
+                    voter_input_map[voterInfo.input_ports[i]] = SigSpec(SigBit()); // wire to nothing
+                }
             }
             std::cout << "here now\n";
             RTLIL::SigBit voter_sigbit = SigBit(voter_output_wire);
@@ -334,19 +348,42 @@ struct InsertVoterWorker {
 
             // connect all the other cells to the voter output
             for (auto pin: entry.second) {
-                RTLIL::SigBit new_sigbit = SigBit(voter_output_wire);
-                RTLIL::SigSpec new_input = RTLIL::SigSpec(new_sigbit);
+                // get the current port and keep everything the same except for the correct new wire
+                RTLIL::SigSpec current = pin.cell->getPort(pin.port);
+                RTLIL::SigSpec new_input = RTLIL::SigSpec();
+                for (auto bit: current.bits()) {
+                    if (bit.wire == nullptr) {
+                        new_input.append(SigBit());
+                        continue;
+                    }
+                    if (bit.wire == pin.sigbit.wire && bit.offset == pin.sigbit.offset) {
+                        RTLIL::SigBit new_sigbit = SigBit(voter_output_wire);
+                        new_input.append(new_sigbit);
+                    }
+                    else {
+                        new_input.append(bit);
+                    }
+                }
+                // RTLIL::SigBit new_sigbit = SigBit(voter_output_wire);
+                // RTLIL::SigSpec new_input = RTLIL::SigSpec(new_sigbit);
                 pin.cell->setPort(pin.port, new_input);
             }
+            std::cout << "made it here\n";
             voter_cnt++;
             std::string to_write = "Added reduction voter: " + voter_id + "\n";
             to_write+= "\tConnections:\n";
             for (auto conn: voter->connections()) {
-                to_write+="\tPort: " + RTLIL::unescape_id(conn.first) + " is connected to " + \
+                if (conn.second[0].wire != nullptr) {
+                    to_write+="\tPort: " + RTLIL::unescape_id(conn.first) + " is connected to " + \
                             RTLIL::unescape_id(conn.second[0].wire->name) + "\n";
+                }
+                else {
+                    to_write+="\tPort: " + RTLIL::unescape_id(conn.first) + " is not connected\n";
+                }
             }
             printMessage(to_write, false);
         }
+        module->fixup_ports();
     }
 
     std::map<std::string, std::vector<RTLIL::Wire*>> create_wire_map(RTLIL::Module *module, std::string suffix) {
@@ -354,12 +391,12 @@ struct InsertVoterWorker {
         std::cout << "creating wire map for module" << RTLIL::unescape_id(module->name) << "\n";
         for (auto wire: module->wires()){
             std::string plain_wire_name = remove_suffix_from_name(RTLIL::unescape_id(wire->name), suffix);
-            std::cout << "plain wire name is " << plain_wire_name << "\n";
+            // std::cout << "plain wire name is " << plain_wire_name << "\n";
             wire_map[plain_wire_name].push_back(wire);
         }
-        for (auto entry: wire_map) {
-            std::cout << "Entry: " << entry.first << " is size " << std::to_string(entry.second.size()) << "\n";
-        }
+        // for (auto entry: wire_map) {
+        //     std::cout << "Entry: " << entry.first << " is size " << std::to_string(entry.second.size()) << "\n";
+        // }
 
         return wire_map;
     }
@@ -501,10 +538,10 @@ struct InsertVoterWorker {
         //     std::cout << "primary driver is nullptr\n";
         // }
         std::string plain_name = remove_suffix_from_name(RTLIL::unescape_id(primary_driver->name), suffix);
-        std::cout << "here\n";
+        // std::cout << "here\n";
         std::string type = RTLIL::unescape_id(primary_driver->type);
-        std::cout << "plain_name is " << plain_name << "\n";
-        std::cout << "Receiver cell is " << RTLIL::unescape_id(receiving_cell.cell->name) << " on port " << RTLIL::unescape_id(receiving_cell.port_name) << "\n";
+        // std::cout << "plain_name is " << plain_name << "\n";
+        // std::cout << "Receiver cell is " << RTLIL::unescape_id(receiving_cell.cell->name) << " on port " << RTLIL::unescape_id(receiving_cell.port_name) << "\n";
         // if (plain_name.at(0) != '\\' && plain_name.at(0) != '$') {
         RTLIL::Module *cell_type_module = module->design->module(primary_driver->type);
         if (!cell_type_module->get_blackbox_attribute()) {
@@ -512,7 +549,7 @@ struct InsertVoterWorker {
         // }
         // if (plain_name.at(0) != '$' || type.at(0) != '$') {
             // std::cout << "red voter will be driven by non leaf instance. DO SOMETHING DIFFERENT\n";
-            std::cout << "the driver port name is " << RTLIL::unescape_id(info.driver.port_name) << "\n";
+            // std::cout << "the driver port name is " << RTLIL::unescape_id(info.driver.port_name) << "\n";
             RTLIL::Cell* non_leaf_cell = primary_driver;
             std::string plain_port_name = remove_suffix_from_name(RTLIL::unescape_id(info.driver.port_name), suffix);
             std::string plain_wire_name = remove_suffix_from_name(RTLIL::unescape_id(info.wire->name), suffix);
@@ -794,9 +831,9 @@ public:
                 //     std::cout << "Receiver cell name is " << RTLIL::unescape_id(receiver.cell->name) << " at port " << RTLIL::unescape_id(receiver.port_name) << "\n";
                 // }
             }
-            for (auto entry: reduction_map) {
-                std::cout << "Entry for wire " << entry.first << " is size " << std::to_string(entry.second.size()) << "\n";
-            }
+            // for (auto entry: reduction_map) {
+            //     std::cout << "Entry for wire " << entry.first << " is size " << std::to_string(entry.second.size()) << "\n";
+            // }
             insert_reduction_voters_new(module, suffix, reduction_map, wire_map);
             // if (ff_voters) {
             //     insertion_points_2 = identify_points_after_ff(module, suffix, connection_map);
