@@ -25,36 +25,6 @@ struct InsertVoterWorker {
 
     VoterInfo voterInfo;
 
-    void initialize_output_port_map(RTLIL::Design *design) {
-        type_to_output_port.insert(std::pair<std::string, std::string>("$dff", "Q"));
-        type_to_output_port.insert(std::pair<std::string, std::string>("$sdff", "Q"));
-        type_to_output_port.insert(std::pair<std::string, std::string>("$_DFF_P_", "Q"));
-        type_to_output_port.insert(std::pair<std::string, std::string>("FDRE", "Q"));
-        type_to_output_port.insert(std::pair<std::string, std::string>("FDRE_ZINI", "Q"));
-
-        // for (auto ff_name: additional_ffs) {
-        //     RTLIL::Module *ff_module = design->module(RTLIL::escape_id(ff_name));
-        //     if (ff_module == NULL) {
-        //         std::string errorString = "Specified ff type of " + ff_name + " is unknown to the design\n";
-        //         log_error("%s", errorString.c_str());
-        //         return;
-        //     }
-
-        //     bool output_found = false;
-        //     for (auto wire: ff_module->wires()) {
-        //         if (wire->port_output) {
-        //             type_to_output_port.insert(std::pair<std::string, std::string>(ff_name, RTLIL::unescape_id(wire->name)));
-        //             output_found = true;
-        //             break;
-        //         }
-        //     }
-        //     if (!output_found) {
-        //         std::string errorString = "No output port found for specified ff type of " + ff_name + "\n";
-        //         log_error("%s", errorString.c_str());
-        //     }
-        // }
-    }
-
     void initialize_voter_information(RTLIL::Design *design) {
         printMessage("Initializing Voter Information\n", false);
         printMessage("Voter type is " + voterInfo.cell_type + "\n", false);
@@ -76,7 +46,13 @@ struct InsertVoterWorker {
 
     RTLIL::Cell* addVoter(RTLIL::Module *module, std::string voter_id) {
         RTLIL::Cell* voter = module->addCell(voter_id, RTLIL::escape_id(voterInfo.cell_type));
-        RTLIL::Const val = RTLIL::Const(232, 8); // voter init value of 8'hE8
+        RTLIL::Const val;
+        if (voterInfo.input_ports.size() == 4) {
+            val = RTLIL::Const("0xFCC0");
+        }
+        else {
+            val = RTLIL::Const("0xE8");
+        }
         voter->setParam("\\INIT", val);
         return voter;
     }
@@ -206,7 +182,7 @@ struct InsertVoterWorker {
                         reduction_map[map_key].push_back(pin);
                     }
                     else {
-                        // it wasn't replicated, but it may still output from a non leaf with replicated ports.
+                        // TODO probably delete this: it wasn't replicated, but it may still output from a non leaf with replicated ports.
                     }
                 }
             }
@@ -293,23 +269,20 @@ struct InsertVoterWorker {
     void insert_reduction_voters_new(RTLIL::Module *module, std::string suffix, std::map<std::string, std::vector<Pin>> reduction_map, \
                                         std::map<std::string, std::vector<RTLIL::Wire*>> wire_map) {
         printMessage("inserting reduction voters\n", false);
+        RTLIL::Wire *dummy_wire;
+        if (voterInfo.input_ports.size() > copy_amount) {
+            // create a dummy wire to tie extra input port to
+            dummy_wire = module->addWire("\\dummy_wire");
+        }
         for (auto entry: reduction_map) {
-            // std::cout << "next\n";
             RTLIL::Wire* wire = entry.second[0].sigbit.wire; // grab the wire from one of the pins
             int offset = entry.second[0].sigbit.offset;
             std::string plain_wire_name = remove_suffix_from_name(RTLIL::unescape_id(wire->name), suffix);
 
-            // for (int i = 0; i < copy_amount; i++) {
-            //     RTLIL::IdString other_wire_name = plain_wire_name + "_" + suffix + "_" + std::to_string(i);
-            //     // RTLIL::Wire* other_wire = module->wire(other_wire_name);
-            //     // if (other_wire == nullptr) {
-            //     //     std::cout << "oh no it's null for name " << RTLIL::unescape_id(other_wire_name) <<"\n";
-            //     // }
-            // }
-            // std::cout << "here\n";
             std::string new_wire_name = "\\" + plain_wire_name + "_" + std::to_string(entry.second[0].sigbit.offset) + \
                                         "_RED_" + voterInfo.name + "_wire";
             RTLIL::Wire* voter_output_wire = module->addWire(new_wire_name, 1);
+
             // prepare voter connections
             std::vector<RTLIL::SigSpec> voter_inputs;
             std::cout << "plain_wire_name is " << plain_wire_name << "\n";
@@ -318,7 +291,7 @@ struct InsertVoterWorker {
                 RTLIL::SigSpec sigspec = RTLIL::SigSpec(sigbit);
                 voter_inputs.push_back(sigspec);
             }
-            // std::cout << "here\n";
+
             std::cout << "Voter inputs vector size is " << std::to_string(voter_inputs.size()) << "\n";
             std::map<RTLIL::IdString, RTLIL::SigSpec> voter_input_map;
             for (unsigned int i = 0; i < voterInfo.input_ports.size(); i++){
@@ -327,10 +300,10 @@ struct InsertVoterWorker {
                     voter_input_map[voterInfo.input_ports[i]] = SigSpec(voter_inputs[i]);
                 }
                 else {
-                    voter_input_map[voterInfo.input_ports[i]] = SigSpec(SigBit()); // wire to nothing
+                    voter_input_map[voterInfo.input_ports[i]] = SigSpec(SigBit(dummy_wire)); // wire to nothing
                 }
             }
-            std::cout << "here now\n";
+
             RTLIL::SigBit voter_sigbit = SigBit(voter_output_wire);
             RTLIL::SigSpec voter_output = RTLIL::SigSpec(voter_sigbit);
 
@@ -364,11 +337,10 @@ struct InsertVoterWorker {
                         new_input.append(bit);
                     }
                 }
-                // RTLIL::SigBit new_sigbit = SigBit(voter_output_wire);
-                // RTLIL::SigSpec new_input = RTLIL::SigSpec(new_sigbit);
+
                 pin.cell->setPort(pin.port, new_input);
             }
-            std::cout << "made it here\n";
+
             voter_cnt++;
             std::string to_write = "Added reduction voter: " + voter_id + "\n";
             to_write+= "\tConnections:\n";
@@ -804,7 +776,6 @@ public:
 
     void run(Design* design) {
 
-        // initialize_output_port_map();
         initialize_voter_information(design);
         
         for (auto module: design->modules()) {
