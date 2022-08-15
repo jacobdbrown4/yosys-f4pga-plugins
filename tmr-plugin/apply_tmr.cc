@@ -8,12 +8,12 @@ USING_YOSYS_NAMESPACE
 PRIVATE_NAMESPACE_BEGIN
 
 struct ApplyTMRPass : public ScriptPass {
-    ApplyTMRPass() : ScriptPass("apply_tmr", "Apply TMR to a design") { }
+    ApplyTMRPass() : ScriptPass("apply_tmr_old", "Apply TMR OLD to a design") { }
     void help() override {
 
         log("\n");
 		log("\n");
-		log("    apply_tmr [options]\n");
+		log("    apply_tmr_old [options]\n");
 		log("\n");
         log("Convenience command to run both replicate and insert_voters");
 		log("\n");
