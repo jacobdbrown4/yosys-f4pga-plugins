@@ -19,7 +19,7 @@
  |                                                                            |
  \----------------------------------------------------------------------------/
 
- Yosys 0.17+41 (git sha1 c525b5f91, clang 10.0.0-4ubuntu1 -fPIC -Os)
+ Yosys 0.17+41 (git sha1 c525b5f91, clang 6.0.0-1ubuntu2 -fPIC -Os)
 
 [TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
 [TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
@@ -92,8 +92,8 @@ Removed 4 unused modules.
 
 7. Executing SYNTH_XILINX pass.
 
-7.1. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v
-Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v' to AST representation.
+7.1. Executing Verilog-2005 frontend: /home/jacobdbrown4/yosys/share/xilinx/cells_sim.v
+Parsing Verilog input from `/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v' to AST representation.
 Generating RTLIL representation for module `\VCC'.
 Generating RTLIL representation for module `\GND'.
 Generating RTLIL representation for module `\IBUF'.
@@ -195,8 +195,8 @@ Generating RTLIL representation for module `\RAMB18E1'.
 Generating RTLIL representation for module `\RAMB36E1'.
 Successfully finished Verilog frontend.
 
-7.2. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/xilinx/cells_xtra.v
-Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/xilinx/cells_xtra.v' to AST representation.
+7.2. Executing Verilog-2005 frontend: /home/jacobdbrown4/yosys/share/xilinx/cells_xtra.v
+Parsing Verilog input from `/home/jacobdbrown4/yosys/share/xilinx/cells_xtra.v' to AST representation.
 Generating RTLIL representation for module `\RAMB4_S1'.
 Generating RTLIL representation for module `\RAMB4_S2'.
 Generating RTLIL representation for module `\RAMB4_S4'.
@@ -548,20 +548,20 @@ Removed 0 unused modules.
 Cleaned up 0 empty switches.
 
 7.4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136 in module RAM64M.
-Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964 in module RAM32M.
-Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$894 in module RAM128X1D.
-Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$846 in module RAM64X1D.
-Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$819 in module RAM32X1D_1.
-Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$780 in module RAM32X1D.
-Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:810$643 in module FDPE_1.
-Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:769$640 in module FDPE.
-Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:731$625 in module FDCE_1.
-Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:690$622 in module FDCE.
-Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:587$607 in module FDSE_1.
-Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:554$603 in module FDSE.
-Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:522$585 in module FDRE_1.
-Marked 1 switch rules as full_case in process $proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:489$581 in module FDRE.
+Marked 1 switch rules as full_case in process $proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136 in module RAM64M.
+Marked 1 switch rules as full_case in process $proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964 in module RAM32M.
+Marked 1 switch rules as full_case in process $proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1711$894 in module RAM128X1D.
+Marked 1 switch rules as full_case in process $proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1606$846 in module RAM64X1D.
+Marked 1 switch rules as full_case in process $proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1560$819 in module RAM32X1D_1.
+Marked 1 switch rules as full_case in process $proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1501$780 in module RAM32X1D.
+Marked 1 switch rules as full_case in process $proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:810$643 in module FDPE_1.
+Marked 1 switch rules as full_case in process $proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:769$640 in module FDPE.
+Marked 1 switch rules as full_case in process $proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:731$625 in module FDCE_1.
+Marked 1 switch rules as full_case in process $proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:690$622 in module FDCE.
+Marked 1 switch rules as full_case in process $proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:587$607 in module FDSE_1.
+Marked 1 switch rules as full_case in process $proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:554$603 in module FDSE.
+Marked 1 switch rules as full_case in process $proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:522$585 in module FDRE_1.
+Marked 1 switch rules as full_case in process $proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:489$581 in module FDRE.
 Marked 1 switch rules as full_case in process $proc$uart/mod_counter.sv:26$32 in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
 Removed 1 dead cases from process $proc$uart/debounce.sv:0$22 in module debounce.
 Marked 10 switch rules as full_case in process $proc$uart/debounce.sv:0$22 in module debounce.
@@ -576,170 +576,170 @@ Removed 2 redundant assignments.
 Promoted 102 assignments to connections.
 
 7.4.4. Executing PROC_INIT pass (extract init attributes).
-Found init rule in `\SRLC32E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2400$1341'.
+Found init rule in `\SRLC32E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2400$1341'.
   Set init value: \r = 0
-Found init rule in `\SRLC16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2356$1334'.
+Found init rule in `\SRLC16E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2356$1334'.
   Set init value: \r = 16'0000000000000000
-Found init rule in `\SRLC16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2324$1327'.
+Found init rule in `\SRLC16.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2324$1327'.
   Set init value: \r = 16'0000000000000000
-Found init rule in `\SRL16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2287$1324'.
+Found init rule in `\SRL16E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2287$1324'.
   Set init value: \r = 16'0000000000000000
-Found init rule in `\SRL16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2259$1317'.
+Found init rule in `\SRL16.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2259$1317'.
   Set init value: \r = 16'0000000000000000
-Found init rule in `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1975$1242'.
+Found init rule in `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1975$1242'.
   Set init value: \mem_d = 64'0000000000000000000000000000000000000000000000000000000000000000
-Found init rule in `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1974$1241'.
+Found init rule in `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1974$1241'.
   Set init value: \mem_c = 64'0000000000000000000000000000000000000000000000000000000000000000
-Found init rule in `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1973$1240'.
+Found init rule in `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1973$1240'.
   Set init value: \mem_b = 64'0000000000000000000000000000000000000000000000000000000000000000
-Found init rule in `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1972$1239'.
+Found init rule in `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1972$1239'.
   Set init value: \mem_a = 64'0000000000000000000000000000000000000000000000000000000000000000
-Found init rule in `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1801$1090'.
+Found init rule in `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1801$1090'.
   Set init value: \mem_d = 64'0000000000000000000000000000000000000000000000000000000000000000
-Found init rule in `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1800$1089'.
+Found init rule in `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1800$1089'.
   Set init value: \mem_c = 64'0000000000000000000000000000000000000000000000000000000000000000
-Found init rule in `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1799$1088'.
+Found init rule in `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1799$1088'.
   Set init value: \mem_b = 64'0000000000000000000000000000000000000000000000000000000000000000
-Found init rule in `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1798$1087'.
+Found init rule in `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1798$1087'.
   Set init value: \mem_a = 64'0000000000000000000000000000000000000000000000000000000000000000
-Found init rule in `\RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1707$931'.
+Found init rule in `\RAM128X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1707$931'.
   Set init value: \mem = 128'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-Found init rule in `\RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1602$883'.
+Found init rule in `\RAM64X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1602$883'.
   Set init value: \mem = 64'0000000000000000000000000000000000000000000000000000000000000000
-Found init rule in `\RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1556$838'.
+Found init rule in `\RAM32X1D_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1556$838'.
   Set init value: \mem = 0
-Found init rule in `\RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1497$811'.
+Found init rule in `\RAM32X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1497$811'.
   Set init value: \mem = 0
-Found init rule in `\FDPE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$646'.
+Found init rule in `\FDPE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$646'.
   Set init value: \Q = 1'1
-Found init rule in `\FDPE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$642'.
+Found init rule in `\FDPE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$642'.
   Set init value: \Q = 1'1
-Found init rule in `\FDCE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$628'.
+Found init rule in `\FDCE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$628'.
   Set init value: \Q = 1'0
-Found init rule in `\FDCE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$624'.
+Found init rule in `\FDCE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$624'.
   Set init value: \Q = 1'0
-Found init rule in `\FDSE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$610'.
+Found init rule in `\FDSE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$610'.
   Set init value: \Q = 1'1
-Found init rule in `\FDSE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$606'.
+Found init rule in `\FDSE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$606'.
   Set init value: \Q = 1'1
-Found init rule in `\FDRE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$588'.
+Found init rule in `\FDRE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$588'.
   Set init value: \Q = 1'0
-Found init rule in `\FDRE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$584'.
+Found init rule in `\FDRE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$584'.
   Set init value: \Q = 1'0
 
 7.4.5. Executing PROC_ARST pass (detect async resets in processes).
-Found async reset \PRE in `\FDPE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:810$643'.
-Found async reset \PRE in `\FDPE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:769$640'.
-Found async reset \CLR in `\FDCE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:731$625'.
-Found async reset \CLR in `\FDCE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:690$622'.
+Found async reset \PRE in `\FDPE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:810$643'.
+Found async reset \PRE in `\FDPE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:769$640'.
+Found async reset \CLR in `\FDCE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:731$625'.
+Found async reset \CLR in `\FDCE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:690$622'.
 
 7.4.6. Executing PROC_ROM pass (convert switches to ROMs).
 Converted 0 switches.
 <suppressed ~48 debug messages>
 
 7.4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
-Creating decoders for process `\SRLC32E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2400$1341'.
-Creating decoders for process `\SRLC32E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2408$1340'.
+Creating decoders for process `\SRLC32E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2400$1341'.
+Creating decoders for process `\SRLC32E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2408$1340'.
      1/1: $0\r[31:0]
-Creating decoders for process `\SRLC16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2356$1334'.
-Creating decoders for process `\SRLC16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2364$1333'.
+Creating decoders for process `\SRLC16E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2356$1334'.
+Creating decoders for process `\SRLC16E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2364$1333'.
      1/1: $0\r[15:0]
-Creating decoders for process `\SRLC16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2324$1327'.
-Creating decoders for process `\SRLC16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2327$1326'.
-Creating decoders for process `\SRL16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2287$1324'.
-Creating decoders for process `\SRL16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2294$1323'.
+Creating decoders for process `\SRLC16.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2324$1327'.
+Creating decoders for process `\SRLC16.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2327$1326'.
+Creating decoders for process `\SRL16E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2287$1324'.
+Creating decoders for process `\SRL16E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2294$1323'.
      1/1: $0\r[15:0]
-Creating decoders for process `\SRL16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2259$1317'.
-Creating decoders for process `\SRL16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2261$1316'.
-Creating decoders for process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1975$1242'.
-Creating decoders for process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1974$1241'.
-Creating decoders for process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1973$1240'.
-Creating decoders for process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1972$1239'.
-Creating decoders for process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating decoders for process `\SRL16.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2259$1317'.
+Creating decoders for process `\SRL16.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2261$1316'.
+Creating decoders for process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1975$1242'.
+Creating decoders for process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1974$1241'.
+Creating decoders for process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1973$1240'.
+Creating decoders for process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1972$1239'.
+Creating decoders for process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
      1/16: $1$lookahead\mem_d$1135[63:0]$1168
-     2/16: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1986$1125[63:0]$1163
-     3/16: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1986$1124[63:0]$1162
-     4/16: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1986$1126[5:0]$1164
+     2/16: $1$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1986$1125[63:0]$1163
+     3/16: $1$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1986$1124[63:0]$1162
+     4/16: $1$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1986$1126[5:0]$1164
      5/16: $1$lookahead\mem_c$1134[63:0]$1167
-     6/16: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1985$1122[63:0]$1160
-     7/16: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1985$1121[63:0]$1159
-     8/16: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1985$1123[5:0]$1161
+     6/16: $1$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1985$1122[63:0]$1160
+     7/16: $1$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1985$1121[63:0]$1159
+     8/16: $1$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1985$1123[5:0]$1161
      9/16: $1$lookahead\mem_b$1133[63:0]$1166
-    10/16: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1984$1119[63:0]$1157
-    11/16: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1984$1118[63:0]$1156
-    12/16: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1984$1120[5:0]$1158
+    10/16: $1$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1984$1119[63:0]$1157
+    11/16: $1$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1984$1118[63:0]$1156
+    12/16: $1$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1984$1120[5:0]$1158
     13/16: $1$lookahead\mem_a$1132[63:0]$1165
-    14/16: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1983$1116[63:0]$1154
-    15/16: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1983$1115[63:0]$1153
-    16/16: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1983$1117[5:0]$1155
-Creating decoders for process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1801$1090'.
-Creating decoders for process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1800$1089'.
-Creating decoders for process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1799$1088'.
-Creating decoders for process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1798$1087'.
-Creating decoders for process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+    14/16: $1$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1983$1116[63:0]$1154
+    15/16: $1$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1983$1115[63:0]$1153
+    16/16: $1$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1983$1117[5:0]$1155
+Creating decoders for process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1801$1090'.
+Creating decoders for process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1800$1089'.
+Creating decoders for process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1799$1088'.
+Creating decoders for process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1798$1087'.
+Creating decoders for process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
      1/16: $1$lookahead\mem_d$963[63:0]$996
-     2/16: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1812$945[63:0]$991
-     3/16: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1812$944[63:0]$990
-     4/16: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1812$946[31:0]$992
+     2/16: $1$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1812$945[63:0]$991
+     3/16: $1$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1812$944[63:0]$990
+     4/16: $1$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1812$946[31:0]$992
      5/16: $1$lookahead\mem_c$962[63:0]$995
-     6/16: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1811$942[63:0]$988
-     7/16: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1811$941[63:0]$987
-     8/16: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1811$943[31:0]$989
+     6/16: $1$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1811$942[63:0]$988
+     7/16: $1$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1811$941[63:0]$987
+     8/16: $1$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1811$943[31:0]$989
      9/16: $1$lookahead\mem_b$961[63:0]$994
-    10/16: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1810$939[63:0]$985
-    11/16: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1810$938[63:0]$984
-    12/16: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1810$940[31:0]$986
+    10/16: $1$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1810$939[63:0]$985
+    11/16: $1$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1810$938[63:0]$984
+    12/16: $1$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1810$940[31:0]$986
     13/16: $1$lookahead\mem_a$960[63:0]$993
-    14/16: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1809$936[63:0]$982
-    15/16: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1809$935[63:0]$981
-    16/16: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1809$937[31:0]$983
-Creating decoders for process `\RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1707$931'.
-Creating decoders for process `\RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$894'.
+    14/16: $1$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1809$936[63:0]$982
+    15/16: $1$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1809$935[63:0]$981
+    16/16: $1$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1809$937[31:0]$983
+Creating decoders for process `\RAM128X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1707$931'.
+Creating decoders for process `\RAM128X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1711$894'.
      1/4: $1$lookahead\mem$893[127:0]$902
-     2/4: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$888[127:0]$900
-     3/4: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$887[127:0]$899
-     4/4: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$889[6:0]$901
-Creating decoders for process `\RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1602$883'.
-Creating decoders for process `\RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$846'.
+     2/4: $1$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1711$888[127:0]$900
+     3/4: $1$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1711$887[127:0]$899
+     4/4: $1$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1711$889[6:0]$901
+Creating decoders for process `\RAM64X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1602$883'.
+Creating decoders for process `\RAM64X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1606$846'.
      1/4: $1$lookahead\mem$845[63:0]$854
-     2/4: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$840[63:0]$852
-     3/4: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$839[63:0]$851
-     4/4: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$841[5:0]$853
-Creating decoders for process `\RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1556$838'.
-Creating decoders for process `\RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$819'.
+     2/4: $1$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1606$840[63:0]$852
+     3/4: $1$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1606$839[63:0]$851
+     4/4: $1$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1606$841[5:0]$853
+Creating decoders for process `\RAM32X1D_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1556$838'.
+Creating decoders for process `\RAM32X1D_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1560$819'.
      1/4: $1$lookahead\mem$818[31:0]$827
-     2/4: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$813[31:0]$825
-     3/4: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$812[31:0]$824
-     4/4: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$814[4:0]$826
-Creating decoders for process `\RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1497$811'.
-Creating decoders for process `\RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$780'.
+     2/4: $1$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1560$813[31:0]$825
+     3/4: $1$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1560$812[31:0]$824
+     4/4: $1$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1560$814[4:0]$826
+Creating decoders for process `\RAM32X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1497$811'.
+Creating decoders for process `\RAM32X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1501$780'.
      1/4: $1$lookahead\mem$779[31:0]$788
-     2/4: $1$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$774[31:0]$786
-     3/4: $1$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$773[31:0]$785
-     4/4: $1$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$775[4:0]$787
-Creating decoders for process `\FDPE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$646'.
-Creating decoders for process `\FDPE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:810$643'.
+     2/4: $1$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1501$774[31:0]$786
+     3/4: $1$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1501$773[31:0]$785
+     4/4: $1$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1501$775[4:0]$787
+Creating decoders for process `\FDPE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$646'.
+Creating decoders for process `\FDPE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:810$643'.
      1/1: $0\Q[0:0]
-Creating decoders for process `\FDPE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$642'.
-Creating decoders for process `\FDPE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:769$640'.
+Creating decoders for process `\FDPE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$642'.
+Creating decoders for process `\FDPE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:769$640'.
      1/1: $0\Q[0:0]
-Creating decoders for process `\FDCE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$628'.
-Creating decoders for process `\FDCE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:731$625'.
+Creating decoders for process `\FDCE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$628'.
+Creating decoders for process `\FDCE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:731$625'.
      1/1: $0\Q[0:0]
-Creating decoders for process `\FDCE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$624'.
-Creating decoders for process `\FDCE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:690$622'.
+Creating decoders for process `\FDCE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$624'.
+Creating decoders for process `\FDCE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:690$622'.
      1/1: $0\Q[0:0]
-Creating decoders for process `\FDSE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$610'.
-Creating decoders for process `\FDSE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:587$607'.
+Creating decoders for process `\FDSE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$610'.
+Creating decoders for process `\FDSE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:587$607'.
      1/1: $0\Q[0:0]
-Creating decoders for process `\FDSE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$606'.
-Creating decoders for process `\FDSE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:554$603'.
+Creating decoders for process `\FDSE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$606'.
+Creating decoders for process `\FDSE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:554$603'.
      1/1: $0\Q[0:0]
-Creating decoders for process `\FDRE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$588'.
-Creating decoders for process `\FDRE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:522$585'.
+Creating decoders for process `\FDRE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$588'.
+Creating decoders for process `\FDRE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:522$585'.
      1/1: $0\Q[0:0]
-Creating decoders for process `\FDRE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$584'.
-Creating decoders for process `\FDRE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:489$581'.
+Creating decoders for process `\FDRE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$584'.
+Creating decoders for process `\FDRE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:489$581'.
      1/1: $0\Q[0:0]
 Creating decoders for process `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.$proc$uart/mod_counter.sv:26$32'.
      1/1: $0\count[18:0]
@@ -809,151 +809,151 @@ No latch inferred for signal `\tx.\clrBit' from process `\tx.$proc$uart/tx.sv:0$
 No latch inferred for signal `\tx.\ns' from process `\tx.$proc$uart/tx.sv:0$16'.
 
 7.4.9. Executing PROC_DFF pass (convert process syncs to FFs).
-Creating register for signal `\SRLC32E.\r' using process `\SRLC32E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2408$1340'.
+Creating register for signal `\SRLC32E.\r' using process `\SRLC32E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2408$1340'.
   created $dff cell `$procdff$1938' with positive edge clock.
-Creating register for signal `\SRLC16E.\r' using process `\SRLC16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2364$1333'.
+Creating register for signal `\SRLC16E.\r' using process `\SRLC16E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2364$1333'.
   created $dff cell `$procdff$1939' with positive edge clock.
-Creating register for signal `\SRLC16.\r' using process `\SRLC16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2327$1326'.
+Creating register for signal `\SRLC16.\r' using process `\SRLC16.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2327$1326'.
   created $dff cell `$procdff$1940' with positive edge clock.
-Creating register for signal `\SRL16E.\r' using process `\SRL16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2294$1323'.
+Creating register for signal `\SRL16E.\r' using process `\SRL16E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2294$1323'.
   created $dff cell `$procdff$1941' with positive edge clock.
-Creating register for signal `\SRL16.\r' using process `\SRL16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2261$1316'.
+Creating register for signal `\SRL16.\r' using process `\SRL16.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2261$1316'.
   created $dff cell `$procdff$1942' with positive edge clock.
-Creating register for signal `\RAM64M.\mem_a' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating register for signal `\RAM64M.\mem_a' using process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
   created $dff cell `$procdff$1943' with positive edge clock.
-Creating register for signal `\RAM64M.\mem_b' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating register for signal `\RAM64M.\mem_b' using process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
   created $dff cell `$procdff$1944' with positive edge clock.
-Creating register for signal `\RAM64M.\mem_c' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating register for signal `\RAM64M.\mem_c' using process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
   created $dff cell `$procdff$1945' with positive edge clock.
-Creating register for signal `\RAM64M.\mem_d' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating register for signal `\RAM64M.\mem_d' using process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
   created $dff cell `$procdff$1946' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1983$1115' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating register for signal `\RAM64M.$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1983$1115' using process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
   created $dff cell `$procdff$1947' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1983$1116' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating register for signal `\RAM64M.$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1983$1116' using process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
   created $dff cell `$procdff$1948' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1983$1117' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating register for signal `\RAM64M.$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1983$1117' using process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
   created $dff cell `$procdff$1949' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1984$1118' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating register for signal `\RAM64M.$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1984$1118' using process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
   created $dff cell `$procdff$1950' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1984$1119' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating register for signal `\RAM64M.$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1984$1119' using process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
   created $dff cell `$procdff$1951' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1984$1120' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating register for signal `\RAM64M.$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1984$1120' using process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
   created $dff cell `$procdff$1952' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1985$1121' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating register for signal `\RAM64M.$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1985$1121' using process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
   created $dff cell `$procdff$1953' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1985$1122' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating register for signal `\RAM64M.$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1985$1122' using process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
   created $dff cell `$procdff$1954' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1985$1123' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating register for signal `\RAM64M.$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1985$1123' using process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
   created $dff cell `$procdff$1955' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1986$1124' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating register for signal `\RAM64M.$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1986$1124' using process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
   created $dff cell `$procdff$1956' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1986$1125' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating register for signal `\RAM64M.$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1986$1125' using process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
   created $dff cell `$procdff$1957' with positive edge clock.
-Creating register for signal `\RAM64M.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1986$1126' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating register for signal `\RAM64M.$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1986$1126' using process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
   created $dff cell `$procdff$1958' with positive edge clock.
-Creating register for signal `\RAM64M.$lookahead\mem_a$1132' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating register for signal `\RAM64M.$lookahead\mem_a$1132' using process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
   created $dff cell `$procdff$1959' with positive edge clock.
-Creating register for signal `\RAM64M.$lookahead\mem_b$1133' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating register for signal `\RAM64M.$lookahead\mem_b$1133' using process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
   created $dff cell `$procdff$1960' with positive edge clock.
-Creating register for signal `\RAM64M.$lookahead\mem_c$1134' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating register for signal `\RAM64M.$lookahead\mem_c$1134' using process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
   created $dff cell `$procdff$1961' with positive edge clock.
-Creating register for signal `\RAM64M.$lookahead\mem_d$1135' using process `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Creating register for signal `\RAM64M.$lookahead\mem_d$1135' using process `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
   created $dff cell `$procdff$1962' with positive edge clock.
-Creating register for signal `\RAM32M.\mem_a' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+Creating register for signal `\RAM32M.\mem_a' using process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
   created $dff cell `$procdff$1963' with positive edge clock.
-Creating register for signal `\RAM32M.\mem_b' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+Creating register for signal `\RAM32M.\mem_b' using process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
   created $dff cell `$procdff$1964' with positive edge clock.
-Creating register for signal `\RAM32M.\mem_c' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+Creating register for signal `\RAM32M.\mem_c' using process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
   created $dff cell `$procdff$1965' with positive edge clock.
-Creating register for signal `\RAM32M.\mem_d' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+Creating register for signal `\RAM32M.\mem_d' using process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
   created $dff cell `$procdff$1966' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1809$935' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+Creating register for signal `\RAM32M.$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1809$935' using process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
   created $dff cell `$procdff$1967' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1809$936' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+Creating register for signal `\RAM32M.$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1809$936' using process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
   created $dff cell `$procdff$1968' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1809$937' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+Creating register for signal `\RAM32M.$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1809$937' using process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
   created $dff cell `$procdff$1969' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1810$938' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+Creating register for signal `\RAM32M.$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1810$938' using process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
   created $dff cell `$procdff$1970' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1810$939' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+Creating register for signal `\RAM32M.$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1810$939' using process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
   created $dff cell `$procdff$1971' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1810$940' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+Creating register for signal `\RAM32M.$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1810$940' using process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
   created $dff cell `$procdff$1972' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1811$941' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+Creating register for signal `\RAM32M.$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1811$941' using process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
   created $dff cell `$procdff$1973' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1811$942' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+Creating register for signal `\RAM32M.$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1811$942' using process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
   created $dff cell `$procdff$1974' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1811$943' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+Creating register for signal `\RAM32M.$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1811$943' using process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
   created $dff cell `$procdff$1975' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1812$944' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+Creating register for signal `\RAM32M.$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1812$944' using process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
   created $dff cell `$procdff$1976' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1812$945' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+Creating register for signal `\RAM32M.$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1812$945' using process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
   created $dff cell `$procdff$1977' with positive edge clock.
-Creating register for signal `\RAM32M.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1812$946' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+Creating register for signal `\RAM32M.$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1812$946' using process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
   created $dff cell `$procdff$1978' with positive edge clock.
-Creating register for signal `\RAM32M.$lookahead\mem_a$960' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+Creating register for signal `\RAM32M.$lookahead\mem_a$960' using process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
   created $dff cell `$procdff$1979' with positive edge clock.
-Creating register for signal `\RAM32M.$lookahead\mem_b$961' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+Creating register for signal `\RAM32M.$lookahead\mem_b$961' using process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
   created $dff cell `$procdff$1980' with positive edge clock.
-Creating register for signal `\RAM32M.$lookahead\mem_c$962' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+Creating register for signal `\RAM32M.$lookahead\mem_c$962' using process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
   created $dff cell `$procdff$1981' with positive edge clock.
-Creating register for signal `\RAM32M.$lookahead\mem_d$963' using process `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
+Creating register for signal `\RAM32M.$lookahead\mem_d$963' using process `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
   created $dff cell `$procdff$1982' with positive edge clock.
-Creating register for signal `\RAM128X1D.\mem' using process `\RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$894'.
+Creating register for signal `\RAM128X1D.\mem' using process `\RAM128X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1711$894'.
   created $dff cell `$procdff$1983' with positive edge clock.
-Creating register for signal `\RAM128X1D.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$887' using process `\RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$894'.
+Creating register for signal `\RAM128X1D.$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1711$887' using process `\RAM128X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1711$894'.
   created $dff cell `$procdff$1984' with positive edge clock.
-Creating register for signal `\RAM128X1D.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$888' using process `\RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$894'.
+Creating register for signal `\RAM128X1D.$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1711$888' using process `\RAM128X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1711$894'.
   created $dff cell `$procdff$1985' with positive edge clock.
-Creating register for signal `\RAM128X1D.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$889' using process `\RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$894'.
+Creating register for signal `\RAM128X1D.$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1711$889' using process `\RAM128X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1711$894'.
   created $dff cell `$procdff$1986' with positive edge clock.
-Creating register for signal `\RAM128X1D.$lookahead\mem$893' using process `\RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$894'.
+Creating register for signal `\RAM128X1D.$lookahead\mem$893' using process `\RAM128X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1711$894'.
   created $dff cell `$procdff$1987' with positive edge clock.
-Creating register for signal `\RAM64X1D.\mem' using process `\RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$846'.
+Creating register for signal `\RAM64X1D.\mem' using process `\RAM64X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1606$846'.
   created $dff cell `$procdff$1988' with positive edge clock.
-Creating register for signal `\RAM64X1D.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$839' using process `\RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$846'.
+Creating register for signal `\RAM64X1D.$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1606$839' using process `\RAM64X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1606$846'.
   created $dff cell `$procdff$1989' with positive edge clock.
-Creating register for signal `\RAM64X1D.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$840' using process `\RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$846'.
+Creating register for signal `\RAM64X1D.$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1606$840' using process `\RAM64X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1606$846'.
   created $dff cell `$procdff$1990' with positive edge clock.
-Creating register for signal `\RAM64X1D.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$841' using process `\RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$846'.
+Creating register for signal `\RAM64X1D.$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1606$841' using process `\RAM64X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1606$846'.
   created $dff cell `$procdff$1991' with positive edge clock.
-Creating register for signal `\RAM64X1D.$lookahead\mem$845' using process `\RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$846'.
+Creating register for signal `\RAM64X1D.$lookahead\mem$845' using process `\RAM64X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1606$846'.
   created $dff cell `$procdff$1992' with positive edge clock.
-Creating register for signal `\RAM32X1D_1.\mem' using process `\RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$819'.
+Creating register for signal `\RAM32X1D_1.\mem' using process `\RAM32X1D_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1560$819'.
   created $dff cell `$procdff$1993' with negative edge clock.
-Creating register for signal `\RAM32X1D_1.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$812' using process `\RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$819'.
+Creating register for signal `\RAM32X1D_1.$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1560$812' using process `\RAM32X1D_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1560$819'.
   created $dff cell `$procdff$1994' with negative edge clock.
-Creating register for signal `\RAM32X1D_1.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$813' using process `\RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$819'.
+Creating register for signal `\RAM32X1D_1.$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1560$813' using process `\RAM32X1D_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1560$819'.
   created $dff cell `$procdff$1995' with negative edge clock.
-Creating register for signal `\RAM32X1D_1.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$814' using process `\RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$819'.
+Creating register for signal `\RAM32X1D_1.$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1560$814' using process `\RAM32X1D_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1560$819'.
   created $dff cell `$procdff$1996' with negative edge clock.
-Creating register for signal `\RAM32X1D_1.$lookahead\mem$818' using process `\RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$819'.
+Creating register for signal `\RAM32X1D_1.$lookahead\mem$818' using process `\RAM32X1D_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1560$819'.
   created $dff cell `$procdff$1997' with negative edge clock.
-Creating register for signal `\RAM32X1D.\mem' using process `\RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$780'.
+Creating register for signal `\RAM32X1D.\mem' using process `\RAM32X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1501$780'.
   created $dff cell `$procdff$1998' with positive edge clock.
-Creating register for signal `\RAM32X1D.$bitselwrite$mask$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$773' using process `\RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$780'.
+Creating register for signal `\RAM32X1D.$bitselwrite$mask$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1501$773' using process `\RAM32X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1501$780'.
   created $dff cell `$procdff$1999' with positive edge clock.
-Creating register for signal `\RAM32X1D.$bitselwrite$data$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$774' using process `\RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$780'.
+Creating register for signal `\RAM32X1D.$bitselwrite$data$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1501$774' using process `\RAM32X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1501$780'.
   created $dff cell `$procdff$2000' with positive edge clock.
-Creating register for signal `\RAM32X1D.$bitselwrite$sel$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$775' using process `\RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$780'.
+Creating register for signal `\RAM32X1D.$bitselwrite$sel$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1501$775' using process `\RAM32X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1501$780'.
   created $dff cell `$procdff$2001' with positive edge clock.
-Creating register for signal `\RAM32X1D.$lookahead\mem$779' using process `\RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$780'.
+Creating register for signal `\RAM32X1D.$lookahead\mem$779' using process `\RAM32X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1501$780'.
   created $dff cell `$procdff$2002' with positive edge clock.
-Creating register for signal `\FDPE_1.\Q' using process `\FDPE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:810$643'.
+Creating register for signal `\FDPE_1.\Q' using process `\FDPE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:810$643'.
   created $adff cell `$procdff$2003' with negative edge clock and positive level reset.
-Creating register for signal `\FDPE.\Q' using process `\FDPE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:769$640'.
+Creating register for signal `\FDPE.\Q' using process `\FDPE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:769$640'.
   created $adff cell `$procdff$2004' with positive edge clock and positive level reset.
-Creating register for signal `\FDCE_1.\Q' using process `\FDCE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:731$625'.
+Creating register for signal `\FDCE_1.\Q' using process `\FDCE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:731$625'.
   created $adff cell `$procdff$2005' with negative edge clock and positive level reset.
-Creating register for signal `\FDCE.\Q' using process `\FDCE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:690$622'.
+Creating register for signal `\FDCE.\Q' using process `\FDCE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:690$622'.
   created $adff cell `$procdff$2006' with positive edge clock and positive level reset.
-Creating register for signal `\FDSE_1.\Q' using process `\FDSE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:587$607'.
+Creating register for signal `\FDSE_1.\Q' using process `\FDSE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:587$607'.
   created $dff cell `$procdff$2007' with negative edge clock.
-Creating register for signal `\FDSE.\Q' using process `\FDSE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:554$603'.
+Creating register for signal `\FDSE.\Q' using process `\FDSE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:554$603'.
   created $dff cell `$procdff$2008' with positive edge clock.
-Creating register for signal `\FDRE_1.\Q' using process `\FDRE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:522$585'.
+Creating register for signal `\FDRE_1.\Q' using process `\FDRE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:522$585'.
   created $dff cell `$procdff$2009' with negative edge clock.
-Creating register for signal `\FDRE.\Q' using process `\FDRE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:489$581'.
+Creating register for signal `\FDRE.\Q' using process `\FDRE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:489$581'.
   created $dff cell `$procdff$2010' with positive edge clock.
 Creating register for signal `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.\count' using process `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.$proc$uart/mod_counter.sv:26$32'.
   created $dff cell `$procdff$2011' with positive edge clock.
@@ -975,67 +975,67 @@ Creating register for signal `\tx_top.\btnc_r2' using process `\tx_top.$proc$uar
 7.4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
 
 7.4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Removing empty process `SRLC32E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2400$1341'.
-Found and cleaned up 1 empty switch in `\SRLC32E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2408$1340'.
-Removing empty process `SRLC32E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2408$1340'.
-Removing empty process `SRLC16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2356$1334'.
-Found and cleaned up 1 empty switch in `\SRLC16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2364$1333'.
-Removing empty process `SRLC16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2364$1333'.
-Removing empty process `SRLC16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2324$1327'.
-Removing empty process `SRLC16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2327$1326'.
-Removing empty process `SRL16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2287$1324'.
-Found and cleaned up 1 empty switch in `\SRL16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2294$1323'.
-Removing empty process `SRL16E.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2294$1323'.
-Removing empty process `SRL16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2259$1317'.
-Removing empty process `SRL16.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:2261$1316'.
-Removing empty process `RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1975$1242'.
-Removing empty process `RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1974$1241'.
-Removing empty process `RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1973$1240'.
-Removing empty process `RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1972$1239'.
-Found and cleaned up 1 empty switch in `\RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
-Removing empty process `RAM64M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1981$1136'.
-Removing empty process `RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1801$1090'.
-Removing empty process `RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1800$1089'.
-Removing empty process `RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1799$1088'.
-Removing empty process `RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1798$1087'.
-Found and cleaned up 1 empty switch in `\RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
-Removing empty process `RAM32M.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1807$964'.
-Removing empty process `RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1707$931'.
-Found and cleaned up 1 empty switch in `\RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$894'.
-Removing empty process `RAM128X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1711$894'.
-Removing empty process `RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1602$883'.
-Found and cleaned up 1 empty switch in `\RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$846'.
-Removing empty process `RAM64X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1606$846'.
-Removing empty process `RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1556$838'.
-Found and cleaned up 1 empty switch in `\RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$819'.
-Removing empty process `RAM32X1D_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1560$819'.
-Removing empty process `RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1497$811'.
-Found and cleaned up 1 empty switch in `\RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$780'.
-Removing empty process `RAM32X1D.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:1501$780'.
-Removing empty process `FDPE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$646'.
-Found and cleaned up 1 empty switch in `\FDPE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:810$643'.
-Removing empty process `FDPE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:810$643'.
-Removing empty process `FDPE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$642'.
-Found and cleaned up 1 empty switch in `\FDPE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:769$640'.
-Removing empty process `FDPE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:769$640'.
-Removing empty process `FDCE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$628'.
-Found and cleaned up 1 empty switch in `\FDCE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:731$625'.
-Removing empty process `FDCE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:731$625'.
-Removing empty process `FDCE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$624'.
-Found and cleaned up 1 empty switch in `\FDCE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:690$622'.
-Removing empty process `FDCE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:690$622'.
-Removing empty process `FDSE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$610'.
-Found and cleaned up 2 empty switches in `\FDSE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:587$607'.
-Removing empty process `FDSE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:587$607'.
-Removing empty process `FDSE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$606'.
-Found and cleaned up 2 empty switches in `\FDSE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:554$603'.
-Removing empty process `FDSE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:554$603'.
-Removing empty process `FDRE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$588'.
-Found and cleaned up 2 empty switches in `\FDRE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:522$585'.
-Removing empty process `FDRE_1.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:522$585'.
-Removing empty process `FDRE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:0$584'.
-Found and cleaned up 2 empty switches in `\FDRE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:489$581'.
-Removing empty process `FDRE.$proc$/home/jacobb00/yosys/yosys/share/xilinx/cells_sim.v:489$581'.
+Removing empty process `SRLC32E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2400$1341'.
+Found and cleaned up 1 empty switch in `\SRLC32E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2408$1340'.
+Removing empty process `SRLC32E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2408$1340'.
+Removing empty process `SRLC16E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2356$1334'.
+Found and cleaned up 1 empty switch in `\SRLC16E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2364$1333'.
+Removing empty process `SRLC16E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2364$1333'.
+Removing empty process `SRLC16.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2324$1327'.
+Removing empty process `SRLC16.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2327$1326'.
+Removing empty process `SRL16E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2287$1324'.
+Found and cleaned up 1 empty switch in `\SRL16E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2294$1323'.
+Removing empty process `SRL16E.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2294$1323'.
+Removing empty process `SRL16.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2259$1317'.
+Removing empty process `SRL16.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:2261$1316'.
+Removing empty process `RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1975$1242'.
+Removing empty process `RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1974$1241'.
+Removing empty process `RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1973$1240'.
+Removing empty process `RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1972$1239'.
+Found and cleaned up 1 empty switch in `\RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Removing empty process `RAM64M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1981$1136'.
+Removing empty process `RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1801$1090'.
+Removing empty process `RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1800$1089'.
+Removing empty process `RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1799$1088'.
+Removing empty process `RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1798$1087'.
+Found and cleaned up 1 empty switch in `\RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
+Removing empty process `RAM32M.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1807$964'.
+Removing empty process `RAM128X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1707$931'.
+Found and cleaned up 1 empty switch in `\RAM128X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1711$894'.
+Removing empty process `RAM128X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1711$894'.
+Removing empty process `RAM64X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1602$883'.
+Found and cleaned up 1 empty switch in `\RAM64X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1606$846'.
+Removing empty process `RAM64X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1606$846'.
+Removing empty process `RAM32X1D_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1556$838'.
+Found and cleaned up 1 empty switch in `\RAM32X1D_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1560$819'.
+Removing empty process `RAM32X1D_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1560$819'.
+Removing empty process `RAM32X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1497$811'.
+Found and cleaned up 1 empty switch in `\RAM32X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1501$780'.
+Removing empty process `RAM32X1D.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:1501$780'.
+Removing empty process `FDPE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$646'.
+Found and cleaned up 1 empty switch in `\FDPE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:810$643'.
+Removing empty process `FDPE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:810$643'.
+Removing empty process `FDPE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$642'.
+Found and cleaned up 1 empty switch in `\FDPE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:769$640'.
+Removing empty process `FDPE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:769$640'.
+Removing empty process `FDCE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$628'.
+Found and cleaned up 1 empty switch in `\FDCE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:731$625'.
+Removing empty process `FDCE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:731$625'.
+Removing empty process `FDCE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$624'.
+Found and cleaned up 1 empty switch in `\FDCE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:690$622'.
+Removing empty process `FDCE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:690$622'.
+Removing empty process `FDSE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$610'.
+Found and cleaned up 2 empty switches in `\FDSE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:587$607'.
+Removing empty process `FDSE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:587$607'.
+Removing empty process `FDSE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$606'.
+Found and cleaned up 2 empty switches in `\FDSE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:554$603'.
+Removing empty process `FDSE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:554$603'.
+Removing empty process `FDRE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$588'.
+Found and cleaned up 2 empty switches in `\FDRE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:522$585'.
+Removing empty process `FDRE_1.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:522$585'.
+Removing empty process `FDRE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:0$584'.
+Found and cleaned up 2 empty switches in `\FDRE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:489$581'.
+Removing empty process `FDRE.$proc$/home/jacobdbrown4/yosys/share/xilinx/cells_sim.v:489$581'.
 Found and cleaned up 2 empty switches in `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.$proc$uart/mod_counter.sv:26$32'.
 Removing empty process `$paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.$proc$uart/mod_counter.sv:26$32'.
 Removing empty process `debounce.$proc$uart/debounce.sv:90$31'.
@@ -1650,14 +1650,14 @@ Removed 0 unused cells and 4 unused wires.
 
 7.18. Executing TECHMAP pass (map to technology primitives).
 
-7.18.1. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/mul2dsp.v
-Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/mul2dsp.v' to AST representation.
+7.18.1. Executing Verilog-2005 frontend: /home/jacobdbrown4/yosys/share/mul2dsp.v
+Parsing Verilog input from `/home/jacobdbrown4/yosys/share/mul2dsp.v' to AST representation.
 Generating RTLIL representation for module `\_80_mul'.
 Generating RTLIL representation for module `\_90_soft_mul'.
 Successfully finished Verilog frontend.
 
-7.18.2. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/xilinx/xc7_dsp_map.v
-Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/xilinx/xc7_dsp_map.v' to AST representation.
+7.18.2. Executing Verilog-2005 frontend: /home/jacobdbrown4/yosys/share/xilinx/xc7_dsp_map.v
+Parsing Verilog input from `/home/jacobdbrown4/yosys/share/xilinx/xc7_dsp_map.v' to AST representation.
 Generating RTLIL representation for module `\$__MUL25X18'.
 Successfully finished Verilog frontend.
 
@@ -1673,13 +1673,13 @@ No more expansions possible.
 
 7.22. Executing TECHMAP pass (map to technology primitives).
 
-7.22.1. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/cmp2lut.v
-Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/cmp2lut.v' to AST representation.
+7.22.1. Executing Verilog-2005 frontend: /home/jacobdbrown4/yosys/share/cmp2lut.v
+Parsing Verilog input from `/home/jacobdbrown4/yosys/share/cmp2lut.v' to AST representation.
 Generating RTLIL representation for module `\_90_lut_cmp_'.
 Successfully finished Verilog frontend.
 
-7.22.2. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/cmp2lcu.v
-Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/cmp2lcu.v' to AST representation.
+7.22.2. Executing Verilog-2005 frontend: /home/jacobdbrown4/yosys/share/cmp2lcu.v
+Parsing Verilog input from `/home/jacobdbrown4/yosys/share/cmp2lcu.v' to AST representation.
 Generating RTLIL representation for module `\_80_lcu_cmp_'.
 Generating RTLIL representation for module `\$__CMP2LCU'.
 Successfully finished Verilog frontend.
@@ -1816,8 +1816,8 @@ Finding unused cells or wires in module \tx_top..
 
 7.29. Executing TECHMAP pass (map to technology primitives).
 
-7.29.1. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/xilinx/lutrams_xc5v_map.v
-Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/xilinx/lutrams_xc5v_map.v' to AST representation.
+7.29.1. Executing Verilog-2005 frontend: /home/jacobdbrown4/yosys/share/xilinx/lutrams_xc5v_map.v
+Parsing Verilog input from `/home/jacobdbrown4/yosys/share/xilinx/lutrams_xc5v_map.v' to AST representation.
 Generating RTLIL representation for module `\$__XILINX_LUTRAM_SP_'.
 Generating RTLIL representation for module `\$__XILINX_LUTRAM_DP_'.
 Generating RTLIL representation for module `\$__XILINX_LUTRAM_QP_'.
@@ -1833,8 +1833,8 @@ No more expansions possible.
 
 7.30. Executing TECHMAP pass (map to technology primitives).
 
-7.30.1. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/xilinx/brams_xc6v_map.v
-Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/xilinx/brams_xc6v_map.v' to AST representation.
+7.30.1. Executing Verilog-2005 frontend: /home/jacobdbrown4/yosys/share/xilinx/brams_xc6v_map.v
+Parsing Verilog input from `/home/jacobdbrown4/yosys/share/xilinx/brams_xc6v_map.v' to AST representation.
 Generating RTLIL representation for module `\$__XILINX_BLOCKRAM_TDP_'.
 Generating RTLIL representation for module `\$__XILINX_BLOCKRAM_SDP_'.
 Successfully finished Verilog frontend.
@@ -1944,8 +1944,8 @@ Optimizing module tx_top.
 
 7.35. Executing TECHMAP pass (map to technology primitives).
 
-7.35.1. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/techmap.v
-Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/techmap.v' to AST representation.
+7.35.1. Executing Verilog-2005 frontend: /home/jacobdbrown4/yosys/share/techmap.v
+Parsing Verilog input from `/home/jacobdbrown4/yosys/share/techmap.v' to AST representation.
 Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
 Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
 Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
@@ -1972,8 +1972,8 @@ Generating RTLIL representation for module `\_90_demux'.
 Generating RTLIL representation for module `\_90_lut'.
 Successfully finished Verilog frontend.
 
-7.35.2. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/xilinx/arith_map.v
-Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/xilinx/arith_map.v' to AST representation.
+7.35.2. Executing Verilog-2005 frontend: /home/jacobdbrown4/yosys/share/xilinx/arith_map.v
+Parsing Verilog input from `/home/jacobdbrown4/yosys/share/xilinx/arith_map.v' to AST representation.
 Generating RTLIL representation for module `\_80_xilinx_lcu'.
 Generating RTLIL representation for module `\_80_xilinx_alu'.
 Successfully finished Verilog frontend.
@@ -2043,8 +2043,8 @@ Mapping port tx_top.tx_out using OBUF.
 
 7.38. Executing TECHMAP pass (map to technology primitives).
 
-7.38.1. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/techmap.v
-Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/techmap.v' to AST representation.
+7.38.1. Executing Verilog-2005 frontend: /home/jacobdbrown4/yosys/share/techmap.v
+Parsing Verilog input from `/home/jacobdbrown4/yosys/share/techmap.v' to AST representation.
 Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
 Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
 Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
@@ -2071,8 +2071,8 @@ Generating RTLIL representation for module `\_90_demux'.
 Generating RTLIL representation for module `\_90_lut'.
 Successfully finished Verilog frontend.
 
-7.38.2. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/xilinx/cells_map.v
-Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/xilinx/cells_map.v' to AST representation.
+7.38.2. Executing Verilog-2005 frontend: /home/jacobdbrown4/yosys/share/xilinx/cells_map.v
+Parsing Verilog input from `/home/jacobdbrown4/yosys/share/xilinx/cells_map.v' to AST representation.
 Generating RTLIL representation for module `\$__SHREG_'.
 Generating RTLIL representation for module `\$__XILINX_SHREG_'.
 Generating RTLIL representation for module `\$__XILINX_MUXF78'.
@@ -2208,8 +2208,8 @@ Removed 0 unused cells and 187 unused wires.
 
 7.42. Executing TECHMAP pass (map to technology primitives).
 
-7.42.1. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/xilinx/ff_map.v
-Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/xilinx/ff_map.v' to AST representation.
+7.42.1. Executing Verilog-2005 frontend: /home/jacobdbrown4/yosys/share/xilinx/ff_map.v
+Parsing Verilog input from `/home/jacobdbrown4/yosys/share/xilinx/ff_map.v' to AST representation.
 Generating RTLIL representation for module `\$_DFFE_NP0P_'.
 Generating RTLIL representation for module `\$_DFFE_PP0P_'.
 Generating RTLIL representation for module `\$_DFFE_NP1P_'.
@@ -2237,13 +2237,13 @@ No more expansions possible.
 
 7.44. Executing TECHMAP pass (map to technology primitives).
 
-7.44.1. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/xilinx/lut_map.v
-Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/xilinx/lut_map.v' to AST representation.
+7.44.1. Executing Verilog-2005 frontend: /home/jacobdbrown4/yosys/share/xilinx/lut_map.v
+Parsing Verilog input from `/home/jacobdbrown4/yosys/share/xilinx/lut_map.v' to AST representation.
 Generating RTLIL representation for module `\$lut'.
 Successfully finished Verilog frontend.
 
-7.44.2. Executing Verilog-2005 frontend: /home/jacobb00/yosys/yosys/share/xilinx/cells_map.v
-Parsing Verilog input from `/home/jacobb00/yosys/yosys/share/xilinx/cells_map.v' to AST representation.
+7.44.2. Executing Verilog-2005 frontend: /home/jacobdbrown4/yosys/share/xilinx/cells_map.v
+Parsing Verilog input from `/home/jacobdbrown4/yosys/share/xilinx/cells_map.v' to AST representation.
 Generating RTLIL representation for module `\$__SHREG_'.
 Generating RTLIL representation for module `\$__XILINX_SHREG_'.
 Generating RTLIL representation for module `\$__XILINX_MUXF78'.
@@ -2469,11 +2469,11 @@ Checking module tx_top...
 Found and reported 0 problems.
 
 9. Executing SCC pass (detecting logic loops).
-Found an SCC: $auto$ff.cc:262:slice$3026 $auto$ff.cc:262:slice$3027 $auto$ff.cc:262:slice$3028 $auto$ff.cc:262:slice$3029 $auto$ff.cc:262:slice$3030 $auto$ff.cc:262:slice$3031 $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[1].genblk1.carry4 $abc$3234$auto$blifparse.cc:515:parse_blif$3242 $auto$ff.cc:262:slice$3024 $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[0].genblk1.carry4 $auto$ff.cc:262:slice$3025 $auto$ff.cc:262:slice$3032 $auto$ff.cc:262:slice$3035 $auto$ff.cc:262:slice$3037 $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 $auto$ff.cc:262:slice$3039 $abc$3234$auto$blifparse.cc:515:parse_blif$3238 $auto$ff.cc:262:slice$3036 $abc$3234$auto$blifparse.cc:515:parse_blif$3239 $auto$ff.cc:262:slice$3038 $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[3].genblk1.carry4 $abc$3234$auto$blifparse.cc:515:parse_blif$3240 $auto$ff.cc:262:slice$3033 $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[2].genblk1.carry4 $auto$ff.cc:262:slice$3034 $auto$ff.cc:262:slice$3041 $abc$3234$auto$blifparse.cc:515:parse_blif$3237 $auto$ff.cc:262:slice$3042 $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[4].genblk1.carry4 $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7 $auto$ff.cc:262:slice$3040 $abc$3234$auto$blifparse.cc:515:parse_blif$3241 $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux8 $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7
+Found an SCC: $auto$ff.cc:262:slice$3025 $auto$ff.cc:262:slice$3026 $abc$3234$auto$blifparse.cc:515:parse_blif$3242 $auto$ff.cc:262:slice$3024 $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[0].genblk1.carry4 $auto$ff.cc:262:slice$3027 $auto$ff.cc:262:slice$3029 $auto$ff.cc:262:slice$3030 $auto$ff.cc:262:slice$3032 $auto$ff.cc:262:slice$3035 $auto$ff.cc:262:slice$3033 $auto$ff.cc:262:slice$3037 $auto$ff.cc:262:slice$3041 $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7 $auto$ff.cc:262:slice$3040 $abc$3234$auto$blifparse.cc:515:parse_blif$3237 $auto$ff.cc:262:slice$3042 $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[4].genblk1.carry4 $abc$3234$auto$blifparse.cc:515:parse_blif$3238 $auto$ff.cc:262:slice$3036 $abc$3234$auto$blifparse.cc:515:parse_blif$3239 $auto$ff.cc:262:slice$3038 $auto$ff.cc:262:slice$3039 $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[3].genblk1.carry4 $auto$ff.cc:262:slice$3034 $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[2].genblk1.carry4 $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[1].genblk1.carry4 $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux8 $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7 $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 $auto$ff.cc:262:slice$3028 $abc$3234$auto$blifparse.cc:515:parse_blif$3241 $abc$3234$auto$blifparse.cc:515:parse_blif$3240 $auto$ff.cc:262:slice$3031
 Found 1 SCCs in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter.
-Found an SCC: $auto$ff.cc:262:slice$2944 $abc$3243$auto$blifparse.cc:515:parse_blif$3244 $auto$ff.cc:262:slice$2942 $abc$3243$auto$blifparse.cc:515:parse_blif$3247 $abc$3243$auto$blifparse.cc:515:parse_blif$3248 $auto$ff.cc:262:slice$2945 $abc$3243$auto$blifparse.cc:515:parse_blif$3245 $auto$ff.cc:262:slice$2943 $abc$3243$auto$blifparse.cc:515:parse_blif$3246 timer
+Found an SCC: $auto$ff.cc:262:slice$2942 $abc$3243$auto$blifparse.cc:515:parse_blif$3247 $auto$ff.cc:262:slice$2944 $abc$3243$auto$blifparse.cc:515:parse_blif$3244 timer $abc$3243$auto$blifparse.cc:515:parse_blif$3248 $auto$ff.cc:262:slice$2945 $abc$3243$auto$blifparse.cc:515:parse_blif$3245 $abc$3243$auto$blifparse.cc:515:parse_blif$3246 $auto$ff.cc:262:slice$2943
 Found 1 SCCs in module debounce.
-Found an SCC: $auto$ff.cc:262:slice$2744 $auto$ff.cc:262:slice$2745 $auto$ff.cc:262:slice$2743 $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[0].genblk1.carry4 $abc$3250$auto$blifparse.cc:515:parse_blif$3282 $auto$ff.cc:262:slice$2742 $auto$ff.cc:262:slice$2748 $abc$3250$auto$blifparse.cc:515:parse_blif$3253.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 $auto$ff.cc:262:slice$2749 $auto$ff.cc:262:slice$2753 $auto$ff.cc:262:slice$2750 $abc$3250$auto$blifparse.cc:515:parse_blif$3259 $auto$ff.cc:262:slice$2755 $abc$3250$auto$blifparse.cc:515:parse_blif$3269 $auto$ff.cc:262:slice$2754 $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[3].genblk1.carry4 $abc$3250$auto$blifparse.cc:515:parse_blif$3270 $auto$ff.cc:262:slice$2751 $abc$3250$auto$blifparse.cc:515:parse_blif$3267 $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 $abc$3250$auto$blifparse.cc:515:parse_blif$3252.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7 $abc$3250$auto$blifparse.cc:515:parse_blif$3252.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 $auto$ff.cc:262:slice$2752 $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[2].genblk1.carry4 $abc$3250$auto$blifparse.cc:515:parse_blif$3268 $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7 $abc$3250$auto$blifparse.cc:515:parse_blif$3253.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7 $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux8 $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7 $auto$ff.cc:262:slice$2746 $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[1].genblk1.carry4 $auto$ff.cc:262:slice$2747 $abc$3250$auto$blifparse.cc:515:parse_blif$3265 $abc$3250$auto$blifparse.cc:515:parse_blif$3262 $abc$3250$auto$blifparse.cc:515:parse_blif$3256 $auto$ff.cc:262:slice$2737 $abc$3250$auto$blifparse.cc:515:parse_blif$3251 $auto$ff.cc:262:slice$2734 $abc$3250$auto$blifparse.cc:515:parse_blif$3257 $auto$ff.cc:262:slice$2738 $abc$3250$auto$blifparse.cc:515:parse_blif$3254 $abc$3250$auto$blifparse.cc:515:parse_blif$3261 $auto$ff.cc:262:slice$2794 $auto$ff.cc:262:slice$2796 $auto$alumacc.cc:485:replace_alu$2161.genblk1.slice[0].genblk1.carry4 $abc$3250$auto$blifparse.cc:515:parse_blif$3281 $auto$ff.cc:262:slice$2793 $abc$3250$auto$blifparse.cc:515:parse_blif$3271 $abc$3250$auto$blifparse.cc:515:parse_blif$3272 $auto$ff.cc:262:slice$2735 $abc$3250$auto$blifparse.cc:515:parse_blif$3260 $abc$3250$auto$blifparse.cc:515:parse_blif$3255 $auto$ff.cc:262:slice$2795 $abc$3250$auto$blifparse.cc:515:parse_blif$3266 $auto$ff.cc:262:slice$2736 $abc$3250$auto$blifparse.cc:515:parse_blif$3263 $abc$3250$auto$blifparse.cc:515:parse_blif$3264 $auto$ff.cc:262:slice$2733
+Found an SCC: $auto$ff.cc:262:slice$2745 $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7 $auto$ff.cc:262:slice$2746 $auto$ff.cc:262:slice$2747 $auto$ff.cc:262:slice$2750 $auto$ff.cc:262:slice$2753 $auto$ff.cc:262:slice$2751 $auto$ff.cc:262:slice$2752 $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[2].genblk1.carry4 $abc$3250$auto$blifparse.cc:515:parse_blif$3270 $auto$ff.cc:262:slice$2749 $auto$ff.cc:262:slice$2748 $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[1].genblk1.carry4 $auto$ff.cc:262:slice$2743 $abc$3250$auto$blifparse.cc:515:parse_blif$3267 $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7 $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 $abc$3250$auto$blifparse.cc:515:parse_blif$3282 $abc$3250$auto$blifparse.cc:515:parse_blif$3253.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7 $abc$3250$auto$blifparse.cc:515:parse_blif$3253.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 $auto$ff.cc:262:slice$2742 $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[0].genblk1.carry4 $auto$ff.cc:262:slice$2744 $abc$3250$auto$blifparse.cc:515:parse_blif$3269 $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux8 $abc$3250$auto$blifparse.cc:515:parse_blif$3262 $auto$ff.cc:262:slice$2736 $abc$3250$auto$blifparse.cc:515:parse_blif$3263 $abc$3250$auto$blifparse.cc:515:parse_blif$3259 $abc$3250$auto$blifparse.cc:515:parse_blif$3266 $auto$ff.cc:262:slice$2795 $auto$ff.cc:262:slice$2794 $auto$ff.cc:262:slice$2796 $auto$alumacc.cc:485:replace_alu$2161.genblk1.slice[0].genblk1.carry4 $abc$3250$auto$blifparse.cc:515:parse_blif$3281 $abc$3250$auto$blifparse.cc:515:parse_blif$3272 $auto$ff.cc:262:slice$2734 $abc$3250$auto$blifparse.cc:515:parse_blif$3257 $auto$ff.cc:262:slice$2738 $abc$3250$auto$blifparse.cc:515:parse_blif$3254 $abc$3250$auto$blifparse.cc:515:parse_blif$3261 $auto$ff.cc:262:slice$2735 $abc$3250$auto$blifparse.cc:515:parse_blif$3260 $abc$3250$auto$blifparse.cc:515:parse_blif$3255 $auto$ff.cc:262:slice$2793 $abc$3250$auto$blifparse.cc:515:parse_blif$3271 $abc$3250$auto$blifparse.cc:515:parse_blif$3268 $auto$ff.cc:262:slice$2755 $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[3].genblk1.carry4 $auto$ff.cc:262:slice$2754 $abc$3250$auto$blifparse.cc:515:parse_blif$3265 $abc$3250$auto$blifparse.cc:515:parse_blif$3264 $auto$ff.cc:262:slice$2733 $abc$3250$auto$blifparse.cc:515:parse_blif$3256 $auto$ff.cc:262:slice$2737 $abc$3250$auto$blifparse.cc:515:parse_blif$3251 $abc$3250$auto$blifparse.cc:515:parse_blif$3252.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7 $abc$3250$auto$blifparse.cc:515:parse_blif$3252.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1
 Found 1 SCCs in module tx.
 Found 0 SCCs in module tx_top.
 Found 3 SCCs.
@@ -2919,20 +2919,11 @@ Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3290 of type INV will be replica
 Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3291 of type INV will be replicated
 Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3292 of type INV will be replicated
 Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3293 of type INV will be replicated
-Cell $auto$clkbufmap.cc:261:execute$3414 of type BUFG will be replicated
 Cell $auto$ff.cc:262:slice$2591 of type FDRE will be replicated
 Cell $auto$ff.cc:262:slice$2592 of type FDRE will be replicated
 Cell $iopadmap$tx_top.btnc of type IBUF will be replicated
 Cell $iopadmap$tx_top.btnu of type IBUF will be replicated
 Cell $iopadmap$tx_top.clk of type IBUF will be replicated
-Cell $iopadmap$tx_top.led of type OBUF will be replicated
-Cell $iopadmap$tx_top.led_1 of type OBUF will be replicated
-Cell $iopadmap$tx_top.led_2 of type OBUF will be replicated
-Cell $iopadmap$tx_top.led_3 of type OBUF will be replicated
-Cell $iopadmap$tx_top.led_4 of type OBUF will be replicated
-Cell $iopadmap$tx_top.led_5 of type OBUF will be replicated
-Cell $iopadmap$tx_top.led_6 of type OBUF will be replicated
-Cell $iopadmap$tx_top.led_7 of type OBUF will be replicated
 Cell $iopadmap$tx_top.sw of type IBUF will be replicated
 Cell $iopadmap$tx_top.sw_1 of type IBUF will be replicated
 Cell $iopadmap$tx_top.sw_2 of type IBUF will be replicated
@@ -2941,7 +2932,6 @@ Cell $iopadmap$tx_top.sw_4 of type IBUF will be replicated
 Cell $iopadmap$tx_top.sw_5 of type IBUF will be replicated
 Cell $iopadmap$tx_top.sw_6 of type IBUF will be replicated
 Cell $iopadmap$tx_top.sw_7 of type IBUF will be replicated
-Cell $iopadmap$tx_top.tx_out of type OBUF will be replicated
 Checking wires for cell $abc$3283$auto$blifparse.cc:515:parse_blif$3284
 	Wire reset[0] will be replicated
 Checking wires for cell $abc$3283$auto$blifparse.cc:515:parse_blif$3285
@@ -2962,8 +2952,6 @@ Checking wires for cell $abc$3283$auto$blifparse.cc:515:parse_blif$3292
 	Wire $abc$3283$not$uart/tx_top.sv:67$4_Y[6][0] will be replicated
 Checking wires for cell $abc$3283$auto$blifparse.cc:515:parse_blif$3293
 	Wire $abc$3283$not$uart/tx_top.sv:67$4_Y[7][0] will be replicated
-Checking wires for cell $auto$clkbufmap.cc:261:execute$3414
-	Wire $iopadmap$clk[0] will be replicated
 Checking wires for cell $auto$ff.cc:262:slice$2591
 	Wire btnc_r[0] will be replicated
 Checking wires for cell $auto$ff.cc:262:slice$2592
@@ -2974,22 +2962,6 @@ Checking wires for cell $iopadmap$tx_top.btnu
 	Wire $techmap3352$abc$3283$auto$blifparse.cc:515:parse_blif$3284.A[0] will be replicated
 Checking wires for cell $iopadmap$tx_top.clk
 	Wire $auto$clkbufmap.cc:262:execute$3415[0] will be replicated
-Checking wires for cell $iopadmap$tx_top.led
-	Wire led[0] will be replicated
-Checking wires for cell $iopadmap$tx_top.led_1
-	Wire led[1] will be replicated
-Checking wires for cell $iopadmap$tx_top.led_2
-	Wire led[2] will be replicated
-Checking wires for cell $iopadmap$tx_top.led_3
-	Wire led[3] will be replicated
-Checking wires for cell $iopadmap$tx_top.led_4
-	Wire led[4] will be replicated
-Checking wires for cell $iopadmap$tx_top.led_5
-	Wire led[5] will be replicated
-Checking wires for cell $iopadmap$tx_top.led_6
-	Wire led[6] will be replicated
-Checking wires for cell $iopadmap$tx_top.led_7
-	Wire led[7] will be replicated
 Checking wires for cell $iopadmap$tx_top.sw
 	Wire $techmap3347$abc$3283$auto$blifparse.cc:515:parse_blif$3286.A[0] will be replicated
 Checking wires for cell $iopadmap$tx_top.sw_1
@@ -3006,8 +2978,6 @@ Checking wires for cell $iopadmap$tx_top.sw_6
 	Wire $techmap3349$abc$3283$auto$blifparse.cc:515:parse_blif$3292.A[0] will be replicated
 Checking wires for cell $iopadmap$tx_top.sw_7
 	Wire $techmap3348$abc$3283$auto$blifparse.cc:515:parse_blif$3293.A[0] will be replicated
-Checking wires for cell $iopadmap$tx_top.tx_out
-	Wire tx_out[0] will be replicated
 
 Identifying additional wires to replicate in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
 Identifying additional wires to replicate in module debounce
@@ -3605,9 +3575,7 @@ Replicated wire $abc$3243$auto$fsm_map.cc:170:map_fsm$2041[2] into wire \$abc$32
 Replicated wire $abc$3243$auto$fsm_map.cc:170:map_fsm$2041[3] into wire \$abc$3243$auto$fsm_map.cc:170:map_fsm$2041[3]_TMR_0
 Replicated wire $abc$3243$auto$fsm_map.cc:170:map_fsm$2041[3] into wire \$abc$3243$auto$fsm_map.cc:170:map_fsm$2041[3]_TMR_1
 Replicated wire $abc$3243$auto$fsm_map.cc:170:map_fsm$2041[3] into wire \$abc$3243$auto$fsm_map.cc:170:map_fsm$2041[3]_TMR_2
-Replicated wire clk into wire clk_TMR_0
-Replicated wire clk into wire clk_TMR_1
-Replicated wire clk into wire clk_TMR_2
+Wire clk from module debounce is only copied over
 Replicated wire clrTimer into wire clrTimer_TMR_0
 Replicated wire clrTimer into wire clrTimer_TMR_1
 Replicated wire clrTimer into wire clrTimer_TMR_2
@@ -3776,9 +3744,7 @@ Replicated wire Sout into wire Sout_TMR_2
 Replicated wire bitCount into wire bitCount_TMR_0
 Replicated wire bitCount into wire bitCount_TMR_1
 Replicated wire bitCount into wire bitCount_TMR_2
-Replicated wire clk into wire clk_TMR_0
-Replicated wire clk into wire clk_TMR_1
-Replicated wire clk into wire clk_TMR_2
+Wire clk from module tx is only copied over
 Replicated wire clrBit into wire clrBit_TMR_0
 Replicated wire clrBit into wire clrBit_TMR_1
 Replicated wire clrBit into wire clrBit_TMR_2
@@ -4045,9 +4011,7 @@ Replicated wire $abc$3283$not$uart/tx_top.sv:67$4_Y[7] into wire \$abc$3283$not$
 Replicated wire $auto$clkbufmap.cc:262:execute$3415 into wire \$auto$clkbufmap.cc:262:execute$3415_TMR_0
 Replicated wire $auto$clkbufmap.cc:262:execute$3415 into wire \$auto$clkbufmap.cc:262:execute$3415_TMR_1
 Replicated wire $auto$clkbufmap.cc:262:execute$3415 into wire \$auto$clkbufmap.cc:262:execute$3415_TMR_2
-Replicated wire $iopadmap$clk into wire \$iopadmap$clk_TMR_0
-Replicated wire $iopadmap$clk into wire \$iopadmap$clk_TMR_1
-Replicated wire $iopadmap$clk into wire \$iopadmap$clk_TMR_2
+Wire $iopadmap$clk from module tx_top is only copied over
 Replicated wire $iopadmap$tx_out into wire \$iopadmap$tx_out_TMR_0
 Replicated wire $iopadmap$tx_out into wire \$iopadmap$tx_out_TMR_1
 Replicated wire $iopadmap$tx_out into wire \$iopadmap$tx_out_TMR_2
@@ -4090,9 +4054,7 @@ Replicated wire btnc_r2 into wire btnc_r2_TMR_1
 Replicated wire btnc_r2 into wire btnc_r2_TMR_2
 Wire btnu from module tx_top is only copied over
 Wire clk from module tx_top is only copied over
-Replicated wire led into wire led_TMR_0
-Replicated wire led into wire led_TMR_1
-Replicated wire led into wire led_TMR_2
+Wire led from module tx_top is only copied over
 Replicated wire reset into wire reset_TMR_0
 Replicated wire reset into wire reset_TMR_1
 Replicated wire reset into wire reset_TMR_2
@@ -4100,9 +4062,7 @@ Replicated wire send_character into wire send_character_TMR_0
 Replicated wire send_character into wire send_character_TMR_1
 Replicated wire send_character into wire send_character_TMR_2
 Wire sw from module tx_top is only copied over
-Replicated wire tx_out into wire tx_out_TMR_0
-Replicated wire tx_out into wire tx_out_TMR_1
-Replicated wire tx_out into wire tx_out_TMR_2
+Wire tx_out from module tx_top is only copied over
 Replicating cells in module tx_top
 Replicated cell$abc$3283$auto$blifparse.cc:515:parse_blif$3284 into cell $abc$3283$auto$blifparse.cc:515:parse_blif$3284_TMR_0
 Replicated cell$abc$3283$auto$blifparse.cc:515:parse_blif$3284 into cell $abc$3283$auto$blifparse.cc:515:parse_blif$3284_TMR_1
@@ -4134,9 +4094,6 @@ Replicated cell$abc$3283$auto$blifparse.cc:515:parse_blif$3292 into cell $abc$32
 Replicated cell$abc$3283$auto$blifparse.cc:515:parse_blif$3293 into cell $abc$3283$auto$blifparse.cc:515:parse_blif$3293_TMR_0
 Replicated cell$abc$3283$auto$blifparse.cc:515:parse_blif$3293 into cell $abc$3283$auto$blifparse.cc:515:parse_blif$3293_TMR_1
 Replicated cell$abc$3283$auto$blifparse.cc:515:parse_blif$3293 into cell $abc$3283$auto$blifparse.cc:515:parse_blif$3293_TMR_2
-Replicated cell$auto$clkbufmap.cc:261:execute$3414 into cell $auto$clkbufmap.cc:261:execute$3414_TMR_0
-Replicated cell$auto$clkbufmap.cc:261:execute$3414 into cell $auto$clkbufmap.cc:261:execute$3414_TMR_1
-Replicated cell$auto$clkbufmap.cc:261:execute$3414 into cell $auto$clkbufmap.cc:261:execute$3414_TMR_2
 Replicated cell$auto$ff.cc:262:slice$2591 into cell $auto$ff.cc:262:slice$2591_TMR_0
 Replicated cell$auto$ff.cc:262:slice$2591 into cell $auto$ff.cc:262:slice$2591_TMR_1
 Replicated cell$auto$ff.cc:262:slice$2591 into cell $auto$ff.cc:262:slice$2591_TMR_2
@@ -4152,30 +4109,6 @@ Replicated cell$iopadmap$tx_top.btnu into cell $iopadmap$tx_top.btnu_TMR_2
 Replicated cell$iopadmap$tx_top.clk into cell $iopadmap$tx_top.clk_TMR_0
 Replicated cell$iopadmap$tx_top.clk into cell $iopadmap$tx_top.clk_TMR_1
 Replicated cell$iopadmap$tx_top.clk into cell $iopadmap$tx_top.clk_TMR_2
-Replicated cell$iopadmap$tx_top.led into cell $iopadmap$tx_top.led_TMR_0
-Replicated cell$iopadmap$tx_top.led into cell $iopadmap$tx_top.led_TMR_1
-Replicated cell$iopadmap$tx_top.led into cell $iopadmap$tx_top.led_TMR_2
-Replicated cell$iopadmap$tx_top.led_1 into cell $iopadmap$tx_top.led_1_TMR_0
-Replicated cell$iopadmap$tx_top.led_1 into cell $iopadmap$tx_top.led_1_TMR_1
-Replicated cell$iopadmap$tx_top.led_1 into cell $iopadmap$tx_top.led_1_TMR_2
-Replicated cell$iopadmap$tx_top.led_2 into cell $iopadmap$tx_top.led_2_TMR_0
-Replicated cell$iopadmap$tx_top.led_2 into cell $iopadmap$tx_top.led_2_TMR_1
-Replicated cell$iopadmap$tx_top.led_2 into cell $iopadmap$tx_top.led_2_TMR_2
-Replicated cell$iopadmap$tx_top.led_3 into cell $iopadmap$tx_top.led_3_TMR_0
-Replicated cell$iopadmap$tx_top.led_3 into cell $iopadmap$tx_top.led_3_TMR_1
-Replicated cell$iopadmap$tx_top.led_3 into cell $iopadmap$tx_top.led_3_TMR_2
-Replicated cell$iopadmap$tx_top.led_4 into cell $iopadmap$tx_top.led_4_TMR_0
-Replicated cell$iopadmap$tx_top.led_4 into cell $iopadmap$tx_top.led_4_TMR_1
-Replicated cell$iopadmap$tx_top.led_4 into cell $iopadmap$tx_top.led_4_TMR_2
-Replicated cell$iopadmap$tx_top.led_5 into cell $iopadmap$tx_top.led_5_TMR_0
-Replicated cell$iopadmap$tx_top.led_5 into cell $iopadmap$tx_top.led_5_TMR_1
-Replicated cell$iopadmap$tx_top.led_5 into cell $iopadmap$tx_top.led_5_TMR_2
-Replicated cell$iopadmap$tx_top.led_6 into cell $iopadmap$tx_top.led_6_TMR_0
-Replicated cell$iopadmap$tx_top.led_6 into cell $iopadmap$tx_top.led_6_TMR_1
-Replicated cell$iopadmap$tx_top.led_6 into cell $iopadmap$tx_top.led_6_TMR_2
-Replicated cell$iopadmap$tx_top.led_7 into cell $iopadmap$tx_top.led_7_TMR_0
-Replicated cell$iopadmap$tx_top.led_7 into cell $iopadmap$tx_top.led_7_TMR_1
-Replicated cell$iopadmap$tx_top.led_7 into cell $iopadmap$tx_top.led_7_TMR_2
 Replicated cell$iopadmap$tx_top.sw into cell $iopadmap$tx_top.sw_TMR_0
 Replicated cell$iopadmap$tx_top.sw into cell $iopadmap$tx_top.sw_TMR_1
 Replicated cell$iopadmap$tx_top.sw into cell $iopadmap$tx_top.sw_TMR_2
@@ -4200,9 +4133,6 @@ Replicated cell$iopadmap$tx_top.sw_6 into cell $iopadmap$tx_top.sw_6_TMR_2
 Replicated cell$iopadmap$tx_top.sw_7 into cell $iopadmap$tx_top.sw_7_TMR_0
 Replicated cell$iopadmap$tx_top.sw_7 into cell $iopadmap$tx_top.sw_7_TMR_1
 Replicated cell$iopadmap$tx_top.sw_7 into cell $iopadmap$tx_top.sw_7_TMR_2
-Replicated cell$iopadmap$tx_top.tx_out into cell $iopadmap$tx_top.tx_out_TMR_0
-Replicated cell$iopadmap$tx_top.tx_out into cell $iopadmap$tx_top.tx_out_TMR_1
-Replicated cell$iopadmap$tx_top.tx_out into cell $iopadmap$tx_top.tx_out_TMR_2
 Connecting wire to wire connections...
 
 Fixing connections for non leaf cell named timer of type $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
@@ -4213,131 +4143,554 @@ Inserting Voters
 Initializing Voter Information
 Voter type is LUT3
 Creating wire map for module tx_top
-Identifying reduction points in module tx_top
 Identifying points after ff in module tx_top
-$auto$ff.cc:262:slice$2592_TMR_2 Port Q drives sigbit with wire btnc_r2_TMR_2
-$auto$ff.cc:262:slice$2592_TMR_1 Port Q drives sigbit with wire btnc_r2_TMR_1
-$auto$ff.cc:262:slice$2592_TMR_0 Port Q drives sigbit with wire btnc_r2_TMR_0
-$auto$ff.cc:262:slice$2591_TMR_2 Port Q drives sigbit with wire btnc_r_TMR_2
-$auto$ff.cc:262:slice$2591_TMR_1 Port Q drives sigbit with wire btnc_r_TMR_1
-$auto$ff.cc:262:slice$2591_TMR_0 Port Q drives sigbit with wire btnc_r_TMR_0
+Cell tx_inst of type tx doesn't have scc_attr
+Cell debounce_inst of type debounce doesn't have scc_attr
+Cell $iopadmap$tx_top.tx_out of type OBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_7_TMR_2 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_7_TMR_1 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_7_TMR_0 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_6_TMR_2 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_6_TMR_1 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_6_TMR_0 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_5_TMR_2 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_5_TMR_1 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_5_TMR_0 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_4_TMR_2 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_4_TMR_1 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_4_TMR_0 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_3_TMR_2 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_3_TMR_1 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_3_TMR_0 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_2_TMR_2 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_2_TMR_1 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_2_TMR_0 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_1_TMR_2 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_1_TMR_1 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_1_TMR_0 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_TMR_2 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_TMR_1 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.sw_TMR_0 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.led_7 of type OBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.led_6 of type OBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.led_5 of type OBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.led_4 of type OBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.led_3 of type OBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.led_2 of type OBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.led_1 of type OBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.led of type OBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.clk_TMR_2 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.clk_TMR_1 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.clk_TMR_0 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.btnu_TMR_2 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.btnu_TMR_1 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.btnu_TMR_0 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.btnc_TMR_2 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.btnc_TMR_1 of type IBUF doesn't have scc_attr
+Cell $iopadmap$tx_top.btnc_TMR_0 of type IBUF doesn't have scc_attr
+Cell $auto$ff.cc:262:slice$2592_TMR_2 of type FDRE doesn't have scc_attr
+Cell $auto$ff.cc:262:slice$2592_TMR_1 of type FDRE doesn't have scc_attr
+Cell $auto$ff.cc:262:slice$2592_TMR_0 of type FDRE doesn't have scc_attr
+Cell $auto$ff.cc:262:slice$2591_TMR_2 of type FDRE doesn't have scc_attr
+Cell $auto$ff.cc:262:slice$2591_TMR_1 of type FDRE doesn't have scc_attr
+Cell $auto$ff.cc:262:slice$2591_TMR_0 of type FDRE doesn't have scc_attr
+Cell $auto$clkbufmap.cc:261:execute$3414 of type BUFG doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3293_TMR_2 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3293_TMR_1 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3293_TMR_0 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3292_TMR_2 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3292_TMR_1 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3292_TMR_0 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3291_TMR_2 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3291_TMR_1 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3291_TMR_0 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3290_TMR_2 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3290_TMR_1 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3290_TMR_0 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3289_TMR_2 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3289_TMR_1 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3289_TMR_0 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3288_TMR_2 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3288_TMR_1 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3288_TMR_0 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3287_TMR_2 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3287_TMR_1 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3287_TMR_0 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3286_TMR_2 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3286_TMR_1 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3286_TMR_0 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3285_TMR_2 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3285_TMR_1 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3285_TMR_0 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3284_TMR_2 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3284_TMR_1 of type INV doesn't have scc_attr
+Cell $abc$3283$auto$blifparse.cc:515:parse_blif$3284_TMR_0 of type INV doesn't have scc_attr
 Removing redundant reduction voters...
 Inserting ff voters
-Added ff voter: \btnc_r2_0_VOTER_TMR_0
-	Connections:
-		Port: O is connected to btnc_r2_0_VOTER_wire_TMR_0
-		Port: I2 is connected to btnc_r2_TMR_2
-		Port: I1 is connected to btnc_r2_TMR_1
-		Port: I0 is connected to btnc_r2_TMR_0
-Added ff voter: \btnc_r2_0_VOTER_TMR_1
-	Connections:
-		Port: O is connected to btnc_r2_0_VOTER_wire_TMR_1
-		Port: I2 is connected to btnc_r2_TMR_2
-		Port: I1 is connected to btnc_r2_TMR_1
-		Port: I0 is connected to btnc_r2_TMR_0
-Added ff voter: \btnc_r2_0_VOTER_TMR_2
-	Connections:
-		Port: O is connected to btnc_r2_0_VOTER_wire_TMR_2
-		Port: I2 is connected to btnc_r2_TMR_2
-		Port: I1 is connected to btnc_r2_TMR_1
-		Port: I0 is connected to btnc_r2_TMR_0
-Added ff voter: \btnc_r_0_VOTER_TMR_0
-	Connections:
-		Port: O is connected to btnc_r_0_VOTER_wire_TMR_0
-		Port: I2 is connected to btnc_r_TMR_2
-		Port: I1 is connected to btnc_r_TMR_1
-		Port: I0 is connected to btnc_r_TMR_0
-Added ff voter: \btnc_r_0_VOTER_TMR_1
-	Connections:
-		Port: O is connected to btnc_r_0_VOTER_wire_TMR_1
-		Port: I2 is connected to btnc_r_TMR_2
-		Port: I1 is connected to btnc_r_TMR_1
-		Port: I0 is connected to btnc_r_TMR_0
-Added ff voter: \btnc_r_0_VOTER_TMR_2
-	Connections:
-		Port: O is connected to btnc_r_0_VOTER_wire_TMR_2
-		Port: I2 is connected to btnc_r_TMR_2
-		Port: I1 is connected to btnc_r_TMR_1
-		Port: I0 is connected to btnc_r_TMR_0
-inserting reduction voters
 Creating wire map for module tx
-Identifying reduction points in module tx
 Identifying points after ff in module tx
-$auto$ff.cc:262:slice$2797_TMR_2 Port Q drives sigbit with wire Sout_TMR_2
-$auto$ff.cc:262:slice$2797_TMR_1 Port Q drives sigbit with wire Sout_TMR_1
-$auto$ff.cc:262:slice$2797_TMR_0 Port Q drives sigbit with wire Sout_TMR_0
+Cell $auto$ff.cc:262:slice$2797_TMR_2 of type FDRE doesn't have scc_attr
+Cell $auto$ff.cc:262:slice$2797_TMR_1 of type FDRE doesn't have scc_attr
+Cell $auto$ff.cc:262:slice$2797_TMR_0 of type FDRE doesn't have scc_attr
+Cell $auto$ff.cc:262:slice$2796_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2796_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2796_TMR_2 Port Q drives sigbit with wire bitCount_TMR_2
+Cell $auto$ff.cc:262:slice$2796_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2796_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2796_TMR_1 Port Q drives sigbit with wire bitCount_TMR_1
+Cell $auto$ff.cc:262:slice$2796_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2796_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2796_TMR_0 Port Q drives sigbit with wire bitCount_TMR_0
+Cell $auto$ff.cc:262:slice$2795_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2795_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2795_TMR_2 Port Q drives sigbit with wire bitCount_TMR_2
+Cell $auto$ff.cc:262:slice$2795_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2795_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2795_TMR_1 Port Q drives sigbit with wire bitCount_TMR_1
+Cell $auto$ff.cc:262:slice$2795_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2795_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2795_TMR_0 Port Q drives sigbit with wire bitCount_TMR_0
+Cell $auto$ff.cc:262:slice$2794_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2794_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2794_TMR_2 Port Q drives sigbit with wire bitCount_TMR_2
+Cell $auto$ff.cc:262:slice$2794_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2794_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2794_TMR_1 Port Q drives sigbit with wire bitCount_TMR_1
+Cell $auto$ff.cc:262:slice$2794_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2794_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2794_TMR_0 Port Q drives sigbit with wire bitCount_TMR_0
+Cell $auto$ff.cc:262:slice$2793_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2793_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2793_TMR_2 Port Q drives sigbit with wire bitCount_TMR_2
+Cell $auto$ff.cc:262:slice$2793_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2793_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2793_TMR_1 Port Q drives sigbit with wire bitCount_TMR_1
+Cell $auto$ff.cc:262:slice$2793_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2793_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2793_TMR_0 Port Q drives sigbit with wire bitCount_TMR_0
+Cell $auto$ff.cc:262:slice$2755_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2755_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2755_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$2755_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2755_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2755_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$2755_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2755_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2755_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$2754_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2754_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2754_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$2754_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2754_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2754_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$2754_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2754_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2754_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$2753_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2753_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2753_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$2753_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2753_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2753_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$2753_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2753_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2753_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$2752_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2752_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2752_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$2752_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2752_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2752_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$2752_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2752_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2752_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$2751_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2751_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2751_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$2751_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2751_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2751_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$2751_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2751_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2751_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$2750_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2750_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2750_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$2750_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2750_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2750_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$2750_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2750_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2750_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$2749_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2749_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2749_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$2749_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2749_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2749_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$2749_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2749_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2749_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$2748_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2748_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2748_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$2748_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2748_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2748_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$2748_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2748_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2748_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$2747_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2747_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2747_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$2747_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2747_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2747_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$2747_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2747_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2747_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$2746_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2746_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2746_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$2746_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2746_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2746_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$2746_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2746_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2746_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$2745_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2745_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2745_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$2745_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2745_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2745_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$2745_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2745_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2745_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$2744_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2744_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2744_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$2744_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2744_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2744_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$2744_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2744_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2744_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$2743_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2743_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2743_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$2743_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2743_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2743_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$2743_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2743_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2743_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$2742_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2742_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2742_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$2742_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2742_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2742_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$2742_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2742_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2742_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$2738_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2738_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2738_TMR_2 Port Q drives sigbit with wire cs_TMR_2
+Cell $auto$ff.cc:262:slice$2738_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2738_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2738_TMR_1 Port Q drives sigbit with wire cs_TMR_1
+Cell $auto$ff.cc:262:slice$2738_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2738_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2738_TMR_0 Port Q drives sigbit with wire cs_TMR_0
+Cell $auto$ff.cc:262:slice$2737_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2737_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2737_TMR_2 Port Q drives sigbit with wire cs_TMR_2
+Cell $auto$ff.cc:262:slice$2737_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2737_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2737_TMR_1 Port Q drives sigbit with wire cs_TMR_1
+Cell $auto$ff.cc:262:slice$2737_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2737_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2737_TMR_0 Port Q drives sigbit with wire cs_TMR_0
+Cell $auto$ff.cc:262:slice$2736_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2736_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2736_TMR_2 Port Q drives sigbit with wire cs_TMR_2
+Cell $auto$ff.cc:262:slice$2736_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2736_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2736_TMR_1 Port Q drives sigbit with wire cs_TMR_1
+Cell $auto$ff.cc:262:slice$2736_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2736_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2736_TMR_0 Port Q drives sigbit with wire cs_TMR_0
+Cell $auto$ff.cc:262:slice$2735_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2735_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2735_TMR_2 Port Q drives sigbit with wire cs_TMR_2
+Cell $auto$ff.cc:262:slice$2735_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2735_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2735_TMR_1 Port Q drives sigbit with wire cs_TMR_1
+Cell $auto$ff.cc:262:slice$2735_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2735_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2735_TMR_0 Port Q drives sigbit with wire cs_TMR_0
+Cell $auto$ff.cc:262:slice$2734_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2734_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2734_TMR_2 Port Q drives sigbit with wire cs_TMR_2
+Cell $auto$ff.cc:262:slice$2734_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2734_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2734_TMR_1 Port Q drives sigbit with wire cs_TMR_1
+Cell $auto$ff.cc:262:slice$2734_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2734_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2734_TMR_0 Port Q drives sigbit with wire cs_TMR_0
+Cell $auto$ff.cc:262:slice$2733_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2733_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2733_TMR_2 Port Q drives sigbit with wire cs_TMR_2
+Cell $auto$ff.cc:262:slice$2733_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2733_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2733_TMR_1 Port Q drives sigbit with wire cs_TMR_1
+Cell $auto$ff.cc:262:slice$2733_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2733_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2733_TMR_0 Port Q drives sigbit with wire cs_TMR_0
+Cell $auto$alumacc.cc:485:replace_alu$2161.genblk1.slice[0].genblk1.carry4_TMR_2 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2161.genblk1.slice[0].genblk1.carry4_TMR_2 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2161.genblk1.slice[0].genblk1.carry4_TMR_1 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2161.genblk1.slice[0].genblk1.carry4_TMR_1 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2161.genblk1.slice[0].genblk1.carry4_TMR_0 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2161.genblk1.slice[0].genblk1.carry4_TMR_0 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[3].genblk1.carry4_TMR_2 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[3].genblk1.carry4_TMR_2 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[3].genblk1.carry4_TMR_1 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[3].genblk1.carry4_TMR_1 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[3].genblk1.carry4_TMR_0 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[3].genblk1.carry4_TMR_0 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[2].genblk1.carry4_TMR_2 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[2].genblk1.carry4_TMR_2 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[2].genblk1.carry4_TMR_1 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[2].genblk1.carry4_TMR_1 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[2].genblk1.carry4_TMR_0 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[2].genblk1.carry4_TMR_0 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[1].genblk1.carry4_TMR_2 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[1].genblk1.carry4_TMR_2 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[1].genblk1.carry4_TMR_1 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[1].genblk1.carry4_TMR_1 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[1].genblk1.carry4_TMR_0 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[1].genblk1.carry4_TMR_0 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[0].genblk1.carry4_TMR_2 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[0].genblk1.carry4_TMR_2 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[0].genblk1.carry4_TMR_1 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[0].genblk1.carry4_TMR_1 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[0].genblk1.carry4_TMR_0 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2158.genblk1.slice[0].genblk1.carry4_TMR_0 of type CARRY4 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3282_TMR_2 of type INV DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3282_TMR_2 of type INV is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3282_TMR_1 of type INV DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3282_TMR_1 of type INV is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3282_TMR_0 of type INV DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3282_TMR_0 of type INV is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3281_TMR_2 of type INV DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3281_TMR_2 of type INV is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3281_TMR_1 of type INV DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3281_TMR_1 of type INV is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3281_TMR_0 of type INV DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3281_TMR_0 of type INV is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3280_TMR_2 of type LUT6 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3280_TMR_1 of type LUT6 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3280_TMR_0 of type LUT6 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3279_TMR_2 of type LUT6 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3279_TMR_1 of type LUT6 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3279_TMR_0 of type LUT6 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3278_TMR_2 of type LUT2 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3278_TMR_1 of type LUT2 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3278_TMR_0 of type LUT2 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3277_TMR_2 of type LUT4 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3277_TMR_1 of type LUT4 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3277_TMR_0 of type LUT4 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3276_TMR_2 of type LUT2 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3276_TMR_1 of type LUT2 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3276_TMR_0 of type LUT2 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3275_TMR_2 of type LUT2 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3275_TMR_1 of type LUT2 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3275_TMR_0 of type LUT2 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3274.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux8_TMR_2 of type MUXF8 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3274.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux8_TMR_1 of type MUXF8 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3274.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux8_TMR_0 of type MUXF8 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3274.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_2 of type MUXF7 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3274.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_1 of type MUXF7 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3274.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_0 of type MUXF7 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3274.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_2 of type LUT3 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3274.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_1 of type LUT3 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3274.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_0 of type LUT3 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3274.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0_TMR_2 of type LUT3 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3274.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0_TMR_1 of type LUT3 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3274.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0_TMR_0 of type LUT3 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3274.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_2 of type MUXF7 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3274.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_1 of type MUXF7 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3274.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_0 of type MUXF7 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3274.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_2 of type LUT3 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3274.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_1 of type LUT3 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3274.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_0 of type LUT3 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3273_TMR_2 of type LUT2 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3273_TMR_1 of type LUT2 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3273_TMR_0 of type LUT2 doesn't have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3272_TMR_2 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3272_TMR_2 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3272_TMR_1 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3272_TMR_1 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3272_TMR_0 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3272_TMR_0 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3271_TMR_2 of type LUT5 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3271_TMR_2 of type LUT5 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3271_TMR_1 of type LUT5 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3271_TMR_1 of type LUT5 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3271_TMR_0 of type LUT5 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3271_TMR_0 of type LUT5 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3270_TMR_2 of type LUT4 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3270_TMR_2 of type LUT4 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3270_TMR_1 of type LUT4 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3270_TMR_1 of type LUT4 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3270_TMR_0 of type LUT4 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3270_TMR_0 of type LUT4 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3269_TMR_2 of type LUT2 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3269_TMR_2 of type LUT2 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3269_TMR_1 of type LUT2 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3269_TMR_1 of type LUT2 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3269_TMR_0 of type LUT2 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3269_TMR_0 of type LUT2 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3268_TMR_2 of type LUT2 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3268_TMR_2 of type LUT2 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3268_TMR_1 of type LUT2 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3268_TMR_1 of type LUT2 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3268_TMR_0 of type LUT2 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3268_TMR_0 of type LUT2 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3267_TMR_2 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3267_TMR_2 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3267_TMR_1 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3267_TMR_1 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3267_TMR_0 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3267_TMR_0 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3266_TMR_2 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3266_TMR_2 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3266_TMR_1 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3266_TMR_1 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3266_TMR_0 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3266_TMR_0 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3265_TMR_2 of type LUT3 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3265_TMR_2 of type LUT3 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3265_TMR_1 of type LUT3 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3265_TMR_1 of type LUT3 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3265_TMR_0 of type LUT3 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3265_TMR_0 of type LUT3 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3264_TMR_2 of type LUT2 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3264_TMR_2 of type LUT2 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3264_TMR_1 of type LUT2 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3264_TMR_1 of type LUT2 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3264_TMR_0 of type LUT2 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3264_TMR_0 of type LUT2 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3263_TMR_2 of type LUT5 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3263_TMR_2 of type LUT5 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3263_TMR_1 of type LUT5 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3263_TMR_1 of type LUT5 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3263_TMR_0 of type LUT5 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3263_TMR_0 of type LUT5 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3262_TMR_2 of type LUT2 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3262_TMR_2 of type LUT2 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3262_TMR_1 of type LUT2 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3262_TMR_1 of type LUT2 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3262_TMR_0 of type LUT2 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3262_TMR_0 of type LUT2 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3261_TMR_2 of type LUT2 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3261_TMR_2 of type LUT2 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3261_TMR_1 of type LUT2 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3261_TMR_1 of type LUT2 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3261_TMR_0 of type LUT2 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3261_TMR_0 of type LUT2 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3260_TMR_2 of type LUT5 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3260_TMR_2 of type LUT5 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3260_TMR_1 of type LUT5 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3260_TMR_1 of type LUT5 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3260_TMR_0 of type LUT5 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3260_TMR_0 of type LUT5 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3259_TMR_2 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3259_TMR_2 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3259_TMR_1 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3259_TMR_1 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3259_TMR_0 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3259_TMR_0 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux8_TMR_2 of type MUXF8 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux8_TMR_2 of type MUXF8 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux8_TMR_1 of type MUXF8 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux8_TMR_1 of type MUXF8 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux8_TMR_0 of type MUXF8 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux8_TMR_0 of type MUXF8 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_2 of type MUXF7 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_2 of type MUXF7 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_1 of type MUXF7 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_1 of type MUXF7 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_0 of type MUXF7 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_0 of type MUXF7 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_2 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_2 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_1 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_1 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_0 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_0 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_2 of type MUXF7 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_2 of type MUXF7 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_1 of type MUXF7 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_1 of type MUXF7 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_0 of type MUXF7 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3258.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_0 of type MUXF7 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3257_TMR_2 of type LUT5 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3257_TMR_2 of type LUT5 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3257_TMR_1 of type LUT5 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3257_TMR_1 of type LUT5 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3257_TMR_0 of type LUT5 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3257_TMR_0 of type LUT5 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3256_TMR_2 of type LUT4 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3256_TMR_2 of type LUT4 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3256_TMR_1 of type LUT4 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3256_TMR_1 of type LUT4 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3256_TMR_0 of type LUT4 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3256_TMR_0 of type LUT4 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3255_TMR_2 of type LUT4 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3255_TMR_2 of type LUT4 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3255_TMR_1 of type LUT4 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3255_TMR_1 of type LUT4 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3255_TMR_0 of type LUT4 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3255_TMR_0 of type LUT4 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3254_TMR_2 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3254_TMR_2 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3254_TMR_1 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3254_TMR_1 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3254_TMR_0 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3254_TMR_0 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3253.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_2 of type MUXF7 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3253.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_2 of type MUXF7 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3253.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_1 of type MUXF7 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3253.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_1 of type MUXF7 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3253.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_0 of type MUXF7 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3253.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_0 of type MUXF7 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3253.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_2 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3253.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_2 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3253.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_1 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3253.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_1 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3253.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_0 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3253.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_0 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3252.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_2 of type MUXF7 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3252.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_2 of type MUXF7 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3252.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_1 of type MUXF7 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3252.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_1 of type MUXF7 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3252.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_0 of type MUXF7 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3252.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_0 of type MUXF7 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3252.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_2 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3252.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_2 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3252.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_1 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3252.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_1 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3252.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_0 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3252.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_0 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3251_TMR_2 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3251_TMR_2 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3251_TMR_1 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3251_TMR_1 of type LUT6 is NOT a flip flop
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3251_TMR_0 of type LUT6 DOES have scc_attr
+Cell $abc$3250$auto$blifparse.cc:515:parse_blif$3251_TMR_0 of type LUT6 is NOT a flip flop
 Removing redundant reduction voters...
 Inserting ff voters
 Added ff voter: \bitCount_0_VOTER_TMR_0
@@ -4772,22 +5125,79 @@ Added ff voter: \cs_5_VOTER_TMR_2
 		Port: I2 is connected to cs_TMR_2
 		Port: I1 is connected to cs_TMR_1
 		Port: I0 is connected to cs_TMR_0
-inserting reduction voters
 Creating wire map for module debounce
-Identifying reduction points in module debounce
 Identifying points after ff in module debounce
+Cell timer of type $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter DOES have scc_attr
+Cell timer of type $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter is NOT a flip flop
+Cell $auto$ff.cc:262:slice$2945_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2945_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2945_TMR_2 Port Q drives sigbit with wire cs_TMR_2
+Cell $auto$ff.cc:262:slice$2945_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2945_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2945_TMR_1 Port Q drives sigbit with wire cs_TMR_1
+Cell $auto$ff.cc:262:slice$2945_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2945_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2945_TMR_0 Port Q drives sigbit with wire cs_TMR_0
+Cell $auto$ff.cc:262:slice$2944_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2944_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2944_TMR_2 Port Q drives sigbit with wire cs_TMR_2
+Cell $auto$ff.cc:262:slice$2944_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2944_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2944_TMR_1 Port Q drives sigbit with wire cs_TMR_1
+Cell $auto$ff.cc:262:slice$2944_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2944_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2944_TMR_0 Port Q drives sigbit with wire cs_TMR_0
+Cell $auto$ff.cc:262:slice$2943_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2943_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2943_TMR_2 Port Q drives sigbit with wire cs_TMR_2
+Cell $auto$ff.cc:262:slice$2943_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2943_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2943_TMR_1 Port Q drives sigbit with wire cs_TMR_1
+Cell $auto$ff.cc:262:slice$2943_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2943_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2943_TMR_0 Port Q drives sigbit with wire cs_TMR_0
+Cell $auto$ff.cc:262:slice$2942_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2942_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2942_TMR_2 Port Q drives sigbit with wire cs_TMR_2
+Cell $auto$ff.cc:262:slice$2942_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2942_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2942_TMR_1 Port Q drives sigbit with wire cs_TMR_1
+Cell $auto$ff.cc:262:slice$2942_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$2942_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$2942_TMR_0 Port Q drives sigbit with wire cs_TMR_0
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3249_TMR_2 of type LUT3 doesn't have scc_attr
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3249_TMR_1 of type LUT3 doesn't have scc_attr
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3249_TMR_0 of type LUT3 doesn't have scc_attr
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3248_TMR_2 of type LUT3 DOES have scc_attr
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3248_TMR_2 of type LUT3 is NOT a flip flop
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3248_TMR_1 of type LUT3 DOES have scc_attr
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3248_TMR_1 of type LUT3 is NOT a flip flop
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3248_TMR_0 of type LUT3 DOES have scc_attr
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3248_TMR_0 of type LUT3 is NOT a flip flop
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3247_TMR_2 of type LUT6 DOES have scc_attr
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3247_TMR_2 of type LUT6 is NOT a flip flop
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3247_TMR_1 of type LUT6 DOES have scc_attr
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3247_TMR_1 of type LUT6 is NOT a flip flop
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3247_TMR_0 of type LUT6 DOES have scc_attr
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3247_TMR_0 of type LUT6 is NOT a flip flop
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3246_TMR_2 of type LUT6 DOES have scc_attr
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3246_TMR_2 of type LUT6 is NOT a flip flop
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3246_TMR_1 of type LUT6 DOES have scc_attr
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3246_TMR_1 of type LUT6 is NOT a flip flop
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3246_TMR_0 of type LUT6 DOES have scc_attr
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3246_TMR_0 of type LUT6 is NOT a flip flop
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3245_TMR_2 of type LUT5 DOES have scc_attr
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3245_TMR_2 of type LUT5 is NOT a flip flop
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3245_TMR_1 of type LUT5 DOES have scc_attr
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3245_TMR_1 of type LUT5 is NOT a flip flop
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3245_TMR_0 of type LUT5 DOES have scc_attr
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3245_TMR_0 of type LUT5 is NOT a flip flop
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3244_TMR_2 of type LUT5 DOES have scc_attr
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3244_TMR_2 of type LUT5 is NOT a flip flop
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3244_TMR_1 of type LUT5 DOES have scc_attr
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3244_TMR_1 of type LUT5 is NOT a flip flop
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3244_TMR_0 of type LUT5 DOES have scc_attr
+Cell $abc$3243$auto$blifparse.cc:515:parse_blif$3244_TMR_0 of type LUT5 is NOT a flip flop
 Removing redundant reduction voters...
 Inserting ff voters
 Added ff voter: \cs_0_VOTER_TMR_0
@@ -4862,67 +5272,272 @@ Added ff voter: \cs_3_VOTER_TMR_2
 		Port: I2 is connected to cs_TMR_2
 		Port: I1 is connected to cs_TMR_1
 		Port: I0 is connected to cs_TMR_0
-inserting reduction voters
 Creating wire map for module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
-Identifying reduction points in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
 Identifying points after ff in module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter
+Cell $auto$ff.cc:262:slice$3042_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3042_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3042_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$3042_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3042_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3042_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$3042_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3042_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3042_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$3041_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3041_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3041_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$3041_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3041_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3041_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$3041_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3041_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3041_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$3040_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3040_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3040_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$3040_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3040_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3040_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$3040_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3040_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3040_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$3039_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3039_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3039_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$3039_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3039_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3039_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$3039_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3039_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3039_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$3038_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3038_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3038_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$3038_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3038_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3038_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$3038_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3038_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3038_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$3037_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3037_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3037_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$3037_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3037_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3037_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$3037_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3037_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3037_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$3036_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3036_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3036_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$3036_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3036_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3036_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$3036_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3036_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3036_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$3035_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3035_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3035_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$3035_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3035_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3035_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$3035_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3035_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3035_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$3034_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3034_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3034_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$3034_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3034_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3034_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$3034_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3034_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3034_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$3033_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3033_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3033_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$3033_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3033_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3033_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$3033_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3033_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3033_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$3032_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3032_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3032_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$3032_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3032_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3032_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$3032_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3032_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3032_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$3031_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3031_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3031_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$3031_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3031_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3031_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$3031_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3031_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3031_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$3030_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3030_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3030_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$3030_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3030_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3030_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$3030_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3030_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3030_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$3029_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3029_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3029_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$3029_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3029_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3029_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$3029_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3029_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3029_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$3028_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3028_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3028_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$3028_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3028_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3028_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$3028_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3028_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3028_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$3027_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3027_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3027_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$3027_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3027_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3027_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$3027_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3027_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3027_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$3026_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3026_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3026_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$3026_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3026_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3026_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$3026_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3026_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3026_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$3025_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3025_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3025_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$3025_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3025_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3025_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$3025_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3025_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3025_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$ff.cc:262:slice$3024_TMR_2 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3024_TMR_2 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3024_TMR_2 Port Q drives sigbit with wire count_TMR_2
+Cell $auto$ff.cc:262:slice$3024_TMR_1 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3024_TMR_1 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3024_TMR_1 Port Q drives sigbit with wire count_TMR_1
+Cell $auto$ff.cc:262:slice$3024_TMR_0 of type FDRE DOES have scc_attr
+Cell $auto$ff.cc:262:slice$3024_TMR_0 of type FDRE is a flip flop
 $auto$ff.cc:262:slice$3024_TMR_0 Port Q drives sigbit with wire count_TMR_0
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[4].genblk1.carry4_TMR_2 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[4].genblk1.carry4_TMR_2 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[4].genblk1.carry4_TMR_1 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[4].genblk1.carry4_TMR_1 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[4].genblk1.carry4_TMR_0 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[4].genblk1.carry4_TMR_0 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[3].genblk1.carry4_TMR_2 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[3].genblk1.carry4_TMR_2 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[3].genblk1.carry4_TMR_1 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[3].genblk1.carry4_TMR_1 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[3].genblk1.carry4_TMR_0 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[3].genblk1.carry4_TMR_0 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[2].genblk1.carry4_TMR_2 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[2].genblk1.carry4_TMR_2 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[2].genblk1.carry4_TMR_1 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[2].genblk1.carry4_TMR_1 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[2].genblk1.carry4_TMR_0 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[2].genblk1.carry4_TMR_0 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[1].genblk1.carry4_TMR_2 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[1].genblk1.carry4_TMR_2 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[1].genblk1.carry4_TMR_1 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[1].genblk1.carry4_TMR_1 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[1].genblk1.carry4_TMR_0 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[1].genblk1.carry4_TMR_0 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[0].genblk1.carry4_TMR_2 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[0].genblk1.carry4_TMR_2 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[0].genblk1.carry4_TMR_1 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[0].genblk1.carry4_TMR_1 of type CARRY4 is NOT a flip flop
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[0].genblk1.carry4_TMR_0 of type CARRY4 DOES have scc_attr
+Cell $auto$alumacc.cc:485:replace_alu$2155.genblk1.slice[0].genblk1.carry4_TMR_0 of type CARRY4 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3242_TMR_2 of type INV DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3242_TMR_2 of type INV is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3242_TMR_1 of type INV DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3242_TMR_1 of type INV is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3242_TMR_0 of type INV DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3242_TMR_0 of type INV is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3241_TMR_2 of type LUT6 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3241_TMR_2 of type LUT6 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3241_TMR_1 of type LUT6 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3241_TMR_1 of type LUT6 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3241_TMR_0 of type LUT6 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3241_TMR_0 of type LUT6 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3240_TMR_2 of type LUT4 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3240_TMR_2 of type LUT4 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3240_TMR_1 of type LUT4 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3240_TMR_1 of type LUT4 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3240_TMR_0 of type LUT4 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3240_TMR_0 of type LUT4 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3239_TMR_2 of type LUT2 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3239_TMR_2 of type LUT2 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3239_TMR_1 of type LUT2 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3239_TMR_1 of type LUT2 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3239_TMR_0 of type LUT2 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3239_TMR_0 of type LUT2 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3238_TMR_2 of type LUT2 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3238_TMR_2 of type LUT2 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3238_TMR_1 of type LUT2 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3238_TMR_1 of type LUT2 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3238_TMR_0 of type LUT2 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3238_TMR_0 of type LUT2 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3237_TMR_2 of type LUT4 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3237_TMR_2 of type LUT4 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3237_TMR_1 of type LUT4 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3237_TMR_1 of type LUT4 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3237_TMR_0 of type LUT4 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3237_TMR_0 of type LUT4 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux8_TMR_2 of type MUXF8 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux8_TMR_2 of type MUXF8 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux8_TMR_1 of type MUXF8 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux8_TMR_1 of type MUXF8 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux8_TMR_0 of type MUXF8 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux8_TMR_0 of type MUXF8 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_2 of type MUXF7 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_2 of type MUXF7 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_1 of type MUXF7 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_1 of type MUXF7 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_0 of type MUXF7 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_0 of type MUXF7 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_2 of type LUT6 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_2 of type LUT6 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_1 of type LUT6 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_1 of type LUT6 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_0 of type LUT6 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1_TMR_0 of type LUT6 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_2 of type MUXF7 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_2 of type MUXF7 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_1 of type MUXF7 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_1 of type MUXF7 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_0 of type MUXF7 DOES have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3236.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7_TMR_0 of type MUXF7 is NOT a flip flop
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3235_TMR_2 of type LUT5 doesn't have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3235_TMR_1 of type LUT5 doesn't have scc_attr
+Cell $abc$3234$auto$blifparse.cc:515:parse_blif$3235_TMR_0 of type LUT5 doesn't have scc_attr
 Removing redundant reduction voters...
 Inserting ff voters
 Added ff voter: \count_0_VOTER_TMR_0
@@ -5267,14 +5882,13 @@ Added ff voter: \count_9_VOTER_TMR_2
 		Port: I2 is connected to count_TMR_2
 		Port: I1 is connected to count_TMR_1
 		Port: I0 is connected to count_TMR_0
-inserting reduction voters
-Inserted 49 Voters
+Inserted 47 Voters
 
 12. Executing CHECK pass (checking for obvious problems).
-Checking module tx_top...
-Checking module tx...
-Checking module debounce...
 Checking module $paramod$af89ed8d08c8018cd41487cbf58ed920a4905fc9\mod_counter...
+Checking module debounce...
+Checking module tx...
+Checking module tx_top...
 Found and reported 0 problems.
 
 13. Executing BLIF backend.
@@ -5306,18 +5920,25 @@ will be replicated
     -ff
         Insert voters after every flip flop
 
-    -ff_attr
+    -ff_attr <string>
         Specify an attribute that signifies a cell is a flip flop
         Attributes can be set using the 'setattr' command.
         e.g. "setattr is_ff 1 */t:FDRE" and then
         pass "-ff_attr is_ff" as a parameter
 
-    -specify_ff
+    -specify_ff <string>
         Specify the name of a primitive that is a flip flop
+
+    -scc <string>
+        Insert feedback voters after flip flops in sccs.
+        Sccs can be discovered and tagged using the 'scc -set_attr'
+        command. The used tag must be provided.
+        e.g. "scc -set_attr in_scc 1 " and then
+        pass "-scc in_scc " as a parameter
 
     -verbose
         Print all log messages during replication and voter insertion
 
-End of script. Logfile hash: be9713fe3e, CPU: user 1.42s system 0.03s, MEM: 141.09 MB peak
-Yosys 0.17+41 (git sha1 c525b5f91, clang 10.0.0-4ubuntu1 -fPIC -Os)
-Time spent: 58% 22x read_verilog (0 sec), 8% 1x abc (0 sec), ...
+End of script. Logfile hash: 224f936d99, CPU: user 2.91s system 0.09s, MEM: 141.50 MB peak
+Yosys 0.17+41 (git sha1 c525b5f91, clang 6.0.0-1ubuntu2 -fPIC -Os)
+Time spent: 49% 22x read_verilog (1 sec), 8% 14x opt_clean (0 sec), ...

@@ -602,6 +602,8 @@ struct InsertVoterWorker: TMRWorker {
     int voter_cnt = 0;
     std::map<RTLIL::Wire*,std::vector<RTLIL::Wire*>> provided_wire_map;
     std::string ff_attr;
+    bool scc;
+    std::string scc_attr;
 
     typedef struct VoterInfo{
         std::string cell_type;
@@ -704,16 +706,25 @@ struct InsertVoterWorker: TMRWorker {
         std::vector<RTLIL::SigBit> ff_driven_sigbits;
         // std::cout << "ff_attr is " << ff_attr << "\n";
         for (auto cell: module->cells()) {
+            if (scc) {
+                if (!cell->has_attribute("\\" + scc_attr)) {
+                    printMessage("Cell " + unescape_id(cell->name) + " of type " + unescape_id(cell->type) + " doesn't have scc_attr\n", false);
+                    continue;
+                }
+                else {
+                    printMessage("Cell " + unescape_id(cell->name) + " of type " + unescape_id(cell->type) + " DOES have scc_attr\n", false);
+                }
+            }
             bool in_ff_names = (std::find(ff_names.begin(), ff_names.end(), log_id(cell->type)) != ff_names.end());
             bool has_ff_attr = false;
             if (ff_attr != "") {
                 has_ff_attr = cell->has_attribute("\\" + ff_attr);
             }
             if (!in_ff_names && !has_ff_attr) {
-                // std::cout << "cell of type " << log_id(cell->type) << " is not a flip flop\n";
+                printMessage("Cell " + unescape_id(cell->name) + " of type " + unescape_id(cell->type) + " is NOT a flip flop\n", false);
                 continue;
             }
-            // std::cout << "cell of type " << log_id(cell->type) << " is a flip flop!\n";
+            printMessage("Cell " + unescape_id(cell->name) + " of type " + unescape_id(cell->type) + " is a flip flop\n", false);
             for (auto conn: cell->connections()) {
                 if (!cell->output(conn.first)) {
                     continue;
@@ -752,7 +763,7 @@ struct InsertVoterWorker: TMRWorker {
 
     void insert_reduction_voters(RTLIL::Module *module, std::string suffix, std::map<std::string, std::vector<Pin>> reduction_map, \
                                         std::map<std::string, std::vector<RTLIL::Wire*>> wire_map) {
-        printMessage("inserting reduction voters\n", false);
+        printMessage("Inserting reduction voters\n", false);
         RTLIL::Wire *dummy_wire = module->wire("\\dummy_wire");
         if (voterInfo.input_ports.size() > copy_amount && dummy_wire == nullptr) { // create a dummy wire to tie extra input port to
             dummy_wire = module->addWire("\\dummy_wire");
@@ -970,14 +981,9 @@ struct InsertVoterWorker: TMRWorker {
     }
 
 public:
-    InsertVoterWorker(std::string suffix, int copy_amount, 
-                            bool ff_voters, bool reduction_voters, std::vector<std::string> ff_names, std::string ff_attr) {
+    InsertVoterWorker(std::string suffix, int copy_amount) {
         this->suffix = suffix;
         this->copy_amount = copy_amount;
-        this->reduction_voters = reduction_voters;
-        this->ff_voters = ff_voters;
-        this->ff_names = ff_names;
-        this->ff_attr = ff_attr;
     }
 
     void setVoterInformation(std::string voter_type, std::string voter_name) {
@@ -988,6 +994,15 @@ public:
         //     voterInfo.cell_type = "$lut";
         // }
         voterInfo.name = voter_name;
+    }
+
+    void setTargetVoterTypes(bool reduction_voters, bool ff_voters, std::vector<std::string> ff_names, std::string ff_attr, bool scc, std::string scc_attr) {
+        this->reduction_voters = reduction_voters;
+        this->ff_voters = ff_voters;
+        this->ff_names = ff_names;
+        this->ff_attr = ff_attr;
+        this->scc = scc;
+        this->scc_attr = scc_attr;
     }
 
     void setWireMap(std::map<RTLIL::Wire*,std::vector<RTLIL::Wire*>> wire_map) {
@@ -1013,12 +1028,12 @@ public:
             if (reduction_voters) {
                 reduction_map = identify_reduction_points(module, suffix, wire_map);
             }
-            if (ff_voters) {
+            if (ff_voters || scc) {
                 ff_map = identify_points_after_ff(module, suffix, wire_map);
             }
 
             std::map<std::string, std::vector<Pin>> reduction_map_edited = remove_redundant_reduction_voters(reduction_map, ff_map);
-            if (ff_voters) {
+            if (ff_voters || scc) {
                 insert_ff_voters(module, suffix, ff_map, wire_map);
             }
             if (reduction_voters) {
@@ -1066,14 +1081,21 @@ struct ApplyTMRPass : public Pass {
         log("    -ff\n");
         log("        Insert voters after every flip flop\n");
         log("\n");
-        log("    -ff_attr\n");
+        log("    -ff_attr <string>\n");
         log("        Specify an attribute that signifies a cell is a flip flop\n");
         log("        Attributes can be set using the 'setattr' command.\n");
         log("        e.g. \"setattr is_ff 1 */t:FDRE\" and then\n");
         log("        pass \"-ff_attr is_ff\" as a parameter\n");
         log("\n");
-        log("    -specify_ff\n");
+        log("    -specify_ff <string>\n");
         log("        Specify the name of a primitive that is a flip flop\n");
+        log("\n");
+        log("    -scc <string>\n");
+        log("        Insert feedback voters after flip flops in sccs.\n");
+        log("        Sccs can be discovered and tagged using the 'scc -set_attr'\n");
+        log("        command. The used tag must be provided.\n");
+        log("        e.g. \"scc -set_attr in_scc 1 \" and then\n");
+        log("        pass \"-scc in_scc \" as a parameter\n");
         log("\n");
         log("    -verbose\n");
         log("        Print all log messages during replication and voter insertion\n");
@@ -1091,6 +1113,8 @@ struct ApplyTMRPass : public Pass {
         bool ff_voters = false;
         std::vector<std::string> ff_names;
         std::string ff_attr;
+        bool scc = false;
+        std::string scc_attr = "";
 
         log_header(design, "Executing APPLY TMR Pass\n");
 
@@ -1136,6 +1160,12 @@ struct ApplyTMRPass : public Pass {
                 ff_attr = str;
                 continue;
             }
+            if (args[argidx] == "-scc") {
+                scc = true;
+                const char *str = (args[++argidx]).c_str();
+                scc_attr = str;
+                continue;
+            }
             break;
         }
         argidx_2 = argidx;
@@ -1150,15 +1180,21 @@ struct ApplyTMRPass : public Pass {
 
         extra_args(args, argidx_2, new_design); // set the selection on the new design
 
-        InsertVoterWorker voter_worker = InsertVoterWorker(suffix, copy_amount, ff_voters, reduction_voters, ff_names, ff_attr);
+        InsertVoterWorker voter_worker = InsertVoterWorker(suffix, copy_amount);
         voter_worker.setVoterInformation(voter_type, voter_name);
+        voter_worker.setTargetVoterTypes(reduction_voters, ff_voters, ff_names, ff_attr, scc, scc_attr);
         voter_worker.setVerbose(verbose);
         voter_worker.setWireMap(rep_wire_map);
         voter_worker.run(design, new_design);
 
-        // design = new_design;
-        yosys_design = new_design; // set the new design as THE design.
-        
+        // copy the replicated design back into the original design
+        for (auto module: design->modules().to_vector()) {
+            design->remove(module);
+        }
+        for (auto module: new_design->modules().to_vector()){
+            RTLIL::Module *to_add = design->addModule(module->name);
+            module->cloneInto(to_add);
+        }        
     }
 } ApplyTMRPass;
 

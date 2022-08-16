@@ -1,7 +1,7 @@
 # file copy -force ~/yosys_plugins/yosys-f4pga-plugins/mine-plugin/mine.so ~/yosys/share/plugins/
 # file copy -force ~/yosys_plugins/yosys-f4pga-plugins/tmr-plugin/tmr.so ~/yosys/share/plugins/
-file copy -force ~/yosys_plugins/yosys-f4pga-plugins/tmr-plugin/tmr.so ~/yosys/yosys/share/plugins/
-# file copy -force ~/yosys_plugins/yosys-f4pga-plugins/tmr-plugin/tmr.so ~/yosys/share/plugins/
+# file copy -force ~/yosys_plugins/yosys-f4pga-plugins/tmr-plugin/tmr.so ~/yosys/yosys/share/plugins/
+file copy -force ~/yosys_plugins/yosys-f4pga-plugins/tmr-plugin/tmr.so ~/yosys/share/plugins/
 
 
 
@@ -28,7 +28,7 @@ hierarchy -top tx_top
 # yosys proc
 yosys synth_xilinx
 check
-scc -all_cell_types
+scc -all_cell_types -set_attr is_scc 1
 # zinit
 # yosys dffinit -ff FDRE Q INIT
 write_blif -cname -attr -param -conn original.blif
@@ -41,8 +41,8 @@ plugin -i tmr
 # setattr -set is_ff 1 */t:FDRE
 # yosys apply_tmr -verbose -ff -reduction -ff_attr is_ff */t:IBUF */t:OBUF */t:BUFG %% %n
 # setattr -unset is_ff */t:FDRE
-yosys apply_tmr -verbose -ff -reduction -specify_ff FDRE
-# yosys replicate_partial -suffix TMR -ports -verbose */t:IBUF */t:OBUF */t:BUFG %% %n
+yosys apply_tmr -verbose -scc is_scc -specify_ff FDRE 
+# yosys replicate_partial -suffix TMR -verbose */t:IBUF */t:OBUF */t:BUFG %% %n
 # check
 # clean
 

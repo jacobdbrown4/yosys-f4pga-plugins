@@ -1,7 +1,7 @@
 # file copy -force ~/yosys_plugins/yosys-f4pga-plugins/mine-plugin/mine.so ~/yosys/share/plugins/
 # file copy -force ~/yosys_plugins/yosys-f4pga-plugins/tmr-plugin/tmr.so ~/yosys/share/plugins/
-file copy -force ~/yosys_plugins/yosys-f4pga-plugins/tmr-plugin/tmr.so ~/yosys/yosys/share/plugins/
-# file copy -force ~/yosys_plugins/yosys-f4pga-plugins/tmr-plugin/tmr.so ~/yosys/share/plugins/
+# file copy -force ~/yosys_plugins/yosys-f4pga-plugins/tmr-plugin/tmr.so ~/yosys/yosys/share/plugins/
+file copy -force ~/yosys_plugins/yosys-f4pga-plugins/tmr-plugin/tmr.so ~/yosys/share/plugins/
 
 
 
@@ -11,7 +11,7 @@ yosys read_verilog lattice_riscv.v
 hierarchy -top lattice_crosslink_nx_evn
 # deminout
 check
-scc -all_cell_types
+# scc -all_cell_types -set_attr is_scc 1
 yosys write_blif -cname -param -attr original.blif
 # yosys write_rtlil original.rtlil
 plugin -i tmr
