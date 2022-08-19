@@ -18,7 +18,7 @@ yosys write_verilog -defparam original.v
 write_edif original.edif
 
 plugin -i tmr
-yosys apply_tmr -reduction -voter_name VOTER -voter_type LUT3 -verbose */t:IBUF */t:OBUF */t:BUFG */t:RAMB36E1 */t:RAMB18E1 \
+yosys apply_tmr -reduction -voter_name VOTER -ff -specify_ff FDRE -voter_type LUT3 -verbose */t:IBUF */t:OBUF */t:BUFG */t:RAMB36E1 */t:RAMB18E1 \
                                                                                             */t:GND */t:VCC */t:MMCME2_ADV %% %n
 # yosys apply_tmr -verbose */t:IBUF */t:OBUF */t:BUFG */t:RAMB36E1 */t:RAMB18E1 */t:GND */t:VCC %% %n
 select *

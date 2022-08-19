@@ -16,8 +16,8 @@ hierarchy -top top
 yosys synth_xilinx
 check
 write_blif -cname -attr -param -conn original.blif
-write_verilog -norename original.v
-write_edif pico_original.edif
+# write_verilog -norename original.v
+# write_edif pico_original.edif
 
 plugin -i tmr
 yosys apply_tmr -verbose -reduction */t:IBUF */t:OBUF */t:BUFG %% %n 
@@ -25,9 +25,9 @@ select *
 check
 
 yosys write_blif -cname -param -attr after_tmr.blif
-write_verilog -norename after_tmr.v
-write_edif pico_tmr.edif
-hierarchy
+# write_verilog -norename after_tmr.v
+# write_edif pico_tmr.edif
+# hierarchy
 
 
 
